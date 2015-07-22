@@ -1,0 +1,124 @@
+---
+layout: default
+title: Plan trip
+category: ''
+---
+	<!-- <div class="status-widget col-sm-12 alert alert-info" role="alert">
+		<p><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <strong>Status:</strong> All vehicles are running smoothly.</p>
+	</div> -->
+<div class="row">
+	<div class="col-xs-12 col-sm-5 col-md-4">
+		<div class="row">
+			<div class="col-xs-12 planner-widget">
+				<div class="well">
+					{% include planner-widget.html %}
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="well">
+					<p>Recent trips</p>
+					<ul class="list-group">
+						<li class="list-group-item"><a href=""><strong>90 Elizabeth St NE</strong> to <strong>40 Co...</strong><span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a></li>
+						<li class="list-group-item"><a href=""><strong>Georgia Dome</strong> to <strong>Midtown, At...</strong><span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">These guys really love transit!</h3>
+					</div>
+					<div class="panel-body">
+						<a href="#" class="thumbnail">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Dc_metro_car_interior.jpg" alt="...">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-7 col-md-8 carousel-widget">
+		<div class="col-xs-12">
+			{% include carousel-widget.html %}
+		</div>
+		<div class="col-xs-6 col-sm-12 col-md-6 top-buffer">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Purchase your Breeze Card today!</h3>
+				</div>
+				<div class="panel-body">
+					<a href="#" class="thumbnail">
+						<img src="{{ site.baseurl }}/lib/images/breeze_card.png" alt="...">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-sm-12 col-md-6 top-buffer">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">These people love transit!</h3>
+				</div>
+				<div class="panel-body">
+					<a href="#" class="thumbnail">
+						<img src="//c1.staticflickr.com/1/12/96724309_985b8acd3f_m.jpg" alt="...">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div> 
+</div>
+<!-- <div class="row top-buffer">
+	<div class="col-xs-12 col-sm-5 col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">These guys really love transit!</h3>
+			</div>
+			<div class="panel-body">
+				<a href="#" class="thumbnail">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Dc_metro_car_interior.jpg" alt="...">
+				</a>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<script type="text/javascript">
+$('#timepicker1').timepicker();
+$(function(){
+
+    $(".planner-time-menu li a").click(function(){
+
+      $(".planner-time-btn:first-child").html('<span class="glyphicon glyphicon-time" aria-hidden="true"></span> ' + $(this).text() + ' <i class="fa fa-caret-down"></i>');
+      $(".planner-time-btn:first-child").val($(this).text());
+      var val = $(".planner-time-btn:first-child").val();
+      if (val === 'Depart at' || val === 'Arrive by'){
+      	$('#planner-time-input').show();
+      }
+      else{
+      	$('#planner-time-input').hide();
+      }
+   });
+
+});
+function findBootstrapEnvironment() {
+    var envs = ['xs', 'sm', 'md', 'lg'];
+
+    $el = $('<div>');
+    $el.appendTo($('body'));
+
+    for (var i = envs.length - 1; i >= 0; i--) {
+        var env = envs[i];
+
+        $el.addClass('hidden-'+env);
+        if ($el.is(':hidden')) {
+            $el.remove();
+            return env;
+        }
+    }
+}
+var bs = findBootstrapEnvironment();
+console.log(bs);
+if (bs === 'md' || bs === 'sm'){
+	$('.agency-arrivals-radio').addClass('btn-xs');
+}
+</script>

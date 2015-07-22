@@ -1,0 +1,115 @@
+
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs" id="myTab" role="tablist">
+	<li role="presentation" class="active">
+		<a href="#home" class="planner-tab" aria-controls="home" role="tab" data-toggle="tab">
+			Plan trip
+		</a>
+	</li>
+	<li role="presentation">
+		<a href="#profile" class="planner-tab" aria-controls="profile" role="tab" data-toggle="tab">
+			Next arrivals
+		</a>
+	</li>
+	<li role="presentation">
+		<a href="#nearby" class="planner-tab" aria-controls="nearby" role="tab" data-toggle="tab">
+			Nearby
+		</a>
+	</li>
+	</ul>
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active planner-pane" id="home">
+			<form>
+				<div class="form-group">
+					<input class="form-control" type="text" placeholder="From">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" placeholder="To">
+				</div>
+				<div class="form-group">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default planner-time-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Leave now <i class="fa fa-caret-down"></i>
+						</button>
+						<ul class="dropdown-menu planner-time-menu">
+							<li><a href="#">Leave now</a></li>
+							<li><a href="#">Depart at</a></li>
+							<li><a href="#">Arrive by</a></li>
+						</ul>
+					</div>
+					<div style="display:none; width:150px" id="planner-time-input" class="input-group bootstrap-timepicker">
+						<input id="timepicker1" type="text" style="width:200" class="form-control" aria-describedby="planner-time-icon">
+						<span class="glyphicon glyphicon-time input-group-addon" id="planner-time-icon" aria-hidden="true"></span>
+					</div>
+					<!-- <select class="form-control">
+						<option style="background-image:url(http://iconshow.me/media/images/ui/ios7-icons/png/16/clock-outline.png);">Leave now</option>
+						<option>Depart at</option>
+						<option>Arrive by</option>
+					</select> -->
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary">Plan my trip</button>
+					<button class="btn btn-default pull-right">More options <i class="fa fa-caret-right"></i></button>
+				</div>
+			</form>
+		</div>
+		<div role="tabpanel" class="tab-pane planner-pane" id="profile">
+			<form>
+				<div class="form-group text-center">
+					<div class="btn-group" data-toggle="buttons">
+						<label class="agency-arrivals-radio btn btn-default active">
+							<input type="radio" name="options" id="option1" autocomplete="off" checked> MARTA
+						</label>
+						<label class="agency-arrivals-radio btn btn-default">
+							<input type="radio" name="options" id="option2" autocomplete="off"> CCT
+						</label>
+						<label class="agency-arrivals-radio btn btn-default">
+							<input type="radio" name="options" id="option3" autocomplete="off"> GRTA
+						</label>
+						<label class="agency-arrivals-radio btn btn-default">
+							<input type="radio" name="options" id="option3" autocomplete="off"> GCT
+						</label>
+						<label class="agency-arrivals-radio btn btn-default">
+							<input type="radio" name="options" id="option3" autocomplete="off"> Streetcar
+						</label>
+					</div>
+					
+				</div>
+				<div class="form-group">
+					<select class="form-control">
+						<option>Route 2 - Ponce de Leon</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control">
+						<option>Ponce de Leon @ Piedmont Ave</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary">Find next arrival</button>
+				</div>
+			</form>
+		</div>
+		<div role="tabpanel" class="tab-pane planner-pane" id="nearby">
+			<form>
+				<div class="form-group">
+					<select class="form-control">
+						<option>[Nearby routes]</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control">
+						<option>[Nearby stops]</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" placeholder="Enter location...">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary">Use my location <i class="fa fa-location-arrow"></i></button>
+				</div>
+			</form>
+		</div>
+
+	</div> <!-- end tab-content -->
