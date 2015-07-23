@@ -27,7 +27,7 @@
 				<div class="form-group">
 					<input class="form-control" type="text" placeholder="To">
 				</div>
-				<div class="form-group">
+				<div class="form-group form-inline">
 					<div class="btn-group">
 						<button type="button" class="btn btn-default planner-time-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Leave now <i class="fa fa-caret-down"></i>
@@ -38,9 +38,29 @@
 							<li><a href="#">Arrive by</a></li>
 						</ul>
 					</div>
-					<div style="display:none; width:150px" id="planner-time-input" class="input-group bootstrap-timepicker">
-						<input id="timepicker1" type="text" style="width:200" class="form-control" aria-describedby="planner-time-icon">
-						<span class="glyphicon glyphicon-time input-group-addon" id="planner-time-icon" aria-hidden="true"></span>
+					<div class="btn-group pull-right">
+						<button type="button" class="btn btn-default planner-choice-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							ATLtransit <i class="fa fa-caret-down"></i>
+						</button>
+						<ul class="dropdown-menu planner-choice-menu">
+							<li><a href="#">ATLtransit</a></li>
+							<li><a href="#">Google Transit</a></li>
+							<!-- <li><a href="#">Depart at</a></li>
+							<li><a href="#">Arrive by</a></li> -->
+						</ul>
+					</div>
+					<!-- <div class="form-group left-buffer">
+						<label class="radio-inline">
+							<input type="radio" checked="checked" name="inlineRadioOptions" id="inlineRadio1" value="option1"> ATLtransit
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Google
+						</label>
+					</div> -->
+					<div style="display:none; width:150px; margin-top:5px;" id="planner-time-input" class="input-group bootstrap-timepicker">
+						<input id="timepicker1" type="text" style="width:200;border-top-left-radius: 4px;border-bottom-left-radius: 4px;" class="form-control" aria-describedby="planner-time-icon">
+						<!-- <span class="glyphicon glyphicon-time" aria-hidden="true"></span> -->
+						<span class="input-group-addon glyphicon glyphicon-time" style="top:-0.5px" id="planner-time-icon" aria-hidden="true"></span>
 					</div>
 					<!-- <select class="form-control">
 						<option style="background-image:url(http://iconshow.me/media/images/ui/ios7-icons/png/16/clock-outline.png);">Leave now</option>
@@ -87,8 +107,8 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<button class="btn btn-primary">Find next arrival</button>
-					<span class="" style="font-size: 1.3em; margin-bottom:20px;">24 min</span>
+					<button id="get-next-arrival" class="btn btn-primary">Find next arrival</button>
+					<p class="btn-align pull-right" id="next-arrival-msg" style="display:none; font-size: 1.3em; margin-bottom:20px;">24 min</p>
 				</div>
 			</div>
 		</div>
