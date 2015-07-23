@@ -86,8 +86,11 @@ category: ''
 $('#timepicker1').timepicker();
 $(function(){
 	$("#get-next-arrival").click(function(){
-      $("#next-arrival-msg").show();
-   });
+		$("#next-arrival-msg").show();
+	});
+	$("#planner-go-btn").click(function(){
+		window.location.href='{{ site.baseurl }}/plan';
+	});
     $(".planner-time-menu li a").click(function(){
 
       $(".planner-time-btn:first-child").html('<span class="glyphicon glyphicon-time" aria-hidden="true"></span> ' + $(this).text() + ' <i class="fa fa-caret-down"></i>');
