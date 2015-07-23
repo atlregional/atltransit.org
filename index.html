@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Plan trip
+title: Home
 category: ''
 ---
 	<!-- <div class="status-widget col-sm-12 alert alert-info" role="alert">
@@ -41,7 +41,7 @@ category: ''
 		<div class="col-xs-12">
 			{% include carousel-widget.html %}
 		</div>
-		<div class="col-xs-6 col-sm-12 col-md-6 top-buffer">
+		<div class="col-xs-12 col-sm-12 col-md-6 top-buffer">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">Purchase your Breeze Card today!</h3>
@@ -53,7 +53,7 @@ category: ''
 				</div>
 			</div>
 		</div>
-		<div class="col-xs-6 col-sm-12 col-md-6 top-buffer">
+		<div class="col-xs-12 col-sm-12 col-md-6 top-buffer">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">These people love transit!</h3>
@@ -85,7 +85,9 @@ category: ''
 <script type="text/javascript">
 $('#timepicker1').timepicker();
 $(function(){
-
+	$("#get-next-arrival").click(function(){
+      $("#next-arrival-msg").show();
+   });
     $(".planner-time-menu li a").click(function(){
 
       $(".planner-time-btn:first-child").html('<span class="glyphicon glyphicon-time" aria-hidden="true"></span> ' + $(this).text() + ' <i class="fa fa-caret-down"></i>');
@@ -97,6 +99,11 @@ $(function(){
       else{
       	$('#planner-time-input').hide();
       }
+   });
+
+    $(".planner-choice-menu li a").click(function(){
+      $(".planner-choice-btn:first-child").html($(this).text() + ' <i class="fa fa-caret-down"></i>');
+      $(".planner-choice-btn:first-child").val($(this).text());
    });
 
 });
