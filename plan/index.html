@@ -1,0 +1,14 @@
+---
+layout: plan
+title: Plan trip
+category: ''
+---
+<div id="map"></div>
+<script type="text/javascript">
+$(function(){
+	L.mapbox.accessToken = 'pk.eyJ1IjoiYXRscmVnaW9uYWwiLCJhIjoiQmZ6d2tyMCJ9.oENm3NSf--qHrimdm9Vvdw';
+	var map = L.mapbox.map('map', 'mapbox.streets')
+		.setView([33.750855, -84.383149], 9);
+});
+	
+</script>
