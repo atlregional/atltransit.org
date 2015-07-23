@@ -15,7 +15,7 @@
 		<ul class="nav navbar-nav">
 						<li><a href="#">Plan a trip</a></li>
 						<li><a href="#">Status updates</a></li>
-						<li><a href="#">Maps</a></li>
+						<!-- <li><a href="#">Maps</a></li> -->
 						<li><a href="#">Get fare</a></li>
 			<li class="dropdown mega-dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">More... <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
@@ -55,10 +55,10 @@
 							<li><a href="#">Wayfinding</a></li>
 							<li class="divider"></li>
 							<li class="dropdown-header">Destinations</li>
-							<li><a href="#">Downtown Atlanta</a></li>
-							<li><a href="#">Marietta Square</a></li>
-							<li><a href="#">Buckhead</a></li>
-							<li><a href="#">Norcross / Buford Highway</a></li>
+							<li><a href="#">Event calendar</a></li>
+							<li><a href="#">Arts and Entertainment</a></li>
+							<li><a href="#">Sports</a></li>
+							<li><a href="#">Festivals</a></li>
 						</ul>
 					</li>
 					<li class="col-sm-3 col-xs-6">
@@ -95,14 +95,22 @@
 				</ul>
 			</li>  
 		</ul>
-		<div class="col-sm-1 pull-right row">
-				<form class="col-xs-12 col-sm-3  navbar-form navbar-right navbar-input-group visible-*-inline" role="search">
-										<div class="input-group">
-							 <input type="text" class="form-control navbar-search" placeholder="Search">
-							 <span class="input-group-btn">
-										<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-							 </span>
-						</div>
+		<div class="col-sm-6 pull-right row">
+				<form class="col-xs-12 col-sm-6 navbar-form navbar-right navbar-input-group visible-*-inline" role="search">
+					<div class="btn-group" data-toggle="buttons">
+						<label class="agency-arrivals-radio btn btn-default active">
+							<input type="radio" name="options" id="option1" autocomplete="off" checked> En
+						</label>
+						<label class="agency-arrivals-radio btn btn-default">
+							<input type="radio" name="options" id="option2" autocomplete="off"> Es
+						</label>
+					</div>
+					<div class="input-group">
+						<input type="text" class="form-control navbar-search" placeholder="Search">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button" style="margin-right:20px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+						</span>
+					</div>
 				</form>
 		</div>
 	</div><!-- /.nav-collapse -->
