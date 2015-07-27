@@ -20,16 +20,16 @@
 	<!-- Tab panes -->
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active planner-pane" id="home">
-			<div class="form">
+			<div class="form planner-form" action="plan">
 				<div class="form-group">
-					<input class="form-control" type="text" placeholder="From">
+					<input class="form-control" type="text" name="fromPlace" placeholder="From">
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="text" placeholder="To">
+					<input class="form-control" type="text" name="toPlace" placeholder="To">
 				</div>
 				<div class="form-group form-inline">
 					<div class="btn-group">
-						<button type="button" class="btn btn-default planner-time-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<button value="Leave now" type="button" name="arriveBy" class="btn btn-default planner-time-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Leave now <i class="fa fa-caret-down"></i>
 						</button>
 						<ul class="dropdown-menu planner-time-menu">
@@ -39,7 +39,7 @@
 						</ul>
 					</div>
 					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-default planner-choice-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<button value="ATLtransit" type="button" class="btn btn-default planner-choice-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							ATLtransit <i class="fa fa-caret-down"></i>
 						</button>
 						<ul class="dropdown-menu planner-choice-menu">
@@ -57,8 +57,8 @@
 							<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Google
 						</label>
 					</div> -->
-					<div style="display:none; width:150px; margin-top:5px;" id="planner-time-input" class="input-group bootstrap-timepicker">
-						<input id="timepicker1" type="text" style="width:200;border-top-left-radius: 4px;border-bottom-left-radius: 4px;" class="form-control" aria-describedby="planner-time-icon">
+					<div style="display:none; width:117px; margin-top:5px;" id="planner-time-input" class="input-group bootstrap-timepicker">
+						<input id="planner-timepicker" type="text" data-minute-step="1" style="padding-left:4px; border-top-left-radius: 4px;border-bottom-left-radius: 4px;" class="form-control" aria-describedby="planner-time-icon">
 						<!-- <span class="glyphicon glyphicon-time" aria-hidden="true"></span> -->
 						<span class="input-group-addon glyphicon glyphicon-time" style="top:-0.5px" id="planner-time-icon" aria-hidden="true"></span>
 					</div>
@@ -70,7 +70,7 @@
 				</div>
 				<div class="form-group">
 					<button class="btn btn-primary" id="planner-go-btn">Plan my trip</button>
-					<button class="btn btn-default pull-right">More options <i class="fa fa-caret-right"></i></button>
+					<a href="{{ site.baseurl }}/plan" class="btn btn-default pull-right">More options <i class="fa fa-caret-right"></i></a>
 				</div>
 			</div>
 		</div>
@@ -78,57 +78,59 @@
 			<div class="form">
 				<div class="form-group text-center">
 					<div class="btn-group" data-toggle="buttons">
-						<label class="agency-arrivals-radio btn btn-default active">
-							<input type="radio" name="options" id="option1" autocomplete="off" checked> MARTA
+						<label class="agency-arrivals-radio btn btn-default">
+							<input type="radio" name="agency-arrivals-option" value="MARTA" id="option1" autocomplete="off"> MARTA
 						</label>
 						<label class="agency-arrivals-radio btn btn-default">
-							<input type="radio" name="options" id="option2" autocomplete="off"> CCT
+							<input type="radio" name="agency-arrivals-option" value="CCT" id="option2" autocomplete="off"> CCT
 						</label>
 						<label class="agency-arrivals-radio btn btn-default">
-							<input type="radio" name="options" id="option3" autocomplete="off"> GRTA
+							<input type="radio" name="agency-arrivals-option" value="GRTA" id="option3" autocomplete="off"> GRTA
 						</label>
 						<label class="agency-arrivals-radio btn btn-default">
-							<input type="radio" name="options" id="option3" autocomplete="off"> GCT
+							<input type="radio" name="agency-arrivals-option" value="GCT" id="option3" autocomplete="off"> GCT
 						</label>
 						<label class="agency-arrivals-radio btn btn-default">
-							<input type="radio" name="options" id="option3" autocomplete="off"> Streetcar
+							<input type="radio" name="agency-arrivals-option" value="ASC" id="option3" autocomplete="off"> ASC
 						</label>
 					</div>
 					
 				</div>
 				<div class="form-group">
-					<select class="form-control">
-						<option>Route 2 - Ponce de Leon</option>
+					<select id="next-arrivals-routes" class="arrivals-routes form-control" disabled>
+						<option>[Select Route]</option>
 					</select>
 				</div>
 				<div class="form-group">
-					<select class="form-control">
-						<option>Ponce de Leon @ Piedmont Ave</option>
+					<select id="next-arrivals-stops" class="arrivals-stops form-control" disabled>
+						<option>[Select Stop]</option>
 					</select>
 				</div>
 				<div class="form-group">
-					<button id="get-next-arrival" class="btn btn-primary">Find next arrival</button>
-					<p class="btn-align pull-right" id="next-arrival-msg" style="display:none; font-size: 1.3em; margin-bottom:20px;">24 min</p>
+					<button class="get-next-arrival btn btn-primary">Find next arrival</button>
+					<p class="btn-align pull-right arrival-msg" id="next-arrival-msg" style="display:none; font-size: 1.3em; margin-bottom:20px;"></p>
 				</div>
 			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane planner-pane" id="nearby">
 			<div class="form">
 				<div class="form-group">
-					<select class="form-control">
+					<select id="nearby-arrivals-routes" class="nearby arrivals-routes form-control" disabled>
 						<option>[Nearby routes]</option>
 					</select>
 				</div>
 				<div class="form-group">
-					<select class="form-control">
+					<select id="nearby-arrivals-stops" class="nearby arrivals-stops form-control" disabled>
 						<option>[Nearby stops]</option>
 					</select>
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="text" placeholder="Enter location...">
+					<input class="nearby form-control" type="text" placeholder="Enter location...">
 				</div>
 				<div class="form-group">
-					<button class="btn btn-primary">Use my location <i class="fa fa-location-arrow"></i></button>
+					<button class="nearby btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i></button>
+					<button class="get-next-arrival nearby btn btn-primary">Find next arrival</button>
+					<p class="btn-align pull-right arrival-msg" id="nearby-arrival-msg" style="display:none; font-size: 1.3em; margin-bottom:20px;"></p>
 				</div>
 			</div>
 		</div>
