@@ -1,11 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 body {
   font-family: 'Open Sans', 'sans-serif' !important;
-  background:#f0f0f0;
+  /*background: #EEFDF8 !important;*/
   padding-top: 60px;
 }
 .site-container{
-	min-height:240px;
+	min-height:294px;
+}
+.wellington {
+  background-color: #EFF6FD !important;
+  border-radius: 0 !important;
+  border-color: #006BB6 !important;
+  border-width: 0 0 5px 0 !important;
 }
 /*Navbar stuff*/
 .navbar-input-group {
@@ -197,3 +203,13 @@ body {
 
 
 #map { position:absolute; top:50px; bottom:0; width:100%; }
+
+
+/* Footer */
+.brighten {
+    opacity: 0.6;
+}
+
+.brighten:hover {
+    opacity: 1;
+}
