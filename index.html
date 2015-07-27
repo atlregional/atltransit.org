@@ -104,6 +104,7 @@ $(function(){
 	}
 	$('input[type=radio][name=agency-arrivals-option]').change(function(){
 		$('#next-arrivals-routes').html('<option>[Select Route]</option>');
+		$('#next-arrivals-stops').html('<option>[Select Stop]</option>');
 		console.log(this.value);
 		var agencyId = this.value;
 		var url = 'http://atlanta.onebusaway.org/api/api/where/routes-for-agency/' + agencyId + '.json?';
@@ -116,18 +117,39 @@ $(function(){
 			dataType: 'jsonp',
 			success: function(json){
 				console.log(json.data.list);
+				var routeTypeMap = {
+					'0': 'Tram',
+					'1': 'Subway',
+					'2': 'Rail',
+					'3': 'Bus',
+					'4': 'Ferry',
+					'5': 'Cable',
+					'6': 'Gondola',
+					'7': 'Funicular'
+				}
+				var routeNest = d3.nest()
+						.key(function(d) { return d.type; })
+						.sortValues(compareRouteNames)
+						.map(json.data.list);
+				console.log(routeNest);
 				var routes = json.data.list;
-				$.each(routes, function(i, route){
-					var option = $("<option></option>");
-					option.val(route.id);
-					option.text(route.shortName + ' - ' + route.longName);
-					$('#next-arrivals-routes').append(option);
+				$.each(routeNest, function(type, routes) {  
+					var optgroup = $('<optgroup>');
+					optgroup.attr('label',routeTypeMap[type]);
+					$.each(routes, function(i, route){
+						var option = $("<option></option>");
+						option.val(route.id);
+						option.text(route.shortName + ' - ' + route.longName);
+						optgroup.append(option);
+					});
+					$('#next-arrivals-routes').append(optgroup);
 				});
 				$('#next-arrivals-routes').prop('disabled', false);
 			}
 		});
 	})
 	$('#get-location').click(function(){
+		$(this).val(moment().unix());
 		if (geolocationBool && typeof lat !== 'undefined'){
 			var url = 'http://atlanta.onebusaway.org/api/api/where/routes-for-location.json?';
 			var params = {};
@@ -283,6 +305,7 @@ $(function(){
    });
 
 });
+function compareRouteNames(a,b){ return a.shortName - b.shortName; }
 function findBootstrapEnvironment() {
     var envs = ['xs', 'sm', 'md', 'lg'];
 
