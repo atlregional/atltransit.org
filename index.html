@@ -10,12 +10,12 @@ category: ''
 	<div class="col-xs-12 col-sm-5 col-md-4">
 		<div class="row">
 			<div class="col-xs-12 planner-widget">
-				<div class="well">
+				<div class="well wellington">
 					{% include planner-widget.html %}
 				</div>
 			</div>
 			<div class="col-xs-12">
-				<div class="well">
+				<div class="well wellington">
 					<p>Recent trips</p>
 					<ul class="list-group">
 						<li class="list-group-item"><a href=""><strong>90 Elizabeth St NE</strong> to <strong>40 Co...</strong><span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a></li>
@@ -83,13 +83,186 @@ category: ''
 </div> -->
 
 <script type="text/javascript">
-$('#timepicker1').timepicker();
+
+// Planner Widget Javascript
+$('#planner-timepicker').timepicker();
 $(function(){
-	$("#get-next-arrival").click(function(){
+	var geolocationBool = false;
+	var lat, lon;
+	// Geolocation
+	if ("geolocation" in navigator) {
+		/* geolocation is available */
+		console.log('geolocation');
+		geolocationBool = true;
+		navigator.geolocation.getCurrentPosition(function(position) {
+			lat = position.coords.latitude;
+			lon = position.coords.longitude;
+			console.log([position.coords.latitude, position.coords.longitude]);
+		});
+	} else {
+		/* geolocation IS NOT available */
+	}
+	$('input[type=radio][name=agency-arrivals-option]').change(function(){
+		$('#next-arrivals-routes').html('<option>[Select Route]</option>');
+		console.log(this.value);
+		var agencyId = this.value;
+		var url = 'http://atlanta.onebusaway.org/api/api/where/routes-for-agency/' + agencyId + '.json?';
+		var params = {};
+		// params.id = agencyId;
+		params.key = 'TEST';
+		url += serialize(params);
+		$.ajax({
+			url: url,
+			dataType: 'jsonp',
+			success: function(json){
+				console.log(json.data.list);
+				var routes = json.data.list;
+				$.each(routes, function(i, route){
+					var option = $("<option></option>");
+					option.val(route.id);
+					option.text(route.shortName + ' - ' + route.longName);
+					$('#next-arrivals-routes').append(option);
+				});
+				$('#next-arrivals-routes').prop('disabled', false);
+			}
+		});
+	})
+	$('#get-location').click(function(){
+		if (geolocationBool && typeof lat !== 'undefined'){
+			var url = 'http://atlanta.onebusaway.org/api/api/where/routes-for-location.json?';
+			var params = {};
+			params.lat = lat;
+			params.lon = lon;
+			params.radius = 2000;
+			params.key = 'TEST';
+			url += serialize(params);
+			$.ajax({
+				url: url,
+				dataType: 'jsonp',
+				success: function(json){
+					console.log(json.data);
+					var routeNest = d3.nest()
+						.key(function(d) { return d.agencyId; })
+						.map(json.data.list);
+					console.log(routeNest);
+					var agencyCount = 0;
+					var firstValue;
+					$.each(routeNest, function(agency, routes) {  
+						var optgroup = $('<optgroup>');
+						optgroup.attr('label',agency);
+						$.each(routes, function(i, route){
+							var option = $("<option></option>");
+							if (agencyCount === 0 || i === 0){
+								firstValue = route.id;
+							}
+							option.val(route.id);
+							option.text(route.shortName + ' - ' + route.longName);
+							optgroup.append(option);
+						});
+					    $('#nearby-arrivals-routes').append(optgroup);
+					    agencyCount++;
+					});
+					// $('#nearby-arrivals-routes').val(firstValue);
+					$('#nearby-arrivals-routes').prop('disabled', false);
+				}
+			});
+		}
+		else{
+			console.log('no geolocation available');
+		}
+	});
+	$('.arrivals-routes').change(function(){
+		var widgetClass;
+		if ($(this).hasClass('nearby')){
+			widgetClass = 'nearby';
+		}
+		else{
+			widgetClass = 'next';
+		}
+		console.log(this.value);
+		var routeId = this.value;
+		var url = 'http://atlanta.onebusaway.org/api/api/where/stops-for-route/' + routeId + '.json?';
+		var params = {};
+		params.key = 'TEST';
+		url += serialize(params);
+		$.ajax({
+			url: url,
+			dataType: 'jsonp',
+			success: function(json){
+				var closestDistance = 10000000000;
+				var closestStop = '';
+				console.log(json.data.references.stops);
+				$.each(json.data.references.stops, function(i, stop){
+					var distance = getDistanceFromLatLonInKm(stop.lat, stop.lon, lat, lon);
+					if (distance < closestDistance){
+						closestDistance = distance;
+						closestStop = stop.id;
+					}
+					var option = $("<option></option>");
+					option.val(stop.id);
+					option.text(stop.name);
+					$('#' + widgetClass + '-arrivals-stops').append(option);
+				});
+				$('#' + widgetClass + '-arrivals-stops').prop('disabled', false);
+				$('#' + widgetClass + '-arrivals-stops').val(closestStop);
+
+			}
+		});
+	});
+	$(".get-next-arrival").click(function(){
+		console.log($(this));
+		var stopId;
 		$("#next-arrival-msg").show();
+		var widgetClass;
+		if ($(this).hasClass('nearby')){
+			widgetClass = 'nearby';
+		}
+		else{
+			widgetClass = 'next';
+		}
+		stopId = $('#' + widgetClass + '-arrivals-stops').val();
+		var url = 'http://atlanta.onebusaway.org/api/api/where/arrivals-and-departures-for-stop/' + stopId + '.json?';
+		var params = {};
+		params.key = 'TEST';
+		url += serialize(params);
+		$.ajax({
+			url: url,
+			dataType: 'jsonp',
+			success: function(json){
+				var arrivals = json.data.entry.arrivalsAndDepartures;
+				// console.log(json.data.entry.arrivalsAndDepartures[0].predictedArrivalTime);
+				if (arrivals.length > 0){
+					var seconds = arrivals[0].predictedArrivalTime;
+					var diff = seconds - moment().unix();
+					var fromNow = moment(seconds).fromNow(true).replace('minutes', 'min');
+					$('#' + widgetClass + '-arrival-msg').text(fromNow);
+					$('#' + widgetClass + '-arrival-msg').show();
+				}
+				else{
+					$('#' + widgetClass + '-arrival-msg').text('No arrivals.');
+					$('#' + widgetClass + '-arrival-msg').show();
+				}
+			}
+		});
 	});
 	$("#planner-go-btn").click(function(){
-		window.location.href='{{ site.baseurl }}/plan';
+		var params = {};
+		var plannerChoice = $('.planner-choice-btn').val();
+		var origin = $('.planner-form input[name=fromPlace]').val();
+		var destination = $('.planner-form input[name=toPlace]').val();
+		var time = $('#planner-timepicker').val();
+		console.log(origin);
+		if (plannerChoice === 'Google Transit'){
+			params.saddr = origin;
+		    params.daddr = destination;
+		    params.dirflg = 'r';
+			var googUrl = 'http://maps.google.com/?';
+			window.location.href = googUrl + serialize(params);
+		}
+		else{
+
+		}
+		// window.location.href='{{ site.baseurl }}/plan' + params;
 	});
     $(".planner-time-menu li a").click(function(){
 
@@ -104,7 +277,7 @@ $(function(){
       }
    });
 
-    $(".planner-choice-menu li a").click(function(){
+   $(".planner-choice-menu li a").click(function(){
       $(".planner-choice-btn:first-child").html($(this).text() + ' <i class="fa fa-caret-down"></i>');
       $(".planner-choice-btn:first-child").val($(this).text());
    });
@@ -125,6 +298,34 @@ function findBootstrapEnvironment() {
             return env;
         }
     }
+}
+function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+	var R = 6371; // Radius of the earth in km
+	var dLat = deg2rad(lat2-lat1);  // deg2rad below
+	var dLon = deg2rad(lon2-lon1); 
+	var a = 
+	Math.sin(dLat/2) * Math.sin(dLat/2) +
+		Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+		Math.sin(dLon/2) * Math.sin(dLon/2)
+		; 
+	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+	var d = R * c; // Distance in km
+	return d;
+}
+function deg2rad(deg) {
+	return deg * (Math.PI/180);
+}
+serialize = function(obj, prefix) {
+	var str = [];
+	for(var p in obj) {
+	  if (obj.hasOwnProperty(p)) {
+	    var k = prefix ? prefix + "[" + p + "]" : p, v = obj[p];
+	    str.push(typeof v == "object" ?
+	      serialize(v, k) :
+	      encodeURIComponent(k) + "=" + encodeURIComponent(v));
+	  }
+	}
+	return str.join("&");
 }
 var bs = findBootstrapEnvironment();
 console.log(bs);
