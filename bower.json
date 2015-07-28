@@ -1,0 +1,31 @@
+{
+  "name": "atltransit.org",
+  "version": "0.0.0",
+  "homepage": "https://github.com/atlregional/atltransit.org",
+  "authors": [
+    "Landon Reed <landontreed@gmail.com>"
+  ],
+  "description": "ATLtransit.org transit website",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.6",
+    "bootstrap-3-timepickr": "git@github.com:rendom/bootstrap-3-timepicker#master",
+    "moment": "~2.10.5",
+    "js-cookie": "~2.0.3"
+  },
+  "overrides": {
+    "d3": {
+      "main": "**/*.min.js"
+    },
+    "moment": {
+      "main": "**/*.min.js"
+    }
+  }
+}
