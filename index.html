@@ -48,7 +48,7 @@ category: ''
 				</div>
 				<div class="panel-body">
 					<a href="#" class="thumbnail">
-						<img src="{{ site.baseurl }}/lib/images/breeze_card.png" alt="...">
+						<img src="{{ site.baseurl }}/assets/images/breeze_card.png" alt="...">
 					</a>
 				</div>
 			</div>
@@ -108,6 +108,10 @@ $(function(){
 		$('#next-arrivals-routes').html('<option value="">[Select Route]</option>');
 		$('#next-arrivals-stops').html('<option value="">[Select Stop]</option>');
 		console.log(this.value);
+		if (this.value === 'Nearby'){
+			$('#get-location').trigger('click');
+			return true;
+		}
 		var agencyId = this.value;
 		var url = 'http://atlanta.onebusaway.org/api/api/where/routes-for-agency/' + agencyId + '.json?';
 		var params = {};
@@ -118,7 +122,7 @@ $(function(){
 			url: url,
 			dataType: 'jsonp',
 			success: function(json){
-				console.log(json.data.list);
+				console.log(json.data);
 				var routeTypeMap = {
 					'0': 'Tram',
 					'1': 'Subway',
@@ -152,8 +156,9 @@ $(function(){
 	});
 	// Use location 
 	$('#get-location').click(function(){
-		$('#nearby-arrivals-routes').html('<option value="">[Select Route]</option>');
-		$('#nearby-arrivals-stops').html('<option value="">[Select Stop]</option>');
+		$('#next-arrivals-agencies').val('Nearby');
+		$('#next-arrivals-routes').html('<option value="">[Select Route]</option>');
+		$('#next-arrivals-stops').html('<option value="">[Select Stop]</option>');
 		$(this).val(moment().unix());
 		if (geolocationBool && typeof lat !== 'undefined'){
 			var url = 'http://atlanta.onebusaway.org/api/api/where/routes-for-location.json?';
@@ -186,11 +191,11 @@ $(function(){
 							option.text(route.shortName + ' - ' + route.longName);
 							optgroup.append(option);
 						});
-					    $('#nearby-arrivals-routes').append(optgroup);
+					    $('#next-arrivals-routes').append(optgroup);
 					    agencyCount++;
 					});
-					// $('#nearby-arrivals-routes').val(firstValue);
-					$('#nearby-arrivals-routes').prop('disabled', false);
+					// $('#next-arrivals-routes').val(firstValue);
+					$('#next-arrivals-routes').prop('disabled', false);
 				}
 			});
 		}
@@ -201,7 +206,7 @@ $(function(){
 	// Select route change
 	$('.arrivals-routes').change(function(){
 		var widgetClass;
-		$('#stop-code').val('');
+		// $('#stop-code').val('');
 		if ($(this).hasClass('nearby')){
 			widgetClass = 'nearby';
 		}
@@ -230,7 +235,9 @@ $(function(){
 					}
 					var option = $("<option></option>");
 					option.val(stop.id);
-					option.text(stop.name);
+					var name = stop.name.replace(/(@)(?!\s)/g, ' @ ')
+					var name = name.replace(/(\/)(?!\s)/g, ' / ')
+					option.text(toTitleCase(name));
 					$('#' + widgetClass + '-arrivals-stops').append(option);
 				});
 				$('#' + widgetClass + '-arrivals-stops').prop('disabled', false);
@@ -242,22 +249,27 @@ $(function(){
 	$('.arrivals-routes').change(function(){
 		$('#stop-code').val('');
 	});
-	// Find next arrival (next and nearby)
-	$(".get-next-arrival").click(function(){
-		console.log($(this));
-		var stopId, routeId;
-		$("#next-arrival-msg").show();
-		var widgetClass;
+	$('.get-next-stop-code').click(function(){
+		var widgetClass, stopId;
+		// $('#stop-code').val('');
 		if ($(this).hasClass('nearby')){
 			widgetClass = 'nearby';
 		}
 		else{
 			widgetClass = 'next';
 		}
-		stopId = $('#' + widgetClass + '-arrivals-stops').val();
 		var stopCode = $('#stop-code').val();
 		console.log(stopCode);
-		if (widgetClass === 'next' && stopCode !== ''){
+		console.log(widgetClass);
+		if (widgetClass === 'nearby' && stopCode !== ''){
+			// $('#next-arrivals-agencies')
+			// 	.val('');
+			// $('#next-arrivals-routes')
+			// 	.attr('disabled', true)
+			// 	.html('<option value="">[Select Route]</option>');
+			// $('#next-arrivals-stops')
+			// 	.attr('disabled', true)
+			// 	.html('<option value="">[Select Stop]</option>');
 			var url = 'http://atlanta.onebusaway.org/api/api/where/stops-for-location.json?';
 			var params = {};
 			params.query = stopCode;
@@ -292,30 +304,54 @@ $(function(){
 									var seconds = arrivals[0].predictedArrivalTime || arrivals[0].scheduledArrivalTime;
 									var diff = seconds - moment().unix();
 									var fromNow = moment(seconds).fromNow(true).replace('minutes', 'min');
-									$('#' + widgetClass + '-arrival-msg').text(fromNow);
-									$('#' + widgetClass + '-arrival-msg').show();
+									$('#nearby-arrival-msg').text(fromNow);
+									$('#nearby-arrival-msg').show();
 								}
 								else{
-									$('#' + widgetClass + '-arrival-msg').text('No arrivals.');
-									$('#' + widgetClass + '-arrival-msg').show();
+									$('#nearby-arrival-msg').text('No arrivals.');
+									$('#nearby-arrival-msg').show();
 								}
 								
 							}
 						});
 					}
 					else{
-						$('#' + widgetClass + '-arrival-msg').text('Invalid stop ID.');
-						$('#' + widgetClass + '-arrival-msg').show();
+						// console.log('Invalid stop ID.')
+						$('#nearby-arrival-msg').text('Invalid stop ID.');
+						$('#nearby-arrival-msg').show();
 					}
 					return true;
 				}
 			});
 			
 		}
+	});
+	// Find next arrival (next and nearby)
+	$(".get-next-arrival").click(function(){
+		console.log($(this));
+		var stopId, routeId;
+		$("#next-arrival-msg").show();
+		var widgetClass;
+		if ($(this).hasClass('nearby')){
+			widgetClass = 'nearby';
+		}
+		else{
+			widgetClass = 'next';
+		}
+		stopId = $('#' + widgetClass + '-arrivals-stops').val();
 		routeId = $('#' + widgetClass + '-arrivals-routes').val();
+		agencyId = $('#next-arrivals-agencies').val();
 		console.log(stopId);
 		if (stopId === ''){
-			$('#' + widgetClass + '-arrival-msg').text('Select route and stop.');
+			$('#' + widgetClass + '-arrival-msg').text('Select route / stop.');
+			$('#' + widgetClass + '-arrival-msg')
+				.show()
+				// .delay(1000)
+				// .fadeOut();
+			return true;
+		}
+		if (agencyId === '' && widgetClass === 'next' && stopId === ''){
+			$('#' + widgetClass + '-arrival-msg').text('Select agency.');
 			$('#' + widgetClass + '-arrival-msg')
 				.show()
 				// .delay(1000)
@@ -331,7 +367,7 @@ $(function(){
 			dataType: 'jsonp',
 			success: function(json){
 				var arrivals = json.data.entry.arrivalsAndDepartures;
-				// console.log(json.data.entry.arrivalsAndDepartures[0].predictedArrivalTime);
+				console.log(json.data.entry.arrivalsAndDepartures[0]);
 				if (arrivals.length > 0){
 					var seconds = arrivals[0].predictedArrivalTime || arrivals[0].scheduledArrivalTime;
 					var diff = seconds - moment().unix();
@@ -416,6 +452,17 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
 }
 function deg2rad(deg) {
 	return deg * (Math.PI/180);
+}
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+      if (/LCI|CTP|TDM|CSX|^NW$|^NE$|^SE$|^SW$|MARTA|^FY$|^ARC$|^SR$|^II$|^STP$|^III$|^US$|CMAQ/g.test(txt))
+        return txt
+      else if (/^IN$|^OF$|^AND$|^FOR$/g.test(txt)){
+        return txt.toLowerCase()
+      }
+      else
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
 }
 serialize = function(obj, prefix) {
 	var str = [];

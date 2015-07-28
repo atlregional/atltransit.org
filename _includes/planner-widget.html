@@ -7,13 +7,18 @@
 		</a>
 	</li>
 	<li role="presentation">
-		<a href="#profile" class="planner-tab" aria-controls="profile" role="tab" data-toggle="tab">
-			Next arrivals
+		<a href="#next-arrival" class="planner-tab" aria-controls="profile" role="tab" data-toggle="tab">
+			Next arrival
 		</a>
 	</li>
-	<li role="presentation">
+	<!-- <li role="presentation">
 		<a href="#nearby" class="planner-tab" aria-controls="nearby" role="tab" data-toggle="tab">
 			Nearby
+		</a>
+	</li> -->
+	<li role="presentation">
+		<a href="#by-stop-id" class="planner-tab" aria-controls="nearby" role="tab" data-toggle="tab">
+			Stop ID
 		</a>
 	</li>
 	</ul>
@@ -74,7 +79,7 @@
 				</div>
 			</div>
 		</div>
-		<div role="tabpanel" class="tab-pane planner-pane" id="profile">
+		<div role="tabpanel" class="tab-pane planner-pane" id="next-arrival">
 			<div class="form">
 				<!-- <div class="form-group text-center">
 					<div class="btn-group" data-toggle="buttons">
@@ -104,13 +109,15 @@
 							<option value="GRTA">GRTA</option>
 							<option value="GCT">GCT</option>
 							<option value="ASC">Atlanta Streetcar</option>
+							<option value="Nearby">Nearby routes</option>
 						</select>
 					</div>
 					<div class="col-xs-2">
 						<p style="margin-top:6px;">OR</p>
 					</div>
 					<div class="form-group text-center col-xs-4">
-						<input class="nearby form-control" id="stop-code" type="text" placeholder="Stop ID">
+						<!-- <input class="nearby form-control" id="stop-code" type="text" placeholder="Stop ID"> -->
+						<button class="nearby btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Nearby</button>
 					</div>
 				</div>
 				<!-- <div class="row">
@@ -142,11 +149,11 @@
 				</div>
 			</div>
 		</div>
-		<div role="tabpanel" class="tab-pane planner-pane" id="nearby">
+		<!-- <div role="tabpanel" class="tab-pane planner-pane" id="nearby">
 			<div class="form">
 				<div class="row">
 					<div class="form-group col-xs-4">
-						<button class="nearby btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Nearby</button>
+						<button class="nearby btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Find me</button>
 					</div>
 					<div class="col-xs-2">
 						<p style="margin-top:6px;">OR</p>
@@ -159,17 +166,58 @@
 				<div class="row">
 					<div class="col-xs-12 form-group">
 						<select id="nearby-arrivals-routes" class="nearby arrivals-routes form-control" disabled>
-							<option>[Nearby routes]</option>
+							<option value="">[Nearby routes]</option>
 						</select>
 					</div>
 					<div class="col-xs-12 form-group">
 						<select id="nearby-arrivals-stops" class="nearby arrivals-stops form-control" disabled>
-							<option>[Nearby stops]</option>
+							<option value="">[Nearby stops]</option>
 						</select>
 					</div>
 				</div>
 				<div class="form-group">	
 					<button class="get-next-arrival nearby btn btn-primary">Find next arrival</button>
+					<p class="btn-align pull-right arrival-msg" id="nearby-arrival-msg" style="display:none; font-size: 1.3em; margin-bottom:20px;"></p>
+				</div>
+			</div>
+		</div> -->
+		<div role="tabpanel" class="tab-pane planner-pane" id="by-stop-id">
+			<div class="form">
+				<div class="row">
+					<div class="form-group col-xs-6">
+						<p class="text-right" style="margin-top:6px;">Enter stop ID</p>
+					</div>
+					<div class="form-group col-xs-6">
+						<input class="nearby form-control" id="stop-code" type="text" placeholder="103134">
+					</div>
+					<!-- <div class="col-xs-2">
+						<p style="margin-top:6px;">OR</p>
+					</div> -->
+					<!-- <div class="form-group text-center col-xs-4">
+						<button class="nearby btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Nearby</button>
+					</div> -->
+					<!-- <div class="col-xs-2">
+						<p style="margin-top:6px;">OR</p>
+					</div>
+					<div class="form-group col-xs-6">
+						<input class="nearby form-control" type="text" placeholder="Enter location">
+					</div> -->
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 form-group">
+						<select style="visibility:hidden" id="nearby-arrivals-routes" class="nearby arrivals-routes form-control" disabled>
+							<option value="">[Nearby routes]</option>
+						</select>
+					</div>
+					<div class="col-xs-12 form-group">
+						<select style="visibility:hidden" id="nearby-arrivals-stops" class="nearby arrivals-stops form-control" disabled>
+							<option value="">[Nearby stops]</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">	
+					<button class="get-next-stop-code nearby btn btn-primary">Find next arrival</button>
 					<p class="btn-align pull-right arrival-msg" id="nearby-arrival-msg" style="display:none; font-size: 1.3em; margin-bottom:20px;"></p>
 				</div>
 			</div>
