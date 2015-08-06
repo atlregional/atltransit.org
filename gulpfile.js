@@ -17,7 +17,7 @@ var paths = {
   bower   : './bower_components'
 };
 var messages = {
-  jekyllBuild : '<span style="color: grey">Running:</span> $ jekyll build'
+  jekyllBuild : '<span style="color: grey">Running:</span> $ jekyll build --watch'
 };
 var replaceFileName = {
   css: [ project.name + '.css', project.name + '.min.css' ],
@@ -90,16 +90,16 @@ gulp.task('js', function() {
     .pipe(gulp.dest(paths.build + '/js'));
 });
 // Lint JavaScript
-// gulp.task('jshint', function() {
-//   return gulp.src(paths.build + '/js/**/*.js')
-//     .pipe(reload({
-//       stream: true,
-//       once: true
-//     }))
-//     .pipe($.jshint())
-//     .pipe($.jshint.reporter('jshint-stylish'))
-//     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
-// });
+gulp.task('jshint', function() {
+  return gulp.src(paths.build + '/js/**/*.js')
+    .pipe(reload({
+      stream: true,
+      once: true
+    }))
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+});
 
 // less or sass
 gulp.task(cssMetaType(), function() {
@@ -176,23 +176,38 @@ gulp.task('build',function(cb) {
   	'csslint',
   	'jekyll',
   	// 'bower-install',
+    // 'watch',
   	cb
   );
 });
 
+// watch
+// ========================
+gulp.task('watch', function() {
+  // Watch .scss files
+  gulp.watch('assets/css/**/*.css', ['jekyll', reload]);
+  // Watch .js files
+  gulp.watch('src/js/**/*.js', ['js']);
+  // Watch .html files and posts
+  gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'], ['jekyll']);
+
+  gulp.watch([paths.source + '/**/*.html'], ['jekyll', reload]);
+  gulp.watch([paths.asset + '/' + cssMetaType() + '/**/*'], [cssMetaType(),'jekyll', reload]);
+  gulp.watch([paths.asset + '/js/**/*.js', paths.asset + '/js/*.js'],
+    // ['jshint'],
+    ['js', 'jekyll', reload]);
+  gulp.watch([paths.asset + '/images/**/*'], reload);
+});
+
 // default
 // ========================
-gulp.task('default', ['build'], function() {
+gulp.task('default', ['build', 'watch'], function() {
   browserSync({
     notify: true,
     logPrefix: project.name,
     https: false,
     server: paths.pub
   });
-  gulp.watch([paths.source + '/**/*.html'], ['jekyll', reload]);
-  gulp.watch([paths.asset + '/' + cssMetaType() + '/**/*'], [cssMetaType(),'jekyll', reload]);
-  gulp.watch([paths.asset + '/js/**/*.js'], ['jshint'],['js', reload]);
-  gulp.watch([paths.asset + '/images/**/*'], reload);
 });
 
 // minify

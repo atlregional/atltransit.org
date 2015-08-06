@@ -17,8 +17,14 @@
   "dependencies": {
     "d3": "~3.5.6",
     "bootstrap-3-timepickr": "git@github.com:rendom/bootstrap-3-timepicker#master",
+    "bootstrap3-typeahead": "git@github.com:bassjobsen/Bootstrap-3-Typeahead.git#master",
     "moment": "~2.10.5",
-    "js-cookie": "~2.0.3"
+    "js-cookie": "~2.0.3",
+    "font-awesome": "~4.4.0",
+    "datatables": "~1.10.7",
+    "typeahead.js": "~0.11.1",
+    "select2-bootstrap-css": "~1.4.6",
+    "select2": "~4.0.0"
   },
   "overrides": {
     "d3": {
@@ -27,5 +33,8 @@
     "moment": {
       "main": "**/*.min.js"
     }
+  },
+  "resolutions": {
+    "select2": "~4.0.0"
   }
 }
