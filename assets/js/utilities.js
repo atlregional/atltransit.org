@@ -15,6 +15,34 @@ function findBootstrapEnvironment() {
         }
     }
 }
+// Extended disable function
+jQuery.fn.extend({
+    disable: function(state) {
+        return this.each(function() {
+            var $this = $(this);
+            if($this.is('input, button, a'))
+              this.disabled = state;
+            else
+              $this.toggleClass('disabled', state);
+        });
+    }
+});
+function trimHeadsign(headsign){
+	headsign = headsign.split('-').length > 1 ? headsign.split('-')[1] : headsign;
+  headsign = headsign.split('TO').length > 1 ? headsign.split('TO')[1] : headsign;
+	headsign = headsign.split('STATION').length > 1 ? headsign.split('STATION')[0] : headsign;
+	headsign = toTitleCase(headsign);
+	return headsign;
+}
+function cleanStopName(name){
+  name = name
+          .replace(/(@)(?!\s)/g, ' @ ')
+          .replace(/(\/)(?!\s)/g, ' / ')
+          .replace(/STATION/g, '');
+  name = toTitleCase(name);
+  return name;
+
+}
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
 	var R = 6371; // Radius of the earth in km
 	var dLat = deg2rad(lat2-lat1);  // deg2rad below
@@ -33,7 +61,7 @@ function deg2rad(deg) {
 }
 function toTitleCase(str) {
     return str.replace(/\w\S*/g, function(txt){
-      if (/LCI|CTP|TDM|CSX|^NW$|^NE$|^SE$|^SW$|MARTA|^FY$|^ARC$|^SR$|^II$|^STP$|^III$|^US$|CMAQ/g.test(txt))
+      if (/LCI|CTP|TDM|CSX|^NW$|^NE$|^SE$|^SW$|MARTA|GWCC|CNN|^FY$|^ARC$|^SR$|^II$|^STP$|^III$|^US$|CMAQ/g.test(txt))
         return txt
       else if (/^IN$|^OF$|^AND$|^FOR$/g.test(txt)){
         return txt.toLowerCase()
