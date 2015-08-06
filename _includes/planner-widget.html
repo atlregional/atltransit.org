@@ -1,12 +1,12 @@
 
 	<!-- Nav tabs -->
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
-	<li role="presentation" class="active">
+	<li role="presentation" class="planner-tab-li active">
 		<a href="#home" class="planner-tab" aria-controls="home" role="tab" data-toggle="tab">
 			Plan trip
 		</a>
 	</li>
-	<li role="presentation">
+	<li role="presentation" class="planner-tab-li next" id="next-arrival-tab">
 		<a href="#next-arrival" class="planner-tab" aria-controls="profile" role="tab" data-toggle="tab">
 			Next arrival
 		</a>
@@ -16,7 +16,7 @@
 			Nearby
 		</a>
 	</li> -->
-	<li role="presentation">
+	<li role="presentation" class="planner-tab-li stop-code">
 		<a href="#by-stop-id" class="planner-tab" aria-controls="nearby" role="tab" data-toggle="tab">
 			Stop ID
 		</a>
@@ -26,11 +26,19 @@
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active planner-pane" id="home">
 			<div class="form planner-form" action="plan">
-				<div class="form-group">
-					<input class="form-control" type="text" name="fromPlace" placeholder="From">
+				<div class="form-group hidden">
+					<input class="form-control" type="text" name="fromPlace" >
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="text" name="toPlace" placeholder="To">
+					<!-- <select class="form-control js-data-example-ajax input-lg select2" id="to" data-placeholder="From"></select> -->
+					<input class="form-control js-data-example-ajax select2" id="to" placeholder="From"/>
+				</div>
+				<div class="form-group hidden">
+					<input class="form-control" type="text" name="toPlace" >
+				</div>
+				<div class="form-group">
+					<!-- <select class="form-control js-data-example-ajax" id="from" data-placeholder="To"></select> -->
+					<input class="form-control js-data-example-ajax" id="from" placeholder="To"/>
 				</div>
 				<div class="form-group form-inline">
 					<div class="btn-group">
@@ -65,7 +73,7 @@
 					<div style="display:none; width:117px; margin-top:5px;" id="planner-time-input" class="input-group bootstrap-timepicker">
 						<input id="planner-timepicker" type="text" data-minute-step="1" style="padding-left:4px; border-top-left-radius: 4px;border-bottom-left-radius: 4px;" class="form-control" aria-describedby="planner-time-icon">
 						<!-- <span class="glyphicon glyphicon-time" aria-hidden="true"></span> -->
-						<span class="input-group-addon glyphicon glyphicon-time" style="top:-0.5px" id="planner-time-icon" aria-hidden="true"></span>
+						<span class="input-group-addon input-group-glyph glyphicon glyphicon-time" id="planner-time-icon" aria-hidden="true"></span>
 					</div>
 					<!-- <select class="form-control">
 						<option style="background-image:url(http://iconshow.me/media/images/ui/ios7-icons/png/16/clock-outline.png);">Leave now</option>
@@ -81,146 +89,152 @@
 		</div>
 		<div role="tabpanel" class="tab-pane planner-pane" id="next-arrival">
 			<div class="form">
-				<!-- <div class="form-group text-center">
-					<div class="btn-group" data-toggle="buttons">
-						<label class="agency-arrivals-radio btn btn-default">
-							<input type="radio" name="agency-arrivals-option" value="MARTA" id="option1" autocomplete="off"> MARTA
-						</label>
-						<label class="agency-arrivals-radio btn btn-default" disabled>
-							<input type="radio" name="agency-arrivals-option" value="CCT" id="option2" autocomplete="off"> CCT
-						</label>
-						<label class="agency-arrivals-radio btn btn-default">
-							<input type="radio" name="agency-arrivals-option" value="GRTA" id="option3" autocomplete="off"> GRTA
-						</label>
-						<label class="agency-arrivals-radio btn btn-default" disabled>
-							<input type="radio" name="agency-arrivals-option" value="GCT" id="option3" autocomplete="off"> GCT
-						</label>
-						<label class="agency-arrivals-radio btn btn-default" disabled>
-							<input type="radio" name="agency-arrivals-option" value="ASC" id="option3" autocomplete="off"> ASC
-						</label>
-					</div>
-				</div> -->
-				<div class="row">
-					<div class="col-xs-6 form-group">
-						<select id="next-arrivals-agencies" class="arrivals-agencies col-xs-12 form-control">
-							<option value="">[Select Agency]</option>
-							<option value="MARTA">MARTA</option>
-							<option value="CCT">CCT</option>
-							<option value="GRTA">GRTA</option>
-							<option value="GCT">GCT</option>
-							<option value="ASC">Atlanta Streetcar</option>
-							<option value="Nearby">Nearby routes</option>
-						</select>
-					</div>
-					<div class="col-xs-2">
-						<p style="margin-top:6px;">OR</p>
-					</div>
-					<div class="form-group text-center col-xs-4">
-						<!-- <input class="nearby form-control" id="stop-code" type="text" placeholder="Stop ID"> -->
-						<button class="nearby btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Nearby</button>
-					</div>
-				</div>
-				<!-- <div class="row">
-					<div class="form-group col-xs-4">
-						<button class="nearby btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Nearby</button>
-					</div>
-					<div class="col-xs-2">
-						<p style="margin-top:6px;">OR</p>
-					</div>
-					<div class="form-group col-xs-6">
-						<input class="nearby form-control" type="text" placeholder="Enter location">
-					</div>
-				</div> -->
-				<div class="row">
-					<div class="col-xs-12 form-group">
-						<select id="next-arrivals-routes" class="arrivals-routes form-control" disabled>
-							<option>[Select Route]</option>
-						</select>
-					</div>
-					<div class="col-xs-12 form-group">
-						<select id="next-arrivals-stops" class="arrivals-stops form-control" disabled>
-							<option>[Select Stop]</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<button class="get-next-arrival btn btn-primary">Find next arrival</button>
-					<p class="btn-align pull-right arrival-msg" id="next-arrival-msg" style="display:none; font-size: 1.3em; margin-bottom:20px;"></p>
-				</div>
+				<!-- Carousel
+				================================================== -->
+				<div id="next-carousel" class="carousel slide">
+				     <!-- Indicators -->         
+				    <div class="carousel-inner" id="next-carousel-inner">           
+				        <div class="item active">
+				            <div class="row">
+								<div class="col-xs-6 form-group">
+									<select id="next-arrivals-agencies" class="arrivals-agencies col-xs-12 form-control">
+										<option value="" selected>[Select Agency]</option>
+										<option disabled value="MARTA">MARTA</option>
+										<option disabled value="CCT">CCT</option>
+										<option disabled value="GRTA">GRTA</option>
+										<option disabled value="GCT">GCT</option>
+										<option disabled value="ASC">ATL Streetcar</option>
+										<option disabled value="GATECH">Georgia Tech</option>
+										<option value="Nearby">Nearby routes</option>
+									</select>
+								</div>
+								<div class="col-xs-2">
+									<p style="margin-top:6px;">OR</p>
+								</div>
+								<div class="form-group text-center col-xs-4">
+									<button class="btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Near</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-7 form-group">
+									<select id="next-arrivals-routes" class="arrivals-routes form-control" disabled>
+										<option>[Select Route]</option>
+									</select>
+								</div>
+								<div class="col-xs-5 form-group">
+									<select id="next-arrivals-trips" class="arrivals-trips form-control" disabled>
+										<option>[Select Direction]</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 form-group">
+									<select id="next-arrivals-stops" class="arrivals-stops form-control" disabled>
+										<option>[Select Stop]</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<a class="get-arrivals next btn btn-primary disabled" id="next-arrivals-btn" href="#next-carousel" data-slide="next">Find next arrival</a>
+									<a class="get-schedules btn btn-default pull-right disabled" href="#next-carousel" data-slide="next"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Schedules</a>
+								</div>
+							</div>
+				        </div> <!-- End Item -->
+				        <div class="item">
+				        	<div class="row">
+				        		<div class="col-xs-2">	
+									<a class="btn btn-default back-btn" id="next-back-btn" href="#next-carousel" data-slide="prev">Back</a>
+								</div>
+								<div class="col-xs-8">
+									<p class="text-center stop-name" id="next-stop-name"></p>
+									<p class="text-center last-updated" id="next-last-updated"></p>
+								</div>
+								<div class="col-xs-2">
+									<button class="get-arrivals next btn btn-primary pull-right"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+								</div>
+							</div>
+				            <div class="row">
+								<div class="next-arrivals table-responsive col-xs-12">
+									<p class="arrival-msg" id="next-arrival-msg"></p>
+									<table class="table table-hover arrivals-table" id="next-arrivals-table"></table>
+								</div>
+							</div>
+				         </div>  
+				        <!-- <div class="item">
+				            <blockquote>
+				              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				              <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+				            </blockquote>
+				        </div>   -->                                                                                 
+				    </div> 
+				   <!-- <div class="carousel-controls"> -->
+				      
+				      
+				  <!-- </div>                -->
+				                                                
+				</div><!-- End Carousel --> 
 			</div>
 		</div>
-		<!-- <div role="tabpanel" class="tab-pane planner-pane" id="nearby">
-			<div class="form">
-				<div class="row">
-					<div class="form-group col-xs-4">
-						<button class="nearby btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Find me</button>
-					</div>
-					<div class="col-xs-2">
-						<p style="margin-top:6px;">OR</p>
-					</div>
-					<div class="form-group col-xs-6">
-						<input class="nearby form-control" type="text" placeholder="Enter location">
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-xs-12 form-group">
-						<select id="nearby-arrivals-routes" class="nearby arrivals-routes form-control" disabled>
-							<option value="">[Nearby routes]</option>
-						</select>
-					</div>
-					<div class="col-xs-12 form-group">
-						<select id="nearby-arrivals-stops" class="nearby arrivals-stops form-control" disabled>
-							<option value="">[Nearby stops]</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">	
-					<button class="get-next-arrival nearby btn btn-primary">Find next arrival</button>
-					<p class="btn-align pull-right arrival-msg" id="nearby-arrival-msg" style="display:none; font-size: 1.3em; margin-bottom:20px;"></p>
-				</div>
-			</div>
-		</div> -->
 		<div role="tabpanel" class="tab-pane planner-pane" id="by-stop-id">
 			<div class="form">
-				<div class="row">
-					<div class="form-group col-xs-6">
-						<p class="text-right" style="margin-top:6px;">Enter stop ID</p>
-					</div>
-					<div class="form-group col-xs-6">
-						<input class="nearby form-control" id="stop-code" type="text" placeholder="103134">
-					</div>
-					<!-- <div class="col-xs-2">
-						<p style="margin-top:6px;">OR</p>
-					</div> -->
-					<!-- <div class="form-group text-center col-xs-4">
-						<button class="nearby btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Nearby</button>
-					</div> -->
-					<!-- <div class="col-xs-2">
-						<p style="margin-top:6px;">OR</p>
-					</div>
-					<div class="form-group col-xs-6">
-						<input class="nearby form-control" type="text" placeholder="Enter location">
-					</div> -->
-				</div>
-
-				<div class="row">
-					<div class="col-xs-12 form-group">
-						<select style="visibility:hidden" id="nearby-arrivals-routes" class="nearby arrivals-routes form-control" disabled>
-							<option value="">[Nearby routes]</option>
-						</select>
-					</div>
-					<div class="col-xs-12 form-group">
-						<select style="visibility:hidden" id="nearby-arrivals-stops" class="nearby arrivals-stops form-control" disabled>
-							<option value="">[Nearby stops]</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">	
-					<button class="get-next-stop-code nearby btn btn-primary">Find next arrival</button>
-					<p class="btn-align pull-right arrival-msg" id="nearby-arrival-msg" style="display:none; font-size: 1.3em; margin-bottom:20px;"></p>
-				</div>
+				<!-- Carousel
+				================================================== -->
+				<div id="test-carousel" class="carousel slide">
+				     <!-- Indicators -->         
+				    <div class="carousel-inner" id="stop-code-carousel-inner">           
+				        <div class="item active">
+				        	<div class="row">
+				        		<div class="col-xs-6">	
+									<a class="get-arrivals stop-code btn btn-primary disabled" id="stop-code-arrivals-btn" href="#test-carousel" data-slide="next">Find next arrival</a>
+								</div>
+								<!-- <div class="form-group col-xs-6">
+									<p class="text-right" style="margin-top:6px;">Enter ID</p>
+								</div> -->
+								<div class="form-group col-xs-6">
+									<input class="form-control typeahead" id="stop-code" type="number" placeholder="103134">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<p id="stop-code-error-msg"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 form-group">
+									<select style="visibility:hidden" id="nearby-arrivals-routes" class="arrivals-routes form-control" disabled>
+										<option value="">[Nearby routes]</option>
+									</select>
+								</div>
+								<div class="col-xs-12 form-group">
+									<select style="visibility:hidden" id="nearby-arrivals-stops" class="arrivals-stops form-control" disabled>
+										<option value="">[Nearby stops]</option>
+									</select>
+								</div>
+							</div>
+				        </div>
+				        <div class="item">
+				        	<div class="row">
+				        		<div class="col-xs-2">	
+									<a class="btn btn-default back-btn" id="stop-code-back-btn" href="#test-carousel" data-slide="prev">Back</a>
+								</div>
+								<div class="col-xs-8">
+									<p class="text-center stop-name" id="stop-code-stop-name"></p>
+									<p class="text-center last-updated" id="stop-code-last-updated"></p>
+								</div>
+								<div class="col-xs-2">
+									<button class="get-arrivals stop-code btn btn-primary pull-right"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+								</div>
+							</div>
+				            <div class="row">
+								<div class="stop-code-arrivals table-responsive col-xs-12">
+									<p class="arrival-msg" id="stop-code-arrival-msg"></p>
+									<table class="table table-hover  arrivals-table" id="stop-code-arrivals-table"></table>
+								</div>
+							</div>
+				         </div> <!-- End Item --> 
+				    </div>
+				</div> <!-- End Carousel --> 
 			</div>
 		</div>
-
 	</div> <!-- end tab-content -->
