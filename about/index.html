@@ -1,5 +1,12 @@
 ---
-layout: default
+layout: page
 title: About
 category: ''
 ---
+<!-- <h1>Hello</h1> -->
+{% capture about_content %}
+  {% include about_content.markdown %}
+{% endcapture %}
+{{ about_content | markdownify }}
+
+{% include about_content.markdown %}
