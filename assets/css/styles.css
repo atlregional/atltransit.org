@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 body {
   font-family: 'Open Sans', 'sans-serif' !important;
   /*background: #EEFDF8 !important;*/
@@ -16,6 +17,15 @@ body {
 /*Navbar stuff*/
 .navbar-input-group {
   font-size: 0px; /*removes whitespace between button and input*/
+}
+
+.navbar-collapse {
+  max-height: 500px !important;
+  /*overflow: scroll;*/
+}
+
+.input-group-glyph {
+  top: -0.5px !important;
 }
 
 .navbar-input-group input {
@@ -127,7 +137,7 @@ body {
   background-color: #fff;
 }
 .mega-dropdown-menu .dropdown-header {
-  padding: 3px 10px;
+  padding: 3px 10px !important;
 }
 .mega-dropdown-menu .dropdown-header > a {
   color: #428bca;
@@ -201,6 +211,15 @@ body {
 
 }
 
+.stop-name {
+  font-size: small;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.last-updated {
+  font-size: xx-small;
+  margin-bottom: 0px;
+}
 
 #map { position:absolute; top:50px; bottom:0; width:100%; }
 
@@ -212,4 +231,147 @@ body {
 
 .brighten:hover {
     opacity: 1;
+}
+
+
+/* Box replace */
+.replace div {
+    height: 200px;
+    -webkit-transition: width 0.3s ease, margin 0.3s ease;
+    -moz-transition: width 0.3s ease, margin 0.3s ease;
+    -o-transition: width 0.3s ease, margin 0.3s ease;
+    transition: width 0.3s ease, margin 0.3s ease;
+}
+
+.col-md-0 {
+    width: 0%;
+    /*display: none;*/
+    overflow: hidden;
+    visibility: hidden;
+    display: none;
+    height: 0px;
+}
+
+#col1 {
+    background-color: #A6BFBA;
+}
+
+#col2 {
+    background-color: #DE4124;
+}
+/*#col2.col-md-0 {
+    display: none;
+}*/
+#trig {
+    margin: 0px;
+}
+
+.replace .col-md-0 + [class*="span"]{
+    margin-left: 0;
+}
+
+div.new_html_code {
+  width:150px;
+  height:100px;
+  min-width:150px;
+  min-height:100px;
+  max-width:200px;
+  max-height:100px;
+  overflow:hidden;
+  display:block;
+  border:1px solid red;
+}
+
+
+/* Testimonial Carousel */
+{ padding-top: 50px; }
+
+/*#####################
+Additional Styles (required)
+######################*/
+
+.carousel-inner .item img {
+  width:100%;
+  height:100%;
+}
+.item .thumbnail {
+  margin-bottom:0;
+}
+.carousel-control-test.left, .carousel-control-test.right {
+  background-image:none !important;
+}
+.carousel-control-test {
+  background: #ddd;
+  color:#999;
+  padding: 4px 0;
+  width:26px;
+  top:auto; 
+  left:auto;
+  bottom:0;
+  opacity:1;
+  text-shadow:none;
+}
+.carousel-control-test.right {
+  right:10px;
+}
+
+.carousel-control-test.left {
+  right: 40px;
+}
+
+
+
+/* DataTable Planner Widget*/
+.arrivals-table table {
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+  border-top: 0px !important;
+  border-top-color: rgba(0,0,0,0) !important;
+}
+.arrivals-table th {
+  border-top-color: rgba(0,0,0,0) !important;
+  border-top: 0px !important;
+}
+
+/*.arrivals-table tr {
+  border-top-color: #000 !important;
+  border-top: 1px !important;
+}*/
+
+.hidden-optgroup {
+  display: none !important;
+}
+
+
+
+/* Trip Planner */
+#modal-simple {
+  padding:5px;
+  margin-left:15px;
+  overflow:hidden;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background-color:rgba(255,255,255,1) !important;
+  -webkit-box-shadow: #B3B3B3 4px 4px 4px;
+  -moz-box-shadow: #B3B3B3 4px 4px 4px;
+  box-shadow: #B3B3B3 4px 4px 4px;
+}
+
+#planner-advice-div {
+  padding:5px;
+  margin-top:10px;
+  margin-left:15px;
+  overflow:hidden;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color:rgba(255,255,255,1) !important;
+  -webkit-box-shadow: #B3B3B3 4px 4px 4px;
+  -moz-box-shadow: #B3B3B3 4px 4px 4px;
+  box-shadow: #B3B3B3 4px 4px 4px;
+}
+
+.advice-leg:hover {
+  background-color: #eee;
 }
