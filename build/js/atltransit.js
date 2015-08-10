@@ -12,6 +12,10 @@ var labelMap = {
 	'BLUE': 'label label-primary',
 	'GOLD': 'label label-warning',
 	'GREEN': 'label label-success',
+	'MARTA': 'label label-orange',
+	'CCT': 'label label-magenta',
+	'GCT': 'label label-maroon',
+	'GRTA': 'label label-cyan',
 };
 var esriUrl = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/';
 function getEsriGeometry(option, id){
@@ -35,32 +39,33 @@ function getEsriGeometry(option, id){
 		}
 	});
 }
-  function formatRepo (repo) {
-    if (repo.loading) return repo.text;
+function formatRepo (repo) {
+	if (repo.loading) return repo.text;
 
-    var markup = '<div class="clearfix">' +
-    '<div class="col-sm-1">' +
-    // '<img src="' + repo.owner.avatar_url + '" style="max-width: 100%" />' +
-    '</div>' +
-    '<div clas="col-sm-10">' +
-    '<div class="clearfix">' +
-    '<div class="col-sm-6">' + repo.text + '</div>' +
-    // '<div class="col-sm-3"><i class="fa fa-code-fork"></i> ' + repo.forks_count + '</div>' +
-    // '<div class="col-sm-2"><i class="fa fa-star"></i> ' + repo.stargazers_count + '</div>' +
-    '</div>';
+	var markup = '<div class="clearfix">' +
+	'<div class="col-sm-1">' +
+	// '<img src="' + repo.owner.avatar_url + '" style="max-width: 100%" />' +
+	'</div>' +
+	'<div clas="col-sm-10">' +
+	'<div class="clearfix">' +
+	'<div class="col-sm-6">' + repo.text + '</div>' +
+	// '<div class="col-sm-3"><i class="fa fa-code-fork"></i> ' + repo.forks_count + '</div>' +
+	// '<div class="col-sm-2"><i class="fa fa-star"></i> ' + repo.stargazers_count + '</div>' +
+	'</div>';
 
-    if (repo.description) {
-      markup += '<div>' + repo.description + '</div>';
-    }
+	if (repo.description) {
+	markup += '<div>' + repo.description + '</div>';
+	}
 
-    markup += '</div></div>';
+	markup += '</div></div>';
 
-    return markup;
-  }
+	return markup;
+}
 
-  function formatRepoSelection (repo) {
-    return repo.text;
-  }
+function formatRepoSelection (repo) {
+	return repo.text;
+}
+
 $(function(){
 	// // load stop ids
 	// var url = 'http://atlanta.onebusaway.org/api/api/where/stop-ids-for-agency/MARTA.json?';
@@ -79,75 +84,75 @@ $(function(){
 	// 		}
 	// 	}
 	// });
-
-// var data = [];
-//         for (var itemPos in res.locations.slice(0, 10)) {
-
-//           var item = {
-//             text: res.locations[itemPos].name.split(',')[0],
-//             id: itemPos + 1
-//           };
-
-//           data.push(item);
-//         }
-
-//         callback(data);
-$(".js-data-example-ajax").change(function(){
-	console.log(this.value);
-	console.log($(this).select2('data'));
-	var data = $(this).select2('data') // $(this).select2('data')[0];
-	getEsriGeometry(data, this.id);
-});
-$(".js-data-example-ajax").select2({
-	// placeholder: "From",
-	allowClear: true,
-	ajax: {
-		url: esriUrl + 'suggest?',
-		dataType: 'jsonp',
-		delay: 250,
-		data: function (term, page) {
-			return {
-				text: term, // search term
-				// page: params.page,
-				// outFields: 'City,Region',
-				f: 'json',
-				distance: 20000,
-				searchExtents: '-85.386,34.618,-83.269,32.844',
-				location: '-84.383149,33.750855',
-			};
-		},
-		results: function (data, page) {
-			console.log(data);
-			// parse the results into the format expected by Select2.
-			// since we are using custom formatting functions we do not need to
-			// alter the remote JSON data
-			var res = data.suggestions;
-			var array = []
-			$.each(res, function(i, item){
-			var arrItem = {
-			id: item.magicKey,
-			text: item.text
-			};
-			array.push(arrItem);
-			});
-			return {
-				results: array
-			};
-		},
-		cache: true
-	},
-	// escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
-	minimumInputLength: 3,
-	templateResult: function (option) {
-		return '<div class="clearfix">' + option.text + '</div>';
-	},
-	templateSelection: function (option) {
-		return option.text;
+	var params = jQuery.unparam(window.location.hash);
+	console.log(params);
+	if (typeof params.tab !== 'undefined'){
+		$('#' + params.tab + '-link').trigger('click');
 	}
-});
-
-	
-
+	if (typeof params.stopId !== 'undefined'){
+		$('#stop-code')
+			.val(params.stopId.split('_')[1])
+			.delay(1000)
+			.trigger('keyup');
+		// $('a#stop-code-arrivals-btn.get-arrivals')
+		// 	.removeClass('disabled')
+		// 	.val(params.stopId)
+		// 	.trigger('click');
+		// $(' .stop-code').trigger('click');
+	}
+	$(".js-data-example-ajax").change(function(){
+		console.log(this.value);
+		console.log($(this).select2('data'));
+		var data = $(this).select2('data') // $(this).select2('data')[0];
+		getEsriGeometry(data, this.id);
+	});
+	$(".js-data-example-ajax").select2({
+		// placeholder: "From",
+		allowClear: true,
+		ajax: {
+			url: esriUrl + 'suggest?',
+			dataType: 'jsonp',
+			delay: 250,
+			data: function (term, page) {
+				return {
+					text: term, // search term
+					// page: params.page,
+					// outFields: 'City,Region',
+					f: 'json',
+					distance: 20000,
+					searchExtents: '-85.386,34.618,-83.269,32.844',
+					location: '-84.383149,33.750855',
+				};
+			},
+			results: function (data, page) {
+				console.log(data);
+				// parse the results into the format expected by Select2.
+				// since we are using custom formatting functions we do not need to
+				// alter the remote JSON data
+				var res = data.suggestions;
+				var array = []
+				$.each(res, function(i, item){
+				var arrItem = {
+				id: item.magicKey,
+				text: item.text
+				};
+				array.push(arrItem);
+				});
+				return {
+					results: array
+				};
+			},
+			cache: true
+		},
+		// escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+		minimumInputLength: 3,
+		templateResult: function (option) {
+			return '<div class="clearfix">' + option.text + '</div>';
+		},
+		templateSelection: function (option) {
+			return option.text;
+		}
+	});
 	var routeTypeMap = {
 		'0': 'Tram',
 		'1': 'Subway',
@@ -566,6 +571,7 @@ $(".js-data-example-ajax").select2({
 						var data = [];
 						for (var i = 0; i < arrivals.length; i++) {
 							// if (i < 8) {
+								var predicted = arrivals[i].predictedArrivalTime ? true : false;
 								var seconds = arrivals[i].predictedArrivalTime || arrivals[i].scheduledArrivalTime;
 								var diff = seconds - moment().valueOf();
 								var routeName = arrivals[i].routeShortName;
@@ -585,6 +591,9 @@ $(".js-data-example-ajax").select2({
 								// 	+seconds
 								// ]);
 								var row = $('<tr>');
+								if (predicted){
+									fromNowText += ' <i style="font-size:0.7em;" alt="Predicted arrival time" title="Predicted arrival time" class="fa fa-bolt"></i>';
+								}
 								row.append('<td><span class="'+labelMap[routeName]+'">' + routeName + '</span></td>');
 								row.append('<td data-order="'+fromNow+'">' + fromNowText + '</td>');
 								row.append('<td>' + headsign + '</td>');
@@ -699,8 +708,6 @@ $(".js-data-example-ajax").select2({
 	    $('#col1').toggleClass('col-md-12 col-md-3');
 	    $('#col2').toggleClass('col-md-0 col-md-9');
 	});
-
-
 });
 function compareRouteNames(a,b){ return a.shortName - b.shortName; }
 function findBootstrapEnvironment() {
@@ -719,6 +726,29 @@ function findBootstrapEnvironment() {
         }
     }
 }
+jQuery.unparam = function (value) {
+  if (value.length > 1 && value.charAt(0) == '#'){
+    value = value.substring(1);
+  }
+  var
+  // Object that holds names => values.
+  params = {},
+  // Get query string pieces (separated by &)
+  pieces = value.split('&'),
+  // Temporary variables used in loop.
+  pair, i, l;
+
+  // Loop through query string pieces and assign params.
+  for (i = 0, l = pieces.length; i < l; i++) {
+    pair = pieces[i].split('=', 2);
+    // Repeated parameters with the same name are overwritten. Parameters
+    // with no value get set to boolean true.
+    params[decodeURIComponent(pair[0])] = (pair.length == 2 ?
+    decodeURIComponent(pair[1].replace(/\+/g, ' ')) : true);
+  }
+  console.log(params);
+  return params;
+};
 // Extended disable function
 jQuery.fn.extend({
     disable: function(state) {

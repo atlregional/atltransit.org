@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
   font-family: 'Open Sans', 'sans-serif' !important;
@@ -371,7 +371,26 @@ Additional Styles (required)
   -moz-box-shadow: #B3B3B3 4px 4px 4px;
   box-shadow: #B3B3B3 4px 4px 4px;
 }
-
+.planner-advice-itinbutton.focus {
+  background-color: #bbb !important;
+  outline:none !important;
+}
 .advice-leg:hover {
   background-color: #eee;
+}
+
+.label-orange {
+  background-color: rgb(247, 144, 68) !important;
+}
+
+.label-magenta {
+  background-color: rgb(165, 56, 149) !important;
+}
+
+.label-maroon {
+  background-color: rgb(154, 14, 52) !important;
+}
+
+.label-cyan {
+  background-color: rgb(71, 168, 213) !important;
 }

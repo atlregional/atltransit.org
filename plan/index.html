@@ -8,104 +8,106 @@ category: ''
 <script type="text/javascript" src="polyline.js"></script>
 <script type="text/javascript" src="/build/js/atltransit.js"></script>
 <div id="map"></div>
-<div class="row">
-	<div id="modal-simple" class="col-md-4 col-sm-6 col-xs-11 chubi">
-		<form role="form" class="planner-options-form validateDontSubmit form-inline" id="planner-options-form">
+<!-- <div id="containz" style="width:100%; height:100%"> -->
+	<div class="row col-md-4 col-sm-6 col-xs-12">
+		<div id="modal-simple" class="chubi">
+			<form role="form" class="planner-options-form validateDontSubmit form-inline" id="planner-options-form">
+				<div class="row">
+					<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-6">
+						<div class="input-group input-group-sm  planner-options-inputgroup-from" id="planner-options-inputgroup-from">
+							<!-- <label class="input-group-addon planner-options-input-addon required label-from" for="planner-options-from"> -->
+							<span id="origin-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-play-circle"></span>
+							<!-- </label> -->
+							<input aria-describedby="origin-glyph" id="planner-options-from" type="text" title="From" aria-required="true" class="planner-place form-control" placeholder="Train station, bus stop, or address" x-webkit-speech="x-webkit-speech" required="required" />
+							<input id="planner-options-from-latlng" type="hidden" />
+							<p id="planner-options-from-desc"></p>
+						</div>
+					</div>
+					<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-6">
+						<div class="input-group navbar-input-group input-group-sm  planner-options-inputgroup-dest" id="planner-options-inputgroup-dest">
+							<!-- <label class="input-group-addon planner-options-input-addon required label-dest" for="planner-options-dest"> -->
+								<span id="dest-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-record"></span>
+							<!-- </label> -->
+							<input id="planner-options-dest" type="text" title="To" aria-required="true" class="planner-place form-control" aria-describedby="dest-glyph" placeholder="Train station, bus stop, or address" x-webkit-speech="x-webkit-speech" required="required" />
+							<input id="planner-options-dest-latlng" type="hidden" />
+						</div>
+					</div>
+				</div>
+					<div class="row hidden-xs">
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-time">
+								<!-- <label class="input-group-addon planner-options-input-addon label-time" for="planner-options-time"> -->
+									<span id="time-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-time"></span>
+								<!-- </label> -->
+								<input aria-describedby="time-glyph" id="planner-options-time" type="time" title="Time" aria-described-by="planner-options-timeformat" aria-required="true" class="form-control" required="required" />
+								<div class="input-group-addon planner-options-input-addon" id="planner-options-timeformat">h:mma</div>
+							</div>
+						</div>
+						 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-date">
+								<!-- <label class="input-group-addon planner-options-input-addon label-date" for="planner-options-date"> -->
+								<span id="date-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-calendar"></span>
+								<!-- </label> -->
+								<input aria-describedby="date-glyph" id="planner-options-date" type="text" title="Date" aria-label="Datumkiezer, gebruik Ctrl en pijltjes om te navigeren" aria-required="true" class="form-control" required="required"  />
+							</div>
+						</div>
+					</div>
+						<!-- row -->
+						
+						<!-- <div id="planner-options-date-messages" class="accessibility-helper" aria-live="assertive" aria-atomic="true" aria-relevant="additions"></div> -->
+			</form>
 			<div class="row">
-				<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-6">
-					<div class="input-group input-group-sm  planner-options-inputgroup-from" id="planner-options-inputgroup-from">
-						<!-- <label class="input-group-addon planner-options-input-addon required label-from" for="planner-options-from"> -->
-						<span id="origin-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-play-circle"></span>
-						<!-- </label> -->
-						<input aria-describedby="origin-glyph" id="planner-options-from" type="text" title="From" aria-required="true" class="planner-place form-control" placeholder="Train station, bus stop, or address" x-webkit-speech="x-webkit-speech" required="required" />
-						<input id="planner-options-from-latlng" type="hidden" />
-						<p id="planner-options-from-desc"></p>
+				<div class="col-md-12 btn-align">
+					<button type="button" class="btn btn-sm btn-danger" onclick="clearHash()"><span class="glyphicon glyphicon-remove"></span></button>
+					<button type="button" class="btn btn-sm btn-info" id="plan-trip" onclick="submit()"><span class="glyphicon glyphicon-play"></span></button>
+					<div class="btn-group" data-toggle="buttons">
+						<label class="btn btn-sm btn-default mode-option">
+							<input type="radio" name="mode-select" value="TRANSIT,WALK" id="train" checked><i class="fa fa-lg fa-train"></i>
+						</label>
+						<label class="btn btn-sm btn-default mode-option">
+							<input type="radio" name="mode-select" value="BUS,WALK" id="bus"><i class="fa fa-lg fa-bus"></i><!-- <span class="glyphicon svg-icon-bus"></span> -->
+						</label>
+						<label class="btn btn-sm btn-default mode-option">
+							<input type="radio" name="mode-select" value="BICYCLE" id="bike"><i class="fa fa-lg fa-bicycle"></i>
+						</label>
+						<label class="btn btn-sm btn-default mode-option">
+							<input type="radio" name="mode-select" value="CAR" id="car"><i class="fa fa-lg fa-car"></i>
+						</label>
+						<label class="btn btn-sm btn-default mode-option">
+							<input type="radio" name="mode-select" value="WALK" id="pedestrian"><img src="/assets/images/pedestrian.svg" width="18" height="17">
+						</label>
+						<label class="btn btn-sm btn-default mode-option popover-dismiss" data-toggle="popover">
+							<input type="radio" name="mode-select" value="specialized" id="specialized"><i class="fa fa-lg fa-wheelchair"></i>
+						</label>
 					</div>
 				</div>
-				<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-6">
-					<div class="input-group navbar-input-group input-group-sm  planner-options-inputgroup-dest" id="planner-options-inputgroup-dest">
-						<!-- <label class="input-group-addon planner-options-input-addon required label-dest" for="planner-options-dest"> -->
-							<span id="dest-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-record"></span>
-						<!-- </label> -->
-						<input id="planner-options-dest" type="text" title="To" aria-required="true" class="planner-place form-control" aria-describedby="dest-glyph" placeholder="Train station, bus stop, or address" x-webkit-speech="x-webkit-speech" required="required" />
-						<input id="planner-options-dest-latlng" type="hidden" />
-					</div>
-				</div>
-			</div>
-				<div class="row hidden-xs">
-					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-time">
-							<!-- <label class="input-group-addon planner-options-input-addon label-time" for="planner-options-time"> -->
-								<span id="time-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-time"></span>
-							<!-- </label> -->
-							<input aria-describedby="time-glyph" id="planner-options-time" type="time" title="Time" aria-described-by="planner-options-timeformat" aria-required="true" class="form-control" required="required" />
-							<div class="input-group-addon planner-options-input-addon" id="planner-options-timeformat">h:mma</div>
-						</div>
-					</div>
-					 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-date">
-							<!-- <label class="input-group-addon planner-options-input-addon label-date" for="planner-options-date"> -->
-							<span id="date-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-calendar"></span>
-							<!-- </label> -->
-							<input aria-describedby="date-glyph" id="planner-options-date" type="text" title="Date" aria-label="Datumkiezer, gebruik Ctrl en pijltjes om te navigeren" aria-required="true" class="form-control" required="required"  />
-						</div>
-					</div>
-				</div>
-					<!-- row -->
-					
-					<!-- <div id="planner-options-date-messages" class="accessibility-helper" aria-live="assertive" aria-atomic="true" aria-relevant="additions"></div> -->
-		</form>
-		<div class="row">
-			<div class="col-md-12 btn-align">
-				<button type="button" class="btn btn-sm btn-danger" onclick="clearHash()"><span class="glyphicon glyphicon-remove"></span></button>
-				<button type="button" class="btn btn-sm btn-info" id="plan-trip" onclick="submit()"><span class="glyphicon glyphicon-play"></span></button>
-				<div class="btn-group" data-toggle="buttons">
-					<label class="btn btn-sm btn-default mode-option">
-						<input type="radio" name="mode-select" value="TRANSIT,WALK" id="train" checked><i class="fa fa-lg fa-train"></i>
-					</label>
-					<label class="btn btn-sm btn-default mode-option">
-						<input type="radio" name="mode-select" value="BUS,WALK" id="bus"><i class="fa fa-lg fa-bus"></i><!-- <span class="glyphicon svg-icon-bus"></span> -->
-					</label>
-					<label class="btn btn-sm btn-default mode-option">
-						<input type="radio" name="mode-select" value="BICYCLE" id="bike"><i class="fa fa-lg fa-bicycle"></i>
-					</label>
-					<label class="btn btn-sm btn-default mode-option">
-						<input type="radio" name="mode-select" value="CAR" id="car"><i class="fa fa-lg fa-car"></i>
-					</label>
-					<label class="btn btn-sm btn-default mode-option">
-						<input type="radio" name="mode-select" value="WALK" id="pedestrian"><img src="/assets/images/pedestrian.svg" width="18" height="17">
-					</label>
-					<label class="btn btn-sm btn-default mode-option popover-dismiss" data-toggle="popover">
-						<input type="radio" name="mode-select" value="" id="specialized"><i class="fa fa-lg fa-wheelchair"></i>
-					</label>
-				</div>
-			</div>
-		</div>		
+			</div>		
+		</div>
 	</div>
-</div>
-<div class="row">
-	<div id="planner-advice-div" class="hidden col-md-4 col-sm-6 col-xs-11 chubi">
-		<div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12" id ="planner-advice-list" data-toggle="buttons"></div>
-		<!-- <button type="button" class="hidden btn btn-xs btn-default" onclick="toggleResults();" id="hide-results"><span class="glyphicon glyphicon-chevron-up"></span><span class="glyphicon glyphicon-chevron-down"></span></button> -->
-		<div class="hidden col-md-12" style="max-height:350px; overflow: scroll; overflow-x: hidden;" id="planner-advice-container" aria-hidden="true" style="display: none;">
-			<div class="row">
-				<div class="clearfix visible-xs"></div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<ul class="list-group" id="planner-leg-list"></ul>
+	<!-- <div></div> -->
+	<div class="row col-xs-12"></div>
+	<div class="row col-md-4 col-sm-6 col-xs-12">
+		<div id="planner-advice-div" class="hidden chubi">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id ="planner-advice-msg" data-toggle="buttons"></div>
+			<div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12" id ="planner-advice-list" data-toggle="buttons"></div>
+			<!-- <button type="button" class="hidden btn btn-xs btn-default" onclick="toggleResults();" id="hide-results"><span class="glyphicon glyphicon-chevron-up"></span><span class="glyphicon glyphicon-chevron-down"></span></button> -->
+			<div class="hidden col-md-12" style="max-height:350px; overflow: scroll; overflow-x: hidden;" id="planner-advice-container" aria-hidden="true" style="display: none;">
+				<div class="row">
+					<div class="clearfix visible-xs"></div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div id="planner-summary"></div>
+						<ul class="list-group" id="planner-leg-list"></ul>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+<!-- </div> -->
 <script type="text/javascript">
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiYXRscmVnaW9uYWwiLCJhIjoiQmZ6d2tyMCJ9.oENm3NSf--qHrimdm9Vvdw';
 var map;
-var markers;
-var geoJSON = {
-    "type": "FeatureCollection",
-    "features": [
-    ]};
+var markers = {};
 var esri_url = 'http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/';
     //// Code doesn't work!
     // $(document).on('change', 'input:radio[name=mode-select]', function (event) {
@@ -115,8 +117,15 @@ var esri_url = 'http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServ
 function mapClick(e){
   console.log(e);
   var point = e.latlng;
+  var locationType;
+  // handle draggable marker case
+  if (typeof point === 'undefined'){
+  	point = e.target.getLatLng();
+  	locationType = e.target.feature.properties.type;
+  	map.removeLayer(markers[locationType]);
+  }
   console.log(point);
-  if ($( "#planner-options-from-latlng" ).val() === ''){
+  if ($( "#planner-options-from-latlng" ).val() === '' || locationType === 'originMarker'){
     console.log("origin");
     
     $( "#planner-options-from-latlng" ).val(point.lat + ',' + point.lng);
@@ -125,7 +134,7 @@ function mapClick(e){
 
 
   }
-  else if ($( "#planner-options-dest-latlng" ).val() === ''){
+  else if ($( "#planner-options-dest-latlng" ).val() === '' || locationType === 'destinationMarker'){
     console.log("dest");
     dest = point;
     $( "#planner-options-dest-latlng" ).val(point.lat + ',' + point.lng);
@@ -136,7 +145,10 @@ function mapClick(e){
 }
 function getDisplay(data){
   var display;
-  if (data.address.house)
+  if (data.address.Address){
+  	display = data.address.Address;
+  }
+  else if (data.address.house)
     display = data.address.house;
   else if (data.address.building)
     display = data.address.building;
@@ -153,30 +165,36 @@ function getDisplay(data){
 
 function reverseGeocode(point, id){
   this.url = 'http://nominatim.openstreetmap.org/reverse?';
+  this.url = esri_url;
   var params = {};
-  params.lat = point.lat;
-  params.lon = point.lng;
-  params.zoom = '18';
-  params.countrycodes = 'US';
-  params.format = 'json';
+  params.location = point.lng + ',' +point.lat;
+  params.f = 'json';
+  params.langCode='en';
+  params.distance=200;
+  // params.lat = point.lat;
+  // params.lon = point.lng;
+  // params.zoom = '18';
+  // params.countrycodes = 'US';
+  // params.format = 'json';
   // params.key = this.key;
   // params.components = 'administrative_area:GA|country:US';
   // params.sensor = 'false';
 
-  $.ajax(this.url, {
+  $.ajax(this.url + 'reverseGeocode', {
     data : params,
     success: function( data ) {
-      console.log(data);
-      var display = getDisplay(data);
+    	var json = JSON.parse(data)
+      console.log(json);
+      var display = getDisplay(json);
       
       $(id).val(display);
       
-      var symbol = "fa-play-circle-o";
+      var locationType = "originMarker";
       if (id == "#planner-options-dest"){
-        symbol = "fa-dot-circle-o";
+        locationType = "destinationMarker";
         setTimeout(function(){submit();}, 100);
       }
-      addMarker(point, display, symbol, 'click');
+      addMarker(point, display, locationType, 'click');
     }
   });
 }
@@ -184,53 +202,64 @@ function getBoundingBox (data) {
     var bounds = {}, coords, point, latitude, longitude;
 
     // We want to use the “features” key of the FeatureCollection (see above)
-    data = data.features;
-
+    // data = data.geometry;
+    // console.log(data);
     // Loop through each “feature”
-    for (var i = 0; i < data.length; i++) {
+    if (typeof data.geometry !== 'undefined'){
+	    for (var i = 0; i < data.geometry.coordinates.length; i++) {
 
-        // Pull out the coordinates of this feature
-        // coords = data[i].geometry.coordinates[0];
-        coords = data.geometry.coordinates[i];
-        console.log(coords);
-        // For each individual coordinate in this feature's coordinates…
-        for (var j = 0; j < coords.length; j++) {
+	        // Pull out the coordinates of this feature
+	        // coords = data[i].geometry.coordinates[0];
+	        coords = data.geometry.coordinates[i];
+	        // console.log(coords);
+	        // For each individual coordinate in this feature's coordinates…
+	        for (var j = 0; j < coords.length; j++) {
 
-            longitude = coords[j][0];
-            latitude = coords[j][1];
+	            longitude = coords[j][0];
+	            latitude = coords[j][1];
 
-            // Update the bounds recursively by comparing the current
-            // xMin/xMax and yMin/yMax with the coordinate 
-            // we're currently checking
-            bounds.xMin = bounds.xMin < longitude ? bounds.xMin : longitude;
-            bounds.xMax = bounds.xMax > longitude ? bounds.xMax : longitude;
-            bounds.yMin = bounds.yMin < latitude ? bounds.yMin : latitude;
-            bounds.yMax = bounds.yMax > latitude ? bounds.yMax : latitude;
-        }
+	            // Update the bounds recursively by comparing the current
+	            // xMin/xMax and yMin/yMax with the coordinate 
+	            // we're currently checking
+	            bounds.xMin = bounds.xMin < longitude ? bounds.xMin : longitude;
+	            // console.log(bounds.xMin);
+	            bounds.xMax = bounds.xMax > longitude ? bounds.xMax : longitude;
+	            bounds.yMin = bounds.yMin < latitude ? bounds.yMin : latitude;
+	            bounds.yMax = bounds.yMax > latitude ? bounds.yMax : latitude;
+	        }
 
-    }
+	    }
 
-    // Returns an object that contains the bounds of this GeoJSON
-    // data. The keys of this object describe a box formed by the
-    // northwest (xMin, yMin) and southeast (xMax, yMax) coordinates.
-    return bounds;
+	    // Returns an object that contains the bounds of this GeoJSON
+	    // data. The keys of this object describe a box formed by the
+	    // northwest (xMin, yMin) and southeast (xMax, yMax) coordinates.
+	    return bounds;
+	}
 }
 function maxBounds(bounds1, bounds2){
   var bounds = {};
-  bounds.xMin = Math.max(bounds1.xMin, bounds2.xMin);
+  bounds.xMin = Math.min(bounds1.xMin, bounds2.xMin);
   bounds.xMax = Math.max(bounds1.xMax, bounds2.xMax);
-  bounds.yMin = Math.max(bounds1.yMin, bounds2.yMin);
+  bounds.yMin = Math.min(bounds1.yMin, bounds2.yMin);
   bounds.yMax = Math.max(bounds1.yMax, bounds2.yMax);
   return bounds;
 }
-function addMarker(point, title, symbol, source){
+function addMarker(point, title, locationType, source){
 	title = truncate(title, 60);
 	console.log(title);
 	var zoom;
+	var geoJSON = {
+		"type": "FeatureCollection",
+		"features": []
+	};
+	var symbol = locationType === 'destinationMarker' ? 'fa-dot-circle-o' : 'fa-play-circle-o';
 	if (geoJSON.features.length > 0){
 		// map.removeSource('markers', markers);
 		map.removeLayer(markers);
-		markers = {};
+		markers = {
+			'originMarker': {},
+			'destintationMarker' : {}
+		};
 		zoom = map.getZoom() - 1;
 	}
 	else{
@@ -245,14 +274,15 @@ function addMarker(point, title, symbol, source){
 		"properties": {
 			"title": title,
 			"iconHtml": symbol,
+			"type": locationType
 		}
 	});
-	markers = new L.geoJson(geoJSON, { 
+	markers[locationType] = new L.geoJson(geoJSON, { 
 		// style: L.mapbox.simplestyle.style 
-		onEachFeature: function (feature, layer) {
-			// USE A CUSTOM MARKER
-			layer.setIcon(
-				L.divIcon({
+		pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {
+				draggable: true,
+				icon: L.divIcon({
 			        // specify a class name that we can refer to in styles, as we
 			        // do above.
 			        className: 'icon-map',
@@ -262,9 +292,10 @@ function addMarker(point, title, symbol, source){
 			        iconSize: [30, 30],
 			        iconAnchor: [7, 10],
 		    	})
-			);
-			// layer.setIcon(L.icon(feature.properties.icon));
-			// // ADD A POPUP
+			});
+		},
+		onEachFeature: function (feature, layer) {
+			// ADD A POPUP
 			layer.bindPopup("<h1>" + feature.properties.title + "</h1>");
 			layer.on('mouseover', function (e) {
 				this.openPopup();
@@ -272,12 +303,20 @@ function addMarker(point, title, symbol, source){
 			layer.on('mouseout', function (e) {
 				this.closePopup();
 			});
+			layer.on('dragend', function(event) {
+				console.log(layer);
+				console.log(event);
+				// layer.setLatLng(event.target.getLatLng());
+				mapClick(event);
+				// var marker = event.target;  // you could also simply access the marker through the closure
+				// var result = marker.getLatLng();  // but using the passed event is cleaner
+				// console.log(result);
+			});
 		}
 	}).addTo(map);
-	// map.addSource('markers', markers);
-	// map.flyTo(point, zoom, 0, {duration:1000});
-	if (source !== 'click')
-		map.fitBounds(markers.getBounds());
+
+	// if (source !== 'click')
+	// 	map.fitBounds(markers.getBounds());
 }
 
 $(document).ready(function(){
@@ -289,6 +328,15 @@ $(document).ready(function(){
 	if(window.location.hash) {
 		restoreFromHash(window.location.hash);
 	}
+	$("input[type='radio'][name='mode-select']").change(function(){
+		console.log(this.value);
+		if (this.value !== 'specialized'){
+			$(".popover-dismiss").popover("hide");
+		}
+		// else{
+		// 	$(".popover-dismiss").popover("show");
+		// }
+	})
 });
 
 
@@ -386,31 +434,6 @@ String.prototype.lpad = function(padString, length) {
         str = padString + str;
     return str;
 };
-
-jQuery.unparam = function (value) {
-    if (value.length > 1 && value.charAt(0) == '#'){
-        value = value.substring(1);
-    }
-    var
-    // Object that holds names => values.
-    params = {},
-    // Get query string pieces (separated by &)
-    pieces = value.split('&'),
-    // Temporary variables used in loop.
-    pair, i, l;
-
-    // Loop through query string pieces and assign params.
-    for (i = 0, l = pieces.length; i < l; i++) {
-        pair = pieces[i].split('=', 2);
-        // Repeated parameters with the same name are overwritten. Parameters
-        // with no value get set to boolean true.
-        params[decodeURIComponent(pair[0])] = (pair.length == 2 ?
-            decodeURIComponent(pair[1].replace(/\+/g, ' ')) : true);
-    }
-    console.log(params)
-    return params;
-};
-
 var currentTime = moment();
 
 var bag42 = function( request, response ) {
@@ -542,8 +565,7 @@ var photon_geocoder = function(request, response) {
     }
   });
 };
-
-var esri_geocoder = function(request, response) {
+var esri_find = function(request, response) {
   if (request.term.length === 0){
   	console.log('hello geocoder');
   	response([{
@@ -563,15 +585,15 @@ var esri_geocoder = function(request, response) {
   };
 
   $.ajax({
-    url: esri_url + 'suggest',
+    url: esri_url + 'find',
     dataType: "json",
     data: data,
     success: function( data ) {
-      response( $.map( data.suggestions, function( item ) {
-        var parts = item.text.split(', ')
+      response( $.map( data.locations, function( item ) {
+        var parts = item.name.split(', ')
         return {
-          label: item.text,
-          value: item.text,
+          label: item.name,
+          value: item.name,
           // latlng: '33,85',
           desc: parts[parts.length - 2] + ', ' + parts[parts.length - 1],
           key: item.magicKey
@@ -579,6 +601,64 @@ var esri_geocoder = function(request, response) {
       }));
     }
   });
+};
+var esri_suggest = function(request, response) {
+  if (request.term.length === 0){
+  	console.log('hello geocoder');
+  	response([{
+		label: '<i class="fa fa-location-arrow"></i> Your location',
+		value: lat + ', ' + lon,
+		// latlng: lat + ', ' + lon,
+		desc: lat + ', ' + lon,
+		key: '123'
+	}]);
+  }
+  var data = {
+    location: '-84.388847,33.750159',
+    distance: 20000,
+    f: 'pjson',
+    searchExtents: '-85.386,34.618,-83.269,32.844',
+    text: request.term
+  };
+  // if (/&/.test(request.term)){
+  // 	$.ajax({
+	 //    url: esri_url + 'find',
+	 //    dataType: "json",
+	 //    data: data,
+	 //    success: function( data ) {
+	 //      response( $.map( data.locations, function( item ) {
+	 //        var parts = item.name.split(', ')
+	 //        return {
+	 //          label: item.name,
+	 //          value: item.name,
+	 //          // latlng: '33,85',
+	 //          desc: parts[parts.length - 2] + ', ' + parts[parts.length - 1],
+	 //          // key: item.magicKey
+	 //        };
+	 //      }));
+	 //    }
+	 //  });
+  // }
+  // else{
+  	$.ajax({
+	    url: esri_url + 'suggest',
+	    dataType: "json",
+	    data: data,
+	    success: function( data ) {
+	      response( $.map( data.suggestions, function( item ) {
+	        var parts = item.text.split(', ')
+	        return {
+	          label: item.text,
+	          value: item.text,
+	          // latlng: '33,85',
+	          desc: parts[parts.length - 2] + ', ' + parts[parts.length - 1],
+	          key: item.magicKey
+	        };
+	      }));
+	    }
+	  });
+  // }
+  
 };
 
 var nominatim_geocoder = function(request, response) {
@@ -609,7 +689,7 @@ var nominatim_geocoder = function(request, response) {
 
 
 var Geocoder = Geocoder || {};
-Geocoder.geocoder = esri_geocoder;
+Geocoder.geocoder = esri_suggest;
 
 switchLocale();
 
@@ -628,6 +708,7 @@ function initializeForms(){
     $('.popover-dismiss').popover({
         container: 'body',
         html: true,
+        // viewport: '#containz',
         content: '<p>ARC\'s <a target="_blank" href="http://oneclick-arc.camsys-apps.com/">One-Click</a> combines data from this trip planner with services like <strong>MARTA Mobility</strong>, transport for veterans and disabled persons, and other on-demand services.</p><a target="_blank" href="http://oneclick-arc.camsys-apps.com/" type="button" class="center-block btn btn-primary">Visit the One-Click!</a>',
         trigger: 'click',
         title: 'Looking for specialized services?' + '<button type="button" onclick="$(\'.popover-dismiss\').popover(\'hide\');" class="close">&times;</button>'
@@ -700,7 +781,9 @@ function validate(){
 }
 var itinDialog;
 function hideForm(){
-	$('#planner-advice-div').show();
+	$('#planner-advice-div')
+		.show();
+	$('#planner-advice-msg').html('<i alt="loading" style="line-height:2;" title="loading" class="fa-2x fa fa-circle-o-notch fa-spin"></i>');
 	$('#planner-advice-div').attr('aria-hidden',false);
 	$('#planner-advice-div').removeClass('hidden');
 	$('#hide-results').show();
@@ -718,6 +801,7 @@ function showForm(){
     $('.planner-advice-modal').dialog('close');
   }
   hideResults();
+  $('#planner-advice-msg').html('');
     $('#planner-advice-div').find('.alert').remove();
   $('#planner-advice-div').hide();
   $('#planner-advice-div').attr('aria-hidden',true);
@@ -886,7 +970,7 @@ function legItem(leg){
     var legItem = $('<li class="list-group-item advice-leg"><div></div></li>');
     
 
-    console.log(leg)
+    // console.log(leg)
     if (leg.mode == 'WALK' || leg.mode == 'CAR' || leg.mode == 'BICYCLE'){
         if (leg.from.name == leg.to.name){
             return;
@@ -910,7 +994,7 @@ function legItem(leg){
       // if (headsignParts[0] === leg.route || headsignParts[0] === "MARTA"){
       //   headsign = headsign.slice(headsignParts[0].length, headsign.length)
       // }
-      legItem.append('<div class="list-group-item-heading"><h4 class="leg-header"><b>'+leg.route+'</b> '+headsign+'<span class="leg-header-agency-name"><small>'+leg.agencyId+'</small></span></h4>');
+      legItem.append('<div class="list-group-item-heading"><h4 class="leg-header"><b>'+leg.route+'</b> '+headsign+'<span class="leg-header-agency-name pull-right"><small>'+leg.agencyId+'</small></span></h4>');
     }
     var startTime = moment(leg.startTime-(leg.departureDelay ? leg.departureDelay : 0)).format("hh:mm a");
     var delayMin = (leg.departureDelay/60)|0;
@@ -958,6 +1042,9 @@ var lines;
 var renderedRoute;
 var prevItin = {};
 function renderItinerary(index, focus, el, click){
+	var itin = itineraries[index];
+	console.log(el);
+	$el = $(el);
 	if (!focus){
 		renderItinerary(prevItin.index, true, prevItin.el, false);
 		return;
@@ -968,12 +1055,26 @@ function renderItinerary(index, focus, el, click){
 		});
 	}
 	if (click){
+		var fare;
+		if ( itin.fare !== null){
+			fare = itin.fare.fare.regular.cents / 100;
+		}
+		$('#planner-advice-msg').html('');
 		$('#planner-leg-list').html('');
+		$('#planner-summary').html(
+			'<h3>Trip Summary</h3>' +
+			'<p>Fare: $' + fare + '</p>' +
+			'<p>Time: ' + getDiff(itin.startTime, itin.endTime) + '</p>' +
+			'<p>Walk distance: ' + itin.walkDistance / 1609.34 + '</p>' +
+			'<p>Transfers: ' + itin.transfers + '</p>'
+		);
 		prevItin.index = index;
 		prevItin.el = el;
+		// console.log(el);
+		
 	}
 	lines = {};
-	var itin = itineraries[index];
+	
 	var generic = {
 		"type": "Feature",
 		"properties": {},
@@ -1038,53 +1139,82 @@ function renderItinerary(index, focus, el, click){
 				lines[name].leg = leg;
 			}
 		}
-		console.log(name);
-		console.log(lines);
+		// console.log(name);
+		// console.log(lines);
 		if (click){
 			$('#planner-leg-list').append(legItem(leg));
 		}
 		var bounds;
 		var max;
 		if (index === itin.legs.length - 1){
-		console.log("HERE!")
+		// console.log("HERE!")
 		$.each(lines, function(i, line){
 
 			if (typeof bounds === 'undefined'){
-				console.log(line)
-				// bounds = getBoundingBox(line);
+				// console.log(line.data)
+				bounds = getBoundingBox(line.data);
 			}
 			else{
-				console.log(line)
-				// bounds = maxBounds(bounds, getBoundingBox(line));
+				console.log(line.data)
+				if (typeof bounds !== 'undefined')
+					bounds = maxBounds(bounds, getBoundingBox(line.data));
 			}
-			console.log(i)
-			console.log(leg)
+			// console.log(i)
+			// console.log(leg)
 			// TODO: change route to normal mapbox
 			var dash = i === 'WALK' ? "3,10" : null;
 			line.layer = L.geoJson(line.data, { 
 				style: {
 					color: getColor(line.leg),
 					opacity: 0.8,
+					// fill: true,
+					// fillColor: 'blue',
 					dashArray: dash,
-				} 
+				} ,
+				onEachFeature: function(feature, layer){
+					// // ADD A POPUP
+					layer.bindPopup("<h1>" + i + "</h1>");
+					layer.on('mouseover', function (e) {
+						this.openPopup();
+					});
+					layer.on('mouseout', function (e) {
+						map.closePopup();
+					});
+				}
 			}).addTo(map);
-			// map.fitBounds([[bounds.minLat, bounds.minLng],[bounds.maxLat, bounds.maxLng]]);
-		});
+					// console.log(bounds);
+					if (typeof bounds !== 'undefined' && click)
+						map.fitBounds([[bounds.yMin, bounds.xMin],[bounds.yMax, bounds.xMax]]);
+				});
 
 		}
 	});
 
 	// $('#planner-advice-list').find('.btn').removeClass('active');
 	// $(this).addClass('active');
-	console.log(el);
-	$el = $(el);
+	
 	if ($el.hasClass('active')){
 		if (click){
-			console.log('click!')
+			// console.log('click!')
 			toggleResults();
 		}
 	}
-
+	if (click){
+		if ($('#planner-advice-container').hasClass('hidden')){
+			$el.blur();
+		}
+		else{
+			$el.focus();
+		}
+	}
+	// if (click){
+	// 	if ($el.hasClass('active')){
+	// 		$el.focus();
+	// 	}
+	// 	else{
+	// 		$el.blur();
+	// 	}
+	// }
 	// else{
 	// 	$el.focus();
 	// }
@@ -1118,15 +1248,11 @@ function itinButton(index, itin){
 		'</label>'
 	);
     itineraries.push(itin);
-    var start = moment(itin.startTime)
-    var end = moment(itin.endTime)
-    var diff = end.diff(start, 'minutes')
-    var minutes = diff%60;
-    var hours = Math.floor(diff/60)
-    var diffDisplay = hours ? hours + ' h ' + minutes + ' min' : minutes + ' min'
+    var diffDisplay = getDiff(itin.startTime, itin.endTime);
+    
     var itinSummary = '';
     $.each(itin.legs, function(i, leg){
-      var text = getIcon(leg);
+      var text = getIcon(leg, i, itin.legs.length);
       itinSummary += (i == 0 || text == '' || itinSummary == '') ? text : '<span class="glyphicon glyphicon-chevron-right"></span>' + text;
     });
     // itinButton.append('<div class="text-left">'+itinSummary+'<span class="'+hidden+'"><b>'+timeFromEpoch(itin.startTime)+'</b>  <span class="glyphicon glyphicon-chevron-right"></span> <b>'+timeFromEpoch(itin.endTime)+'</b> | '+Locale.amountTransfers(itin.transfers)+ ' | ' + diffDisplay + '</span></div>');
@@ -1134,13 +1260,22 @@ function itinButton(index, itin){
     // itinButton.append('<div class="text-left">'+Locale.amountTransfers(itin.transfers)+ ' | ' + diffDisplay + '</div>');
     return itinButton;
 }
-function getIcon(leg){
+function getDiff(startTime, endTime){
+	var start = moment(startTime)
+    var end = moment(endTime)
+    var diff = end.diff(start, 'minutes')
+    var minutes = diff%60;
+    var hours = Math.floor(diff/60)
+    var diffDisplay = hours ? hours + ' h ' + minutes + ' min' : minutes + ' min'
+    return diffDisplay;
+}
+function getIcon(leg, index, numLegs){
 
-  return leg.mode === 'WALK' && leg.distance > .5 * 1609.34 ? ' <img src="/assets/images/pedestrian.svg" alt="Walk" height="20"> ' :
+  return leg.mode === 'WALK' && (leg.distance > .5 * 1609.34 || (numLegs - index === 1 && index === 0)) ? ' <img src="/assets/images/pedestrian.svg" alt="Walk" height="20"> ' :
           leg.mode === 'SUBWAY' ?  ' <span class="' + labelMap[leg.routeShortName] + '"><i class="fa fa-lg fa-train" alt="' + leg.agencyId + '"></i> ' + leg.routeShortName + '</span> ':
-          leg.mode === 'CAR' ?  ' <img src="images/Car.svg" alt="Drive" height="20"> ' :
-          leg.mode === 'BICYCLE' ?  ' <img src="images/Bike.svg" alt="Bike" height="20"> ' :
-          leg.mode === 'BUS' ?  ' <i class="fa fa-lg fa-bus" alt="' + leg.agencyId + '"></i> ' + leg.routeShortName + ' ' :
+          leg.mode === 'CAR' ?  ' <i class="fa fa-lg fa-car" alt="Drive" height="20"></i> ' :
+          leg.mode === 'BICYCLE' ?  ' <i class="fa fa-lg fa-bicycle" alt="Bike" height="20"></i> ' :
+          leg.mode === 'BUS' ?  ' <span class="' + labelMap[leg.agencyId] + '"><i class="fa fa-lg fa-bus" alt="' + leg.agencyId + '"></i> ' + leg.routeShortName + ' </span>' :
           '';
 }
 // var text = '<span class="label label-warning">'
@@ -1228,7 +1363,12 @@ function truncate(word, num){
 }
 function submit(){
 	// Remove lines when redrawing 
-	console.log('submitting')
+	// console.log('submitting')
+	if ($("input[type='radio'][name='mode-select']:checked").val() === 'specialized'){
+		// alert('Please use the One-Click!')
+		$(".popover-dismiss").popover("show");
+		return;
+	}
 
 	// TODO: determine if this is needed
 	// $.each(map.sources, function(key, val){
@@ -1263,9 +1403,9 @@ function clearHash(){
 		"features": []
 	};
 
-	// $( "#planner-options-from-latlng" ).val('');
+	$( "#planner-options-from-latlng" ).val('');
 	$( "#planner-options-from" ).val('');
-	// $( "#planner-options-dest-latlng" ).val('');
+	$( "#planner-options-dest-latlng" ).val('');
 	$( "#planner-options-dest" ).val('');
 	$('#planner-advice-list').html('');
 	map.eachLayer(function (layer) {
@@ -1289,7 +1429,7 @@ function restoreFromHash(){
         $('#planner-options-from-latlng').val(plannerreq['fromPlace']);
         var latlng = plannerreq['fromPlace'].split(',')
         console.log(Number(latlng[0]))
-        addMarker({lat:Number(latlng[0]),lng:Number(latlng[1])}, plannerreq['fromName'], "fa-play-circle-o", 'form')
+        addMarker({lat:Number(latlng[0]),lng:Number(latlng[1])}, plannerreq['fromName'], "originMarker", 'form')
     }
     if ('toName' in plannerreq){
         $('#planner-options-dest').val(plannerreq['toName']);
@@ -1302,7 +1442,7 @@ function restoreFromHash(){
         $('#planner-options-dest-latlng').val(plannerreq['toPlace']);
         var latlng = plannerreq['toPlace'].split(',')
         console.log(Number(latlng[0]))
-        addMarker({lat:Number(latlng[0]),lng:Number(latlng[1])}, plannerreq['toName'], "fa-dot-circle-o", 'form')
+        addMarker({lat:Number(latlng[0]),lng:Number(latlng[1])}, plannerreq['toName'], "destinationMarker", 'form')
     }
     if ('arriveBy' in plannerreq && plannerreq['arriveBy'] == "true"){
         $('#planner-options-arrivebefore').click();
@@ -1416,10 +1556,11 @@ function setupAutoComplete(){
 			$( "#project-description" ).html( ui.item.desc );
 			console.log(ui.item)
 			var point;
+			map.removeLayer(markers['originMarker']);
 			if (/Your location/g.test(ui.item.label)){
 				$( "#planner-options-from" ).val( ui.item.desc );
 				point = ui.item.desc.split(",");
-				addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "fa-play-circle-o", 'form')
+				addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "originMarker", 'form')
 				$( "#planner-options-from-latlng" ).val( ui.item.desc );
 				return false;
 			}
@@ -1436,7 +1577,7 @@ function setupAutoComplete(){
                   var json = JSON.parse(data)
                   console.log(json)
                   var geometry = json.locations[0].feature.geometry;
-                  addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "fa-play-circle-o", 'form')
+                  addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "originMarker", 'form')
                   $( "#planner-options-from-latlng" ).val( geometry.y + ',' + geometry.x );
                   return false;
                 }
@@ -1477,9 +1618,10 @@ function setupAutoComplete(){
             $( "#project-description" ).html( ui.item.desc );
             console.log(ui.item)
             var point;
+            map.removeLayer(markers['destinationMarker']);
             if (typeof ui.item.latlng !== 'undefined'){
               point = ui.item.latlng.split(",");
-              addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "fa-dot-circle-o", 'form')
+              addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "destinationMarker", 'form')
               $( "#planner-options-dest-latlng" ).val( ui.item.latlng );
               return false;
             }
@@ -1495,7 +1637,7 @@ function setupAutoComplete(){
                   // console.log(data);
                   var json = JSON.parse(data)
                   var geometry = json.locations[0].feature.geometry;
-                  addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "fa-dot-circle-o", 'form')
+                  addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "destinationMarker", 'form')
                   $( "#planner-options-dest-latlng" ).val( geometry.y + ',' + geometry.x );
                   return false;
                 }
