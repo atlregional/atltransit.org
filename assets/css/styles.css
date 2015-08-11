@@ -394,3 +394,14 @@ Additional Styles (required)
 .label-cyan {
   background-color: rgb(71, 168, 213) !important;
 }
+
+#planner-summary {
+  margin: 5px 0 5px 0;
+}
+
+#planner-summary h3 {
+  margin: 0px;
+}
+#planner-summary p {
+  margin: 0px;
+}

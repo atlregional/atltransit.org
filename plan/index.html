@@ -95,7 +95,7 @@ category: ''
 				<div class="row">
 					<div class="clearfix visible-xs"></div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div id="planner-summary"></div>
+						<div id="planner-summary" class="well"></div>
 						<ul class="list-group" id="planner-leg-list"></ul>
 					</div>
 				</div>
@@ -144,23 +144,25 @@ function mapClick(e){
 
 }
 function getDisplay(data){
-  var display;
-  if (data.address.Address){
-  	display = data.address.Address;
-  }
-  else if (data.address.house)
-    display = data.address.house;
-  else if (data.address.building)
-    display = data.address.building;
-  else if (data.address.house_number)
-    display = data.address.house_number + " " + data.address.road;
-  else if (data.address.road)
-    display = data.address.road + ', ' + data.address.city;
-  else if (data.address.neighborhood)
-    display = data.address.neighborhood + ', ' + data.address.city + ', ' + data.address.state;
-  else if (data.address.city)
-    display = data.address.city + ', ' + data.address.state;
-  return display;
+	var display;
+	if (typeof data.address !== 'undefined'){
+		if ( data.address.Address){
+			display = data.address.Address;
+		}
+		else if (data.address.house)
+			display = data.address.house;
+		else if (data.address.building)
+			display = data.address.building;
+		else if (data.address.house_number)
+			display = data.address.house_number + " " + data.address.road;
+		else if (data.address.road)
+			display = data.address.road + ', ' + data.address.city;
+		else if (data.address.neighborhood)
+			display = data.address.neighborhood + ', ' + data.address.city + ', ' + data.address.state;
+		else if (data.address.city)
+			display = data.address.city + ', ' + data.address.state;
+	}
+	return display;
 }
 
 function reverseGeocode(point, id){
@@ -296,7 +298,11 @@ function addMarker(point, title, locationType, source){
 		},
 		onEachFeature: function (feature, layer) {
 			// ADD A POPUP
-			layer.bindPopup("<h1>" + feature.properties.title + "</h1>");
+			layer.bindPopup(
+				// "<h1>" + 
+				feature.properties.title + ''
+				// "</h1>"
+			);
 			layer.on('mouseover', function (e) {
 				this.openPopup();
 			});
@@ -336,7 +342,7 @@ $(document).ready(function(){
 		// else{
 		// 	$(".popover-dismiss").popover("show");
 		// }
-	})
+	});
 });
 
 
@@ -966,10 +972,24 @@ function timeFromEpoch(epoch){
 
 var itineraries = null;
 
-function legItem(leg){
-    var legItem = $('<li class="list-group-item advice-leg"><div></div></li>');
-    
+function highlightLeg(el){
+	// console.log();
+	var legName = el.id;
+	lines[legName].layer.setStyle({
+		color:'#aaa',
+		weight: 10
+	});
+}
 
+function resetLeg(el){
+	var legName = el.id;
+	lines[legName].layer.resetStyle(lines[legName].layer);
+}
+
+function legItem(leg, legName){
+    var legItem = $('<li class="list-group-item advice-leg" id="'+legName+'" onmouseover="highlightLeg(this)" onmouseout="resetLeg(this)"><div></div></li>');
+    
+    var icon = getIcon(leg)
     // console.log(leg)
     if (leg.mode == 'WALK' || leg.mode == 'CAR' || leg.mode == 'BICYCLE'){
         if (leg.from.name == leg.to.name){
@@ -981,7 +1001,7 @@ function legItem(leg){
         else if (leg.mode == 'BICYCLE'){
           leg.mode = 'Bike';
         }
-        legItem.append('<div class="list-group-item-heading"><h4 class="leg-header"><b>'+toTitleCase(leg.mode)+'</b></h4></div>');
+        legItem.append('<div class="list-group-item-heading"><h4 class="leg-header"><b>' + icon + ' ' + toTitleCase(leg.mode)+'</b></h4></div>');
     } else {
       var headsign = leg.routeLongName;
       if (leg.headsign !== null)
@@ -994,7 +1014,7 @@ function legItem(leg){
       // if (headsignParts[0] === leg.route || headsignParts[0] === "MARTA"){
       //   headsign = headsign.slice(headsignParts[0].length, headsign.length)
       // }
-      legItem.append('<div class="list-group-item-heading"><h4 class="leg-header"><b>'+leg.route+'</b> '+headsign+'<span class="leg-header-agency-name pull-right"><small>'+leg.agencyId+'</small></span></h4>');
+      legItem.append('<div class="list-group-item-heading"><h4 class="leg-header"><b>' + icon + ' ' + '</b> '+headsign+'<span class="leg-header-agency-name pull-right"><small>'+leg.agencyId+'</small></span></h4>');
     }
     var startTime = moment(leg.startTime-(leg.departureDelay ? leg.departureDelay : 0)).format("hh:mm a");
     var delayMin = (leg.departureDelay/60)|0;
@@ -1006,7 +1026,7 @@ function legItem(leg){
     }else if (delayMin > 0){
         startTime += '<span class="early"> '+ delayMin+'</span>';
     }else if (leg.departureDelay != null){
-        startTime += '<span class="ontime"> ✓</span>';
+        // startTime += '<span class="ontime"> ✓</span>';
     }
 
     var endTime = moment(leg.endTime-(leg.arrivalDelay ? leg.arrivalDelay : 0)).format("hh:mm a");
@@ -1019,7 +1039,7 @@ function legItem(leg){
     }else if (delayMin > 0){
         endTime += '<span class="early"> '+ delayMin+'</span>';
     }else if (leg.arrivalDelay != null){
-        endTime += '<span class="ontime"> ✓</span>';
+        // endTime += '<span class="ontime"> ✓</span>';
     }
 
     if (leg.from.platformCode && leg.mode == 'RAIL'){
@@ -1036,11 +1056,31 @@ function legItem(leg){
     }else{
         legItem.append('<div><b>'+endTime+'</b> '+toTitleCase(leg.to.name)+'</div>');
     }
+    if (leg.mode === 'SUBWAY' || leg.mode === 'BUS'){
+    	legItem.append('<a class="btn btn-xs btn-default" href="/#tab=stop-code&stopId='+leg.from.stopId.agencyId +'_'+leg.from.stopId.id+'">Get realtime</a>')
+    }
     return legItem;
 }
 var lines;
 var renderedRoute;
 var prevItin = {};
+
+function getName(leg){
+	var name;
+	if(leg.route === "BLUE" || leg.route === "GREEN" || leg.route === "RED" || leg.route === "GOLD") {
+		name = leg.route;
+	}
+	else if (leg.agencyId == 'MARTA' || leg.agencyId == 'GRTA' || leg.agencyId == 'GCT' || leg.agencyId == 'CCT'){
+		name = leg.agencyId;
+	}
+	else if (leg.mode == 'WALK' || leg.mode == 'BICYCLE'){
+		name = leg.mode;
+	}
+	else{
+		name = 'route';
+	}
+	return name;
+}
 function renderItinerary(index, focus, el, click){
 	var itin = itineraries[index];
 	console.log(el);
@@ -1062,7 +1102,7 @@ function renderItinerary(index, focus, el, click){
 		$('#planner-advice-msg').html('');
 		$('#planner-leg-list').html('');
 		$('#planner-summary').html(
-			'<h3>Trip Summary</h3>' +
+			'<h3>Trip Summary</h3><button class="btn btn-xs btn-default pull-right"><i class="fa fa-link"></i></button>' +
 			'<p>Fare: $' + fare + '</p>' +
 			'<p>Time: ' + getDiff(itin.startTime, itin.endTime) + '</p>' +
 			'<p>Walk distance: ' + itin.walkDistance / 1609.34 + '</p>' +
@@ -1095,54 +1135,13 @@ function renderItinerary(index, focus, el, click){
 		var points = polyline.decode(leg.legGeometry.points);
 		line.geometry.coordinates.push(points);
         var name = 'route';
-		if(leg.route === "BLUE" || leg.route === "GREEN" || leg.route === "RED" || leg.route === "GOLD") {
-			name = leg.route;
-			if ( lines[name]){
-				lines[name].data.geometry.coordinates.push(points);
-			}
-			else{
-				lines[name] = {};
-				lines[name].data = line;
-				lines[name].leg = leg;
-			}
-		}
-		else if (leg.agencyId == 'MARTA' || leg.agencyId == 'GRTA' || leg.agencyId == 'GCT' || leg.agencyId == 'CCT'){
-			name = leg.agencyId;
-			if ( lines[name]){
-				lines[name].data.geometry.coordinates.push(points);
-			}
-			else{
-				lines[name] = {};
-				lines[name].data = line;
-				lines[name].leg = leg;
-			}
-		}
-		else if (leg.mode == 'WALK' || leg.mode == 'BICYCLE'){
-			name = leg.mode;
-			if ( lines[name]){
-				lines[name].data.geometry.coordinates.push(points);
-			}
-			else{
-				lines[name] = {};
-				lines[name].data = line;
-				lines[name].leg = leg;
-			}
-		}
-		else{
-			name = 'route';
-			if ( lines[name]){
-				lines[name].data.geometry.coordinates.push(points);
-			}
-			else{
-				lines[name] = {};
-				lines[name].data = line;
-				lines[name].leg = leg;
-			}
-		}
-		// console.log(name);
-		// console.log(lines);
+        name = getName(leg);
+		lines[name + index] = {};
+		lines[name + index].data = line;
+		lines[name + index].leg = leg;
+		lines[name + index].name = name;
 		if (click){
-			$('#planner-leg-list').append(legItem(leg));
+			$('#planner-leg-list').append(legItem(leg, name + index));
 		}
 		var bounds;
 		var max;
@@ -1155,40 +1154,44 @@ function renderItinerary(index, focus, el, click){
 				bounds = getBoundingBox(line.data);
 			}
 			else{
-				console.log(line.data)
-				if (typeof bounds !== 'undefined')
-					bounds = maxBounds(bounds, getBoundingBox(line.data));
+				// console.log(line.data);
+				bounds = maxBounds(bounds, getBoundingBox(line.data));
+				// console.log(bounds);
 			}
 			// console.log(i)
 			// console.log(leg)
 			// TODO: change route to normal mapbox
-			var dash = i === 'WALK' ? "3,10" : null;
+			var dash = /WALK/.test(i) ? "3,10" : null;
 			line.layer = L.geoJson(line.data, { 
 				style: {
 					color: getColor(line.leg),
 					opacity: 0.8,
+					weight: 5,
 					// fill: true,
 					// fillColor: 'blue',
 					dashArray: dash,
 				} ,
 				onEachFeature: function(feature, layer){
 					// // ADD A POPUP
-					layer.bindPopup("<h1>" + i + "</h1>");
+					layer.bindPopup(
+						// "<h1>" + 
+						getIcon(line.leg) + ''
+						// "</h1>"
+					);
 					layer.on('mouseover', function (e) {
 						this.openPopup();
 					});
 					layer.on('mouseout', function (e) {
 						map.closePopup();
+
 					});
 				}
 			}).addTo(map);
-					// console.log(bounds);
-					if (typeof bounds !== 'undefined' && click)
-						map.fitBounds([[bounds.yMin, bounds.xMin],[bounds.yMax, bounds.xMax]]);
-				});
-
-		}
-	});
+		});
+		if (typeof bounds !== 'undefined' && click)
+			map.fitBounds([[bounds.yMin, bounds.xMin],[bounds.yMax, bounds.xMax]]);
+	}
+});
 
 	// $('#planner-advice-list').find('.btn').removeClass('active');
 	// $(this).addClass('active');
@@ -1252,7 +1255,11 @@ function itinButton(index, itin){
     
     var itinSummary = '';
     $.each(itin.legs, function(i, leg){
-      var text = getIcon(leg, i, itin.legs.length);
+      var text = getIcon(leg);
+      // remove walk icon if distance is less than threshold
+      if (leg.mode === 'WALK' && (leg.distance < .5 * 1609.34 || (itin.legs.length - i === 1 && i === 0))){
+      	text = '';
+      }
       itinSummary += (i == 0 || text == '' || itinSummary == '') ? text : '<span class="glyphicon glyphicon-chevron-right"></span>' + text;
     });
     // itinButton.append('<div class="text-left">'+itinSummary+'<span class="'+hidden+'"><b>'+timeFromEpoch(itin.startTime)+'</b>  <span class="glyphicon glyphicon-chevron-right"></span> <b>'+timeFromEpoch(itin.endTime)+'</b> | '+Locale.amountTransfers(itin.transfers)+ ' | ' + diffDisplay + '</span></div>');
@@ -1269,23 +1276,21 @@ function getDiff(startTime, endTime){
     var diffDisplay = hours ? hours + ' h ' + minutes + ' min' : minutes + ' min'
     return diffDisplay;
 }
-function getIcon(leg, index, numLegs){
+function getIcon(leg){
 
-  return leg.mode === 'WALK' && (leg.distance > .5 * 1609.34 || (numLegs - index === 1 && index === 0)) ? ' <img src="/assets/images/pedestrian.svg" alt="Walk" height="20"> ' :
+  return leg.mode === 'WALK' ? ' <img src="/assets/images/pedestrian.svg" alt="Walk" height="20"> ' :
           leg.mode === 'SUBWAY' ?  ' <span class="' + labelMap[leg.routeShortName] + '"><i class="fa fa-lg fa-train" alt="' + leg.agencyId + '"></i> ' + leg.routeShortName + '</span> ':
           leg.mode === 'CAR' ?  ' <i class="fa fa-lg fa-car" alt="Drive" height="20"></i> ' :
           leg.mode === 'BICYCLE' ?  ' <i class="fa fa-lg fa-bicycle" alt="Bike" height="20"></i> ' :
           leg.mode === 'BUS' ?  ' <span class="' + labelMap[leg.agencyId] + '"><i class="fa fa-lg fa-bus" alt="' + leg.agencyId + '"></i> ' + leg.routeShortName + ' </span>' :
           '';
 }
-// var text = '<span class="label label-warning">'
-//       text += getIcon(leg) + '</span>';
 function planItinerary(plannerreq){
   var url = planningserver + jQuery.param(plannerreq);
   console.log(url)
-  $('#planner-advice-container').prepend('<div class="progress progress-striped active">'+
-  '<div class="progress-bar"  role="progressbar" aria-valuenow="100" aria-valuemin="100" aria-valuemax="100" style="width: 100%">'+
-  '<span class="sr-only">'+Locale.loading+'</span></div></div>');
+  // $('#planner-advice-container').prepend('<div class="progress progress-striped active">'+
+  // '<div class="progress-bar"  role="progressbar" aria-valuenow="100" aria-valuemin="100" aria-valuemax="100" style="width: 100%">'+
+  // '<span class="sr-only">'+Locale.loading+'</span></div></div>');
   $('#planner-advice-list').html('');
   $('#planner-leg-list').html('');
 
@@ -1328,6 +1333,7 @@ function getColor(leg){
         else if(leg.route === "BLUE") return 'rgb(0, 0, 255)';
         else if(leg.route === "GREEN") return 'rgb(0, 153, 51)';
         else if(leg.route === "RED") return 'rgb(255, 0, 0)';
+        // else if(leg.route === "GOLD") return 'rgb(255, 215, 0)';
         else if(leg.route === "GOLD") return 'rgb(255, 215, 0)';
         else if(/MARTA/g.test(leg.agencyId)) return 'rgb(247, 144, 68)';
         else if(/CCT/g.test(leg.agencyId)) return 'rgb(165, 56, 149)';

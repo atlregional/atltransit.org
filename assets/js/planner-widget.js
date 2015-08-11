@@ -65,7 +65,7 @@ function formatRepo (repo) {
 function formatRepoSelection (repo) {
 	return repo.text;
 }
-
+var urlParams;
 $(function(){
 	// // load stop ids
 	// var url = 'http://atlanta.onebusaway.org/api/api/where/stop-ids-for-agency/MARTA.json?';
@@ -84,20 +84,27 @@ $(function(){
 	// 		}
 	// 	}
 	// });
-	var params = jQuery.unparam(window.location.hash);
-	console.log(params);
-	if (typeof params.tab !== 'undefined'){
-		$('#' + params.tab + '-link').trigger('click');
+	urlParams = jQuery.unparam(window.location.hash);
+	// console.log(params);
+	if (typeof urlParams.tab !== 'undefined'){
+		$('#' + urlParams.tab + '-link').trigger('click');
 	}
-	if (typeof params.stopId !== 'undefined'){
+	if (typeof urlParams.stopId !== 'undefined'){
+		window.setTimeout(function(){
+			// $('#stop-code')
+			// 	.val('908986')
+			// 	// .val(urlParams.stopId.split('_')[1])
+			// 	.delay(1000)
+			// 	.keyup();
 		$('#stop-code')
-			.val(params.stopId.split('_')[1])
-			.delay(1000)
-			.trigger('keyup');
-		// $('a#stop-code-arrivals-btn.get-arrivals')
-		// 	.removeClass('disabled')
-		// 	.val(params.stopId)
-		// 	.trigger('click');
+			.val(urlParams.stopId.split('_')[1])
+			.keyup();
+		$('#stop-code-arrivals-btn')
+			.removeClass('disabled')
+			.val(urlParams.stopId)
+			.trigger('click');
+		}, 200);
+		
 		// $(' .stop-code').trigger('click');
 	}
 	$(".js-data-example-ajax").change(function(){
