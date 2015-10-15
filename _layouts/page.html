@@ -9,12 +9,34 @@
 	<div class="container site-container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1>{{ page.title }}</h1>
+				<h1 class="page-title">{{ page.title }}</h1>
+				{% include breadcrumbs.html %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-9">
 				{{content}}
 			</div>
+			{% include sidebar.html %}
 		</div>
 	</div>
 	{% include footer.html %}
 <script type="text/javascript" src="{{ site.baseurl }}/build/js/atltransit.js"></script>
+<script type="text/javascript">
+	// console.log(atltransit.nav);
+	// console.log(atltransit.nav['{{ page.category }}']);
+	// $('.nav-sidebar').append('<li><a href="/{{ page.category }}">{{ page.category }}</a></li>');
+	// $.each(atltransit.nav['{{ page.category }}'], function(i, item){
+	// 	var activeLabel = '';
+	// 	var activeBar = '';
+	// 	if ('{{ page.id }}' === item ){
+	// 		activeLabel = '<span class="sr-only">(current)</span>';
+	// 		activeBar = 'class="active"';
+	// 	}
+	// 	$('.nav-sidebar').append('<li ' + activeBar + '><a href="/{{ page.category }}/' + item + '">'+item + activeLabel + '</a></li>');
+	// });
+	
+</script>
 </body>
+
 </html>
