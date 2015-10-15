@@ -6,7 +6,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
 }
 .footer {
   /*position: absolute;*/
@@ -18,4 +18,7 @@ body {
   border-color: #006BB6;
   border-top-style: solid;
   border-top-width: 5px;
+}
+.footer a {
+  color: #337AB7 !important;
 }
