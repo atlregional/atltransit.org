@@ -1,0 +1,122 @@
+<nav class="navbar navbar-light bg-faded navbar-fixed-top">
+	<!-- <div class="navbar-header"> -->
+		<!-- <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button> -->
+		<button class="navbar-toggler pull-right hidden-sm-up" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+			&#9776;
+		</button>
+		<a class="navbar-brand"  href="{{ site.baseurl }}/">
+			<img src="https://dl.dropboxusercontent.com/s/k6d5atcwj880ugn/atltransit-orig-color.png" width="180">
+		</a>
+	<!-- </div> -->
+	
+	
+	<div class="collapse navbar-toggleable-xs  js-navbar-collapse">
+		<ul class="nav navbar-nav">
+			<!-- <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/plan">Plan a trip</a></li> -->
+			<li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/alerts">Transfers</a></li>
+			<!-- <li class="nav-item"><a class="nav-link" href="#">Maps</a></li> -->
+			<li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/fares">Fares</a></li>
+			<li class="dropdown mega-dropdown nav-item">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More... <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+				<ul class="dropdown-menu mega-dropdown-menu row">
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header"><a href="#">Purchase Breeze Card</a></li>
+								<div id="myCarousel" class="carousel slide" data-ride="carousel">
+									<div class="carousel-inner">
+										<div class="item active">
+											<a href="#"><img src="{{ site.baseurl }}/assets/images/breeze_card.png" class="img-responsive" alt="product 1"></a>
+											<h4><small>Use for any trip in the region</small></h4>                                        
+											<button class="btn btn-primary" type="button">$2.50</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span> Add trips</button>       
+										</div><!-- End Item -->
+										<!-- <div class="item">
+											<a href="#"><img src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+											<h4><small>Gold sandals with shiny touch</small></h4>                                        
+											<button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>        
+										</div>
+										<div class="item">
+											<a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+											<h4><small>Denin jacket stamped</small></h4>                                        
+											<button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>      
+										</div> -->
+									</div><!-- End Carousel Inner -->
+								</div><!-- /.carousel -->
+								<li class="divider"></li>
+								<li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3 col-xs-6">
+						<ul>
+							<li class="dropdown-header"><a href="{{ site.baseurl }}/maps">Maps</a></li>
+							<li><a href="{{ site.baseurl }}/maps/">System Maps</a></li>
+							<li><a href="{{ site.baseurl }}/maps/">Interactive Map</a></li>
+							<li><a href="{{ site.baseurl }}/maps/">Park 'n' Ride stations</a></li>
+							<li><a href="{{ site.baseurl }}/maps/">Wayfinding</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header"><a href="{{ site.baseurl }}/destinations">Destinations</a></li>
+							<li><a href="{{ site.baseurl }}/destinations/">Event calendar</a></li>
+							<li><a href="{{ site.baseurl }}/destinations/">Arts and Entertainment</a></li>
+							<li><a href="{{ site.baseurl }}/destinations/">Sports</a></li>
+							<li><a href="{{ site.baseurl }}/destinations/">Festivals</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3 col-xs-6">
+						<ul>
+							<li class="dropdown-header"><a href="{{ site.baseurl }}/services">Services</a></li>
+							<li><a href="{{ site.baseurl }}/agencies">Agency information</a></li>
+							<li><a href="{{ site.baseurl }}/services/">Accessibility</a></li>
+							<li><a href="{{ site.baseurl }}/services/">Discounts and passes</a></li>
+							<li><a href="{{ site.baseurl }}/services/">Biking and transit</a></li>
+							<li><a href="{{ site.baseurl }}/services/">Parking</a></li>
+							<li><a href="{{ site.baseurl }}/services/">How-tos and tips</a></li>
+							<li><a href="{{ site.baseurl }}/services/">Safety and security</a></li>
+							<li><a href="{{ site.baseurl }}/services/">Georgia Commute Options</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3 col-xs-6">
+						<ul>
+							<li class="dropdown-header"><a href="{{ site.baseurl }}/about">About</a></li>
+							<li><a href="{{ site.baseurl }}/about/history">History of ATLtransit</a></li>
+							<li><a href="{{ site.baseurl }}/about/regional-transit">About regional transit</a></li>
+							<li><a href="{{ site.baseurl }}/about/feedback">Feedback</a></li>             
+							<li><a href="{{ site.baseurl }}/about/contact">Contact us</a></li>             
+							<li class="divider"></li>
+							<li class="dropdown-header"><a href="#">Newsletter / Alerts</a></li>
+							<form class="form" role="form">
+								<div class="form-group">
+									<label class="sr-only" for="email">Email address</label>
+									<input type="email" class="form-control" id="email" placeholder="Enter email">
+								</div>
+								<button type="submit" class="btn btn-primary btn-block">Sign up!</button>
+							</form>                                                       
+						</ul>
+					</li>
+				</ul>
+			</li>  
+		</ul>
+		<div class="col-sm-1 pull-right row">
+				<form class="col-xs-12 col-sm-1 navbar-form navbar-right visible-*-inline" role="search">
+					<!-- <div class="btn-group" data-toggle="buttons">
+						<label class="agency-arrivals-radio btn btn-default active">
+							<input type="radio" name="options" id="option1" autocomplete="off" checked> En
+						</label>
+						<label class="agency-arrivals-radio btn btn-default">
+							<input type="radio" name="options" id="option2" autocomplete="off"> Es
+						</label>
+					</div> -->
+					<!-- <div class="input-group navbar-input-group">
+						<input type="text" class="form-control navbar-search" placeholder="Search">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button" style="margin-right:20px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+						</span>
+					</div> -->
+				</form>
+		</div>
+	</div><!-- /.nav-collapse -->
+</nav>
+<!-- </div> -->

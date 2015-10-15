@@ -7,93 +7,66 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" style="padding-top:10px"  href="{{ site.baseurl }}/">
-			<img src="https://dl.dropboxusercontent.com/s/k6d5atcwj880ugn/atltransit-orig-color.png" width="180">
+		<a class="navbar-brand" style="padding-top:10px"  href="/">
+			<img src="/assets/images/atltransit-logo-blue.png" width="180">
 		</a>
 	</div>
 	
 	
 	<div class="collapse navbar-collapse js-navbar-collapse">
 		<ul class="nav navbar-nav">
-						<li><a href="{{ site.baseurl }}/plan">Plan a trip</a></li>
-						<li><a href="{{ site.baseurl }}/alerts">Status updates</a></li>
+						<li><a href="/plan">Plan a trip</a></li>
+						<li><a href="/tools/alerts">Status updates</a></li>
 						<!-- <li><a href="#">Maps</a></li> -->
-						<li><a href="{{ site.baseurl }}/fares">Fares & transfers</a></li>
+						<li><a href="/fares">Fares & transfers</a></li>
 			<li class="dropdown mega-dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">More... <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
 				<ul class="dropdown-menu mega-dropdown-menu row">
 					<li class="col-sm-3">
 						<ul>
-							<li class="dropdown-header"><a href="#">Purchase Breeze Card</a></li>
+							<li class="dropdown-header"><a href="https://is.breezecard.com/marta/">Purchase Breeze Card <span class="glyphicon glyphicon-chevron-right"></a></li>
 								<div id="myCarousel" class="carousel slide" data-ride="carousel">
 									<div class="carousel-inner">
 										<div class="item active">
-											<a href="#"><img src="{{ site.baseurl }}/assets/images/breeze_card.png" class="img-responsive" alt="product 1"></a>
-											<h4><small>Use for any trip in the region</small></h4>                                        
-											<button class="btn btn-primary" type="button">$2.50</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span> Add trips</button>       
+											<a href="https://is.breezecard.com/marta/"><img src="/assets/images/breeze_card.png" class="img-responsive" alt="product 1"></a>
+											<p class="nav-highlight"><small>Use for any trip in the region</small></p>                                        
+											<button class="btn btn-primary" type="button">$2.50</button> <a href="https://is.breezecard.com/marta/" class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span> Add trips</a>       
 										</div><!-- End Item -->
-										<!-- <div class="item">
-											<a href="#"><img src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
-											<h4><small>Gold sandals with shiny touch</small></h4>                                        
-											<button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>        
-										</div>
-										<div class="item">
-											<a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
-											<h4><small>Denin jacket stamped</small></h4>                                        
-											<button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>      
-										</div> -->
 									</div><!-- End Carousel Inner -->
 								</div><!-- /.carousel -->
 								<li class="divider"></li>
-								<li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+								<li><a href="#">View information on fares & transfers <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
 						</ul>
 					</li>
-					<li class="col-sm-3 col-xs-6">
-						<ul>
-							<li class="dropdown-header"><a href="{{ site.baseurl }}/maps">Maps</a></li>
-							<li><a href="{{ site.baseurl }}/maps/">System Maps</a></li>
-							<li><a href="{{ site.baseurl }}/maps/">Interactive Map</a></li>
-							<li><a href="{{ site.baseurl }}/maps/">Park 'n' Ride stations</a></li>
-							<li><a href="{{ site.baseurl }}/maps/">Wayfinding</a></li>
-							<li class="divider"></li>
-							<li class="dropdown-header"><a href="{{ site.baseurl }}/destinations">Destinations</a></li>
-							<li><a href="{{ site.baseurl }}/destinations/">Event calendar</a></li>
-							<li><a href="{{ site.baseurl }}/destinations/">Arts and Entertainment</a></li>
-							<li><a href="{{ site.baseurl }}/destinations/">Sports</a></li>
-							<li><a href="{{ site.baseurl }}/destinations/">Festivals</a></li>
-						</ul>
-					</li>
-					<li class="col-sm-3 col-xs-6">
-						<ul>
-							<li class="dropdown-header"><a href="{{ site.baseurl }}/services">Services</a></li>
-							<li><a href="{{ site.baseurl }}/agencies">Agency information</a></li>
-							<li><a href="{{ site.baseurl }}/services/">Accessibility</a></li>
-							<li><a href="{{ site.baseurl }}/services/">Discounts and passes</a></li>
-							<li><a href="{{ site.baseurl }}/services/">Biking and transit</a></li>
-							<li><a href="{{ site.baseurl }}/services/">Parking</a></li>
-							<li><a href="{{ site.baseurl }}/services/">How-tos and tips</a></li>
-							<li><a href="{{ site.baseurl }}/services/">Safety and security</a></li>
-							<li><a href="{{ site.baseurl }}/services/">Georgia Commute Options</a></li>
-						</ul>
-					</li>
-					<li class="col-sm-3 col-xs-6">
-						<ul>
-							<li class="dropdown-header"><a href="{{ site.baseurl }}/about">About</a></li>
-							<li><a href="{{ site.baseurl }}/about/history">History of ATLtransit</a></li>
-							<li><a href="{{ site.baseurl }}/about/regional-transit">About regional transit</a></li>
-							<li><a href="{{ site.baseurl }}/about/feedback">Feedback</a></li>             
-							<li><a href="{{ site.baseurl }}/about/contact">Contact us</a></li>             
-							<li class="divider"></li>
-							<li class="dropdown-header"><a href="#">Newsletter / Alerts</a></li>
-							<form class="form" role="form">
-								<div class="form-group">
-									<label class="sr-only" for="email">Email address</label>
-									<input type="email" class="form-control" id="email" placeholder="Enter email">
-								</div>
-								<button type="submit" class="btn btn-primary btn-block">Sign up!</button>
-							</form>                                                       
-						</ul>
-					</li>
+					{% for item in site.data.nav %}
+						{% if forloop.index == 1 or forloop.index == 3 or forloop.index == 5 %}
+							<li class="col-sm-3 col-xs-6">
+						{% endif %}
+								<ul id="{{ item.category }}-subnav">
+									<li class="dropdown-header"><a href="{{ item.url }}">{{ item.title }}</a></li>
+									{% for subitem in item.dropdown %}
+									{% if subitem.include != false %}	
+										<li><a href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+									{% endif %}
+									{% endfor %}
+									{% if forloop.first or forloop.last or forloop.index == 3 %}
+										<li class="divider"></li>
+									{% endif %}
+									{% if forloop.last %}
+										<li class="dropdown-header"><a href="#">Newsletter / Alerts</a></li>
+										<form class="form" role="form">
+											<div class="form-group">
+												<label class="sr-only" for="email">Email address</label>
+												<input type="email" class="form-control" id="email" placeholder="Enter email">
+											</div>
+											<button type="submit" class="btn btn-primary btn-block">Sign up!</button>
+										</form>
+									{% endif %}
+								</ul>
+						{% if forloop.index == 2 or forloop.index == 4 %}
+							</li>
+						{% endif %}
+					{% endfor %}
 				</ul>
 			</li>  
 		</ul>
@@ -108,13 +81,12 @@
 						</label>
 					</div> -->
 					<div class="input-group navbar-input-group">
-						<input type="text" class="form-control navbar-search" placeholder="Search">
+						<input type="text" class="form-control navbar-search nav-search" placeholder="Search">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" style="margin-right:20px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+							<button class="btn btn-primary nav-search" type="submit" style="margin-right:20px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 						</span>
 					</div>
 				</form>
 		</div>
 	</div><!-- /.nav-collapse -->
 </nav>
-<!-- </div> -->

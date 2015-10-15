@@ -1,3 +1,45 @@
-<div class="col-md-3 pull-right">
-	<h1>Sidebar!</h1>
+<div class="col-sm-6 col-xs-12 col-md-3 sidebar ">
+	<ul class="nav nav-sidebar">
+			{% for item in site.data.nav %}
+				{% if item.category == page.category %}
+					{% if item.title == page.title %}
+						<li class="nav-header active"><a href="{{ item.url }}">{{ item.title }}<span class="sr-only">(current)</span></a></li>
+					{% else %}
+						<li class="nav-header"><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{% endif %}
+					{% if item.dropdown %}
+						{% for subitem in item.dropdown %}
+							{% if subitem.title == page.title %}
+								<li class="active"><a href="{{ subitem.url }}">{{ subitem.title }}<span class="sr-only">(current)</span></a></li>
+							{% else %}
+				    			<li><a href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+				    		{% endif %}	
+				    	{% endfor %}
+				    {% endif %}
+				{% endif %}
+			{% endfor %}
+	</ul>
+</div>
+<div class="col-sm-6 col-xs-12 col-md-3 sidebar pull-right">
+	<h4>Related pages</h4>
+	<ul class="nav nav-sidebar">
+		{% if page.related %}
+			{% for category in page.related %}
+				{% for item in site.data.nav %}
+					{% if item.title == category %}
+						<li class="nav-header"><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{% else %}
+						{% for subitem in item.dropdown %}
+							{% if subitem.title == category %}
+				    			<li><a href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+				    		{% endif %}	
+				    	{% endfor %}
+					{% endif %}
+					
+				{% endfor %}
+			{% endfor %}
+		{% else %}
+			<li class="disabled"><a href="#">No related pages</a></li>
+		{% endif %}
+	</ul>
 </div>
