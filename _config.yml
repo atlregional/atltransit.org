@@ -7,5 +7,5 @@ exclude:
   - "package.json"
   - "gulpfile.js"
 # source:	_src
-url: https://atltransit.surge.sh
+url: http://test.atlb.us
 title: ATLtransit
