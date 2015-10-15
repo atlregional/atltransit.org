@@ -1,0 +1,88 @@
+# - title: Plan a trip
+#   category: plan
+#   url: "/plan"
+#   side: left
+
+# - title: "Fares & Transfers"
+#   category: fares
+#   url: "/fares"
+
+- title: Maps
+  category: maps
+  url: "/maps"
+  dropdown:
+  - title: Plan a trip
+    url: "/plan"
+    include: false
+  - title: Interactive Map
+    url: "/maps/interactive"
+  - title: "Park 'n' Ride"
+    url: "/maps/parknride"
+  - title: Wayfinding
+    url: "/maps/wayfinding"
+
+- title: Destinations
+  category: destinations
+  url: "/destinations"
+  dropdown:
+  - title: Calendar
+    url: "/destinations/calendar"
+  - title: "Arts & entertainment"
+    url: "/destinations/arts"
+  - title: Sports
+    url: "/destinations/sports"
+  - title: Festivals
+    url: "/destinations/festivals"
+
+- title: Services
+  category: services
+  url: "/services"
+  dropdown:
+  - title: Agency information
+    url: "/services/agencies"
+  - title: Accessibility
+    url: "/services/accessibility"
+  - title: "Discounts & passes"
+    url: "/services/passes"
+  - title: "Biking & transit"
+    url: "/services/biking"
+  - title: "Fares & transfers"
+    url: "/fares"
+    include: false
+  - title: Parking
+    url: "/services/parking"
+  - title: "How-tos & tips"
+    url: "/services/tips"
+  - title: "Safety & security"
+    url: "/services/safety"
+  - title: "Georgia Commute Options"
+    url: "/services/gco"
+
+- title: Rider tools
+  category: tools
+  url: "/tools"
+  dropdown: 
+  - title: Plan a trip
+    url: "/plan"
+    include: false
+  - title: Real-time arrivals
+    url: "/tools/realtime"
+  - title: Schedules
+    url: "/tools/schedules"
+  - title: Alerts
+    url: "/tools/alerts"
+
+- title: About
+  category: about
+  url: "/about"
+  dropdown:
+  - title: "History of ATLtransit"
+    url: "/about/history"
+  - title: "About regional transit"
+    url: "/about/regional-transit"
+  - title: Feedback
+    url: "/about/feedback"
+  - title: Contact us
+    url: "/about/contact"
+  # ],
+  # newsletter: []
