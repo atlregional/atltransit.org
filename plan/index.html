@@ -2,6 +2,7 @@
 layout: plan
 title: Plan trip
 category: ''
+permalink: '/plan/'
 ---
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="/assets/css/jquery-ui-1.10.3.custom.css" />
@@ -84,12 +85,15 @@ category: ''
 	<div class="row col-xs-12"></div>
 	<div class="row col-md-4 col-sm-6 col-xs-12">
 		<div id="planner-advice-div" class="hidden chubi">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id ="planner-advice-msg" data-toggle="buttons"></div>
-			<div role="group" class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12" id ="planner-advice-list" data-toggle="buttons"></div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id ="planner-advice-msg" data-toggle="buttons">
+			</div>
+			<div role="group" class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12" id ="planner-advice-list" data-toggle="buttons">
+			</div>
 			<!-- <button type="button" class="hidden btn btn-xs btn-default" onclick="toggleResults();" id="hide-results"><span class="glyphicon glyphicon-chevron-up"></span><span class="glyphicon glyphicon-chevron-down"></span></button> -->
 			<div class="hidden col-md-12" style="max-height:350px; overflow: scroll; overflow-x: hidden;" id="planner-advice-container" aria-hidden="true" style="display: none;">
 				<div class="row">
-					<div class="clearfix visible-xs"></div>
+					<div class="clearfix visible-xs">
+					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div class="card bg-faded">
 							<div id="planner-summary" class="card-block">
