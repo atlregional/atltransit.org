@@ -189,7 +189,7 @@ gulp.task('watch', function() {
   // Watch .js files
   gulp.watch('src/js/**/*.js', ['js']);
   // Watch .html files and posts
-  gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'], ['jekyll']);
+  gulp.watch(['index.html', '_data/*.yml', '/images/**/*', '_includes/*.html', '_layouts/*.html', '_includes/*.md', 'pages/**/*.md', '_includes/*.markdown', '_posts/*', 'plan/*'], ['jekyll']);
 
   gulp.watch([paths.source + '/**/*.html'], ['jekyll', reload]);
   gulp.watch([paths.asset + '/' + cssMetaType() + '/**/*'], [cssMetaType(),'jekyll', reload]);
