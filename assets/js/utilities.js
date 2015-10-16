@@ -53,7 +53,7 @@ jQuery.fn.extend({
 function trimHeadsign(headsign){
 	headsign = headsign.split('-').length > 1 ? headsign.split('-')[1] : headsign;
   headsign = headsign.split('TO').length > 1 ? headsign.split('TO')[1] : headsign;
-	headsign = headsign.split('STATION').length > 1 ? headsign.split('STATION')[0] : headsign;
+	headsign = headsign.replace(/STATION/i, '');
 	headsign = toTitleCase(headsign);
 	return headsign;
 }

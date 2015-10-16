@@ -7,6 +7,13 @@ $('#test-carousel, #next-carousel').carousel({
 $('#next-arrivals-agencies').val('');
 var geolocationBool = false;
 var lat, lon;
+// var Locale = {};
+// Locale.autocompleteMessages = {
+//         noResults: "No results found.",
+//         results: function( amount ) {
+//             return amount + ( amount > 1 ? " results are " : " result is" ) + " available, use the up and down arrow keys to navigate them.";
+//         }
+// };
 var labelMap = {
 	'RED': 'label label-danger',
 	'BLUE': 'label label-primary',
@@ -84,21 +91,17 @@ $(function(){
 	// 		}
 	// 	}
 	// });
+if (typeof setupAutoComplete === 'function'){
+	setupAutoComplete();
+}
+
 	urlParams = jQuery.unparam(window.location.hash);
-	// console.log(params);
+	// console.log(params);{}
 	if (typeof urlParams.tab !== 'undefined'){
 		$('#' + urlParams.tab + '-link').trigger('click');
 	}
 	if (typeof urlParams.stopId !== 'undefined'){
 		window.setTimeout(function(){
-			// $('#stop-code')
-			// 	.val('908986')
-			// 	// .val(urlParams.stopId.split('_')[1])
-			// 	.delay(1000)
-			// 	.keyup();
-		$('#stop-code')
-			.val(urlParams.stopId.split('_')[1])
-			.keyup();
 		$('#stop-code-arrivals-btn')
 			.removeClass('disabled')
 			.val(urlParams.stopId)
@@ -217,7 +220,6 @@ $(function(){
 	});
 	// Agency select change
 	$('input[type=radio][name=agency-arrivals-option], #next-arrivals-agencies').change(function(){
-		$('#stop-code').val('');
 		$('#next-arrivals-routes').html('<option value="">[Select Route]</option>');
 		$('#next-arrivals-trips')
 			.html('<option value="">[Select Direction]</option>')
@@ -325,7 +327,6 @@ $(function(){
 	// Select route change
 	$('.arrivals-routes').change(function(){
 		var widgetClass;
-		// $('#stop-code').val('');
 		if ($(this).hasClass('nearby')){
 			widgetClass = 'nearby';
 		}
@@ -433,7 +434,6 @@ $(function(){
 		}); // end ajax
 	});
 	// $('.arrivals-routes').change(function(){
-	// 	$('#stop-code').val('');
 	// });
 	var previousTrip;
 	$('#next-arrivals-trips')
@@ -532,7 +532,6 @@ $(function(){
 	$('.get-arrivals').click(function(){
 		var widgetClass, stopId;
 		
-		// $('#stop-code').val('');
 		if ($(this).hasClass('stop-code')){
 			widgetClass = 'stop-code';
 		}
@@ -565,8 +564,9 @@ $(function(){
 					console.log(json.data.entry.arrivalsAndDepartures);
 					if (arrivals.length > 0){
 						stopName = stopMap[json.data.entry.stopId][0].name;
+						$('#' + widgetClass + '-stop-code').html(cleanStopName('Stop ID: ' + stopId.split('_')[1]));
 						$('#' + widgetClass + '-stop-name').html(cleanStopName(stopName));
-						$('#' + widgetClass + '-last-updated').html('Last updated: ' + moment(arrivals[0].lastUpdateTime).format('h:mm:ss a'));
+						$('#' + widgetClass + '-last-updated').html('<a class="get-arrivals next btn"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> ' + moment(arrivals[0].lastUpdateTime).format('h:mm a') + '</a>');
 						$('#nearby-arrival-msg').hide();
 						table.show();
 						table.empty();
@@ -597,7 +597,7 @@ $(function(){
 								// 	headsign, 
 								// 	+seconds
 								// ]);
-								var row = $('<tr>');
+								var row = $('<tr class="info">');
 								if (predicted){
 									fromNowText += ' <i style="font-size:0.7em;" alt="Predicted arrival time" title="Predicted arrival time" class="fa fa-bolt"></i>';
 								}
@@ -655,8 +655,8 @@ $(function(){
 	$("#planner-go-btn").click(function(){
 		var params = {};
 		var plannerChoice = $('.planner-choice-btn').val();
-		var origin = $('.planner-form input[name=fromPlace]').val();
-		var destination = $('.planner-form input[name=toPlace]').val();
+		var origin = $('#planner-options-from-latlng').val();
+		var destination = $('#planner-options-dest-latlng').val();
 		var time = $('#planner-timepicker').val();
 		console.log(origin);
 		if (plannerChoice === 'Google Transit'){
@@ -672,18 +672,19 @@ $(function(){
 		    params.arriveBy = $(".planner-time-btn:first-child").val() === 'Arrive by' ? true : false;
 		    params.date = moment().format('YYYY-MM-DD');
 		    params.time = moment().valueOf();
-		    params.fromName = $('#from').select2('data').text // $('#from').select2('data')[0].text;
+		    params.fromName = $('#planner-options-from').val() // $('#from').select2('data')[0].text;
 			// params.toPlace = $('#planner-options-dest-latlng').val();
-			params.toName = $('#to').select2('data').text // $('#to').select2('data')[0].text;
+			params.toName = $('#planner-options-dest').val() // $('#to').select2('data')[0].text;
 			params.mode = 'TRANSIT,WALK'; // $('input[name=mode-select]:checked').val()
 			var atltransitUrl = 'plan#';
+			// console.log(atltransitUrl + serialize(params));
 			window.location.href = atltransitUrl + serialize(params);
 		}
 		// window.location.href='{{ site.baseurl }}/plan' + params;
 	});
     $(".planner-time-menu li a").click(function(){
 
-      $(".planner-time-btn:first-child").html('<span class="glyphicon glyphicon-time" aria-hidden="true"></span> ' + $(this).text() + ' <i class="fa fa-caret-down"></i>');
+      $(".planner-time-btn:first-child").html('<i class="fa fa-clock-o"></i> ' + $(this).text());
       $(".planner-time-btn:first-child").val($(this).text());
       var val = $(".planner-time-btn:first-child").val();
       if (val === 'Depart at' || val === 'Arrive by'){
@@ -695,7 +696,7 @@ $(function(){
    });
 
    $(".planner-choice-menu li a").click(function(){
-      $(".planner-choice-btn:first-child").html($(this).text() + ' <i class="fa fa-caret-down"></i>');
+      $(".planner-choice-btn:first-child").html($(this).text());
       $(".planner-choice-btn:first-child").val($(this).text());
    });
  //   $('.box').click(function() {
