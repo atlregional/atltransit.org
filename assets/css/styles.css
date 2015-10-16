@@ -8,6 +8,13 @@ body {
 .site-container{
 	min-height:294px;
 }
+
+/* Home elements */
+
+.home-thumbnail {
+  max-height: 187px;
+}
+
 .wellington {
   background-color: #EFF6FD !important;
   border-radius: 0 !important;
@@ -326,8 +333,29 @@ Additional Styles (required)
   right: 40px;
 }
 
-
-
+.carousel-caption > h3 {
+  text-transform: uppercase;
+}
+.carousel-caption > h3 > a {
+  color: white;
+}
+.atltransit-carousel {
+  background-color: rgb(0, 107, 182);
+  position: relative;
+  left:0px;
+  right: 0px;
+  /*width: 200px;*/
+  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.atl-carousel-control {
+  background-image: none !important;
+  background-repeat: none;
+}
+.atl-carousel-control > span.glyphicon {
+  top: 80%;
+}
 /* DataTable Planner Widget*/
 .arrivals-table table {
   margin-top: 0px !important;
@@ -419,7 +447,7 @@ Additional Styles (required)
 }
 
 .emphasis {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   border-bottom: 1px dotted #000;
 }
 
@@ -465,5 +493,27 @@ Additional Styles (required)
 
 /* Page Elements */
 .page-title {
+  padding-top: 70px;
+  /*padding-right: 30px;*/
+  /*background-color: #eff6fd;*/
+}
+.page-title > h2 {
+  font-size: 4em;
+}
+.page-tagline {
+  font-style: italic;
+  color: #777;
+  position: absolute;
+}
 
+.page-content {
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+/* Category Elements */
+.category-item-img {
+  max-height: 178px;
+  /*max-width: 100%;*/
+  overflow: hidden;
 }

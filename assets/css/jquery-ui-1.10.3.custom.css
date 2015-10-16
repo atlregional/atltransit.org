@@ -2300,12 +2300,12 @@ body .ui-tooltip {
 
 /*** Input field styling from Bootstrap **/
 
- input, textarea {
+/* input, textarea {
 	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
 	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
 	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
 	transition: border linear 0.2s, box-shadow linear 0.2s;
-}
+}*/
 
 textarea {
   overflow: auto;
@@ -2326,7 +2326,7 @@ input[type=file]:focus, input[type=checkbox]:focus, select:focus {
 	outline: 1px dotted #666;
 }
 
-input[type="text"],
+/*input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="search"],
@@ -2341,10 +2341,10 @@ textarea,
 	line-height: 18px;
 	color: #555555;
 	border: 1px solid #ccc;
-	-webkit-border-radius: 3px; /* Safari 4 */
-	-moz-border-radius: 3px; /* Firefox 3.6 */
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
 	border-radius: 3px;
-}
+}*/
 
 input[type="search"] {
   -webkit-appearance: textfield;
