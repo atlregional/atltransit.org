@@ -1,0 +1,18 @@
+<div class="row">
+{% for item in site.data.nav %}
+	{% if page.id == item.category %}
+		{% for subitem in item.subitems %}
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<a href="{{ subitem.url }}"><img class="category-item-img" src="{{ subitem.image }}" alt="{{ subitem.title }}" title="{{ subitem.title }}"></a>
+						<div class="caption">
+							<a href="{{ subitem.url }}"><h3>{{ subitem.title }}</h3></a>
+							<!-- <p>...</p> -->
+						</div>
+					</div>
+				</div>
+
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+</div>
