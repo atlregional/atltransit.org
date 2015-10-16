@@ -8,16 +8,23 @@
 	{% include nav.html %}
 	<div class="container site-container">
 		<div class="row">
-			<div class="col-md-12">
-				<h1 class="page-title">{{ page.title }}</h1>
+			<div class="col-md-12 page-title">
 				{% include breadcrumbs.html %}
+				<h1 class="">{{ page.title }}</h1>
+				<p class="page-tagline">{{ page.tagline }}</p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-9">
-				{{content}}
-			</div>
-			{% include sidebar.html %}
+			{% if page.id == page.category %}
+				<div class="col-md-12 page-content">
+					{% include category.html %}
+				</div>
+			{% else %}
+				<div class="col-md-9 page-content">
+					{{content}}
+				</div>
+				{% include sidebar.html %}
+			{% endif %}
 		</div>
 	</div>
 	{% include footer.html %}
