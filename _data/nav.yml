@@ -5,7 +5,7 @@
   subitems:
   - title: Interactive map
     url: "/maps/interactive"
-    image: "/build/tools/interactive-map.png"
+    image: "/build/images/tools/interactive-map.png"
   - title: System maps
     url: "/maps/systems"
     image: "/build/images/atl-placeholder.png"
