@@ -14,31 +14,31 @@ permalink: '/tools/alerts/'
 					<p>Follow one or more of Atlanta's transit providers on Twitter for real-time updates on significant service delays or other alerts (e.g. elevator outages).</p>
 					<!-- <ul> -->
 					<div class="row">
-						<div class="col-sm-3 col-xs-4 text-center">
+						<div class="col-sm-4 col-xs-4 text-center">
 							<a class="thumbnail" href="https://twitter.com/martaservice">
 								<i class="fa fa-twitter fa-5x"></i>
 								<p class="btn btn-sm btn-primary">@martaservice</p>
 							</a>
 						</div>
-						<div class="col-sm-3 col-xs-4 text-center">
+						<div class="col-sm-4 col-xs-4 text-center">
 							<a class="thumbnail" href="https://twitter.com/xpressga">
 								<i class="fa fa-twitter fa-5x"></i>
 								<p class="btn btn-sm btn-primary">@xpressga</p>
 							</a>
 						</div>
-						<div class="col-sm-3 col-xs-4 text-center">
+						<div class="col-sm-4 col-xs-4 text-center">
 							<a class="thumbnail" href="https://twitter.com/cobbtransit">
 								<i class="fa fa-twitter fa-5x"></i>
 								<p class="btn btn-sm btn-primary">@cobbtransit</p>
 							</a>
 						</div>
-						<div class="col-sm-3 col-xs-4 text-center">
+						<div class="col-sm-4 col-xs-4 text-center">
 							<a class="thumbnail" href="https://twitter.com/gctransit">
 								<i class="fa fa-twitter fa-5x"></i>
 								<p class="btn btn-sm btn-primary">@gctransit</p>
 							</a>
 						</div>
-						<div class="col-sm-3 col-xs-4 text-center">
+						<div class="col-sm-4 col-xs-4 text-center">
 							<a class="thumbnail" href="https://twitter.com/atlstreetcar">
 								<i class="fa fa-twitter fa-5x"></i>
 								<p class="btn btn-sm btn-primary">@atlstreetcar</p>

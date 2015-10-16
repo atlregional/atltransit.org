@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Fares & transfers
-id: fares
+title: How to transfer
+id: transfers
 category: 'fares'
-permalink: '/fares/'
-related: ["Schedules"]
-tagline: The Breeze Card is your all-access pass to transit in Atlanta!
+permalink: '/fares/transfers/'
+related: ["Schedules", "Real-time arrivals"]
 ---
+
 <div class="row">
     <div class="col-md-12">
         <h2>Having trouble understanding free transfers?</h2>
@@ -253,3 +253,4 @@ tagline: The Breeze Card is your all-access pass to transit in Atlanta!
 
     </div>
 </div>
+

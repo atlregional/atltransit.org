@@ -4,6 +4,7 @@ title: About regional transit
 id: regional-transit
 category: 'about'
 permalink: '/about/regional-transit/'
+related: ["Interactive map"]
 ---
 
 # Hello

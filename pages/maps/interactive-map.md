@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Interactive Map
+title: Interactive map
 id: interactive
 category: 'maps'
 permalink: '/maps/interactive/'
+related: ["Agency information", "Plan a trip"]
 ---
 <p>The map below shows the major regional connections for transit service in the Atlanta region.</p>
 <p><strong>Not shown</strong> are the local bus service that exists in Fulton, DeKalb, Cobb, Gwinnett, Clayton, and Cherokee counties.</p>
