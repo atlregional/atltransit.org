@@ -1,88 +1,122 @@
-# - title: Plan a trip
-#   category: plan
-#   url: "/plan"
-#   side: left
-
-# - title: "Fares & Transfers"
-#   category: fares
-#   url: "/fares"
-
 - title: Maps
   category: maps
+  dropdown: true
   url: "/maps"
-  dropdown:
-  - title: Plan a trip
-    url: "/plan"
-    include: false
-  - title: Interactive Map
+  subitems:
+  - title: Interactive map
     url: "/maps/interactive"
+    image: "/build/images/atl-placeholder.png"
+  - title: System maps
+    url: "/maps/systems"
+    image: "/build/images/atl-placeholder.png"
   - title: "Park 'n' Ride"
     url: "/maps/parknride"
+    image: "/build/images/atl-placeholder.png"
   - title: Wayfinding
     url: "/maps/wayfinding"
+    image: "/build/images/atl-placeholder.png"
 
 - title: Destinations
   category: destinations
+  dropdown: true
   url: "/destinations"
-  dropdown:
+  subitems:
   - title: Calendar
     url: "/destinations/calendar"
+    image: "/build/images/atl-placeholder.png"
   - title: "Arts & entertainment"
     url: "/destinations/arts"
+    image: "/build/images/atl-placeholder.png"
   - title: Sports
     url: "/destinations/sports"
+    image: "/build/images/atl-placeholder.png"
   - title: Festivals
     url: "/destinations/festivals"
+    image: "/build/images/atl-placeholder.png"
 
 - title: Services
   category: services
+  dropdown: true
   url: "/services"
-  dropdown:
-  - title: Agency information
-    url: "/services/agencies"
+  subitems:
   - title: Accessibility
     url: "/services/accessibility"
-  - title: "Discounts & passes"
-    url: "/services/passes"
+    image: "/build/images/atl-placeholder.png"
   - title: "Biking & transit"
     url: "/services/biking"
-  - title: "Fares & transfers"
-    url: "/fares"
-    include: false
+    image: "/build/images/atl-placeholder.png"
   - title: Parking
     url: "/services/parking"
+    image: "/build/images/atl-placeholder.png"
   - title: "How-tos & tips"
     url: "/services/tips"
+    image: "/build/images/atl-placeholder.png"
   - title: "Safety & security"
     url: "/services/safety"
+    image: "/build/images/atl-placeholder.png"
   - title: "Georgia Commute Options"
     url: "/services/gco"
+    image: "/build/images/atl-placeholder.png"
 
 - title: Rider tools
   category: tools
+  dropdown: true
   url: "/tools"
-  dropdown: 
+  subitems: 
   - title: Plan a trip
     url: "/plan"
+    image: "/build/images/tools/trip-planner.png"
     include: false
   - title: Real-time arrivals
     url: "/tools/realtime"
+    image: "/build/images/atl-placeholder.png"
   - title: Schedules
     url: "/tools/schedules"
+    image: "/build/images/atl-placeholder.png"
   - title: Alerts
     url: "/tools/alerts"
+    image: "/build/images/atl-placeholder.png"
 
 - title: About
   category: about
+  dropdown: true
   url: "/about"
-  dropdown:
-  - title: "History of ATLtransit"
+  subitems:
+  - title: History of ATLtransit
     url: "/about/history"
+    image: "/build/images/atl-placeholder.png"
+  - title: Agency information
+    url: "/about/agencies"
+    image: "/build/images/atl-placeholder.png"
   - title: "About regional transit"
     url: "/about/regional-transit"
+    image: "/build/images/atl-placeholder.png"
   - title: Feedback
     url: "/about/feedback"
+    image: "/build/images/atl-placeholder.png"
   - title: Contact us
     url: "/about/contact"
+    image: "/build/images/atl-placeholder.png"
   # ],
   # newsletter: []
+
+- title: "Fares & transfers"
+  category: fares
+  dropdown: false
+  url: "/fares"
+  subitems:
+  - title: "How to buy fare"
+    url: "/fares/products"
+    image: "/build/images/breezecard_hand.png"
+  - title: "Fare calculator"
+    url: "/fares/calculator"
+    image: "/build/images/calculator.jpg"
+  - title: "Discounts & passes"
+    url: "/fares/passes"
+    image: "/build/images/atl-placeholder.png"
+  - title: "How to transfer"
+    url: "/fares/transfers"
+    image: "/build/images/atl-placeholder.png"
+  - title: FAQs
+    url: "/fares/faqs"
+    image: "/build/images/atl-placeholder.png"

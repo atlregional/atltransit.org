@@ -1,8 +1,93 @@
-- agency: MARTA
-  cost: 2.50
+- name: MARTA
+  id: marta
+  base: 
+    - name: Local
+      cost: "2.50"
+  passes: 
+  - name: 1 Trip
+    cost: "2.50"
+  - name: 2 Trip
+    cost: "5.00"
+  - name: 10 Trip
+    cost: "25.00"
+  - name: 20 Trip
+    cost: "42.50"
+  - name: 1 Day Pass
+    cost: "9.00"
+  - name: 2 Day Pass
+    cost: "14.00"
+  - name: 3 Day Pass
+    cost: "16.00"
+  - name: 4 Day Pass
+    cost: "19.00"
+  - name: 7 Day Pass
+    cost: "23.75"
+  - name: 30 Day Pass
+    cost: "95.00"
 
-- agency: CCT
-  cost: 2.50
+- name: CCT
+  id: cct
+  base: 
+    - name: Local
+      cost: "2.50"
+    - name: Express
+      cost: "5.00"
+  passes:
+  - name: Local 10 Ride
+    cost: "18.00"
+  - name: Local 31 Day Pass
+    cost: "72.00"
+  - name: Express 20 Ride
+    cost: "65.00"
+  - name: Express 31 Day Pass
+    cost: "125.00"
 
-- agency: GCT
-  cost: 
+- name: GCT
+  id: gct
+  base: 
+    - name: Local
+      cost: "2.50"
+    - name: Zone 1
+      cost: "3.75"
+    - name: Zone 2
+      cost: "5.00"
+  passes:
+  - name: Zone1 Exp 10 Ride
+    cost: "32.50"
+  - name: Zone 2 Express 10 Ride
+    cost: "45.00"
+  - name: Zone1 Express 30 Day
+    cost: "130.00"
+  - name: Zone 2 Express 30 Day
+    cost: "180.00"
+  - name: Local 30 Day
+    cost: "80.00"
+  - name: Local 10 Ride
+    cost: "22.50"
+
+- name: GRTA Xpress
+  id: grta
+  base:
+    - name: Green Zone
+      cost: "3.00"
+    - name: Blue Zone
+      cost: "4.00"
+  passes:
+  - name: Green Zone Round Trip
+    cost: "5.00"
+  - name: Green Zone 10-Trip
+    cost: "25.00"
+  - name: Green Zone 31-Day
+    cost: "100.00"
+  - name: Blue Zone Round Trip
+    cost: "7.00"
+  - name: Blue Zone 10-Trip
+    cost: "35.00"
+  - name: Blue Zone 31-Day
+    cost: "125.00"
+
+- name: Atlanta Streetcar
+  id: asc
+  base: 
+    - name: Local
+      cost: "0.00"
