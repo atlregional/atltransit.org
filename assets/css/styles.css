@@ -3,10 +3,11 @@
 body {
   font-family: 'Open Sans', 'sans-serif' !important;
   /*background: #EEFDF8 !important;*/
-  padding-top: 60px;
+  padding-top: 50px;
 }
 .site-container{
 	min-height:294px;
+  margin-top: 10px;
 }
 
 /* Home elements */
@@ -346,7 +347,7 @@ Additional Styles (required)
   right: 0px;
   /*width: 200px;*/
   padding: 0px;
-  padding-top: 20px;
+  padding-top: 5px;
   padding-bottom: 30px;
 }
 .atl-carousel-control {
@@ -476,6 +477,17 @@ Additional Styles (required)
   font-size: large;
   border-bottom: solid 1px #000;
 }
+.nav-sidebar-sub {
+  margin: 0;
+  width: 100%; }
+  .nav-sidebar-sub li {
+    border: none;
+    /*font-size: 1.5rem; */
+  }
+  .nav-sidebar-sub a {
+    padding-left: 40px!important;
+    /*line-height: 1.3; */
+  }
 
 /*Interactive Map*/
 .svg-buttons {
@@ -494,18 +506,36 @@ Additional Styles (required)
 /* Page Elements */
 .page-title {
   padding-top: 70px;
-  /*padding-right: 30px;*/
+  background-image: url("http://trimet.org/global/img/header-bg.png");
   /*background-color: #eff6fd;*/
+  background-color: rgb(90, 90, 90);
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .page-title {
+    padding-top: 20px;
+  }
 }
 .page-title > h2 {
   font-size: 4em;
 }
-.page-tagline {
-  font-style: italic;
-  color: #777;
-  position: absolute;
+.page-tagline-container {
+  padding-top: 10px;
+  background-color: #006BB6;
 }
 
+.page-tagline {
+  font-style: italic;
+  color: #eee;
+}
+.page-tagline > a {
+  font-style: italic;
+  color: #eee;
+  text-decoration: underline;
+}
+.page-tagline > a:hover {
+  color: #fff;
+}
 .page-content {
   margin-top:40px;
   margin-bottom:40px;
@@ -517,3 +547,10 @@ Additional Styles (required)
   /*max-width: 100%;*/
   overflow: hidden;
 }
+
+
+
+.cse .gsc-control-cse,
+        .gsc-control-cse {
+                padding: 0px!important;
+        }
