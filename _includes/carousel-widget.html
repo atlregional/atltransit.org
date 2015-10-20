@@ -1,60 +1,22 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	<!-- Indicators -->
 	<ol class="carousel-indicators">
-		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="4"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+		{% for item in site.data.carousel %}
+			<li data-target="#carousel-example-generic" data-slide-to="{{ forloop.index0}}" class="{% if forloop.first %}active{% endif %}"></li>
+		{% endfor %}
 	</ol>
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner" role="listbox">
-		<div class="item active">
-			<a href="/about"><img src="/build/images/carousel/carousel_atltransit.png" alt="bus"></a>
-			<div class="carousel-caption atltransit-carousel">
-				<h3><a href="/about">ATLtransit.org</a></h3>
-				<p>Your source for regional transit information.</p>
+		{% for item in site.data.carousel %}
+			<div class="item {% if forloop.first %}active{% endif %}">
+				<a href="{{ item.url }}"><img src="{{ item.image }}" alt="{{ item.title }}"></a>
+				<div class="carousel-caption atltransit-carousel">
+					<h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+					<p>{{ item.tagline }}</p>
+				</div>
 			</div>
-		</div>
-		<div class="item">
-			<a href="/#"><img src="/build/images/carousel/carousel1_blank_commuteTime.png" alt="bus"></a>
-			<div class="carousel-caption atltransit-carousel">
-				<h3><a href="">Commute time is you time</a></h3>
-				<p>Use your ride to catch up on news, emails, or just your morning coffee.</p>
-			</div>
-		</div>
-		<div class="item">
-			<a href="/tools/realtime"><img src="/build/images/carousel/carousel3_blank_OBA.png" alt="bus"></a>
-			<div class="carousel-caption atltransit-carousel">
-				<h3><a href="/tools/realtime">Where's my ride?</a></h3>
-				<p>Real-time data to save you time on your commute.</p>
-			</div>
-		</div>
-		<div class="item">
-			<a href="/fares"><img src="/build/images/carousel/carousel5_blank_breeze.png" alt="bus"></a>
-			<div class="carousel-caption atltransit-carousel">
-				<h3><a href="/fares">No cash, no problem</a></h3>
-				<p>Load up your card online to make transfers a breeze.</p>
-			</div>
-		</div>
-		<div class="item">
-			<a href="/plan"><img src="/build/images/carousel/carousel2_blank_serviceMap.png" alt="bus"></a>
-			<div class="carousel-caption atltransit-carousel">
-				<h3><a href="/plan">From Avondale to Acworth</a></h3>
-				<p>View our interactive maps to see where transit can take you.</p>
-			</div>
-		</div>
-		<div class="item">
-			<a href="/services"><img src="/build/images/carousel/carousel4_blank_saveGas.png" alt="bus"></a>
-			<div class="carousel-caption atltransit-carousel">
-				<h3><a href="/services">Turn your 20 mile trip into 2</a></h3>
-				<p>Bike or carpool to your station to save gas for trips you <em>want</em> to take.</p>
-			</div>
-		</div>
-		
+		{% endfor %}
 	</div>
-
 	<!-- Controls -->
 	<a class="left carousel-control atl-carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
