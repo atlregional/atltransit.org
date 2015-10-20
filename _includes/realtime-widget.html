@@ -1,0 +1,90 @@
+<div role="tabpanel" class="tab-pane planner-pane" id="next-arrival">
+	<div class="form">
+		<!-- Carousel
+		================================================== -->
+		<div id="next-carousel" class="carousel slide">
+		     <!-- Indicators -->         
+		    <div class="carousel-inner" id="next-carousel-inner">           
+		        <div class="item active">
+		            <div class="row">
+						<div class="col-xs-6 form-group">
+							<select id="next-arrivals-agencies" class="arrivals-agencies col-xs-12 form-control">
+								<option value="" selected>[Select Agency]</option>
+								<option disabled value="MARTA">MARTA</option>
+								<option disabled value="CCT">CCT</option>
+								<option disabled value="GRTA">GRTA</option>
+								<option disabled value="GCT">GCT</option>
+								<option disabled value="ASC">ATL Streetcar</option>
+								<option disabled value="GATECH">Georgia Tech</option>
+								<option value="Nearby">Nearby routes</option>
+							</select>
+						</div>
+						<div class="col-xs-2">
+							<p style="margin-top:6px;">OR</p>
+						</div>
+						<div class="form-group text-center col-xs-4">
+							<button class="btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Near</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-7 form-group">
+							<select id="next-arrivals-routes" class="arrivals-routes form-control" disabled>
+								<option>[Select Route]</option>
+							</select>
+						</div>
+						<div class="col-xs-5 form-group">
+							<select id="next-arrivals-trips" class="arrivals-trips form-control" disabled>
+								<option>[Select Direction]</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 form-group">
+							<select id="next-arrivals-stops" class="arrivals-stops form-control" disabled>
+								<option>[Select Stop]</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-xs-12">
+							<a class="get-arrivals next btn btn-primary disabled" id="next-arrivals-btn" href="#next-carousel" data-slide="next">Find next arrival</a>
+							<a class="get-schedules btn btn-default pull-right disabled" href="#next-carousel" data-slide="next"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Schedules</a>
+						</div>
+					</div>
+		        </div> <!-- End Item -->
+		        <div class="item">
+		        	<div class="row">
+		        		<div class="col-xs-2 hidden-home">	
+							<a class="btn btn-default back-btn" id="next-back-btn" href="#next-carousel" data-slide="prev">Back</a>
+						</div>
+						<div class="col-xs-10">
+							<p class="stop-id-label" id="next-stop-id"></p>
+							<p class="stop-name" id="next-stop-name"></p>
+							<p class="last-updated" id="next-last-updated"></p>
+						</div>
+						<div class="col-xs-2">
+							<button class="get-arrivals next btn btn-primary pull-right"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+						</div>
+					</div>
+		            <div class="row">
+						<div class="next-arrivals table-responsive col-xs-12">
+							<p class="arrival-msg" id="next-arrival-msg"></p>
+							<table class="table table-hover arrivals-table" id="next-arrivals-table"></table>
+						</div>
+					</div>
+		         </div>  
+		        <!-- <div class="item">
+		            <blockquote>
+		              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+		              <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+		            </blockquote>
+		        </div>   -->                                                                                 
+		    </div> 
+		   <!-- <div class="carousel-controls"> -->
+		      
+		      
+		  <!-- </div>                -->
+		                                                
+		</div><!-- End Carousel --> 
+	</div>
+</div>

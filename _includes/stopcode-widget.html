@@ -1,0 +1,61 @@
+<div role="tabpanel" class="tab-pane planner-pane" id="by-stop-id">
+	<div class="form">
+		<!-- Carousel
+		================================================== -->
+		<div id="test-carousel" class="carousel slide">
+		     <!-- Indicators -->         
+		    <div class="carousel-inner" id="stop-code-carousel-inner">           
+		        <div class="item active">
+		        	<div class="row">
+		        		<div class="col-xs-6">	
+							<a class="get-arrivals stop-code btn btn-primary disabled" id="stop-code-arrivals-btn" href="#test-carousel" data-slide="next">Find next arrival</a>
+						</div>
+						<!-- <div class="form-group col-xs-6">
+							<p class="text-right" style="margin-top:6px;">Enter ID</p>
+						</div> -->
+						<div class="form-group col-xs-6">
+							<input class="form-control typeahead" id="stop-code" type="number" placeholder="103134">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p id="stop-code-error-msg"></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 form-group">
+							<select style="visibility:hidden" id="nearby-arrivals-routes" class="arrivals-routes form-control" disabled>
+								<option value="">[Nearby routes]</option>
+							</select>
+						</div>
+						<div class="col-xs-12 form-group">
+							<select style="visibility:hidden" id="nearby-arrivals-stops" class="arrivals-stops form-control" disabled>
+								<option value="">[Nearby stops]</option>
+							</select>
+						</div>
+					</div>
+		        </div>
+		        <div class="item">
+		        	<div class="row">
+		        		<div class="col-xs-2 hidden">	
+							<a class="btn btn-default back-btn" id="stop-code-back-btn" href="#test-carousel" data-slide="prev">Back</a>
+						</div>
+						<div class="col-xs-8">
+							<p class="text-center stop-name" id="stop-code-stop-name"></p>
+							<p class="text-center last-updated" id="stop-code-last-updated"></p>
+						</div>
+						<div class="col-xs-2">
+							<button class="get-arrivals stop-code btn btn-primary pull-right"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+						</div>
+					</div>
+		            <div class="row">
+						<div class="stop-code-arrivals table-responsive col-xs-12">
+							<p class="arrival-msg" id="stop-code-arrival-msg"></p>
+							<table class="table table-hover  arrivals-table" id="stop-code-arrivals-table"></table>
+						</div>
+					</div>
+		         </div> <!-- End Item --> 
+		    </div>
+		</div> <!-- End Carousel --> 
+	</div>
+</div>
