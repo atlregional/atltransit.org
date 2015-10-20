@@ -1080,15 +1080,15 @@ setupDatetime();
 						$('#nearby-arrival-msg').hide();
 						var data = [];
 						var schedulesDiv = $('.schedules-tables');
+						schedulesDiv.empty();
 						for (var i = 0; i < routes.length; i++) {
 							console.log(routes[i]);
 							var routeName = routeMap[routes[i].routeId][0].shortName;
 							var directions = routes[i].stopRouteDirectionSchedules;
 							for (var j = 0; j < directions.length; j++) {
 								// var tableId = '#' + widgetClass + '-table';
-								var table = $('<table class="table table-hover" id="schedule-'+routeId+j+'"></table>');
-								table.show();
-								table.empty();
+								var columnDiv = $('<div class="schedule-table table-responsive col-xs-12 col-md-3"></div>')
+								var table = $('<table class="table table-striped table-condensed table-hover col-md-3" id="schedule-'+routeId+j+'"></table>');
 
 								table.append('<thead><tr><th class="text-right">Hour</th><th>Minute</th></tr></thead>');
 								var tbody = $('<tbody>');
@@ -1104,30 +1104,35 @@ setupDatetime();
 									var currentHour = 0;
 									var row;
 									var minuteCell;
+									var morning = true;
 									for (var k = 0; k < stopTimes.length; k++) {
 										var seconds = stopTimes[k].arrivalTime;
-										console.log(seconds);
+										// console.log(seconds);
 										var arrivalTime = moment(seconds);
 										var nextArrivalTime;
 										if (k !== stopTimes.length - 1){
 											nextArrivalTime = moment(stopTimes[k + 1].arrivalTime);
 										}
-										console.log(arrivalTime.format('h:mm a'));
+										// console.log(arrivalTime.format('h:mm a'));
 										if (arrivalTime.hour() !== currentHour){
-											console.log(arrivalTime.hour())
-											console.log(currentHour)
+											// console.log(arrivalTime.hour())
+											// console.log(currentHour)
 											// if (arrivalTime.hour() > firstTime.hour()){
 											// 	tbody.append($('.' +i+j+arrivalTime.hour()));
 											// }
+											if (arrivalTime.hour() >= 13 && morning){
+												morning = false;
+												tbody.append('<tr><td></td><td></td></tr>')
+											}
 											row = $('<tr id="'+i+j+arrivalTime.hour()+'">');
-											row.append('<td class="text-right"><strong>' + arrivalTime.hour() + ':</strong></td>');
+											row.append('<td class="text-right"><strong>' + arrivalTime.format('h') + ':</strong></td>');
 											minuteCell = $('<td class="text-left">' + arrivalTime.minutes() + '</td>');
 											row.append();
 											currentHour = arrivalTime.hour();
 										}
 										else {
 											minuteCell.append(' ' + arrivalTime.minutes());
-											console.log($('.'+i+j+'-hour-'+arrivalTime.hour()).html());
+											// console.log($('.'+i+j+'-hour-'+arrivalTime.hour()).html());
 										}
 
 										if (nextArrivalTime.hour() !== arrivalTime.hour()){
@@ -1138,10 +1143,12 @@ setupDatetime();
 										if (k == stopTimes.length - 1){
 											console.log('done')
 											table.append(tbody);
-											console.log(table)
-											schedulesDiv
+											// console.log(table);
+											columnDiv
 												.append('<h4>'+ routeName + ' - ' + headsign +'</h4')
 												.append(table);
+											schedulesDiv
+												.append(columnDiv);
 										}
 									};
 								}
