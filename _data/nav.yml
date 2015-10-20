@@ -71,7 +71,7 @@
     image: "/build/images/atl-placeholder.png"
   - title: Schedules
     url: "/tools/schedules"
-    image: "/build/images/atl-placeholder.png"
+    image: "/build/images/tools/schedules.png"
   - title: Alerts
     url: "/tools/alerts"
     image: "/build/images/atl-placeholder.png"
