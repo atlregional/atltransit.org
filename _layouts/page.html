@@ -6,14 +6,10 @@
 {% include header.html %}
 <body>
 	{% include nav.html %}
+	{% include page-header.html %}
 	<div class="container site-container">
-		<div class="row">
-			<div class="col-md-12 page-title">
-				{% include breadcrumbs.html %}
-				<h1 class="">{{ page.title }}</h1>
-				<p class="page-tagline">{{ page.tagline }}</p>
-			</div>
-		</div>
+		<!-- <div class="row"> -->
+		<!-- </div> -->
 		<div class="row">
 			{% if page.id == page.category %}
 				<div class="col-md-12 page-content">
@@ -23,7 +19,9 @@
 				<div class="col-md-9 page-content">
 					{{content}}
 				</div>
-				{% include sidebar.html %}
+				{% if page.sidebar != false %}
+					{% include sidebar.html %}
+				{% endif %}
 			{% endif %}
 		</div>
 	</div>
