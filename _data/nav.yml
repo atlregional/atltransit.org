@@ -15,7 +15,6 @@
   - title: Wayfinding
     url: "/maps/wayfinding"
     image: "/build/images/atl-placeholder.png"
-
 - title: Destinations
   category: destinations
   dropdown: true
@@ -120,3 +119,7 @@
   - title: FAQs
     url: "/fares/faqs"
     image: "/build/images/atl-placeholder.png"
+- title: Search
+  category: search
+  dropdown: false
+  url: "/search"
