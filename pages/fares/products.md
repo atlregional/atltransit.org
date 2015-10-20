@@ -4,9 +4,16 @@ title: How to buy fare
 id: products
 category: 'fares'
 permalink: '/fares/products/'
+sections: ["Purchasing fare", "Where to buy fare", "Basic fare prices"]
 ---
 
-## Basic fare
+## Purchasing fare
+
+## Where to buy fare
+
+You can purchase fare at any Breeze vending machine which are located at every MARTA rail station.  Breeze vending machines are also at major regional transfer centers
+
+## Basic fare prices
 
 A single ride on any transit system can be taken with the following fares:
 

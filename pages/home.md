@@ -26,7 +26,7 @@ permalink: '/'
 					{% include planner-widget.html %}
 				</div>
 			</div>
-			<div class="col-xs-12">
+			<!-- <div class="col-xs-12">
 				<div class="well wellington">
 					<p>Recent trips</p>
 					<ul class="list-group">
@@ -34,7 +34,7 @@ permalink: '/'
 						<li class="list-group-item"><a href=""><strong>Georgia Dome</strong> to <strong>Midtown, At...</strong><span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a></li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<div class="col-xs-12 col-sm-7 col-md-8 carousel-widget">
@@ -88,38 +88,3 @@ permalink: '/'
 		interval: false
 	});
 </script> 
-<!-- <div id="box-container">
-    
-    <div id="box1" class="box">Div #1</div>
-    <div id="box2" class="box">Div #2</div>
-    <div id="box3" class="box">Div #3</div>
-    <div id="box4" class="box">Div #4</div>
-    <div id="box5" class="box">Div #5</div>
-    
-</div> -->
-<!-- <div class="container">
-	<div class="row replace col-md-6">
-	    <div id="col2" class="col-md-0">
-	    	<h1>Party!!</h1>
-	    </div>
-	    <div id="col1" class="col-md-12">
-	        <a id="trig" class="btn btn-default">Reflow Me</a>
-	    </div>
-	</div>
-</div> -->
-
-  <!-- </div> -->
-<!-- <div class="row top-buffer">
-	<div class="col-xs-12 col-sm-5 col-md-12">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">These guys really love transit!</h3>
-			</div>
-			<div class="panel-body">
-				<a href="#" class="thumbnail">
-					<img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Dc_metro_car_interior.jpg" alt="...">
-				</a>
-			</div>
-		</div>
-	</div>
-</div> -->

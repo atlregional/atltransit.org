@@ -6,3 +6,5 @@ category: 'tools'
 permalink: '/tools/realtime/'
 related: ["Fares & transfers"]
 ---
+
+{% include realtime-widget.html %}

@@ -5,7 +5,7 @@ id: fares
 category: 'fares'
 permalink: '/fares/'
 related: ["Schedules"]
-tagline: The Breeze Card is your all-access pass to transit in Atlanta!
+tagline: Your Breeze Card lets you ride any combination of MARTA <a href="#">rail</a> and local or express buses in the Atlanta region.
 ---
 <div class="row">
     <div class="col-md-12">
