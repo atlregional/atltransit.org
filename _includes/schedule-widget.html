@@ -1,0 +1,100 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="/assets/css/jquery-ui-1.10.3.custom.css" />
+<div role="tabpanel" class="tab-pane planner-pane" id="schedules">
+	<div class="form">
+		<!-- Carousel
+		================================================== -->
+		<div id="schedules-carousel" class="carousel slide">
+		     <!-- Indicators -->         
+		    <div class="carousel-inner" id="schedules-carousel-inner">           
+		        <div class="item active">
+		            <div class="row">
+						<div class="col-xs-6 form-group">
+							<select id="schedules-agencies" class="arrivals-agencies col-xs-12 form-control">
+								<option value="" selected>[Select Agency]</option>
+								<option disabled value="MARTA">MARTA</option>
+								<option disabled value="CCT">CCT</option>
+								<option disabled value="GRTA">GRTA</option>
+								<option disabled value="GCT">GCT</option>
+								<option disabled value="ASC">ATL Streetcar</option>
+								<option disabled value="GATECH">Georgia Tech</option>
+								<option value="Nearby">Nearby routes</option>
+							</select>
+						</div>
+						<div class="col-xs-2">
+							<p style="margin-top:6px;">OR</p>
+						</div>
+						<div class="form-group text-center col-xs-4">
+							<button class="btn btn-default" id="get-location"><i class="fa fa-location-arrow"></i> Near</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-7 form-group">
+							<select id="schedules-routes" class="arrivals-routes form-control" disabled>
+								<option>[Select Route]</option>
+							</select>
+						</div>
+						<div class="col-xs-5 form-group">
+							<select id="schedules-trips" class="arrivals-trips form-control" disabled>
+								<option>[Select Direction]</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 form-group">
+							<select id="schedules-stops" class="arrivals-stops form-control" disabled>
+								<option>[Select Stop]</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-xs-12">
+							<a class="get-schedules next btn btn-primary disabled" id="schedules-btn" href="#schedules-carousel" data-slide="next">Get schedule info</a>
+							<a class="get-realtime btn btn-default pull-right disabled" href="/tools/realtime" data-slide="next"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span> Real-time arrivals</a>
+						</div>
+					</div>
+		        </div> <!-- End Item -->
+		        <div class="item">
+		        	<div class="row">
+		        		<div class="col-xs-2 hidden-home">	
+							<a class="btn btn-default back-btn" id="schedules-back-btn" href="#schedules-carousel" data-slide="prev">Back</a>
+						</div>
+						<div class="col-xs-10">
+							<p class="stop-id-label" id="schedules-stop-id"></p>
+							<p class="stop-name" id="schedules-stop-name"></p>
+							<p class="last-updated" id="schedules-last-updated"></p>
+						</div>
+						<!-- <div class="col-xs-2">
+							<button class="get-arrivals next btn btn-primary pull-right"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+						</div> -->
+					</div>
+					<div class="row">
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-date">
+								<span id="date-glyph" class="input-group-addon input-group-glyph"><i class="fa fa-calendar"></i></span>
+								<input aria-describedby="date-glyph" id="planner-options-date" type="text" title="Date" aria-label="Datumkiezer, gebruik Ctrl en pijltjes om te navigeren" aria-required="true" class="form-control" required="required"  />
+							</div>
+						</div>
+					</div>
+		            <div class="row">
+						<div class="schedules-tables table-responsive col-xs-12">
+							<p class="arrival-msg" id="schedules-msg"></p>
+							<!-- <table class="table table-hover arrivals-table" id="schedules-table"></table> -->
+						</div>
+					</div>
+		         </div>  
+		        <!-- <div class="item">
+		            <blockquote>
+		              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+		              <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+		            </blockquote>
+		        </div>   -->                                                                                 
+		    </div> 
+		   <!-- <div class="carousel-controls"> -->
+		      
+		      
+		  <!-- </div>                -->
+		                                                
+		</div><!-- End Carousel --> 
+	</div>
+</div>

@@ -15,6 +15,75 @@ function findBootstrapEnvironment() {
         }
     }
 }
+function setupDatetime(){
+    // if(Modernizr.inputtypes.time){
+        $('#planner-options-timeformat').hide();
+        $('#planner-options-timeformat').attr('aria-hidden',true);
+    // }
+    setTime(currentTime);
+    function pad(n) { return n < 10 ? '0' + n : n }
+    var date = currentTime.year() + '-' + pad(currentTime.month() + 1) + '-' + pad(currentTime.date());
+    setDate(date);
+    if (typeof $().datepicker === 'function'){
+      $("#planner-options-date").datepicker( {
+         dateFormat: Locale.dateFormat,
+         dayNames: Locale.days,
+         dayNamesMin : Locale.daysMin,
+         monthNames: Locale.months,
+         defaultDate: 0,
+         hideIfNoPrevNext: true,
+         minDate: whitelabel_minDate,
+         maxDate: whitelabel_maxDate
+      });
+    }
+    else{
+      console.log('error no datetimepicker');
+    }
+    /* Read aloud the selected dates */
+    $(document).on("mouseenter", ".ui-state-default", function() {
+        var text = $(this).text()+" "+$(".ui-datepicker-month",$(this).parents()).text()+" "+$(".ui-datepicker-year",$(this).parents()).text();
+        $("#planner-options-date-messages").text(text);
+    });
+
+    // if(Modernizr.inputtypes.date){
+        $('#planner-options-dateformat').hide();
+        $('#planner-options-dateformat').attr('aria-hidden',true);
+    // }
+};
+function setDate(iso8601){
+  parts = iso8601.split('-');
+  var d = moment(iso8601);
+  $('#planner-options-date').val(d.format('MM-DD-YYYY'));
+}
+function setTime(iso8601){
+    // if(Modernizr.inputtypes.time){
+    //     $('#planner-options-time').val(iso8601.slice(0,5));
+    // }else{
+      console.log(iso8601)
+         input = moment(iso8601, "hh:mm a");
+        // var secs = parseInt(val[0])*60*60+parseInt(val[1])*60;
+        // var hours = String(Math.floor(secs / (60 * 60)) % 24);
+        // var divisor_for_minutes = secs % (60 * 60);
+        // var minutes = String(Math.floor(divisor_for_minutes / 60));
+        console.log(input.format("HH:mm"))
+
+        $('#planner-options-time').val(input.format("HH:mm"));
+    // }
+}
+
+function getDate(){
+  return moment($('#planner-options-date').val()).format("YYYY-MM-DD");
+  console.log(elements)
+  var month = currentTime.day();
+  var day = currentTime.month();
+  var year = String(currentTime.year());
+  setDate(year+'-'+month+'-'+day);
+  return year+'-'+month+'-'+day;
+}
+function getTime(){
+  var time = moment($('#planner-options-time').val(), "HH:mm");
+  return time.format("hh:mm a")
+}
 // Scrolls to anchor tag from subnav link
 function scrollToAnchor(aid){
     console.log(aid)

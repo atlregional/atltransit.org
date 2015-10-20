@@ -1,7 +1,7 @@
 
 // Planner Widget Javascript
 $('#planner-timepicker').timepicker();
-$('#test-carousel, #next-carousel').carousel({
+$('#test-carousel, #next-carousel, #schedules-carousel').carousel({
 		interval: false
 });
 $('#next-arrivals-agencies').val('');
@@ -99,16 +99,16 @@ if (typeof setupAutoComplete === 'function'){
 	// console.log(params);{}
 	if (typeof urlParams.tab !== 'undefined'){
 		$('#' + urlParams.tab + '-link').trigger('click');
-	}
-	if (typeof urlParams.stopId !== 'undefined'){
-		window.setTimeout(function(){
-		$('#stop-code-arrivals-btn')
-			.removeClass('disabled')
-			.val(urlParams.stopId)
-			.trigger('click');
-		}, 200);
-		
-		// $(' .stop-code').trigger('click');
+		if (typeof urlParams.stopId !== 'undefined'){
+			window.setTimeout(function(){
+			$('#' + urlParams.tab + '-arrivals-btn')
+				.removeClass('disabled')
+				.val(urlParams.stopId)
+				.trigger('click');
+			}, 200);
+			
+			// $(' .stop-code').trigger('click');
+		}
 	}
 	$(".js-data-example-ajax").change(function(){
 		console.log(this.value);
@@ -199,7 +199,7 @@ if (typeof setupAutoComplete === 'function'){
 			console.log(json.data.list);
 			var agencies = json.data.list;
 			$.each(agencies, function(i, agency) {  
-				$('#next-arrivals-agencies option[value='+agency.agencyId+']').removeAttr('disabled');
+				$('.arrivals-agencies option[value='+agency.agencyId+']').removeAttr('disabled');
 			});
 		}
 	}); // end ajax
@@ -218,7 +218,8 @@ if (typeof setupAutoComplete === 'function'){
 			$('#' + widgetClass + '-back-btn').trigger('click');
 		}
 	});
-	// Agency select change
+	
+	// Real-time agency select change
 	$('input[type=radio][name=agency-arrivals-option], #next-arrivals-agencies').change(function(){
 		$('#next-arrivals-routes').html('<option value="">[Select Route]</option>');
 		$('#next-arrivals-trips')
@@ -325,7 +326,7 @@ if (typeof setupAutoComplete === 'function'){
 		}
 	});
 	// Select route change
-	$('.arrivals-routes').change(function(){
+	$('#next-arrivals-routes').change(function(){
 		var widgetClass;
 		if ($(this).hasClass('nearby')){
 			widgetClass = 'nearby';
