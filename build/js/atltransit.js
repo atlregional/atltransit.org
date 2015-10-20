@@ -1,42 +1,3 @@
-var atltransit = {};
-
-atltransit.nav = {
-	'plan': [],
-	'alerts': [],
-	'fares': [],
-	'maps': [
-		'systems', 
-		'plan',
-		'real-time',
-		'interactive', 
-		'parknride',
-		'wayfinding'
-	],
-	'destinations': [
-		'calendar',
-		'arts',
-		'sports',
-		'festivals'
-	],
-	'services': [
-		'agencies',
-		'accessibility',
-		'passes',
-		'biking',
-		'fares',
-		'parking',
-		'tips',
-		'safety',
-		'gco'
-	],
-	'about': [
-		'history',
-		'regional-transit',
-		'feedback',
-		'contact'
-	],
-	'newsletter': []
-};
 $('.nav-search').submit(function(e){
 	e.preventDefault();
 	console.log(this.value);
@@ -777,6 +738,19 @@ function findBootstrapEnvironment() {
         }
     }
 }
+// Scrolls to anchor tag from subnav link
+function scrollToAnchor(aid){
+    console.log(aid)
+    var aTag = $("[name='"+ aid +"']");
+    console.log(aTag)
+    $('html,body').animate({scrollTop: aTag.offset().top - 60},'slow');
+}
+
+$(".nav-sidebar-sub > li > a").click(function() {
+  console.log($(this).attr('href').split('#')[1])
+   scrollToAnchor($(this).attr('href').split('#')[1]);
+});
+
 jQuery.unparam = function (value) {
   if (value.length > 1 && value.charAt(0) == '#'){
     value = value.substring(1);
