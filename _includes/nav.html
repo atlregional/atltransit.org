@@ -72,8 +72,8 @@
 				</ul>
 			</li>  
 		</ul>
-		<div class="col-sm-1 pull-right row">
-				<form class="col-xs-12 col-sm-1 navbar-form navbar-right visible-*-inline" role="search">
+		<div class="col-sm-2 pull-right row">
+				<form class="col-xs-12 col-sm-2 navbar-form navbar-right visible-*-inline" id="searchbox_XXXXXXXXXX:YYYYYYYYY" action="/search">
 					<!-- <div class="btn-group" data-toggle="buttons">
 						<label class="agency-arrivals-radio btn btn-default active">
 							<input type="radio" name="options" id="option1" autocomplete="off" checked> En
@@ -83,12 +83,32 @@
 						</label>
 					</div> -->
 					<div class="input-group navbar-input-group">
-						<input type="text" class="form-control navbar-search nav-search" placeholder="Search">
+						<input id="q" name="q" type="text" class="form-control navbar-search nav-search" placeholder="Search">
+						<input value="012656238249604753028:qzpqrvzllsa" name="cx" type="hidden"/>
+						<input value="FORID:11" name="cof" type="hidden"/>
+						<!-- <input id="q" style="" name="q" size="75" type="text"/> -->
+    					<!-- <button class="btn">Search</button> -->
 						<span class="input-group-btn">
 							<button class="btn btn-primary nav-search" type="submit" style="margin-right:20px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 						</span>
+					</div>
+					<div style="width:0px;overflow:hidden;height:0px;"> <!-- if you use display:nonw here it doesn't work-->
+					    <gcse:searchbox-only></gcse:searchbox-only>
 					</div>
 				</form>
 		</div>
 	</div><!-- /.nav-collapse -->
 </nav>
+
+<!-- Put the following javascript before the closing  tag. -->
+<script>
+(function() {
+  var cx = '012656238249604753028:qzpqrvzllsa'; // Insert your own Custom Search engine ID here
+  var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+  gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<!-- Place this tag where you want both of the search box and the search results to render -->
