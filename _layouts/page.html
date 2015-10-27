@@ -2,7 +2,7 @@
 
 ---
 <!doctype html>
-<html ng-app>
+<html manifest="/auto.appcache">
 {% include header.html %}
 <body>
 	{% include nav.html %}
@@ -18,6 +18,9 @@
 				</div>
 			{% else %}
 				<div class="col-md-9 page-content">
+					{% if page.sidebar != false %}
+						{% include anchor-nuggets.html %}
+					{% endif %}
 					{{content}}
 				</div>
 				{% if page.sidebar != false %}
