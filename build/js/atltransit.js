@@ -1080,14 +1080,21 @@ setupDatetime();
 						$('#nearby-arrival-msg').hide();
 						var data = [];
 						var schedulesDiv = $('.schedules-tables');
+						var rowDiv = $('<div class="row row-eq-height"></div>');
+						var rowDiv2 = $('<div class="row row-eq-height"></div>');
 						schedulesDiv.empty();
 						for (var i = 0; i < routes.length; i++) {
 							console.log(routes[i]);
 							var routeName = routeMap[routes[i].routeId][0].shortName;
 							var directions = routes[i].stopRouteDirectionSchedules;
 							for (var j = 0; j < directions.length; j++) {
+								var numTrips = directions.length * routes.length;
+								var gridWidth = numTrips > 4 ? 3 : 12 / numTrips;
+								gridWidth = numTrips === 1 ? 6 : gridWidth;
+								var gridWidthSm = numTrips > 4 ? 6 : 12 / numTrips * 2;
 								// var tableId = '#' + widgetClass + '-table';
-								var columnDiv = $('<div class="schedule-table table-responsive col-xs-12 col-md-3"></div>')
+								var columnDiv = $('<div class="schedule-table table-responsive col-xs-12 col-md-'+gridWidth+' col-sm-6"></div>')
+								
 								var table = $('<table class="table table-striped table-condensed table-hover col-md-3" id="schedule-'+routeId+j+'"></table>');
 
 								table.append('<thead><tr><th class="text-right">Hour</th><th>Minute</th></tr></thead>');
@@ -1104,8 +1111,13 @@ setupDatetime();
 									var currentHour = 0;
 									var row;
 									var minuteCell;
-									var morning = true;
+									var morning = firstTime.hour() < 12 ? true : false;
 									for (var k = 0; k < stopTimes.length; k++) {
+										var meridian = '';
+										if (morning && k === 0){
+											// tbody.append('<tr class="text-left warning"><td colspan="2"><strong>AM</strong></td></tr>');
+											meridian = '<strong>AM</strong>  ';
+										}
 										var seconds = stopTimes[k].arrivalTime;
 										// console.log(seconds);
 										var arrivalTime = moment(seconds);
@@ -1120,12 +1132,16 @@ setupDatetime();
 											// if (arrivalTime.hour() > firstTime.hour()){
 											// 	tbody.append($('.' +i+j+arrivalTime.hour()));
 											// }
-											if (arrivalTime.hour() >= 13 && morning){
-												morning = false;
-												tbody.append('<tr><td></td><td></td></tr>')
-											}
 											row = $('<tr id="'+i+j+arrivalTime.hour()+'">');
-											row.append('<td class="text-right"><strong>' + arrivalTime.format('h') + ':</strong></td>');
+											if (arrivalTime.hour() >= 12 && morning){
+												morning = false;
+												tbody.append('<tr class="blank_row"><td colspan="2"></td></tr>');
+												meridian = '<strong>PM</strong>  ';
+												// tbody.append('<tr class="text-left info"><td colspan="2"><strong>PM</strong></td></tr>');
+												// row.append('<td>PM</td>');
+											}
+											
+											row.append('<td class="text-right"><strong>' + meridian + arrivalTime.format('h') + ':</strong></td>');
 											minuteCell = $('<td class="text-left">' + arrivalTime.minutes() + '</td>');
 											row.append();
 											currentHour = arrivalTime.hour();
@@ -1145,10 +1161,20 @@ setupDatetime();
 											table.append(tbody);
 											// console.log(table);
 											columnDiv
-												.append('<h4>'+ routeName + ' - ' + headsign +'</h4')
+												.append('<h4><span class="'+labelMap[routeName]+'">' + routeName + '</span> - ' + headsign +'</h4')
 												.append(table);
+											if ( i > 1 ){
+												rowDiv2
+													.append(columnDiv);
+											}
+											else{
+												rowDiv
+													.append(columnDiv);
+											}
+											
 											schedulesDiv
-												.append(columnDiv);
+												.append(rowDiv)
+												.append(rowDiv2);
 										}
 									};
 								}
@@ -1308,14 +1334,60 @@ function getTime(){
 // Scrolls to anchor tag from subnav link
 function scrollToAnchor(aid){
     console.log(aid)
-    var aTag = $("[name='"+ aid +"']");
+    var aTag = $("[id='"+ aid +"']");
     console.log(aTag)
     $('html,body').animate({scrollTop: aTag.offset().top - 60},'slow');
 }
 
-$(".nav-sidebar-sub > li > a").click(function() {
-  console.log($(this).attr('href').split('#')[1])
+$(".anchor-link > a").click(function(e) {
+  e.preventDefault()
+  
+  var hash = $(this).attr('href').split('#')[1];
+  history.pushState(null, null, '#' + hash);
    scrollToAnchor($(this).attr('href').split('#')[1]);
+});
+
+// Set all thumbnails to same height
+function equalHeight(group) {    
+    var tallest = 0;    
+
+    group.each(function() {     
+        $(this).css({'height' : ''});  
+        var thisHeight = $(this).height();       
+        console.log(thisHeight);
+        if(thisHeight > tallest) {          
+            tallest = thisHeight;       
+        }    
+    });
+    console.log('resizing...' + tallest);
+    group.each(function() { $(this).height(tallest); });
+} 
+
+$(document).ready(function() {   
+    equalHeight($(".equal-height")); 
+});
+
+// Check equal-height height on resize
+
+var waitForFinalEvent = (function () {
+  var timers = {};
+  return function (callback, ms, uniqueId) {
+    if (!uniqueId) {
+      uniqueId = "Don't call this twice without a uniqueId";
+    }
+    if (timers[uniqueId]) {
+      clearTimeout (timers[uniqueId]);
+    }
+    timers[uniqueId] = setTimeout(callback, ms);
+  };
+})();
+
+$(window).resize(function () {
+
+    waitForFinalEvent(function(){
+      equalHeight($(".equal-height"));
+      //...
+    }, 500, "some unique string");
 });
 
 jQuery.unparam = function (value) {
