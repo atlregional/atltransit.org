@@ -15,6 +15,7 @@
   - title: Wayfinding
     url: "/maps/wayfinding"
     image: "/build/images/atl-placeholder.png"
+
 - title: Destinations
   category: destinations
   dropdown: true
@@ -22,40 +23,40 @@
   subitems:
   - title: Calendar
     url: "/destinations/calendar"
-    image: "/build/images/atl-placeholder.png"
+    image: "http://i.istockimg.com/image-zoom/14018603/3/380/253/zoom-14018603-3.jpg"
   - title: "Arts & entertainment"
     url: "/destinations/arts"
-    image: "/build/images/atl-placeholder.png"
+    image: "//c2.staticflickr.com/8/7115/7824150726_63323faa1d_n.jpg"
   - title: Sports
     url: "/destinations/sports"
-    image: "/build/images/atl-placeholder.png"
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Falcons_vs_Redskins_2006.jpg"
   - title: Festivals
     url: "/destinations/festivals"
-    image: "/build/images/atl-placeholder.png"
+    image: "//c2.staticflickr.com/8/7103/7132908703_2f96280984_n.jpg"
 
-- title: Services
-  category: services
+- title: Rider's Guide
+  category: guide
   dropdown: true
-  url: "/services"
+  url: "/guide"
   subitems:
   - title: Accessibility
-    url: "/services/accessibility"
-    image: "/build/images/atl-placeholder.png"
+    url: "/guide/accessibility"
+    image: "http://i.istockimg.com/image-zoom/34098832/3/380/253/zoom-34098832-3.jpg"
   - title: "Biking & transit"
-    url: "/services/biking"
-    image: "/build/images/atl-placeholder.png"
+    url: "/guide/biking"
+    image: "/build/images/marta_bike.jpg"
   - title: Parking
-    url: "/services/parking"
-    image: "/build/images/atl-placeholder.png"
+    url: "/guide/parking"
+    image: "http://i.istockimg.com/image-zoom/47646808/3/380/254/zoom-47646808-3.jpg"
   - title: "How-tos & tips"
-    url: "/services/tips"
+    url: "/guide/tips"
     image: "/build/images/atl-placeholder.png"
   - title: "Safety & security"
-    url: "/services/safety"
+    url: "/guide/safety"
     image: "/build/images/atl-placeholder.png"
   - title: "Georgia Commute Options"
-    url: "/services/gco"
-    image: "/build/images/atl-placeholder.png"
+    url: "/guide/gco"
+    image: "http://www.peachpass.com/uploads/GACommuteOptions.jpg"
 
 - title: Rider tools
   category: tools
@@ -68,10 +69,10 @@
     include: false
   - title: Real-time arrivals
     url: "/tools/realtime"
-    image: "/build/images/atl-placeholder.png"
+    image: "/build/images/tools/train_realtime.jpeg"
   - title: Schedules
     url: "/tools/schedules"
-    image: "/build/images/tools/schedules.png"
+    image: "/build/images/tools/train_schedule.jpeg"
   - title: Alerts
     url: "/tools/alerts"
     image: "/build/images/atl-placeholder.png"
@@ -83,19 +84,20 @@
   subitems:
   - title: History of ATLtransit
     url: "/about/history"
-    image: "/build/images/atl-placeholder.png"
+    image: "/build/images/marta_airport_historic.png"
   - title: Agency information
+    slug: agency
     url: "/about/agencies"
     image: "/build/images/atl-placeholder.png"
   - title: "About regional transit"
     url: "/about/regional-transit"
-    image: "/build/images/atl-placeholder.png"
+    image: "/build/images/concept_3.png"
   - title: Feedback
     url: "/about/feedback"
     image: "/build/images/atl-placeholder.png"
   - title: Contact us
     url: "/about/contact"
-    image: "/build/images/atl-placeholder.png"
+    image: "http://i.istockimg.com/image-zoom/66321341/3/380/253/zoom-66321341-3.jpg"
   # ],
   # newsletter: []
 
@@ -104,21 +106,21 @@
   dropdown: false
   url: "/fares"
   subitems:
-  - title: "How to buy fare"
+  - title: "How to pay your fare"
     url: "/fares/products"
     image: "/build/images/breezecard_hand.png"
   - title: "Fare calculator"
     url: "/fares/calculator"
-    image: "/build/images/calculator.jpg"
+    image: "/build/images/calculator.png"
   - title: "Discounts & passes"
     url: "/fares/passes"
-    image: "/build/images/atl-placeholder.png"
+    image: "/build/images/breeze_multi_agency.jpeg"
   - title: "How to transfer"
     url: "/fares/transfers"
-    image: "/build/images/atl-placeholder.png"
+    image: "/build/images/bus_transfer.png"
   - title: FAQs
     url: "/fares/faqs"
-    image: "/build/images/atl-placeholder.png"
+    image: "http://i.istockimg.com/image-zoom/22041580/3/380/294/zoom-22041580-3.jpg"
 - title: Search
   category: search
   dropdown: false
