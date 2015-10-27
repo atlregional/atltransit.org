@@ -9,17 +9,23 @@
 					{% endif %}
 					{% if item.subitems %}
 						{% for subitem in item.subitems %}
-							{% if subitem.title == page.title %}
+							{% if subitem.title == page.title or subitem.slug == page.layout %}
 								<li class="active"><a href="{{ subitem.url }}">{{ subitem.title }}<span class="sr-only">(current)</span></a>
 									{% if page.sections %}
-										<ul class="nav nav-sidebar nav-sidebar-sub" style="list-style-type: none;">
+										<ul class="nav nav-sidebar nav-sidebar-sub hidden-sm hidden-xs" style="list-style-type: none;">
 											{% for section in page.sections %}
-												<li><a href="#{{section}}">{{section}}</a></li>
+												<li class="anchor-link"><a href="#{{ section | slugify }}">{{section}}</a></li>
 											{% endfor %}
 										</ul>
 									{% endif %}
+									{% if page.layout == 'agency' %}
+										<ul class="nav nav-sidebar nav-sidebar-sub hidden-sm hidden-xs" style="list-style-type: none;">
+											{% for agency in site.agencies %}
+												{% if agency.name == page.name %}<li class="active"><a href="{{ agency.url }}">{{agency.title}}</a><span class="sr-only">(current)</span></li>{% else %}<li><a href="{{ agency.url }}">{{agency.title}}</a></li>{% endif %}
+											{% endfor %}
+										</ul>
+									{% endif %}	
 								</li>
-								
 							{% else %}
 				    			<li><a href="{{ subitem.url }}">{{ subitem.title }}</a></li>
 				    		{% endif %}	
@@ -29,10 +35,10 @@
 			{% endfor %}
 	</ul>
 </div>
+{% if page.related %}
 <div class="col-sm-6 col-xs-12 col-md-3 sidebar pull-right">
-	<h4>Related pages</h4>
+	<h4>Related</h4>
 	<ul class="nav nav-sidebar">
-		{% if page.related %}
 			{% for category in page.related %}
 				{% for item in site.data.nav %}
 					{% if item.title == category %}
@@ -47,8 +53,6 @@
 					
 				{% endfor %}
 			{% endfor %}
-		{% else %}
-			<li class="disabled"><a href="#">No related pages</a></li>
-		{% endif %}
 	</ul>
 </div>
+{% endif %}

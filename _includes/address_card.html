@@ -1,0 +1,12 @@
+
+<address>
+	<strong>{{ page.name }}</strong><br>
+	{% if page.attn %}{{ page.attn }}<br>{% endif %}
+	{{ page.address }}<br>
+	{% if page.address2 %}{{ page.address2 }}<br>{% endif %}
+	{{ page.city }}, {{ page.state }} {{ page.zip }}<br><br>
+	<abbr title="Email"><i class="fa fa-envelope-o"></i></abbr> 
+	{% if page.email %}<a href="mailto:{{ page.email }}">{{ page.email }}</a>{% else %}visit website{% endif %}<br>
+	<abbr title="Website"><i class="fa fa-laptop"></i></abbr> <a href="{{ page.website }}" target="_new">{{ page.website }}</a><br>
+	<abbr title="Phone"><i class="fa fa-phone"></i></abbr> {{ page.phone }}
+</address>

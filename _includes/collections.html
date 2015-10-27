@@ -1,0 +1,28 @@
+<div class="row">
+
+		{% for doc in site.collections[page.category].docs %}
+			{% if forloop.index0 == 0 or forloop.index0 == 3 %}
+				<!-- <div class="row equal"> -->
+			{% endif %}
+			{% if page.category != doc.id %}
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail equal-height">
+						<a href="{{ doc.url }}">
+							<!-- <img class="img-rounded center-cropped category-item-img" src="{{ doc.image }}" alt="{{ doc.title }}" title="{{ doc.title }}"> -->
+							<img class="img-rounded" src="{{ doc.image }}" alt="{{ doc.title }}" title="{{ doc.title }}">
+						</a>
+						<div class="caption">
+							<h3><a href="{{ doc.url }}">{{ doc.title }}</a></h3>
+							<p>{{ doc.tagline }}</p>
+							<a class="btn btn-primary" href="{{ doc.url }}">View</a>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+			{% if forloop.index0 == 2 or forloop.last %}
+				<!-- </div> -->
+			{% endif %}
+		{% endfor %}
+
+
+</div>
