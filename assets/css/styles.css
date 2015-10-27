@@ -456,9 +456,9 @@ Additional Styles (required)
 
 /* Sidebar navigation */
 .nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
+  /*margin-right: -21px;*/
   margin-bottom: 20px;
-  margin-left: -20px;
+  /*margin-left: -20px;*/
 }
 .nav-sidebar > li > a {
   padding-right: 20px;
@@ -479,7 +479,8 @@ Additional Styles (required)
 }
 .nav-sidebar-sub {
   margin: 0;
-  width: 100%; }
+  /*width: 100%; */
+}
   .nav-sidebar-sub li {
     border: none;
     /*font-size: 1.5rem; */
@@ -534,7 +535,7 @@ Additional Styles (required)
   text-decoration: underline;
 }
 .page-tagline > a:hover {
-  color: #fff;
+  color: #FF4500;
 }
 .page-content {
   margin-top:40px;
@@ -549,8 +550,60 @@ Additional Styles (required)
 }
 
 
-
+/* Google search bar -- currently hidden */
 .cse .gsc-control-cse,
         .gsc-control-cse {
                 padding: 0px!important;
         }
+
+/*Schedules table*/
+.blank_row
+{
+    height: 10px !important; /* Overwrite any previous rules */
+    background-color: #FFFFFF !important;
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+/*bootstrap image */
+
+
+
+  .center-cropped {
+    object-fit: fill; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    width: 348px;
+    height: 178px;
+  }
+
+.thumbnail > .caption > h3 > a {
+  color: #000;
+}
+
+/*.equal, .equal > div[class*='col-md-'] {  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}*/
+
+
+a > .panel-heading > .panel-title {
+  color: #000;
+}
+
+
+ul.anchor {
+  list-style: none;
+}
+
+ul.anchor > li {
+  display: inline-block;
+  padding-top: 5px;
+}

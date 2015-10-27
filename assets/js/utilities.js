@@ -87,14 +87,60 @@ function getTime(){
 // Scrolls to anchor tag from subnav link
 function scrollToAnchor(aid){
     console.log(aid)
-    var aTag = $("[name='"+ aid +"']");
+    var aTag = $("[id='"+ aid +"']");
     console.log(aTag)
     $('html,body').animate({scrollTop: aTag.offset().top - 60},'slow');
 }
 
-$(".nav-sidebar-sub > li > a").click(function() {
-  console.log($(this).attr('href').split('#')[1])
+$(".anchor-link > a").click(function(e) {
+  e.preventDefault()
+  
+  var hash = $(this).attr('href').split('#')[1];
+  history.pushState(null, null, '#' + hash);
    scrollToAnchor($(this).attr('href').split('#')[1]);
+});
+
+// Set all thumbnails to same height
+function equalHeight(group) {    
+    var tallest = 0;    
+
+    group.each(function() {     
+        $(this).css({'height' : ''});  
+        var thisHeight = $(this).height();       
+        console.log(thisHeight);
+        if(thisHeight > tallest) {          
+            tallest = thisHeight;       
+        }    
+    });
+    console.log('resizing...' + tallest);
+    group.each(function() { $(this).height(tallest); });
+} 
+
+$(document).ready(function() {   
+    equalHeight($(".equal-height")); 
+});
+
+// Check equal-height height on resize
+
+var waitForFinalEvent = (function () {
+  var timers = {};
+  return function (callback, ms, uniqueId) {
+    if (!uniqueId) {
+      uniqueId = "Don't call this twice without a uniqueId";
+    }
+    if (timers[uniqueId]) {
+      clearTimeout (timers[uniqueId]);
+    }
+    timers[uniqueId] = setTimeout(callback, ms);
+  };
+})();
+
+$(window).resize(function () {
+
+    waitForFinalEvent(function(){
+      equalHeight($(".equal-height"));
+      //...
+    }, 500, "some unique string");
 });
 
 jQuery.unparam = function (value) {
