@@ -7,9 +7,6 @@ permalink: '/'
 <!-- <div class="status-widget col-sm-12 alert alert-info" role="alert">
 	<p><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <strong>Status:</strong> All vehicles are running smoothly.</p>
 </div> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="/assets/css/jquery-ui-1.10.3.custom.css" />
-<script type="text/javascript" src="/plan/plan-util.js"></script>
 <!-- <div class="row">
 	<div class="col-md-12 hidden-xs text-right">
 		<div class="jumbotron" style="padding: 0px; background-color: #fff">

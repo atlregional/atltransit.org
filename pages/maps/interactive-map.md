@@ -1,10 +1,13 @@
 ---
 layout: page
 title: Interactive map
+order: 1
 id: interactive
 category: 'maps'
 permalink: '/maps/interactive/'
 related: ["Agency information", "Plan a trip"]
+image: "/build/images/tools/interactive-map.png"
+tagline: Easily find regional connections and the closest rail station or park 'n' ride lot to you.
 ---
 <p>The map below shows the major regional connections for transit service in the Atlanta region.</p>
 <p><strong>Not shown</strong> are the local bus service that exists in Fulton, DeKalb, Cobb, Gwinnett, Clayton, and Cherokee counties.</p>

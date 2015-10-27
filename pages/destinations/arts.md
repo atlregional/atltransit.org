@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Destinations
-id: destinations
+title: Arts and entertainment
+id: arts
+order: 2
 category: 'destinations'
-permalink: '/destinations/'
+permalink: '/destinations/arts/'
 related: ["Park 'n' Ride"]
+image: "//c2.staticflickr.com/8/7115/7824150726_63323faa1d_n.jpg"
 ---
 
 ## ATLtransit

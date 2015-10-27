@@ -2,10 +2,12 @@
 layout: page
 title: System maps
 id: systems
+order: 2
 category: 'maps'
 permalink: '/maps/systems/'
 related: ["Agency information"]
 tagline: Find your way around Atlanta with confidence
+image: "/build/images/atl-placeholder.png"
 ---
 
 <div class="row">

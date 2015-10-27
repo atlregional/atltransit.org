@@ -4,4 +4,5 @@ title: Rider tools
 id: tools
 category: 'tools'
 permalink: '/tools/'
+tagline: Take control over your commute with our rider tools. Whether you need to plan a new trip, find out when the next bus is on its way, or get a better handle on the schedule for your stop or station, we've got you covered.
 ---

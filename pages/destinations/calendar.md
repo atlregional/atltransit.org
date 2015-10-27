@@ -2,9 +2,11 @@
 layout: page
 title: Calendar
 id: calendar
+order: 1
 category: 'destinations'
 permalink: '/destinations/calendar/'
 related: ["Park 'n' Ride"]
+image: "http://i.istockimg.com/image-zoom/14018603/3/380/253/zoom-14018603-3.jpg"
 ---
 
 ## ATLtransit
