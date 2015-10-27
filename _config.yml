@@ -11,3 +11,19 @@ url: http://test.atlb.us
 title: ATLtransit
 gems:
   - jekyll-sitemap
+collections:
+  agencies:
+    output: true
+    permalink: /about/agencies/:path/
+    name: agencies
+  services:
+    output: true
+    permalink: /about/services/:path/
+    name: services
+  # - fares
+  # fares:
+  #   output: true
+  #   permalink: /fares/:path/
+  # tools:
+  # 	output: true
+  # 	permalink: /tools/:path/
