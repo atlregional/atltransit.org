@@ -71,10 +71,10 @@ permalink: '/'
 		</a>
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-3">
-		<a href="/destinations/airport" class="thumbnail thumbnail-link equal-height">
-			<img class="img-rounded hidden-xs hidden-sm" src="/build/images/marta_airport_historic.png" alt="Take transit to the airport!" title="Take transit to the airport!">
+		<a href="/fares/transfers" class="thumbnail thumbnail-link equal-height">
+			<img class="img-rounded hidden-xs hidden-sm" src="/build/images/bus_transfer.png" alt="Take transit to the airport!" title="Take transit to the airport!">
 			<div class="caption">
-				<h3><i class="fa fa-plane"></i> Hitch a ride to the airport on MARTA!</h3>
+				<h3>Not sure how to transfer?</h3>
 				<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
 			</div>
 		</a>
@@ -82,24 +82,24 @@ permalink: '/'
 </div>
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-6">
-		<a href="/destinations/airport" class="thumbnail thumbnail-link main-item">
+		<a href="/about/regional-transit" class="thumbnail thumbnail-link main-item">
 			<!-- <div class="row"> -->
 				<!-- <img class="col-xs-3 col-sm-2 col-md-3 top-buffer img-responsive" src="/build/images/atltransit-badge.png"> -->
 				<!-- <div class="caption col-xs-9 col-sm-10 col-md-9"> -->
 				<div class="caption">
-					<h3>Get real-time arrivals for trains and buses!</h3>
+					<h3>Is transit in Atlanta regional?</h3>
 					<p class="">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
 				<!-- </div> -->
 			</div>
 		</a>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6">
-		<a href="/destinations/airport" class="thumbnail thumbnail-link main-item">
+		<a href="/about/history" class="thumbnail thumbnail-link main-item">
 			<!-- <div class="row"> -->
 				<!-- <img class="col-xs-3 col-sm-2 col-md-3 top-buffer img-responsive" src="/build/images/atltransit-badge.png"> -->
 				<!-- <div class="caption col-xs-9 col-sm-10 col-md-9"> -->
 				<div class="caption">
-					<h3><i class="fa fa-plane"></i> Hitch a ride to the airport on MARTA!</h3>
+					<h3>What is ATLtransit?</h3>
 					<p class="">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
 				<!-- </div> -->
 			</div>
