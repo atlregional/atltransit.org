@@ -43,41 +43,67 @@ permalink: '/'
 	</div> 
 </div>
 <div class="row">
-	<div class="col-xs-12 col-sm-6 col-md-4">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title"><i class="fa fa-plane"></i> Hitch a ride to the airport on MARTA!</h3>
+	<div class="col-xs-12 col-sm-6 col-md-3">
+		<a href="/destinations/airport" class="thumbnail thumbnail-link equal-height">
+			<img class="img-rounded hidden-xs hidden-sm" src="/build/images/marta_airport_historic.png" alt="Take transit to the airport!" title="Take transit to the airport!">
+			<div class="caption">
+				<h3><i class="fa fa-plane"></i> Hitch a ride to the airport on MARTA!</h3>
+				<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
 			</div>
-			<div class="panel-body">
-				<a href="#" class="thumbnail">
-					<img class="home-thumbnail" src="{{ site.baseurl }}/assets/images/marta_train_interior.jpg" alt="...">
-				</a>
-			</div>
-		</div>
+		</a>
 	</div>
-	<div class="col-xs-12 col-sm-6 col-md-4">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">Purchase your Breeze Card today!</h3>
+	<div class="col-xs-12 col-sm-6 col-md-3">
+		<a href="/destinations/airport" class="thumbnail thumbnail-link equal-height">
+			<img class="img-rounded hidden-xs hidden-sm" src="{{ site.baseurl }}/build/images/breeze_multi_agency.jpeg" alt="Breeze Card" title="Breeze Card">
+			<div class="caption">
+				<h3>Purchase your Breeze Card today!</h3>
+				<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
 			</div>
-			<div class="panel-body">
-				<a href="/fares/products" class="thumbnail">
-					<img class="home-thumbnail" src="{{ site.baseurl }}/assets/images/breeze_card.png" alt="...">
-				</a>
-			</div>
-		</div>
+		</a>
 	</div>
-	<div class="col-xs-12 col-sm-6 col-md-4">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">Get real-time arrivals for trains and buses!</h3>
+	<div class="col-xs-12 col-sm-6 col-md-3">
+		<a href="/destinations/airport" class="thumbnail thumbnail-link equal-height">
+			<img class="img-rounded hidden-xs hidden-sm" src="/build/images/tools/train_realtime.jpeg" alt="MARTA train at station" title="Get real-time arrivals for trains and buses!">
+			<div class="caption">
+				<h3>Get real-time arrivals for trains and buses!</h3>
+				<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
 			</div>
-			<div class="panel-body">
-				<a href="/tools/realtime" class="thumbnail">
-					<img class="home-thumbnail" src="//c1.staticflickr.com/1/12/96724309_985b8acd3f_m.jpg" alt="...">
-				</a>
+		</a>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-3">
+		<a href="/destinations/airport" class="thumbnail thumbnail-link equal-height">
+			<img class="img-rounded hidden-xs hidden-sm" src="/build/images/marta_airport_historic.png" alt="Take transit to the airport!" title="Take transit to the airport!">
+			<div class="caption">
+				<h3><i class="fa fa-plane"></i> Hitch a ride to the airport on MARTA!</h3>
+				<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
 			</div>
-		</div>
+		</a>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-6">
+		<a href="/destinations/airport" class="thumbnail thumbnail-link main-item">
+			<!-- <div class="row"> -->
+				<!-- <img class="col-xs-3 col-sm-2 col-md-3 top-buffer img-responsive" src="/build/images/atltransit-badge.png"> -->
+				<!-- <div class="caption col-xs-9 col-sm-10 col-md-9"> -->
+				<div class="caption">
+					<h3>Get real-time arrivals for trains and buses!</h3>
+					<p class="">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+				<!-- </div> -->
+			</div>
+		</a>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-6">
+		<a href="/destinations/airport" class="thumbnail thumbnail-link main-item">
+			<!-- <div class="row"> -->
+				<!-- <img class="col-xs-3 col-sm-2 col-md-3 top-buffer img-responsive" src="/build/images/atltransit-badge.png"> -->
+				<!-- <div class="caption col-xs-9 col-sm-10 col-md-9"> -->
+				<div class="caption">
+					<h3><i class="fa fa-plane"></i> Hitch a ride to the airport on MARTA!</h3>
+					<p class="">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+				<!-- </div> -->
+			</div>
+		</a>
 	</div>
 </div>
 <script type="text/javascript">

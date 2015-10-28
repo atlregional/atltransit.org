@@ -584,6 +584,43 @@ Additional Styles (required)
   color: #000;
 }
 
+.thumbnail-link a {
+  color: #000;
+}
+
+a.thumbnail-link:hover,
+a.thumbnail-link:focus {
+  text-decoration: none;
+  background-color: #EFF6FD;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+a.main-item {
+  background: url("/build/images/atltransit-badge.png") 15px 15px no-repeat;
+  background-origin: padding-box;
+  background-size: 100px 100px;
+  padding-left: 130px;
+}
+@media only screen and (min-width: 768px) {
+  a.main-item {
+    background: url("/build/images/atltransit-badge.png") 15px 15px no-repeat;
+    background-origin: padding-box;
+    background-size: 100px 100px;
+    padding-left: 130px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  a.main-item {
+    background: url("/build/images/atltransit-badge.png") 15px 15px no-repeat;
+    background-origin: padding-box;
+    background-size: 60px 60px;
+    padding-left: 90px;
+  }
+}
 /*.equal, .equal > div[class*='col-md-'] {  
     display: -webkit-box;
     display: -moz-box;

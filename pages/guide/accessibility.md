@@ -2,6 +2,7 @@
 layout: page
 title: Accessibility
 id: accessibility
+order: 1
 category: 'guide'
 permalink: '/guide/accessibility/'
 image: "http://i.istockimg.com/image-zoom/34098832/3/380/253/zoom-34098832-3.jpg"

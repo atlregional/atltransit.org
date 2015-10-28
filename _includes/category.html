@@ -5,20 +5,21 @@
 	{% if item.id != page.category %}
 			{% if forloop.index0 == 0 or forloop.index0 == 3 %}
 				<!-- <div class="row equal"> -->
-			{% endif %}
+			{% endif %} 
 
 				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail equal-height">
-						<a href="{{ item.url }}">
+					<a href="{{ item.url }}" class="thumbnail thumbnail-link equal-height">
+						<!-- <a href="{{ item.url }}"> -->
 							<!-- <img class="img-rounded center-cropped category-item-img" src="{{ item.image }}" alt="{{ item.title }}" title="{{ item.title }}"> -->
-							<img class="img-rounded" src="{% if item.image %}{{ item.image }}{% else %}/build/images/atl-placeholder.png{% endif %}" alt="{{ item.title }}" title="{{ item.title }}">
+							<img class="img-rounded hidden-xs hidden-sm" src="{% if item.image %}{{ item.image }}{% else %}/build/images/atl-placeholder.png{% endif %}" alt="{{ item.title }}" title="{{ item.title }}">
+						
+							<div class="caption">
+								<h3>{{ item.title }}</h3>
+								<p>{% if item.tagline %}{{ item.tagline }}{% else %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endif %}</p>
+								<!-- <a class="btn btn-primary" href="{{ item.url }}">View</a> -->
+							</div>
 						</a>
-						<div class="caption">
-							<h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-							<p>{% if item.tagline %}{{ item.tagline }}{% else %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endif %}</p>
-							<a class="btn btn-primary" href="{{ item.url }}">View</a>
-						</div>
-					</div>
+					<!-- </div> -->
 				</div>
 			{% if forloop.index0 == 2 or forloop.last %}
 				<!-- </div> -->

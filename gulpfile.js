@@ -50,6 +50,7 @@ var gulpFilter = require('gulp-filter');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
 var runSequence = require('run-sequence');
+var rename = require('gulp-rename');
 var mainBowerFiles = require('main-bower-files');
 var browserSync = require('browser-sync');
 var childProcess = require('child_process');
@@ -77,7 +78,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest(paths.build + '/images'))
     .pipe($.size({
       title: 'images'
-    }))
+    }));
 });
 
 // JavaScript
@@ -166,6 +167,43 @@ gulp.task('bower-override', function() {
     .pipe(gulp.dest(paths.vendor));
 });
 
+//
+// concat *.js to `vendor.js`
+// and *.css to `vendor.css`
+// rename fonts to `fonts/*.*`
+//
+// Define paths variables
+gulp.task('bower-concat', function() {
+  var jsFilter = gulpFilter('**/*.js',  {restore: true})
+  var cssFilter = gulpFilter('**/*.css',  {restore: true})
+
+  return gulp.src(mainBowerFiles(), { base: paths.bower })
+    
+    // js
+    .pipe(jsFilter)
+    .pipe($.sourcemaps.init())
+    .pipe($.concat('vendor.js'))
+    .pipe($.sourcemaps.write('./'))
+    .pipe(gulp.dest(paths.vendor))
+    .pipe(jsFilter.restore)
+
+    // css
+    .pipe(cssFilter)
+    .pipe($.sourcemaps.init())
+    .pipe($.concat('vendor.css'))
+    .pipe($.sourcemaps.write('./'))
+    .pipe(gulp.dest(paths.vendor))
+    .pipe(cssFilter.restore)
+
+    // .pipe(rename(function(path) {
+    //   if (~path.dirname.indexOf('fonts')) {
+    //     path.dirname = '/fonts'
+    //   }
+    // }))
+    // .pipe(gulp.dest(paths.vendor))
+
+});
+
 // build
 // ========================
 gulp.task('build',function(cb) {
@@ -189,7 +227,7 @@ gulp.task('watch', function() {
   // Watch .js files
   gulp.watch('src/js/**/*.js', ['js']);
   // Watch .html files and posts
-  gulp.watch(['index.html', '_data/*.yml', '/images/**/*', '_includes/*.html', '_layouts/*.html', '_includes/*.md', 'pages/**/*.md', '_includes/*.markdown', '_posts/*', 'plan/*'], ['jekyll']);
+  gulp.watch(['index.html', '_config.yml', '_data/*.yml', '/images/**/*', '_includes/*.html', '_agencies/*.md', '_guide/*.md', '_fares/*.md', '_layouts/*.html', '_includes/*.md', 'pages/**/*.md', '_includes/*.markdown', '_posts/*.md', 'plan/*'], ['jekyll']);
 
   gulp.watch([paths.source + '/**/*.html'], ['jekyll', reload]);
   gulp.watch([paths.asset + '/' + cssMetaType() + '/**/*'], [cssMetaType(),'jekyll', reload]);

@@ -96,10 +96,10 @@ function reverseGeocode(point, id){
 function getBoundingBox (data) {
     var bounds = {}, coords, point, latitude, longitude;
 
-    // We want to use the “features” key of the FeatureCollection (see above)
+    // We want to use the â€œfeaturesâ€ key of the FeatureCollection (see above)
     // data = data.geometry;
     // console.log(data);
-    // Loop through each “feature”
+    // Loop through each â€œfeatureâ€
     if (typeof data.geometry !== 'undefined'){
       for (var i = 0; i < data.geometry.coordinates.length; i++) {
 
@@ -107,7 +107,7 @@ function getBoundingBox (data) {
           // coords = data[i].geometry.coordinates[0];
           coords = data.geometry.coordinates[i];
           // console.log(coords);
-          // For each individual coordinate in this feature's coordinates…
+          // For each individual coordinate in this feature's coordinatesâ€¦
           for (var j = 0; j < coords.length; j++) {
 
               longitude = coords[j][0];
@@ -273,10 +273,6 @@ itinOpt = {
     title: "Trip Itinerary"
 };
 //////////////////////////////////////////
-
-
-
-
 var whitelabel_prefix = 'http://opentrip.atlantaregion.com/otp-rest-servlet/';
 
 var whitelabel_minDate = new Date(2014, 02, 08);
@@ -334,7 +330,19 @@ String.prototype.lpad = function(padString, length) {
     return str;
 };
 var currentTime = moment();
+var Geocoder = Geocoder || {};
+Geocoder.geocoder = esri_suggest;
 
+switchLocale();
+
+var itineraries = null;
+var lines;
+var renderedRoute;
+var prevItin = {};
+var itinDialog;
+var input;
+
+/////////////// Geocoders
 var bag42 = function( request, response ) {
   $.ajax({
     url: "http://bag42.nl/api/v0/geocode/json",
@@ -579,11 +587,16 @@ var nominatim_geocoder = function(request, response) {
   })
 }
 
-
-var Geocoder = Geocoder || {};
-Geocoder.geocoder = esri_suggest;
-
-switchLocale();
+$(document).on('ready', function(){
+      var win = $(this); //this = window
+      if (win.width() >= 750) { $('.planner-options-form').removeClass('form-inline'); }
+      else { $('.planner-options-form').addClass('form-inline'); }
+});
+$(window).on('resize', function(){
+      var win = $(this); //this = window
+      if (win.width() >= 750) { $('.planner-options-form').removeClass('form-inline'); }
+      else { $('.planner-options-form').addClass('form-inline'); }
+});
 
 function initializeForms(){
     setupAutoComplete();
@@ -609,7 +622,6 @@ function initializeForms(){
         $(".popover-dismiss").popover("hide");
     });
 }
-
 function validate(){
     var valid = true;
 
@@ -671,7 +683,6 @@ function validate(){
     }
     return valid;
 }
-var itinDialog;
 function hideForm(){
   $('#planner-advice-div')
     .show();
@@ -683,7 +694,6 @@ function hideForm(){
 
   $('#hide-results').removeClass('hidden');
 }
-
 function showForm(){
   $('.plannerpanel.planner-options').removeClass('planner-summary').addClass('planner-form');
   $('#planner-options-form').attr('aria-hidden',false);
@@ -708,13 +718,11 @@ function hideResults(){
   $('#planner-advice-container').hide();
   $('#planner-advice-container').attr('aria-hidden',true);
   $('#planner-advice-container').addClass('hidden');
-
 }
 function showResults(){
   $('#planner-advice-container').show();
   $('#planner-advice-container').attr('aria-hidden',false);
   $('#planner-advice-container').removeClass('hidden');
-
 }
 function toggleResults(){
   if (!$('#planner-options-desc-row').hasClass('hidden')){
@@ -734,7 +742,6 @@ function getPrettyDate(){
    console.log(Locale.days[date.getDay()])
    return Locale.days[date.getDay()] + ' ' + Locale.months[date.getMonth()] + ' ' + date.getDate();
 }
-
 function makeBliksemReq(plannerreq){
   req = {}
   bliksemReq = {}
@@ -750,13 +757,11 @@ function makeBliksemReq(plannerreq){
   bliksemReq['showIntermediateStops'] = true;
   return bliksemReq;
 }
-
 function epochtoIS08601date(epoch){
   var d = new Date(epoch);
   var date = String(d.getFullYear())+'-'+String((d.getMonth()+1)).lpad('0',2)+'-'+String(d.getDate()).lpad('0',2);
   return date;
 }
-
 function epochtoIS08601time(epoch){
   var d = new Date(epoch);
   var time = d.getHours().toString().lpad('0',2)+':'+d.getMinutes().toString().lpad('0',2)+':'+d.getSeconds().toString().lpad('0',2);
@@ -802,7 +807,6 @@ function earlierAdvice(){
   });
   return false;
 }
-
 function laterAdvice(){
   if (!itineraries){
      return false;
@@ -845,19 +849,14 @@ function laterAdvice(){
   });
   return false;
 }
-
 function prettyDateEpoch(epoch){
   var date = new Date(epoch);
   return Locale.days[date.getDay()] + ' ' + date.getDate() + ' ' + Locale.months[date.getMonth()];
 }
-
 function timeFromEpoch(epoch){
   var date = moment(epoch);
   return date.format('h:mm a');
 }
-
-var itineraries = null;
-
 function highlightLeg(el){
   // console.log();
   var legName = el.id;
@@ -866,12 +865,10 @@ function highlightLeg(el){
     weight: 10
   });
 }
-
 function resetLeg(el){
   var legName = el.id;
   lines[legName].layer.resetStyle(lines[legName].layer);
 }
-
 function legItem(leg, legName){
     var legItem = $('<li class="list-group-item advice-leg" id="'+legName+'" onmouseover="highlightLeg(this)" onmouseout="resetLeg(this)"><div></div></li>');
     
@@ -912,7 +909,7 @@ function legItem(leg, legName){
     }else if (delayMin > 0){
         startTime += '<span class="early"> '+ delayMin+'</span>';
     }else if (leg.departureDelay != null){
-        // startTime += '<span class="ontime"> ✓</span>';
+        // startTime += '<span class="ontime"> âœ“</span>';
     }
 
     var endTime = moment(leg.endTime-(leg.arrivalDelay ? leg.arrivalDelay : 0)).format("hh:mm a");
@@ -925,7 +922,7 @@ function legItem(leg, legName){
     }else if (delayMin > 0){
         endTime += '<span class="early"> '+ delayMin+'</span>';
     }else if (leg.arrivalDelay != null){
-        // endTime += '<span class="ontime"> ✓</span>';
+        // endTime += '<span class="ontime"> âœ“</span>';
     }
 
     if (leg.from.platformCode && leg.mode == 'RAIL'){
@@ -947,10 +944,6 @@ function legItem(leg, legName){
     }
     return legItem;
 }
-var lines;
-var renderedRoute;
-var prevItin = {};
-
 function getName(leg){
   var name;
   if(leg.route === "BLUE" || leg.route === "GREEN" || leg.route === "RED" || leg.route === "GOLD") {
@@ -1032,52 +1025,53 @@ function renderItinerary(index, focus, el, click){
     var bounds;
     var max;
     if (index === itin.legs.length - 1){
-    // console.log("HERE!")
-    $.each(lines, function(i, line){
+      // console.log("HERE!")
+      $.each(lines, function(i, line){
 
-      if (typeof bounds === 'undefined'){
-        // console.log(line.data)
-        bounds = getBoundingBox(line.data);
-      }
-      else{
-        // console.log(line.data);
-        bounds = maxBounds(bounds, getBoundingBox(line.data));
-        // console.log(bounds);
-      }
-      // console.log(i)
-      // console.log(leg)
-      // TODO: change route to normal mapbox
-      var dash = /WALK/.test(i) ? "3,10" : null;
-      line.layer = L.geoJson(line.data, { 
-        style: {
-          color: getColor(line.leg),
-          opacity: 0.8,
-          weight: 5,
-          // fill: true,
-          // fillColor: 'blue',
-          dashArray: dash,
-        } ,
-        onEachFeature: function(feature, layer){
-          // // ADD A POPUP
-          layer.bindPopup(
-            // "<h1>" + 
-            getIcon(line.leg) + ''
-            // "</h1>"
-          );
-          layer.on('mouseover', function (e) {
-            this.openPopup();
-          });
-          layer.on('mouseout', function (e) {
-            map.closePopup();
-
-          });
+        if (typeof bounds === 'undefined'){
+          // console.log(line.data)
+          bounds = getBoundingBox(line.data);
         }
-      }).addTo(map);
-    });
-    if (typeof bounds !== 'undefined' && click)
-      map.fitBounds([[bounds.yMin, bounds.xMin],[bounds.yMax, bounds.xMax]]);
-  }
-});
+        else{
+          // console.log(line.data);
+          bounds = maxBounds(bounds, getBoundingBox(line.data));
+          // console.log(bounds);
+        }
+        // console.log(i)
+        // console.log(leg)
+        // TODO: change route to normal mapbox
+        var dash = /WALK/.test(i) ? "3,10" : null;
+        line.layer = L.geoJson(line.data, { 
+          style: {
+            color: getColor(line.leg),
+            opacity: 0.8,
+            weight: 5,
+            // fill: true,
+            // fillColor: 'blue',
+            dashArray: dash,
+          } ,
+          onEachFeature: function(feature, layer){
+            // // ADD A POPUP
+            layer.bindPopup(
+              // "<h1>" + 
+              getIcon(line.leg) + ''
+              // "</h1>"
+            );
+            layer.on('mouseover', function (e) {
+              this.openPopup();
+            });
+            layer.on('mouseout', function (e) {
+              map.closePopup();
+
+            });
+          }
+        }).addTo(map);
+      });
+      if (typeof bounds !== 'undefined' && click){
+        map.fitBounds([[bounds.yMin, bounds.xMin],[bounds.yMax, bounds.xMax]]);
+      }
+    }
+  });
 
   // $('#planner-advice-list').find('.btn').removeClass('active');
   // $(this).addClass('active');
@@ -1096,35 +1090,7 @@ function renderItinerary(index, focus, el, click){
       $el.focus();
     }
   }
-  // if (click){
-  //  if ($el.hasClass('active')){
-  //    $el.focus();
-  //  }
-  //  else{
-  //    $el.blur();
-  //  }
-  // }
-  // else{
-  //  $el.focus();
-  // }
-  
 }
-$('#planner-advice-div').on('hover', function(){
-
-});
-$('.planner-advice-itinbutton').on('hover', function(){
-  console.log('hovering');
-});
-$(document).on('ready', function(){
-      var win = $(this); //this = window
-      if (win.width() >= 750) { $('.planner-options-form').removeClass('form-inline'); }
-      else { $('.planner-options-form').addClass('form-inline'); }
-});
-$(window).on('resize', function(){
-      var win = $(this); //this = window
-      if (win.width() >= 750) { $('.planner-options-form').removeClass('form-inline'); }
-      else { $('.planner-options-form').addClass('form-inline'); }
-});
 function itinButton(index, itin){
   var hidden = ''
     // if (index){ // check if first button, if not add 'hidden' class
@@ -1212,7 +1178,6 @@ function planItinerary(plannerreq){
         // laterAdvice();
       }
   });
-
 }
 function getColor(leg){
         if(leg.mode === "WALK") return '#555';
@@ -1343,7 +1308,6 @@ function restoreFromHash(){
     }
     if (validate()){submit();}
 }
-
 function setupSubmit(){
     $(document).on('submit','.validateDontSubmit',function (e) {
         //prevent the form from doing a submit
@@ -1358,7 +1322,6 @@ function setupSubmit(){
        if (validate()){submit();}
     });
 };
-var input;
 function setTime(iso8601){
     // if(Modernizr.inputtypes.time){
     //     $('#planner-options-time').val(iso8601.slice(0,5));
@@ -1374,8 +1337,6 @@ function setTime(iso8601){
         $('#planner-options-time').val(input.format("HH:mm"));
     // }
 }
-
-
 function setupDatetime(){
     // if(Modernizr.inputtypes.time){
         $('#planner-options-timeformat').hide();
@@ -1407,13 +1368,11 @@ function setupDatetime(){
         $('#planner-options-dateformat').attr('aria-hidden',true);
     // }
 };
-
 function setDate(iso8601){
   parts = iso8601.split('-');
   var d = moment(iso8601);
   $('#planner-options-date').val(d.format('MM-DD-YYYY'));
 }
-
 function getDate(){
   return moment($('#planner-options-date').val()).format("YYYY-MM-DD");
   console.log(elements)
@@ -1423,12 +1382,10 @@ function getDate(){
   setDate(year+'-'+month+'-'+day);
   return year+'-'+month+'-'+day;
 }
-
 function getTime(){
   var time = moment($('#planner-options-time').val(), "HH:mm");
   return time.format("hh:mm a")
 }
-
 function setupAutoComplete(){
     $( "#planner-options-from" ).autocomplete({
         autoFocus: true,
@@ -1544,7 +1501,6 @@ function setupAutoComplete(){
                    .appendTo(ul);
     };
 }
-
 function switchLocale() {
   $(".label-from").text(Locale.from);
   $(".label-via").text(Locale.via);

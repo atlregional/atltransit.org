@@ -1,49 +1,3 @@
-var whitelabel_prefix = 'http://opentrip.atlantaregion.com/otp-rest-servlet/';
-
-var whitelabel_minDate = new Date(2014, 02, 08);
-var whitelabel_maxDate = new Date(2020, 03, 30);
-
-var Locale = {};
-
-Locale.dateFormat = 'mm-dd-yy';
-Locale.timeFormat = 'h:mma';
-Locale.dateAriaLabel = 'Date, use Ctrl en arrow keys to navigate, enter to choose';
-Locale.loading = "Loading...";
-Locale.edit = "Change trip";
-Locale.plan = "Plan trip";
-Locale.geocoderInput = "Enter starting address, or click on the map...";
-Locale.originInput = "Enter starting address, or click on the map...";
-Locale.destinationInput = "Enter destination...";
-Locale.startpointEmpty = "No starting point entered";
-Locale.noStartpointSelected = "No starting point selected";
-Locale.destinationEmpty = "No destination entered";
-Locale.noDestinationSelected = "No destination selected";
-Locale.noValidDate = "Enter a valid date";
-Locale.noValidTime = "Enter a valid time";
-Locale.dateTooEarly = function ( minDate8601 ) { return "This trip planner works for travel dates starting "+minDate8601.split('-').reverse().join('-'); };
-Locale.dateTooLate = function ( maxDate8601 ) { return "This trip planner works for travel dates till "+maxDate8601.split('-').reverse().join('-'); };
-Locale.from = "From";
-Locale.via = "Via";
-Locale.to = "To";
-Locale.date = "Date";
-Locale.time = "Time";
-Locale.months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-Locale.days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-Locale.daysMin = ['Su','Mo','Tu','We','Th','Fr','Sa'];
-Locale.earlier = 'Earlier';
-Locale.later = 'Later';
-Locale.noAdviceFound = 'No valid trips found';
-Locale.walk = 'Walk';
-Locale.platformrail = 'Platform';
-Locale.platform = 'Platform';
-Locale.amountTransfers = function ( transfers ) { if (transfers === 0) { return 'Direct'; } else { return transfers+ ' transfers';} };
-Locale.autocompleteMessages = {
-        noResults: "No results found.",
-        results: function( amount ) {
-            return amount + ( amount > 1 ? " results are " : " result is" ) + " available, use the up and down arrow keys to navigate them.";
-        }
-};
-
 /////////////// Geocoders
 var bag42 = function( request, response ) {
   $.ajax({
@@ -169,7 +123,10 @@ var photon_geocoder = function(request, response) {
     }
   });
 };
+
+// NOT IN USE
 var esri_find = function(request, response) {
+
   if (request.term.length === 0){
   	console.log('hello geocoder');
   	response([{
@@ -206,7 +163,11 @@ var esri_find = function(request, response) {
     }
   });
 };
+
+// CURRENTLY IN USE
 var esri_suggest = function(request, response) {
+  // if (typeof request.term === 'undefined')
+    console.log(request.term);
   if (request.term.length === 0){
   	console.log('hello geocoder');
   	response([{
@@ -217,13 +178,6 @@ var esri_suggest = function(request, response) {
 		key: '123'
 	}]);
   }
-  var data = {
-    location: '-84.388847,33.750159',
-    distance: 20000,
-    f: 'pjson',
-    searchExtents: '-85.386,34.618,-83.269,32.844',
-    text: request.term
-  };
   // if (/&/.test(request.term)){
   // 	$.ajax({
 	 //    url: esri_url + 'find',
@@ -243,7 +197,14 @@ var esri_suggest = function(request, response) {
 	 //    }
 	 //  });
   // }
-  // else{
+  else{
+    var data = {
+      location: '-84.388847,33.750159',
+      distance: 20000,
+      f: 'pjson',
+      searchExtents: '-85.386,34.618,-83.269,32.844',
+      text: request.term
+    };
   	$.ajax({
 	    url: esri_url + 'suggest',
 	    dataType: "json",
@@ -261,7 +222,7 @@ var esri_suggest = function(request, response) {
 	      }));
 	    }
 	  });
-  // }
+  }
 };
 var nominatim_geocoder = function(request, response) {
   this.url = 'http://open.mapquestapi.com/nominatim/v1/search.php?';
@@ -1063,7 +1024,7 @@ function itinButton(index, itin){
     // }
     // var itinButton = $('<button type="button" class="btn btn-sm btn-secondary planner-advice-itinbutton" onclick="renderItinerary('+itineraries.length+',true)"></button>');
 	var itinButton = $(
-		'<label class="btn btn-sm btn-secondary planner-advice-itinbutton" style="margin-bottom:0" onmouseout="renderItinerary('+itineraries.length+',false, this, false)" onmouseover="renderItinerary('+itineraries.length+',true, this, false)" onclick="renderItinerary('+itineraries.length+',true, this, true)">' +
+		'<label class="btn btn-sm btn-default planner-advice-itinbutton" style="margin-bottom:0" onmouseout="renderItinerary('+itineraries.length+',false, this, false)" onmouseover="renderItinerary('+itineraries.length+',true, this, false)" onclick="renderItinerary('+itineraries.length+',true, this, true)">' +
 			'<input type="radio" name="options" id="option1" autocomplete="off" checked>' +
 		'</label>'
 	);
@@ -1296,71 +1257,9 @@ function setupSubmit(){
        if (validate()){submit();}
     });
 };
-function setTime(iso8601){
-    // if(Modernizr.inputtypes.time){
-    //     $('#planner-options-time').val(iso8601.slice(0,5));
-    // }else{
-      console.log(iso8601)
-         input = moment(iso8601, "hh:mm a");
-        // var secs = parseInt(val[0])*60*60+parseInt(val[1])*60;
-        // var hours = String(Math.floor(secs / (60 * 60)) % 24);
-        // var divisor_for_minutes = secs % (60 * 60);
-        // var minutes = String(Math.floor(divisor_for_minutes / 60));
-        console.log(input.format("HH:mm"))
 
-        $('#planner-options-time').val(input.format("HH:mm"));
-    // }
-}
-function setupDatetime(){
-    // if(Modernizr.inputtypes.time){
-        $('#planner-options-timeformat').hide();
-        $('#planner-options-timeformat').attr('aria-hidden',true);
-    // }
-    setTime(currentTime);
-    function pad(n) { return n < 10 ? '0' + n : n }
-    var date = currentTime.year() + '-' + pad(currentTime.month() + 1) + '-' + pad(currentTime.date());
-    setDate(date);
-    $("#planner-options-date").datepicker( {
-       dateFormat: Locale.dateFormat,
-       dayNames: Locale.days,
-       dayNamesMin : Locale.daysMin,
-       monthNames: Locale.months,
-       defaultDate: 0,
-       hideIfNoPrevNext: true,
-       minDate: whitelabel_minDate,
-       maxDate: whitelabel_maxDate
-    });
-
-    /* Read aloud the selected dates */
-    $(document).on("mouseenter", ".ui-state-default", function() {
-        var text = $(this).text()+" "+$(".ui-datepicker-month",$(this).parents()).text()+" "+$(".ui-datepicker-year",$(this).parents()).text();
-        $("#planner-options-date-messages").text(text);
-    });
-
-    // if(Modernizr.inputtypes.date){
-        $('#planner-options-dateformat').hide();
-        $('#planner-options-dateformat').attr('aria-hidden',true);
-    // }
-};
-function setDate(iso8601){
-	parts = iso8601.split('-');
-	var d = moment(iso8601);
-	$('#planner-options-date').val(d.format('MM-DD-YYYY'));
-}
-function getDate(){
-	return moment($('#planner-options-date').val()).format("YYYY-MM-DD");
-	console.log(elements)
-	var month = currentTime.day();
-	var day = currentTime.month();
-	var year = String(currentTime.year());
-	setDate(year+'-'+month+'-'+day);
-	return year+'-'+month+'-'+day;
-}
-function getTime(){
-	var time = moment($('#planner-options-time').val(), "HH:mm");
-	return time.format("hh:mm a")
-}
 function setupAutoComplete(){
+  console.log('setting up')
     $( "#planner-options-from" ).autocomplete({
         autoFocus: true,
         minLength: 0,
@@ -1373,6 +1272,7 @@ function setupAutoComplete(){
         focus: function( event, ui ) {
             // $( "#planner-options-from" ).val( ui.item.label );
             //$( "#planner-options-from-latlng" ).val( ui.item.latlng );
+            console.log('focus up toPlace')
             return false;
         },
 		select: function( event, ui ) {
@@ -1383,6 +1283,7 @@ function setupAutoComplete(){
 				map.removeLayer(markers['originMarker']);
 			}
 			if (/Your location/g.test(ui.item.label)){
+        console.log('your location selected')
 				$( "#planner-options-from" ).val( ui.item.desc );
 				point = ui.item.desc.split(",");
 				if (typeof map !== 'undefined'){
@@ -1391,16 +1292,16 @@ function setupAutoComplete(){
 				$( "#planner-options-from-latlng" ).val( ui.item.desc );
 				return false;
 			}
-            else{
-            	$( "#planner-options-from" ).val( ui.item.label );
-              var params = {
-                text: ui.item.label,
-                magicKey: ui.item.key,
-                f: 'pjson'
-              };
-              $.ajax(esri_url + 'find', {
-                data : params,
-                success: function( data ) {
+      else{
+      	$( "#planner-options-from" ).val( ui.item.label );
+        var params = {
+          text: ui.item.label,
+          magicKey: ui.item.key,
+          f: 'pjson'
+        };
+        $.ajax(esri_url + 'find', {
+          data : params,
+          success: function( data ) {
 					var json = JSON.parse(data)
 					console.log(json)
 					var geometry = json.locations[0].feature.geometry;
@@ -1416,6 +1317,7 @@ function setupAutoComplete(){
 
     })
 	.focus(function(){
+    console.log('focus')
 		if (typeof lat !== 'undefined'){
 			$(this).autocomplete('search');
 		}
