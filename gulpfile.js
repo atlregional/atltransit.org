@@ -14,7 +14,9 @@ var paths = {
   build   : './build',
   vendor  : './vendor',
   pub     : './_site',
-  bower   : './bower_components'
+  bower   : './bower_components',
+  imgSrc  : './assets/source_images'
+
 };
 var messages = {
   jekyllBuild : '<span style="color: grey">Running:</span> $ jekyll build --watch'
@@ -56,6 +58,18 @@ var browserSync = require('browser-sync');
 var childProcess = require('child_process');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
+var imageResize = require('gulp-image-resize');
+ 
+gulp.task('image-resize', function () {
+  gulp.src(paths.imgSrc + '/cards/*')
+    .pipe(imageResize({ 
+      width : 600,
+      height : 300,
+      crop : true,
+      upscale : false
+    }))
+    .pipe(gulp.dest(paths.asset + '/images'));
+});
 
 // Build the Jekyll Site
 gulp.task('jekyll', function(done) {
@@ -234,7 +248,7 @@ gulp.task('watch', function() {
   gulp.watch([paths.asset + '/js/**/*.js', paths.asset + '/js/*.js'],
     // ['jshint'],
     ['js', 'jekyll', reload]);
-  gulp.watch([paths.asset + '/images/**/*'], reload);
+  gulp.watch([paths.asset + '/images/**/*.png', paths.asset + '/images/**/*.jpg', paths.asset + '/images/**/*.svg', paths.asset + '/images/**/*.jpeg'], reload);
 });
 
 // default

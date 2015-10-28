@@ -6,7 +6,7 @@ order: 3
 category: 'about'
 permalink: '/about/regional-transit/'
 related: ["Interactive map"]
-image: "/build/images/concept_3.png"
+image: "/build/images/about/concept_3.png"
 sections: ["Regional Transit Committee", "Concept 3", "Regional fare product", "Unified bus stop signage"]
 tagline: The transit agencies in Atlanta are working together to build a more seamless transit system.  Here are a few of the projects they're working on.
 ---
@@ -27,10 +27,10 @@ Concept 3 is the Atlanta region's official long-range transit vision. It was dev
 
 The vision was officially adopted in 2008 and now serves as the transit element of the Aspirations Plan of the Regional Transportation Plan.
 <p>
-	<a class="btn btn-default" href="/build/images/concept3_stylized.png">View Concept 3 Maps</a>
+	<a class="btn btn-default" href="/build/images/about/concept3_stylized.png">View Concept 3 Maps</a>
 </p>
 <p>
-	<a class="hidden-xs hidden-sm" href="/build/images/concept3_stylized.pdf">Download pdf</a>
+	<a class="hidden-xs hidden-sm" href="/assets/pdf/concept3_stylized.pdf">Download pdf</a>
 </p>
 <p>
 	<a class="btn btn-default" href="http://atlantaregional.com/transportation/transit/transit-planning">Learn more about transit planning</a>
@@ -39,7 +39,7 @@ The vision was officially adopted in 2008 and now serves as the transit element 
 ## {{ page.sections[2] }}
 
 <div class="col-sm-6 col-xs-12 pull-right">
-	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/breeze_farebox.png">
+	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/fares/breeze_farebox.png">
 </div>
 
 Currently travelling with multiple transit agencies requires having either multiple fare products (e.g., GRTA fare and MARTA fare) or cash stored on your Breeze Card.  There is no option for a regional "all-access" pass.
@@ -54,7 +54,7 @@ In addition to work to support the Breeze fare payment system, the transit agenc
 ## {{ page.sections[3] }}
 
 <div class="col-sm-6 col-xs-12 pull-right">
-	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/bus-stop-sign-01.png">
+	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/about/bus-stop-sign-01.png">
 </div>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci lectus. In tristique lorem eu lectus aliquam posuere. Sed vestibulum arcu et velit condimentum, eget ullamcorper massa interdum. Pellentesque luctus mauris non sem scelerisque, et vestibulum nisi malesuada. Aliquam lacus ex, blandit ac risus nec, iaculis porta augue. 

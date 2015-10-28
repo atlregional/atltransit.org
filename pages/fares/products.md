@@ -15,7 +15,7 @@ image: "/build/images/breezecard_hand.png"
 
 
 		<div class="col-sm-6 col-xs-12 pull-right text-center">
-			<img class="img-responsive img-rounded center-block" style="max-height:285px" src="/build/images/breeze_machine.jpg">
+			<img class="img-responsive img-rounded center-block" style="max-height:285px" src="/build/images/fares/breeze_machine.jpg">
 		</div>
 
 		<p>
@@ -33,7 +33,7 @@ image: "/build/images/breezecard_hand.png"
 
 
 		<div class="col-sm-6 col-xs-12 pull-right text-center">
-			<img class="img-responsive center-block" style="max-height:285px" src="/build/images/breezecard_website.png">
+			<img class="img-responsive center-block" style="max-height:285px" src="/build/images/fares/breezecard_website.png">
 		</div>
 
 
@@ -46,7 +46,7 @@ image: "/build/images/breezecard_hand.png"
 		<h2 id="{{ page.sections[2] | slugify }}">{{ page.sections[2] }}</h2>
 
 		<div class="col-sm-6 col-xs-12 pull-right text-center">
-			<img class="img-responsive img-rounded center-block" style="max-height:285px" src="/build/images/breeze_farebox.png">
+			<img class="img-responsive img-rounded center-block" style="max-height:285px" src="/build/images/fares/breeze_farebox.png">
 		</div>
 
 		If you already have a Breeze Card, you may load cash value onto your card when boarding a bus.  The process involves three easy steps:

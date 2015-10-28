@@ -59,7 +59,7 @@ sections: ["Services", "Eligibility", "Planning your trip"]
 
 
 		<div class="col-sm-6 col-xs-12 pull-right text-center">
-			<img class="img-responsive img-rounded center-block" style="max-height:285px" src="/build/images/simplygetthere.png">
+			<img class="img-responsive img-rounded center-block" style="max-height:285px" src="/build/images/guide/simplygetthere.png">
 		</div>
 
 		<p>

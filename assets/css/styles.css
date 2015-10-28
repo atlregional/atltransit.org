@@ -643,7 +643,7 @@ div.news {
     overflow: hidden;
     position: relative;
     margin-bottom: 30px;
-    box-shadow: 0 0 #6db33f;
+    box-shadow: 0 0 rgb(0, 107, 182);
     transition-property: box-shadow;
     transition-duration: .15s;
     transition-timing-function: ease-out
@@ -664,7 +664,7 @@ div.news>div {
 }
 
 div.news:hover {
-    box-shadow: 0 0 0 5px #6db33f;
+    box-shadow: 0 0 0 5px rgb(0, 107, 182);
     transition-property: box-shadow;
     transition-duration: .2s;
     transition-timing-function: ease-out
@@ -689,14 +689,14 @@ div.news:hover {
 }
 
 a.news-king>img {
-    box-shadow: 0 0 #6db33f;
+    box-shadow: 0 0 rgb(0, 107, 182);
     transition-property: box-shadow;
     transition-duration: .15s;
     transition-timing-function: ease-out
 }
 
 a.news-king:hover>img {
-    box-shadow: 0 0 0 5px #6db33f;
+    box-shadow: 0 0 0 5px rgb(0, 107, 182);
     transition-property: box-shadow;
     transition-duration: .2s;
     transition-timing-function: ease-out
@@ -733,14 +733,14 @@ a.news-king:hover>img {
     }
 
 a.main-item {
-  background: url("/build/images/atltransit-badge.png") 15px 15px no-repeat;
+  background: url("/build/images/badge/atltransit-badge.png") 15px 15px no-repeat;
   background-origin: padding-box;
   background-size: 100px 100px;
   padding-left: 130px;
 }
 @media only screen and (min-width: 768px) {
   a.main-item {
-    background: url("/build/images/atltransit-badge.png") 15px 15px no-repeat;
+    background: url("/build/images/badge/atltransit-badge.png") 15px 15px no-repeat;
     background-origin: padding-box;
     background-size: 100px 100px;
     padding-left: 130px;
@@ -748,7 +748,7 @@ a.main-item {
 }
 @media only screen and (max-width: 768px) {
   a.main-item {
-    background: url("/build/images/atltransit-badge.png") 15px 15px no-repeat;
+    background: url("/build/images/badge/atltransit-badge.png") 15px 15px no-repeat;
     background-origin: padding-box;
     background-size: 60px 60px;
     padding-left: 90px;
