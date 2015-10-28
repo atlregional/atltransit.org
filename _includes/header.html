@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="196x196" href="{{ site.baseurl }}/assets/images/breeze-logo196.png">
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="shortcut icon" sizes="196x196" href="{{ site.baseurl }}/assets/images/badge/atltransit-badge.png">
+    <title>{% if page.title != 'Home' %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     {% include scripts.html %}
 </head>
