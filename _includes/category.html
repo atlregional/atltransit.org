@@ -4,7 +4,7 @@
 {% for item in sorted %}
 	{% if item.id != page.category %}
 			{% if forloop.index0 == 0 or forloop.index0 == 3 %}
-				<div class="row">
+				<!-- <div class="row"> -->
 			{% endif %} 
 
 				<div class="col-sm-6 col-md-4">
@@ -22,7 +22,7 @@
 					<!-- </div> -->
 				</div>
 			{% if forloop.index0 == 3 or forloop.last %}
-				</div>
+				<!-- </div> -->
 			{% endif %}
 	{% endif %}
 {% endfor %}
