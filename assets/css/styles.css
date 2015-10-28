@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather:400,700);
 body {
   font-family: 'Open Sans', 'sans-serif' !important;
   /*background: #EEFDF8 !important;*/
@@ -598,6 +597,140 @@ a.thumbnail-link:focus {
   -ms-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
 }
+
+.thumb-yo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+.thumb-yo img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.thumb-yo img.portrait {
+  width: 100%;
+  height: auto;
+}
+
+.thumb {
+  transform: scale(1,1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*z-index: -1;*/
+}
+
+.thumbnail > div.caption {
+  /*z-index: 20;*/
+}
+
+
+
+div.news {
+    color: #FFF;
+    height: 190px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0 #6db33f;
+    transition-property: box-shadow;
+    transition-duration: .15s;
+    transition-timing-function: ease-out
+}
+
+div.news>div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all .2s;
+    -webkit-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    transform: scale(1,1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1
+}
+
+div.news:hover {
+    box-shadow: 0 0 0 5px #6db33f;
+    transition-property: box-shadow;
+    transition-duration: .2s;
+    transition-timing-function: ease-out
+}
+
+.news-text {
+    position: absolute;
+    font-size: 1.4em;
+    text-align: center;
+    margin: 0;
+    left: 50%;
+    line-height: .9em;
+    width: 101%;
+    -webkit-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    bottom: 0;
+    font-weight: 700;
+    padding: 50% 5% 20px;
+    text-shadow: 0 2px 5px #000;
+    background: linear-gradient(to bottom,transparent 30%,#000 110%) repeat scroll 0 0 transparent
+}
+
+a.news-king>img {
+    box-shadow: 0 0 #6db33f;
+    transition-property: box-shadow;
+    transition-duration: .15s;
+    transition-timing-function: ease-out
+}
+
+a.news-king:hover>img {
+    box-shadow: 0 0 0 5px #6db33f;
+    transition-property: box-shadow;
+    transition-duration: .2s;
+    transition-timing-function: ease-out
+}
+
+@media (min-width: 992px) {
+  div.news {
+    height: 190px
+  }
+}
+
+/***** HOMEPAGE NEWS SECTION *****/
+ .l-newsbar a {
+    border: none;
+}
+     .l-newsbar a:hover {
+        border: none;
+    }
+ h3.news-text {
+    padding-bottom: .5em;
+    text-align: left;
+    font-weight: 600;
+    padding-right: 30px;
+    font-family: Merriweather, Georgia, serif;
+    line-height: 1.25;
+}
+     h3.news-text small {
+        font-family: Hind, Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 2;
+        font-weight: 400;
+        font-size: 12px;
+    }
 
 a.main-item {
   background: url("/build/images/atltransit-badge.png") 15px 15px no-repeat;
