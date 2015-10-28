@@ -15,7 +15,7 @@ image: "/build/images/breezecard_hand.png"
 
 
 		<div class="col-sm-6 col-xs-12 pull-right text-center">
-			<img class="img-responsive img-rounded center-block" style="max-height:285px" src="http://ukc.ksea.org/UKC2015/images/direct5.jpg">
+			<img class="img-responsive img-rounded center-block" style="max-height:285px" src="/build/images/breeze_machine.jpg">
 		</div>
 
 		<p>

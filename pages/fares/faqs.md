@@ -8,7 +8,7 @@ permalink: '/fares/faqs/'
 related:
 tagline: Get that nagging question about transit in Atlanta answered here.
 sections: ["Inter-agency transfers", "Fare payment", "Is your question missing?"]
-image: "http://i.istockimg.com/image-zoom/22041580/3/380/294/zoom-22041580-3.jpg"
+image: "/build/images/confused_customers.jpg"
 ---
 
 <h2 name="Inter-agency transfers">Inter-agency transfers</h2>
@@ -25,7 +25,7 @@ image: "http://i.istockimg.com/image-zoom/22041580/3/380/294/zoom-22041580-3.jpg
 * Transfer from CCT: 3 hours
 * Transfer from GRTA: 3 hours
 
-[More info &raquo;](/fares/passes)
+[More info...](/fares/passes)
 
 <h2 name="Fare payment">Fare payment</h2>
 

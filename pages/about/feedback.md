@@ -6,7 +6,7 @@ order: 4
 category: 'about'
 permalink: '/about/feedback/'
 related: 
-tagline: "Please share any comments, questions, or concerns you may have about ATLtransit.  <a href='/about/contact#transit-operators'>Looking to contact a specific transit agency?</a>"
+tagline: "Please share any comments, questions, or concerns you may have about ATLtransit."
 ---
 <div class="row">
 <div class="panel panel-default top-buffer col-md-8" style="padding-top:10px; background-color:#ddd">

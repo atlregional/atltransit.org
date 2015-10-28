@@ -7,7 +7,7 @@ category: 'tools'
 permalink: '/tools/realtime/'
 related: ["Fares & transfers"]
 tagline: 
-image: "/build/images/tools/train_realtime.jpeg"
+image: "/build/images/train_realtime.jpeg"
 ---
 
 <h2 name="Stop-specific schedules">Stop-specific real-time arrivals</h2>

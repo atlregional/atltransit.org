@@ -42,40 +42,48 @@ permalink: '/'
 		</div>
 	</div> 
 </div>
-<div class="row">
+<div class="row l-newsbar">
 	<div class="col-xs-12 col-sm-6 col-md-3">
-		<a href="/destinations/airport" class="thumbnail thumbnail-link equal-height">
-			<img class="img-rounded hidden-xs hidden-sm" src="/build/images/marta_airport_historic.png" alt="Take transit to the airport!" title="Take transit to the airport!">
-			<div class="caption">
-				<h3><i class="fa fa-plane"></i> Hitch a ride to the airport on MARTA!</h3>
-				<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+		<a href="/destinations/airport">
+			<div class="news">
+				<h3 class="news-text"><i class="fa fa-plane"></i> Hitch a ride to the airport on MARTA!</h3>
+				<div class="news-box" style="background-image: url('/build/images/marta_airport_historic.png');"></div>
+				<!-- <div class="caption">
+					<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+				</div> -->
 			</div>
 		</a>
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-3">
-		<a href="/destinations/airport" class="thumbnail thumbnail-link equal-height">
-			<img class="img-rounded hidden-xs hidden-sm" src="{{ site.baseurl }}/build/images/breeze_multi_agency.jpeg" alt="Breeze Card" title="Breeze Card">
-			<div class="caption">
-				<h3>Purchase your Breeze Card today!</h3>
-				<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+		<a href="/fares/products">
+			<div class="news">
+				<h3 class="news-text">Purchase your Breeze Card today!</h3>
+				<div class="news-box" style="background-image: url('{{ site.baseurl }}/build/images/breeze_multi_agency.jpeg');"></div>
+				<!-- <div class="caption">
+					<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+				</div> -->
 			</div>
 		</a>
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-3">
-		<a href="/destinations/airport" class="thumbnail thumbnail-link equal-height">
-			<img class="img-rounded hidden-xs hidden-sm" src="/build/images/tools/train_realtime.jpeg" alt="MARTA train at station" title="Get real-time arrivals for trains and buses!">
-			<div class="caption">
-				<h3>Get real-time arrivals for trains and buses!</h3>
-				<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+		<a href="/tools/realtime">
+			<div class="news">
+				<h3 class="news-text">Get real-time arrivals for trains and buses!</h3>
+				<div class="news-box" style="background-image: url('/build/images/train_realtime.jpeg');"></div>
+				<!-- <div class="caption">
+					<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+				</div> -->
 			</div>
 		</a>
 	</div>
 	<div class="col-xs-12 col-sm-6 col-md-3">
-		<a href="/fares/transfers" class="thumbnail thumbnail-link equal-height">
-			<img class="img-rounded hidden-xs hidden-sm" src="/build/images/bus_transfer.png" alt="Take transit to the airport!" title="Take transit to the airport!">
-			<div class="caption">
-				<h3>Not sure how to transfer?</h3>
-				<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+		<a href="/fares/transfers">
+			<div class="news">
+				<h3 class="news-text">Not sure how to transfer?</h3>
+				<div class="news-box" style="background-image: url('/build/images/bus_transfer.png');"></div>
+				<!-- <div class="caption">
+					<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+				</div> -->
 			</div>
 		</a>
 	</div>
