@@ -38,7 +38,7 @@
     },
     "bootstrap": {
       "main": [
-        "less/**/!(variables).less", "dist/fonts/*", "dist/js/*"
+        "less/**/!(variables).less", "dist/fonts/*", "dist/js/*.min.js"
       ]
     }
   },

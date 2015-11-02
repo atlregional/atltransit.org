@@ -213,6 +213,7 @@ gulp.task('bower-concat', function() {
     .pipe(jsFilter)
     .pipe($.sourcemaps.init())
     .pipe($.concat('vendor.js'))
+    // .pipe($.uglify())
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(paths.vendor))
     .pipe(jsFilter.restore)
