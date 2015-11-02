@@ -114,8 +114,3 @@ permalink: '/'
 		</a>
 	</div>
 </div>
-<script type="text/javascript">
-	$('#test-carousel').carousel({
-		interval: false
-	});
-</script> 
