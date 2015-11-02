@@ -37,7 +37,9 @@
       "main": "min/moment.min.js"
     },
     "bootstrap": {
-      "main": ["**/boostrap.min.css", "**/*.min.js", "fonts/*"]
+      "main": [
+        "less/**/!(variables).less", "dist/fonts/*", "dist/js/*"
+      ]
     }
   },
   "resolutions": {

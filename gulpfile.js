@@ -7,7 +7,7 @@ var project = {
 var repo = {
   url     : 'git@github.com:atlregional/atltransit.org.git'
 };
-var less = false; // less or sass = false
+var less = true; // less or sass = false
 var paths = {
   source  : './',
   asset   : './assets',
@@ -101,6 +101,7 @@ gulp.task('js', function() {
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.concat(project.name + '.js'))
+    .pipe($.uglify())
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(paths.build + '/js'));
 });
@@ -116,6 +117,8 @@ gulp.task('jshint', function() {
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
+
+
 // less or sass
 gulp.task(cssMetaType(), function() {
   return gulp.src(paths.asset + '/' + cssMetaType() + '/**/*')
@@ -124,10 +127,23 @@ gulp.task(cssMetaType(), function() {
     .pipe($.if(less,$.less().on('error', console.error.bind(console))))
     .pipe($.if(!less,$.sass().on('error', console.error.bind(console))))
     .pipe($.autoprefixer(autoprefixerBrowsers))
+    // .pipe($.minifyCss())
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(paths.build + '/css'))
     .pipe($.size({ title: cssMetaType() }));
 });
+
+// bootstrap less prep
+gulp.task('bootstrap:prepareLess', ['bower-override'], function() {
+  return gulp.src(paths.asset + '/less/bootstrap/variables.less')
+    .pipe(gulp.dest(paths.vendor + '/bootstrap/less'));
+});
+gulp.task('bootstrap:compileLess', ['bootstrap:prepareLess'], function() {
+  return gulp.src(paths.vendor + '/bootstrap/less/bootstrap.less')
+    .pipe($.less())
+    .pipe(gulp.dest(paths.vendor + '/bootstrap/dist/css'));
+});
+
 
 // Lint CSS
 gulp.task('csslint', function() {
@@ -229,6 +245,7 @@ gulp.task('build',function(cb) {
   	'jekyll',
   	// 'bower-install',
     // 'watch',
+    // 'minify',
   	cb
   );
 });

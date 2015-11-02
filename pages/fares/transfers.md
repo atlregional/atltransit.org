@@ -6,6 +6,7 @@ order: 4
 category: 'fares'
 permalink: '/fares/transfers/'
 related: ["Schedules", "Real-time arrivals"]
+tagline: Wondering what makes a successful transfer? Here, you can learn when, where, and how.
 sections: ["Transfer basics", "Transfer information", "Major transfer stations"]
 image: "/build/images/bus_transfer.png"
 ---

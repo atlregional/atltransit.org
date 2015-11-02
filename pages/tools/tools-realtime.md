@@ -10,7 +10,11 @@ tagline:
 image: "/build/images/train_realtime.jpeg"
 ---
 
-<h2 name="Stop-specific schedules">Stop-specific real-time arrivals</h2>
-<p>Choose an agency, route, and stop to view real-time arrival information.</p>
+* toc goes here
+{:toc class="list-inline anchor toc text-center col-sm-12"}
+
+## Stop-specific real-time arrivals
+
+Choose an agency, route, and stop to view real-time arrival information.
 
 {% include realtime-widget.html %}

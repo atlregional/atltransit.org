@@ -5,7 +5,7 @@ id: passes
 order: 3
 category: 'fares'
 permalink: '/fares/passes/'
-tagline: Buy in bulk and reap the rewards.
+tagline: Buy in bulk and reap the rewards. Also, find info on discounts for seniors, youth, and more.
 sections: ["Regional fare pass", "Breeze Card passes", "Individual agency fare products"]
 image: "/build/images/breeze_multi_agency.jpeg"
 ---

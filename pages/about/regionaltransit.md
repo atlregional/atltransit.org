@@ -7,17 +7,22 @@ category: 'about'
 permalink: '/about/regional-transit/'
 related: ["Interactive map"]
 image: "/build/images/about/concept_3.png"
-sections: ["Regional Transit Committee", "Concept 3", "Regional fare product", "Unified bus stop signage"]
 tagline: The transit agencies in Atlanta are working together to build a more seamless transit system.  Here are a few of the projects they're working on.
 ---
 
-## {{ page.sections[0] }}
+* toc goes here
+{:toc class="list-inline anchor toc text-center col-sm-12"}
+
+
+## Regional Transit Committee
 
 The Regional Transit Committee (RTC) is a policy committee of the Atlanta Regional Commission that focuses on issues of regional transit planning, funding and governance. 
 
 The RTC builds upon the work of its predecessors, the Transit Implementation Board (TIB) and the Transit Planning Board (TPB).  [Learn more about the RTC »](http://atlantaregional.com/about-us/board--committees/regional-transit-committee)
 
-## {{ page.sections[1] }}
+{% include row_break.html %}
+
+## Concept 3
 
 <div class="col-sm-6 col-xs-12 pull-right">
 	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/concept_3.png">
@@ -26,17 +31,17 @@ The RTC builds upon the work of its predecessors, the Transit Implementation Boa
 Concept 3 is the Atlanta region's official long-range transit vision. It was developed through a collaborative, multi-year effort led by the Transit Planning Board, a predecessor to today's (RTC). 
 
 The vision was officially adopted in 2008 and now serves as the transit element of the Aspirations Plan of the Regional Transportation Plan.
-<p>
-	<a class="btn btn-default" href="/build/images/about/concept3_stylized.png">View Concept 3 Maps</a>
-</p>
-<p>
-	<a class="hidden-xs hidden-sm" href="/assets/pdf/concept3_stylized.pdf">Download pdf</a>
-</p>
-<p>
-	<a class="btn btn-default" href="http://atlantaregional.com/transportation/transit/transit-planning">Learn more about transit planning</a>
-</p>
 
-## {{ page.sections[2] }}
+[View Concept 3 Maps](/build/images/about/concept3_stylized.png){: .btn .btn-default }
+
+[Download pdf](/assets/pdf/concept3_stylized.pdf){: .hidden-xs .hidden-sm }
+
+[Learn more about transit planning](http://atlantaregional.com/transportation/transit/transit-planning){: .btn .btn-default }
+
+
+{% include row_break.html %}
+
+## Regional fare
 
 <div class="col-sm-6 col-xs-12 pull-right">
 	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/fares/breeze_farebox.png">
@@ -48,10 +53,10 @@ In addition to work to support the Breeze fare payment system, the transit agenc
 
 [Learn more about discounts and passes in the region »](/fares/passes)
 
-<div class="row"></div>
+{% include row_break.html %}
 
 
-## {{ page.sections[3] }}
+## Unified bus stop signage
 
 <div class="col-sm-6 col-xs-12 pull-right">
 	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/about/bus-stop-sign-01.png">

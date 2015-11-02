@@ -5,23 +5,51 @@ id: schedules
 order: 2
 category: 'tools'
 permalink: '/tools/schedules/'
-related: ["Fares & transfers", "Maps"]
+related: ["Fares & transfers", "Maps", "Agency information"]
 tagline: View schedules for any route or line with the interactive tool below or check out schedule information and maps on individual agencies' websites.
 sections: ["Stop-specific schedules", "General schedule information"]
 image: "/build/images/train_schedule.jpeg"
 ---
 
-<h2 name="Stop-specific schedules">Stop-specific schedules</h2>
-<p>Choose an agency, route, and stop to view schedules by date.</p>
+## Stop-specific schedules
+
+Choose an agency, route, and stop to view schedules by date.
+
 {% include schedule-widget.html %}
 
-<h2 name="General schedule information">General schedule information</h2>
+## General schedule information
 
 Regional transit service schedules are subject to individual agencies' respective hours of operation.
 
 <div class="row">
 	<div class="col-md-12">
-		<h3>Saturday</h3>
+		<div class="row">
+			<img class="img-responsive center-block top-buffer col-sm-3"  src="/build/images/services/marta_train_long.png">
+			<div class="col-sm-9">
+				<h3>MARTA Rail service</h3>
+				<div class="row">
+					<div class="col-sm-6">
+						<h4>Monday thru Friday</h4>
+						<p>4:45 am to 1am<br>
+						<strong>Frequencies</strong><br>
+						6-9 am and 3-7 pm: 10 minutes<br>
+						Midday & Early Evening: 15 minutes<br>
+						After 8:30 pm: 20 minutes</p>
+					</div>
+					<div class="col-sm-6">
+						<h4>Weekends</h4>
+						<p>6 am to 1am<br>
+						<strong>Frequencies</strong><br>
+						All weekend: 20 minutes<br>
+						<strong>Note:</strong> 6 am to 1am After 9 pm, Red line travels between Lindbergh & North Springs<br>
+						After 9 pm, Green line travels between Bankhead & Vine City</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<h3>Monday thru Friday</h3>
 
 		<p>All agencies operate Monday thru Friday; however, service hours vary by operator and service type: </p>
 
