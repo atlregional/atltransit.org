@@ -1,6 +1,7 @@
 ---
 
 ---
+
 <!doctype html>
 <html manifest="/auto.appcache">
 {% include header.html %}
@@ -17,7 +18,7 @@
 					{{content}}
 				</div>
 			{% else %}
-				<div class="col-md-9 page-content">
+				<div class="col-md-9 page-content {{ page.design }}">
 					{% if page.sidebar != false %}
 						{% include anchor-nuggets.html %}
 					{% endif %}
