@@ -1,14 +1,25 @@
+{% comment %}
 {% if page.sections %}
-<ul class="list-inline anchor text-center hidden-md hidden-lg">
-{% for section in page.sections %}
-	<li class="anchor-link"><a class="btn btn-default" href="#{{ section | slugify }}">{{section}}</a></li>
-{% endfor %}
-</ul>
+<div class="row">
+	<div class="col-xs-12">
+		<ul class="list-inline anchor text-center hidden-md hidden-lg">
+		{% for section in page.sections %}
+			<li class="anchor-link"><a class="btn btn-default" href="#{{ section | slugify }}">{{section}}</a></li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>
 {% endif %}
+{% endcomment %}
+
 {% if page.layout == 'agency' %}
-<ul class="list-inline anchor text-center hidden-md hidden-lg">
-{% for agency in site.agencies %}
-	<li class=""><a class="btn btn-default" href="{{ agency.url }}">{{agency.title}}</a></li>
-{% endfor %}
-</ul>
+<div class="row">
+	<div class="col-xs-12">
+		<ul class="list-inline anchor text-center hidden-md hidden-lg">
+		{% for agency in site.agencies %}
+			<li class=""><a class="btn btn-default" href="{{ agency.url }}">{{agency.title}}</a></li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>
 {% endif %}	

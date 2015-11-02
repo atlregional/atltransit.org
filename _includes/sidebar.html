@@ -11,13 +11,27 @@
 						{% for subitem in item.subitems %}
 							{% if subitem.title == page.title or subitem.slug == page.layout %}
 								<li class="active"><a href="{{ subitem.url }}">{{ subitem.title }}<span class="sr-only">(current)</span></a>
-									{% if page.sections %}
-										<ul class="nav nav-sidebar nav-sidebar-sub hidden-sm hidden-xs" style="list-style-type: none;">
-											{% for section in page.sections %}
-												<li class="anchor-link"><a href="#{{ section | slugify }}">{{section}}</a></li>
+									{% comment %}
+										{% assign sections = page.content | split: '## ' %}
+										{% if sections[0] %}
+											<ul class="nav nav-sidebar toc nav-sidebar-sub hidden-sm hidden-xs" style="list-style-type: none;">
+											{% for section in sections %}
+												{% assign headers = section | newline_to_br | strip_new_lines | split: '<br />' %}
+												{% assign first_char = headers[0] | strip %}
+												{% if headers[0] and headers[0] != "" and  headers[0] != '{::options parse_block_html="true" /}' %}	
+													<li class="anchor-link"><a href="#{{ headers[0] | strip_html | slugify }}">{{ headers[0] | strip_html }}</a></li>
+												{% endif %}
 											{% endfor %}
-										</ul>
-									{% endif %}
+											</ul>
+										{% endif %}
+										{% if page.sections %}
+											<ul class="nav nav-sidebar nav-sidebar-sub toc hidden-sm hidden-xs" style="list-style-type: none;">
+												{% for section in page.sections %}
+													<li class="anchor-link"><a href="#{{ section | slugify }}">{{section}}</a></li>
+												{% endfor %}
+											</ul>
+										{% endif %}
+									{% endcomment %}
 									{% if page.layout == 'agency' %}
 										<ul class="nav nav-sidebar nav-sidebar-sub hidden-sm hidden-xs" style="list-style-type: none;">
 											{% for agency in site.agencies %}
