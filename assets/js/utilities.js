@@ -92,8 +92,8 @@ function scrollToAnchor(aid){
     $('html,body').animate({scrollTop: aTag.offset().top - 60},'slow');
 }
 
-$(".anchor-link > a").click(function(e) {
-  e.preventDefault()
+$(".toc a").click(function(e) {
+  e.preventDefault();
   
   var hash = $(this).attr('href').split('#')[1];
   history.pushState(null, null, '#' + hash);
@@ -146,7 +146,7 @@ $(document).ready(function() {
     //       }
     // });
     // $("img").reveal("fadeIn", 1000);
-    equalHeight($(".equal-height")); 
+    // equalHeight($(".equal-height")); 
 });
 
 // Check equal-height height on resize
@@ -167,7 +167,7 @@ var waitForFinalEvent = (function () {
 $(window).resize(function () {
 
     waitForFinalEvent(function(){
-      equalHeight($(".equal-height"));
+      // equalHeight($(".equal-height"));
       //...
     }, 500, "some unique string");
 });

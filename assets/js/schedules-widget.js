@@ -311,8 +311,8 @@ setupDatetime();
 						$('#nearby-arrival-msg').hide();
 						var data = [];
 						var schedulesDiv = $('.schedules-tables');
-						var rowDiv = $('<div class="row row-eq-height"></div>');
-						var rowDiv2 = $('<div class="row row-eq-height"></div>');
+						var rowDiv = $('<div class="row"></div>');
+						var rowDiv2 = $('<div class="row"></div>');
 						schedulesDiv.empty();
 						for (var i = 0; i < routes.length; i++) {
 							console.log(routes[i]);
@@ -326,7 +326,7 @@ setupDatetime();
 								// var tableId = '#' + widgetClass + '-table';
 								var columnDiv = $('<div class="schedule-table table-responsive col-xs-12 col-md-'+gridWidth+' col-sm-6"></div>')
 								
-								var table = $('<table class="table table-striped table-condensed table-hover col-md-3" id="schedule-'+routeId+j+'"></table>');
+								var table = $('<table class="table table-striped table-condensed table-hover col-md-'+gridWidth+'" id="schedule-'+routeId+j+'"></table>');
 
 								table.append('<thead><tr><th class="text-right">Hour</th><th>Minute</th></tr></thead>');
 								var tbody = $('<tbody>');
