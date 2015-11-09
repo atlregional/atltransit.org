@@ -235,6 +235,7 @@ if (typeof setupAutoComplete === 'function'){
 			return true;
 		}
 		var agencyId = this.value;
+		location.hash = 'agency=' + agencyId;
 		var url = 'http://atlanta.onebusaway.org/api/api/where/routes-for-agency/' + agencyId + '.json?';
 		var params = {};
 		// params.id = agencyId;
@@ -341,6 +342,7 @@ if (typeof setupAutoComplete === 'function'){
 		$('#next-arrivals-trips').html('<option value="">[Select Direction]</option>');
 		console.log(this.value);
 		var routeId = this.value;
+		location.hash += '&route=' + routeId;
 		var url = 'http://atlanta.onebusaway.org/api/api/where/stops-for-route/' + routeId + '.json?';
 		var params = {};
 		params.key = 'TEST';
@@ -463,10 +465,14 @@ if (typeof setupAutoComplete === 'function'){
 			}
 		});
 	$('#next-arrivals-stops').change(function(){
-		if (this.value !== ''){
+		var stopId = this.value;
+		if (stopId !== ''){
 			$('#next-arrivals-btn')
 				.removeClass('disabled')
-				.val(this.value);
+				.val(stopId);
+			
+			location.hash += '&stop=' + stopId;
+
 			$('.get-schedules').removeClass('disabled');
 		}
 		else {
@@ -677,7 +683,7 @@ if (typeof setupAutoComplete === 'function'){
 			// params.toPlace = $('#planner-options-dest-latlng').val();
 			params.toName = $('#planner-options-dest').val() // $('#to').select2('data')[0].text;
 			params.mode = 'TRANSIT,WALK'; // $('input[name=mode-select]:checked').val()
-			var atltransitUrl = 'plan#';
+			var atltransitUrl = '/plan#';
 			// console.log(atltransitUrl + serialize(params));
 			window.location.href = atltransitUrl + serialize(params);
 		}

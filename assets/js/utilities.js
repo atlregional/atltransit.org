@@ -89,7 +89,9 @@ function scrollToAnchor(aid){
     console.log(aid)
     var aTag = $("[id='"+ aid +"']");
     console.log(aTag)
-    $('html,body').animate({scrollTop: aTag.offset().top - 60},'slow');
+    $('html,body').animate({
+      scrollTop: aTag.offset().top // - 60
+    },'slow');
 }
 
 $(".toc a").click(function(e) {
