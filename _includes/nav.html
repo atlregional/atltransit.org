@@ -1,78 +1,52 @@
-<!-- <div class="container"> -->
-<nav class="navbar navbar-default navbar-fixed-top">
-	<div class="navbar-header">
-		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<a class="navbar-brand" style="padding-top:10px"  href="/">
-			<img src="/build/images/logos/atltransit-logo-blue.png" width="180">
-		</a>
-	</div>
-	
-	
-	<div class="collapse navbar-collapse js-navbar-collapse">
-		<ul class="nav navbar-nav">
-						<li><a href="/plan">Plan a trip</a></li>
-						<li><a href="/tools/alerts">Status updates</a></li>
-						<!-- <li><a href="#">Maps</a></li> -->
-						<li><a href="/fares">Fares & transfers</a></li>
-			<li class="dropdown mega-dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">More... <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
-				<ul class="dropdown-menu mega-dropdown-menu row">
-					<li class="col-sm-3">
-						<ul>
-							<li class="dropdown-header"><a href="https://is.breezecard.com/marta/">Purchase Breeze Card <span class="glyphicon glyphicon-chevron-right"></a></li>
-								<div id="myCarousel" class="carousel slide" data-ride="carousel">
-									<div class="carousel-inner">
-										<div class="item active">
-											<a href="https://is.breezecard.com/marta/"><img src="/assets/images/breeze_card.png" class="img-responsive" alt="product 1"></a>
-											<p class="nav-highlight"><small>Use for any trip in the region</small></p>                                        
-											<button class="btn btn-primary" type="button">$2.50</button> <a href="https://is.breezecard.com/marta/" class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span> Add trips</a>       
-										</div><!-- End Item -->
-									</div><!-- End Carousel Inner -->
-								</div><!-- /.carousel -->
-								<li class="divider"></li>
-								<li><a href="#">View information on fares & transfers <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
-						</ul>
+
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span>Menu</span>
+				<!-- <span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> --> 
+			</button>
+			<a class="navbar-brand atltransit-logo" href="/">
+				<img src="/build/images/logos/atltransit-logo-blue.png" width="180">
+			</a>
+		</div>
+		
+		
+		<div id="main-navbar" class="collapse navbar-collapse navbar-right" aria-expanded="false">
+			<ul class="nav navbar-nav">
+				{% for item in site.data.nav reversed %}
+					{% capture li_class_list %}{% if item.main != true %}visible-xs {% endif %}{% if item.main and item.dropdown %}dropdown mega-dropdown has-children{% endif %}{% endcapture %}
+					{% capture attributes %}{% if item.main and item.dropdown %}class="collapsed" href="#{{ item.title | slugify }}-navbar" data-collapse-group="navbarCollapse" data-toggle="collapse" aria-expanded="false" aria-controls="faresNavbar"{% endif %}{% endcapture %}
+					<li class="menu-item {{ li_class_list }}">
+						<a {{ attributes }} href="{{ item.url }}">
+							<h3 class="menu-item-header">{{ item.title }}</h3>
+							<div class="menu-item-caption visible-xs">
+							{% if item.subitems.size > 0 %}
+								{%comment%}
+								{% assign titles = item.subitems | map: 'title' %}
+								{{ titles | array_to_sentence_string }}
+								{%endcomment%}
+								{% for subitem in item.subitems limit:3 %}
+								{{ subitem.title }}{% if forloop.last == false %}, {% endif %}
+								{% endfor %}
+							{% else %}
+								{{ item.tagline }}
+							{% endif %}
+							</div>
+						</a>
 					</li>
-					{% for item in site.data.nav %}
-						{% if item.dropdown %}
-							{% if forloop.index == 1 or forloop.index == 3 or forloop.index == 5 %}
-								<li class="col-sm-3 col-xs-6">
-							{% endif %}
-									<ul id="{{ item.category }}-subnav">
-										<li class="dropdown-header"><a href="{{ item.url }}">{{ item.title }}</a></li>
-										{% for subitem in item.subitems %}
-										{% if subitem.include != false %}	
-											<li><a href="{{ subitem.url }}">{{ subitem.title }}</a></li>
-										{% endif %}
-										{% endfor %}
-										{% if forloop.first or forloop.index == 5 or forloop.index == 3 %}
-											<li class="divider"></li>
-										{% endif %}
-										{% if forloop.index == 5 %}
-											<li class="dropdown-header"><a href="/blog">Blog</a></li>
-											<form class="form" role="form">
-												<div class="form-group">
-													<label class="sr-only" for="email">Email address</label>
-													<input type="email" class="form-control" id="email" placeholder="Enter email">
-												</div>
-												<button type="submit" class="btn btn-primary btn-block">Sign up!</button>
-											</form>
-										{% endif %}
-									</ul>
-							{% if forloop.index == 2 or forloop.index == 4 %}
-								</li>
-							{% endif %}
-						{% endif %}
-					{% endfor %}
-				</ul>
-			</li>  
-		</ul>
-		<div class="col-sm-2 pull-right row">
+				{% endfor %}
+				<!-- <li class="menu-item dropdown hidden-xs mega-dropdown has-children">
+					<a class="collapsed" href="#faresNavbar" data-collapse-group="navbarCollapse" data-toggle="collapse" aria-expanded="false" aria-controls="faresNavbar"><h3 class="menu-item-header">Fares & transfers</h3></a>
+				</li>
+				<li class="menu-item dropdown hidden-xs mega-dropdown has-children">
+					<a class="collapsed" href="#moreNavbar" data-collapse-group="navbarCollapse" data-toggle="collapse" aria-expanded="false" aria-controls="moreNavbar"><h3 class="menu-item-header">More</h3></a>
+				</li> -->
+			</ul>
+			<div class="col-sm-2 pull-right hidden row">
 				<form class="col-xs-12 col-sm-2 navbar-form navbar-right visible-*-inline" id="searchbox_XXXXXXXXXX:YYYYYYYYY" action="/search">
 					<!-- <div class="btn-group" data-toggle="buttons">
 						<label class="agency-arrivals-radio btn btn-default active">
@@ -87,21 +61,22 @@
 						<input value="012656238249604753028:qzpqrvzllsa" name="cx" type="hidden"/>
 						<input value="FORID:11" name="cof" type="hidden"/>
 						<!-- <input id="q" style="" name="q" size="75" type="text"/> -->
-    					<!-- <button class="btn">Search</button> -->
+						<!-- <button class="btn">Search</button> -->
 						<span class="input-group-btn">
 							<button class="btn btn-primary nav-search" type="submit" style="margin-right:20px;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 						</span>
 					</div>
 					<div style="width:0px;overflow:hidden;height:0px;"> <!-- if you use display:nonw here it doesn't work-->
-					    <gcse:searchbox-only></gcse:searchbox-only>
+						<gcse:searchbox-only></gcse:searchbox-only>
 					</div>
-				</form>
-		</div>
-	</div><!-- /.nav-collapse -->
+				</form>  <!-- Search -->
+			</div> <!-- Pull right -->
+		</div><!-- /.nav-collapse -->
+	</div> <!-- .container -->
 </nav>
 
 <!-- Put the following javascript before the closing  tag. -->
-<script>
+<!-- <script>
 (function() {
   var cx = '012656238249604753028:qzpqrvzllsa'; // Insert your own Custom Search engine ID here
   var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
@@ -109,6 +84,139 @@
       '//cse.google.com/cse.js?cx=' + cx;
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
 })();
-</script>
+</script> --> 
 
 <!-- Place this tag where you want both of the search box and the search results to render -->
+
+<div id="fares-transfers-navbar" class="collapse hidden-xs">
+	<div class="nav-collapse-container">
+		<div class="row bottom-buffer">
+			<div class="col-sm-4">
+				<!-- <h3><a href="https://is.breezecard.com/marta/">Top off your Breeze Card <img src="/build/images/fares/breeze_shadow.png" height="28px" class="" alt="Breeze Card" title="Purchase or reload your Breeze Card"></a></h3> -->
+				<h4>Basic fare prices</h4>
+				<table class="table table-condensed">
+					<thead><th>Agency</th><th>1 Trip</th></thead>
+					{% for agency in site.data.fares %}
+					<tr><td>{{agency.name}}</td><td>{{agency.base[0].cost}}{% if agency.base[1].cost %} - {{agency.base[1].cost}}{% endif %}</td></tr>
+					{% endfor %}
+				</table>
+				<a href="/fares/products">Learn more about fare products »</a>
+			</div>
+			<div class="col-sm-4">
+				<!-- <div class="row"> -->
+				<h4>Fare</h4>
+				{% include category_small.html category="fares" %}
+				<a href="/fares">View all »</a>
+				<!-- </div> -->
+
+			</div>
+			<div class="col-sm-4">
+				<div class="row">
+				<h4>Transfers</h4>
+				<a href="/maps/interactive">
+					<p>Find your regional connection with our interactive map »</p>
+					<!-- <svg width="5cm" height="4cm" version="1.1"
+					     xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+						<image xlink:href="/build/images/regional_map_final_legend.svg" x="0" y="0" height="300px"/>
+					</svg> -->
+					<img src="/build/images/regional_map_final_legend.svg" class="img-responsive" style="max-height:270px;" alt="Regional map">
+				</a>
+				<a href="/fares/transfers">Learn how to transfer »</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="rider-tools-navbar" class="collapse hidden-xs">
+	<div class="nav-collapse-container">
+		<div class="row bottom-buffer">
+			<div class="col-sm-4">
+				<!-- <h3><a href="https://is.breezecard.com/marta/">Top off your Breeze Card <img src="/build/images/fares/breeze_shadow.png" height="28px" class="" alt="Breeze Card" title="Purchase or reload your Breeze Card"></a></h3> -->
+				<h4>App center</h4>
+				<div class="row">
+					<div class="col-md-4">
+						OneBusAway
+					</div>
+					<div class="col-md-4">
+						OneBusAway
+					</div>
+					<div class="col-md-4">
+						OneBusAway
+					</div>
+				</div>
+				<a href="/fares/products">View all apps »</a>
+			</div>
+			<div class="col-sm-4">
+				<!-- <div class="row"> -->
+				<h4>Rider tools</h4>
+				{% include category_small.html category="tools" %}
+				<a href="/tools/">View all rider tools »</a>
+				<!-- </div> -->
+
+			</div>
+			<div class="col-sm-4">
+				<div class="row">
+				<h4>Plan a trip</h4>
+				{% include tripplan-widget.html %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="more-navbar" class="collapse hidden-xs">
+	<div class="nav-collapse-container">
+	<ul class="mega-collapse mega-dropdown-menu row">
+		<li class="col-sm-3">
+			<ul>
+			</ul>
+		</li>
+		{% for item in site.data.nav %}
+		{% if item.dropdown %}
+		{% if forloop.index == 1 or forloop.index == 3 or forloop.index == 5 %}
+		<li class="col-sm-3 col-xs-6">
+			{% endif %}
+			<ul id="{{ item.category }}-subnav">
+				<li class="dropdown-header"><a href="{{ item.url }}">{{ item.title }}</a></li>
+				{% for subitem in item.subitems %}
+				{% if subitem.include != false %}	
+				<li><a href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+				{% endif %}
+				{% endfor %}
+				{% if forloop.first or forloop.index == 5 or forloop.index == 3 %}
+				<li class="divider"></li>
+				{% endif %}
+				{% if forloop.index == 5 %}
+				<li class="dropdown-header"><a href="/blog">Blog</a></li>
+				<form class="form" role="form">
+					<div class="form-group">
+						<label class="sr-only" for="email">Email address</label>
+						<input type="email" class="form-control" id="email" placeholder="Enter email">
+					</div>
+					<button type="submit" class="btn btn-primary btn-block">Sign up!</button>
+				</form>
+				{% endif %}
+			</ul>
+			{% if forloop.index == 2 or forloop.index == 4 %}
+		</li>
+		{% endif %}
+		{% endif %}
+		{% endfor %}
+	</ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+window.onload = function () { 
+	$("[data-collapse-group='navbarCollapse']").click(function () {
+	    var $this = $(this);
+	    $("[data-collapse-group='navbarCollapse']:not([href='" + $this.attr("href") + "'])").each(function () {
+	    	$(this).addClass('collapsed');
+	    	console.log(this);
+	        $($(this).attr("href")).removeClass("in").addClass('collapse');
+
+	    });
+	});
+}
+</script>

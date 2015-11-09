@@ -58,25 +58,6 @@
     url: "/guide/gco"
     image: "http://www.peachpass.com/uploads/GACommuteOptions.jpg"
 
-- title: Rider tools
-  category: tools
-  dropdown: true
-  url: "/tools"
-  subitems: 
-  - title: Plan a trip
-    url: "/plan"
-    image: "/build/images/tools/trip-planner.png"
-    include: false
-  - title: Real-time arrivals
-    url: "/tools/realtime"
-    image: "/build/images/tools/train_realtime.jpeg"
-  - title: Schedules
-    url: "/tools/schedules"
-    image: "/build/images/tools/train_schedule.jpeg"
-  - title: Alerts
-    url: "/tools/alerts"
-    image: "/build/images/atl-placeholder.png"
-
 - title: About
   category: about
   dropdown: true
@@ -101,9 +82,42 @@
   # ],
   # newsletter: []
 
+- title: "More"
+  main: true
+  tagline: "Hours of operation, System map, Timetables"
+  dropdown: true
+  url: "/getting-around"
+
+# - title: "Basic info"
+#   main: true
+#   tagline: "Yadda, etc., Yadda yadda"
+#   dropdown: false
+#   url: "/schedules"
+
+- title: Rider tools
+  category: tools
+  main: true
+  dropdown: true
+  url: "/tools"
+  subitems: 
+  - title: Plan a trip
+    url: "/plan"
+    image: "/build/images/tools/trip-planner.png"
+    include: false
+  - title: Real-time arrivals
+    url: "/tools/realtime"
+    image: "/build/images/tools/train_realtime.jpeg"
+  - title: Schedules
+    url: "/tools/schedules"
+    image: "/build/images/tools/train_schedule.jpeg"
+  - title: Alerts
+    url: "/tools/alerts"
+    image: "/build/images/atl-placeholder.png"
+
 - title: "Fares & transfers"
   category: fares
-  dropdown: false
+  main: true
+  dropdown: true
   url: "/fares"
   subitems:
   - title: "How to pay your fare"
@@ -121,7 +135,19 @@
   - title: FAQs
     url: "/fares/faqs"
     image: "http://i.istockimg.com/image-zoom/22041580/3/380/294/zoom-22041580-3.jpg"
-- title: Search
-  category: search
+# - title: Search
+#   category: search
+#   dropdown: false
+#   url: "/search"
+
+- title: "Getting around"
+  main: true
+  tagline: "Hours of operation, System map, Timetables"
   dropdown: false
-  url: "/search"
+  url: "/getting-around"
+
+- title: Plan a trip
+  main: true
+  tagline: Find your trip itinerary for all modes
+  dropdown: false
+  url: "/plan"
