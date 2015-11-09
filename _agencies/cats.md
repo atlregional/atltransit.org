@@ -18,3 +18,5 @@ services:
   - local_bus
   - express_bus
 ---
+
+CATS provides fixed route service in and around Downtown Canton.
