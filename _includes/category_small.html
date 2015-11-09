@@ -1,0 +1,24 @@
+<ul class="media-list col-sm-12">
+{% assign pages = site.pages | where:"category",include.category %}
+{% assign sorted = pages | sort:"order" %}
+{% for item in sorted limit:4 %}
+	{% if item.id != include.category %}
+		<!-- <div class=""> -->
+		
+		<li class="category-item-small media">
+		<a href="{{ item.url }}">
+			<div class="media-left">
+				<img class="media-object img-rounded" height="40px" src="{% if item.image %}{{ item.image }}{% else %}/build/images/atl-placeholder.png{% endif %}" alt="{{ item.title }}" title="{{ item.title }}">
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading">{{ item.title }}</h4>
+				
+				<p>{% if item.tagline %}{{ item.tagline }}{% else %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endif %}</p>
+			</div>
+		</a>
+		</li>
+		
+		<!-- </div> -->
+	{% endif %}
+{% endfor %}
+</ul>

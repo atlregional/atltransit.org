@@ -1,0 +1,16 @@
+<ul class="col-xs-12 text-center list-inline">
+	{% for agency in site.agencies %}
+	{% if agency.twitter %}
+
+	<!-- <div class="col-xs-12 text-center"> -->
+		<li><a class="btn btn-default top-buffer" href="https://twitter.com/{{ agency.twitter }}">
+			<!-- <i class="fa fa-twitter fa-5x"></i> -->
+			<!-- <p class="btn btn-sm btn-primary"> -->
+			{{ agency.acronym }} -
+				@{{ agency.twitter }}
+			<!-- </p> -->
+		</a></li>
+	<!-- </div> -->
+	{% endif %}
+	{% endfor %}
+</ul>

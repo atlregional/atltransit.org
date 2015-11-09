@@ -1,0 +1,26 @@
+<div class="status-widget col-sm-12 well well-slim" role="alert">
+	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Click to view recent status updates.</a>
+	<div class="collapse" id="collapseExample">
+		<div class="row">
+			<div class="col-sm-6 col-md-6">
+				<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/eltiar/lists/atl-transit-alerts" data-widget-id="661596417299906560" data-aria-polite="assertive" data-chrome="nofooter noborders transparent noheader">Tweets from https://twitter.com/eltiar/lists/atl-transit-alerts</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<p><a href="/tools/alerts">View more service alerts »</a></p>
+			</div>
+			<div class="hidden-xs hidden-sm col-md-3">
+				<p class="lead">Updates by the tweet</p>
+				<p>Follow your agency's twitter account for real-time updates:</p>
+				<ul class="twitter-list">
+					{% for agency in site.agencies %}
+					{% if agency.twitter %}<li><a href="https://twitter.com/{{ agency.twitter }}">@{{ agency.twitter }}</a></li>{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="hidden-xs col-sm-6 col-md-3">
+				<p class="lead">Get service updates by email or SMS</p>
+				<p>Sign up for service updates and rider news, or manage your existing account or unsubscribe.</p>
+				{% include forms/alerts_signup.html size="col-xs-12" %}
+			</div>
+		</div>
+	</div>
+</div>

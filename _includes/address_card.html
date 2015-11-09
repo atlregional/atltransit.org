@@ -5,8 +5,10 @@
 	{{ page.address }}<br>
 	{% if page.address2 %}{{ page.address2 }}<br>{% endif %}
 	{{ page.city }}, {{ page.state }} {{ page.zip }}<br><br>
+	<small>
 	<abbr title="Email"><i class="fa fa-envelope-o"></i></abbr> 
 	{% if page.email %}<a href="mailto:{{ page.email }}">{{ page.email }}</a>{% else %}visit website{% endif %}<br>
 	<abbr title="Website"><i class="fa fa-laptop"></i></abbr> <a href="{{ page.website }}" target="_new">{{ page.website }}</a><br>
-	<abbr title="Phone"><i class="fa fa-phone"></i></abbr> {{ page.phone }}
+	<abbr title="Phone"><i class="fa fa-phone"></i></abbr> <a href="tel:{{ page.phone }}">{{ page.phone }}</a>
+	</small>
 </address>

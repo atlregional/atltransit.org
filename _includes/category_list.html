@@ -1,0 +1,20 @@
+<div class="col-md-12">
+{% assign pages = site.pages | where:"category",page.category %}
+{% assign sorted = pages | sort:"order" %}
+{% for item in sorted %}
+	{% if item.id != page.category %}
+		<!-- <div class=""> -->
+		<a class="row thumbnail category-item" href="{{ item.url }}">
+			<div class="col-xs-12 col-sm-5">
+				<img class="hidden-xs img-rounded img-responsive" src="{% if item.image %}{{ item.image }}{% else %}/build/images/atl-placeholder.png{% endif %}" alt="{{ item.title }}" title="{{ item.title }}">
+			</div>
+			<div class="col-xs-12 col-sm-7">
+				<h3>{{ item.title }}</h3>
+				<p>{% if item.tagline %}{{ item.tagline }}{% else %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endif %}</p>
+				<!-- <a class="btn btn-primary" href="{{ item.url }}">View</a> --> 
+			</div>
+		</a>
+		<!-- </div> -->
+	{% endif %}
+{% endfor %}
+</div>

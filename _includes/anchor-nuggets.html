@@ -15,9 +15,9 @@
 {% if page.layout == 'agency' %}
 <div class="row">
 	<div class="col-xs-12">
-		<ul class="list-inline anchor text-center hidden-md hidden-lg">
+		<ul class="list-inline anchor text-center">
 		{% for agency in site.agencies %}
-			<li class=""><a class="btn btn-default" href="{{ agency.url }}">{{agency.title}}</a></li>
+			<li class=""><a class="{% if page.title == agency.title %}active {% endif %}btn btn-default" href="{{ agency.url }}">{{agency.title}}</a></li>
 		{% endfor %}
 		</ul>
 	</div>

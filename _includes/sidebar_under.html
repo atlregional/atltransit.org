@@ -1,0 +1,39 @@
+<div class="col-sm-6 col-xs-12 sidebar ">
+	<h4>Learn more</h4>
+	<ul class="nav ">
+			{% for item in site.data.nav %}
+				{% if item.category == page.category %}
+					{% if item.subitems %}
+						{% for subitem in item.subitems %}
+							{% if subitem.title == page.title or subitem.slug == page.layout %}
+								<li class="active"><a class="btn btn-default" href="{{ subitem.url }}">{{ subitem.title }}<span class="sr-only">(current)</span></a></li>
+							{% else %}
+				    			<li><a class="btn btn-default" href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+				    		{% endif %}	
+				    	{% endfor %}
+				    {% endif %}
+				{% endif %}
+			{% endfor %}
+	</ul>
+</div>
+{% if page.related %}
+<div class="col-sm-6 col-xs-12 sidebar pull-right">
+	<h4>Learn more</h4>
+	<ul class="nav ">
+			{% for category in page.related %}
+				{% for item in site.data.nav %}
+					{% if item.title == category %}
+						<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{% else %}
+						{% for subitem in item.subitems %}
+							{% if subitem.title == category %}
+				    			<li><a href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+				    		{% endif %}	
+				    	{% endfor %}
+					{% endif %}
+					
+				{% endfor %}
+			{% endfor %}
+	</ul>
+</div>
+{% endif %}

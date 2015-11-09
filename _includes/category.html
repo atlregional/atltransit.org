@@ -3,11 +3,11 @@
 {% assign sorted = pages | sort:"order" %}
 {% for item in sorted %}
 	{% if item.id != page.category %}
-		{% if forloop.index0 == 5 %}
+		{% if forloop.index0 == 3 forloop.index0 == 5 %}
 			<div class="row">
 		{% endif %} 
 
-				<div class="col-sm-6 col-md-3">
+				<div class="col-sm-6">
 					<a href="{{ item.url }}" class="thumbnail thumbnail-link equal-height">
 						<!-- <a href="{{ item.url }}"> -->
 							<!-- <img class="img-rounded center-cropped category-item-img" src="{{ item.image }}" alt="{{ item.title }}" title="{{ item.title }}"> -->
@@ -21,7 +21,7 @@
 						</a>
 					<!-- </div> -->
 				</div>
-		{% if forloop.index0 == 4 and forloop.last == false %}
+		{% if forloop.index0 == 2  or forloop.index0 == 4 %}
 			</div>
 		{% endif %}
 	{% endif %}

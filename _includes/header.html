@@ -2,9 +2,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="196x196" href="{{ site.baseurl }}/assets/images/badge/atltransit-badge.png">
+    <link rel="shortcut icon" sizes="196x196" href="{{ site.baseurl }}/build/images/badge/atltransit-badge.png">
+    <link rel="apple-touch-startup-image" href="{{ site.baseurl }}/build/images/badge/atltransit-badge.png">
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/build/images/badge/atltransit-badge.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#EFF6FD">
+    <meta name="theme-color" content="#EFF6FD">
     <title>{% if page.title != 'Home' %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     {% include css.html %}
     

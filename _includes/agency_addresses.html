@@ -8,10 +8,12 @@
 				{{ agency.address }}<br>
 				{% if agency.address2 %}{{ agency.address2 }}<br>{% endif %}
 				{{ agency.city }}, {{ agency.state }} {{ agency.zip }}<br><br>
+				<small>
 				<abbr title="Email"><i class="fa fa-envelope-o"></i></abbr> 
 				{% if agency.email %}<a href="mailto:{{ agency.email }}">{{ agency.email }}</a>{% else %}visit website{% endif %}<br>
 				<abbr title="Website"><i class="fa fa-laptop"></i></abbr> <a href="{{ agency.website }}" target="_new">{{ agency.website }}</a><br>
-				<abbr title="Phone"><i class="fa fa-phone"></i></abbr> {{ agency.phone }}
+				<abbr title="Phone"><i class="fa fa-phone"></i></abbr> <a href="tel:{{ page.phone }}">{{ agency.phone }}</a>
+				</small>
 			</address>
 		</div>
 	{% endfor %}
