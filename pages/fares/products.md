@@ -5,7 +5,7 @@ id: products
 order: 1
 category: 'fares'
 permalink: '/fares/products/'
-tagline: Paying your fare is easy. Breeze Card lets you access most of the transit in the Atlanta region.
+tagline: Paying your fare is easy. Your Breeze Card lets you access most of the transit in the Atlanta region.
 image: "/build/images/breezecard_hand.png"
 ---
 
@@ -50,12 +50,3 @@ If you already have a Breeze Card, you may load cash value onto your card when b
 
 {% include row_break.html %}
 
-## Basic fare prices
-
-A single ride on any transit system can be taken with the following fares:
-
-{% include row_break.html %}
-
-{% include tables/agency_fare_tables.html %}
-
-<!-- </div> -->

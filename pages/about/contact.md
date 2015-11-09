@@ -27,7 +27,7 @@ You can also get in touch with us with the following:
 	Atlanta, GA 30303<br><br>
 	<abbr title="Email"><i class="fa fa-envelope-o"></i></abbr> 
 	<a href="mailto:info@atltransit.org">info@atltransit.org</a><br>
-	<abbr title="Phone"><i class="fa fa-phone"></i></abbr> (404) 463-3291
+	<abbr title="Phone"><i class="fa fa-phone"></i></abbr> <a href="tel:{{ page.phone }}">(404) 463-3291</a>
 </address>
 
 
