@@ -13,8 +13,8 @@ gems:
   - jekyll-sitemap
 
 prose:
-  rooturl: /pages/
-  media: /build/images/
+  rooturl: /pages
+  media: /build/images
 
 collections:
   agencies:
