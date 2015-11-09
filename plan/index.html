@@ -7,101 +7,100 @@ permalink: '/plan/'
 image: "/build/images/trip-planner.png"
 tagline: Plan a trip using the atltransit trip planner.
 ---
+<!-- Leaflet map div -->
 <div id="map"></div>
-<!-- <div id="containz" style="width:100%; height:100%"> -->
-	<div class="row col-md-4 col-sm-6 col-xs-12">
-		<div id="modal-simple" class="chubi">
-			<form role="form" class="planner-options-form validateDontSubmit form-inline" id="planner-options-form">
-				<div class="row">
-					<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-6">
-						<div class="input-group input-group-sm  planner-options-inputgroup-from" id="planner-options-inputgroup-from">
-							<!-- <label class="input-group-addon planner-options-input-addon required label-from" for="planner-options-from"> -->
-							<span id="origin-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-play-circle"></span>
-							<!-- </label> -->
-							<input aria-describedby="origin-glyph" id="planner-options-from" type="text" title="From" aria-required="true" class="planner-place form-control" placeholder="Train station, bus stop, or address" x-webkit-speech="x-webkit-speech" required="required" />
-							<input id="planner-options-from-latlng" type="hidden" />
-							<p id="planner-options-from-desc"></p>
-						</div>
-					</div>
-					<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-6">
-						<div class="input-group navbar-input-group input-group-sm  planner-options-inputgroup-dest" id="planner-options-inputgroup-dest">
-							<!-- <label class="input-group-addon planner-options-input-addon required label-dest" for="planner-options-dest"> -->
-								<span id="dest-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-record"></span>
-							<!-- </label> -->
-							<input id="planner-options-dest" type="text" title="To" aria-required="true" class="planner-place form-control" aria-describedby="dest-glyph" placeholder="Train station, bus stop, or address" x-webkit-speech="x-webkit-speech" required="required" />
-							<input id="planner-options-dest-latlng" type="hidden" />
-						</div>
-					</div>
-				</div>
-					<div class="row hidden-xs">
-						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-							<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-time">
-								<span id="time-glyph" class="input-group-addon input-group-glyph"><i class="fa fa-clock-o"></i></span>
-								<input aria-describedby="time-glyph" id="planner-options-time" style="line-height:20px;" type="time" title="Time" aria-described-by="planner-options-timeformat" aria-required="true" class="form-control" required="required" />
-								<div class="input-group-addon planner-options-input-addon"  id="planner-options-timeformat">h:mma</div>
-							</div>
-						</div>
-						 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-							<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-date">
-								<span id="date-glyph" class="input-group-addon input-group-glyph"><i class="fa fa-calendar"></i></span>
-								<input aria-describedby="date-glyph" id="planner-options-date" type="text" title="Date" aria-label="Datumkiezer, gebruik Ctrl en pijltjes om te navigeren" aria-required="true" class="form-control" required="required"  />
-							</div>
-						</div>
-					</div>
-						<!-- row -->
-						
-						<!-- <div id="planner-options-date-messages" class="accessibility-helper" aria-live="assertive" aria-atomic="true" aria-relevant="additions"></div> -->
-			</form>
+<!-- Planner options div -->
+<div class="row col-md-4 col-sm-6 col-xs-12">
+	<div id="modal-simple" class="chubi">
+		<form role="form" class="planner-options-form validateDontSubmit form-inline" id="planner-options-form">
 			<div class="row">
-				<div class="col-md-12 btn-align">
-					<button type="button" class="btn btn-sm btn-danger" onclick="clearHash()"><i class="fa fa-times"></i></button>
-					<button type="button" class="btn btn-sm btn-info" id="plan-trip" onclick="submit()"><i class="fa fa-play"></i></button>
-					<div role="group" class="btn-group" data-toggle="buttons">
-						<label class="btn btn-sm btn-default mode-option">
-							<input type="radio" name="mode-select" value="TRANSIT,WALK" id="train" checked><i class="fa fa-lg fa-train"></i>
-						</label>
-						<label class="btn btn-sm btn-default mode-option">
-							<input type="radio" name="mode-select" value="BUS,WALK" id="bus"><i class="fa fa-lg fa-bus"></i><!-- <span class="glyphicon svg-icon-bus"></span> -->
-						</label>
-						<label class="btn btn-sm btn-default mode-option">
-							<input type="radio" name="mode-select" value="BICYCLE" id="bike"><i class="fa fa-lg fa-bicycle"></i>
-						</label>
-						<label class="btn btn-sm btn-default mode-option">
-							<input type="radio" name="mode-select" value="CAR" id="car"><i class="fa fa-lg fa-car"></i>
-						</label>
-						<label class="btn btn-sm btn-default mode-option">
-							<input type="radio" name="mode-select" value="WALK" id="pedestrian"><img src="/assets/images/pedestrian.svg" width="18" height="17">
-						</label>
-						<label class="btn btn-sm btn-default mode-option popover-dismiss" data-toggle="popover">
-							<input type="radio" name="mode-select" value="specialized" id="specialized"><i class="fa fa-lg fa-wheelchair"></i>
-						</label>
+				<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-6">
+					<div class="input-group input-group-sm  planner-options-inputgroup-from" id="planner-options-inputgroup-from">
+						<!-- <label class="input-group-addon planner-options-input-addon required label-from" for="planner-options-from"> -->
+						<span id="origin-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-play-circle"></span>
+						<!-- </label> -->
+						<input aria-describedby="origin-glyph" id="planner-options-from" type="text" title="From" aria-required="true" class="planner-place form-control" placeholder="Train station, bus stop, or address" x-webkit-speech="x-webkit-speech" required="required" />
+						<input id="planner-options-from-latlng" type="hidden" />
+						<p id="planner-options-from-desc"></p>
 					</div>
 				</div>
-			</div>		
-		</div>
-	</div>
-	<!-- <div></div> -->
-	<div class="row col-xs-12"></div>
-	<div class="row col-md-4 col-sm-6 col-xs-12">
-		<div id="planner-advice-div" class="hidden chubi">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id ="planner-advice-msg" data-toggle="buttons">
-			</div>
-			<div role="group" class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12" id ="planner-advice-list" data-toggle="buttons">
-			</div>
-			<!-- <button type="button" class="hidden btn btn-xs btn-default" onclick="toggleResults();" id="hide-results"><span class="glyphicon glyphicon-chevron-up"></span><span class="glyphicon glyphicon-chevron-down"></span></button> -->
-			<div class="hidden col-md-12" style="max-height:350px; overflow: scroll; overflow-x: hidden;" id="planner-advice-container" aria-hidden="true" style="display: none;">
-				<div class="row">
-					<div class="clearfix visible-xs">
+				<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-6">
+					<div class="input-group navbar-input-group input-group-sm  planner-options-inputgroup-dest" id="planner-options-inputgroup-dest">
+						<!-- <label class="input-group-addon planner-options-input-addon required label-dest" for="planner-options-dest"> -->
+							<span id="dest-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-record"></span>
+						<!-- </label> -->
+						<input id="planner-options-dest" type="text" title="To" aria-required="true" class="planner-place form-control" aria-describedby="dest-glyph" placeholder="Train station, bus stop, or address" x-webkit-speech="x-webkit-speech" required="required" />
+						<input id="planner-options-dest-latlng" type="hidden" />
 					</div>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div class="card bg-faded">
-							<div id="planner-summary" class="card-block">
-							</div>
+				</div>
+			</div>
+				<div class="row hidden-xs">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-time">
+							<span id="time-glyph" class="input-group-addon input-group-glyph"><i class="fa fa-clock-o"></i></span>
+							<input aria-describedby="time-glyph" id="planner-options-time" style="line-height:20px;" type="time" title="Time" aria-described-by="planner-options-timeformat" aria-required="true" class="form-control" required="required" />
+							<div class="input-group-addon planner-options-input-addon"  id="planner-options-timeformat">h:mma</div>
 						</div>
-						<ul class="list-group" id="planner-leg-list"></ul>
 					</div>
+					 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-date">
+							<span id="date-glyph" class="input-group-addon input-group-glyph"><i class="fa fa-calendar"></i></span>
+							<input aria-describedby="date-glyph" id="planner-options-date" type="text" title="Date" aria-label="Datumkiezer, gebruik Ctrl en pijltjes om te navigeren" aria-required="true" class="form-control" required="required"  />
+						</div>
+					</div>
+				</div>
+					<!-- row -->
+					
+					<!-- <div id="planner-options-date-messages" class="accessibility-helper" aria-live="assertive" aria-atomic="true" aria-relevant="additions"></div> -->
+		</form>
+		<div class="row">
+			<div class="col-md-12 btn-align">
+				<button type="button" class="btn btn-sm btn-danger" onclick="clearHash()"><i class="fa fa-times"></i></button>
+				<button type="button" class="btn btn-sm btn-info" id="plan-trip" onclick="submit()"><i class="fa fa-play"></i></button>
+				<div role="group" class="btn-group" data-toggle="buttons">
+					<label class="btn btn-sm btn-default mode-option">
+						<input type="radio" name="mode-select" value="TRANSIT,WALK" id="train" checked><i class="fa fa-lg fa-train"></i>
+					</label>
+					<label class="btn btn-sm btn-default mode-option">
+						<input type="radio" name="mode-select" value="BUS,WALK" id="bus"><i class="fa fa-lg fa-bus"></i><!-- <span class="glyphicon svg-icon-bus"></span> -->
+					</label>
+					<label class="btn btn-sm btn-default mode-option">
+						<input type="radio" name="mode-select" value="BICYCLE" id="bike"><i class="fa fa-lg fa-bicycle"></i>
+					</label>
+					<label class="btn btn-sm btn-default mode-option">
+						<input type="radio" name="mode-select" value="CAR" id="car"><i class="fa fa-lg fa-car"></i>
+					</label>
+					<label class="btn btn-sm btn-default mode-option">
+						<input type="radio" name="mode-select" value="WALK" id="pedestrian"><img src="/assets/images/pedestrian.svg" width="18" height="17">
+					</label>
+					<label class="btn btn-sm btn-default mode-option popover-dismiss" data-toggle="popover">
+						<input type="radio" name="mode-select" value="specialized" id="specialized"><i class="fa fa-lg fa-wheelchair"></i>
+					</label>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+<div class="row col-xs-12"></div>
+<div class="row col-md-4 col-sm-6 col-xs-12">
+	<div id="planner-advice-div" class="hidden chubi">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id ="planner-advice-msg" data-toggle="buttons">
+		</div>
+		<div role="group" class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12" id ="planner-advice-list" data-toggle="buttons">
+		</div>
+		<!-- <button type="button" class="hidden btn btn-xs btn-default" onclick="toggleResults();" id="hide-results"><span class="glyphicon glyphicon-chevron-up"></span><span class="glyphicon glyphicon-chevron-down"></span></button> -->
+		<div class="hidden col-md-12" style="max-height:350px; overflow: scroll; overflow-x: hidden;" id="planner-advice-container" aria-hidden="true" style="display: none;">
+			<div class="row">
+				<div class="clearfix visible-xs">
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="card bg-faded">
+						<div id="planner-summary" class="card-block">
+						</div>
+					</div>
+					<ul class="list-group" id="planner-leg-list"></ul>
 				</div>
 			</div>
 		</div>
 	</div>
-<!-- </div> -->
+</div>
