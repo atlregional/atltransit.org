@@ -109,7 +109,7 @@
   - name: 1 trip
     cost: "$4.00"
 
-- name: GRTA Xpress
+- name: GRTA
   id: grta
   info_url: "http://www.xpressga.com/index.php?option=com_content&task=view&id=87&Itemid=75"
   purchase_url: "http://onlinesales.xpressga.com/"
@@ -135,7 +135,7 @@
   - name: Children
     cost: "Free"
 
-- name: Atlanta Streetcar
+- name: Streetcar
   id: asc
   base: 
     - name: Local
