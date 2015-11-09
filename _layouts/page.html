@@ -13,20 +13,29 @@
 		<!-- </div> -->
 		<div class="row">
 			{% if page.id == page.category %}
-				<div class="col-md-12 page-content">
-					{% include category.html %}
+				<div class="col-md-8 col-md-offset-2 page-content">
+					{% include category_list.html %}
 					{{content}}
 				</div>
 			{% else %}
-				<div class="col-md-9 page-content {{ page.design }}">
+				<div class="col-md-8 col-md-offset-2 {{ page.design }}">
+					<div class="page-content">
 					{% if page.sidebar != false %}
 						{% include anchor-nuggets.html %}
 					{% endif %}
 					{{content}}
+					</div>
+					<div class="row top-buffer bottom-buffer">
+					{% if page.sidebar != false %}
+						{% include sidebar.html %}
+					{% endif %}
+					</div>
 				</div>
+				{%comment%}
 				{% if page.sidebar != false %}
 					{% include sidebar.html %}
 				{% endif %}
+				{%endcomment%}
 			{% endif %}
 		</div>
 	</div>
