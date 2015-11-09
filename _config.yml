@@ -8,9 +8,14 @@ exclude:
   - "gulpfile.js"
 # source:	_src
 url: http://test.atlb.us
-title: ATLtransit
+title: atltransit
 gems:
   - jekyll-sitemap
+
+prose:
+  rooturl: /pages/
+  media: /build/images/
+
 collections:
   agencies:
     output: true
