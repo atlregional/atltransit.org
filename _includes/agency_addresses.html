@@ -1,9 +1,9 @@
 <div class="row">
 	{% for agency in site.agencies %}
 		<div class="col-md-4 col-sm-4">
-			<h3>{{ agency.acronym }}</h3>
+			<h3 class="notranslate">{{ agency.acronym }}</h3>
 			<address>
-				<strong>{{ agency.name }}</strong><br>
+				<strong class="notranslate">{{ agency.name }}</strong><br>
 				{% if agency.attn %}{{ agency.attn }}<br>{% endif %}
 				{{ agency.address }}<br>
 				{% if agency.address2 %}{{ agency.address2 }}<br>{% endif %}

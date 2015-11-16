@@ -1,0 +1,33 @@
+<div id="rider-tools-navbar" class="nav-collapse-container collapse hidden-xs">
+	<div class="container-fluid">
+		<div class="row bottom-20">
+			<div class="col-sm-4">
+				<h4>App center</h4>
+				<div class="row">
+					{% for app in site.data.apps limit:6 %}
+					<div class="col-sm-4">
+						<a href="{{ app.url }}">
+						<img class="img-responsive" src="/build/images/badge/atltransit-badge.png">
+						{{ app.name }}
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+				<a href="/tools/apps">View all apps »</a>
+			</div>
+			<div class="col-sm-4">
+				<h4>Rider tools</h4>
+				{% include category_small.html category="tools" %}
+				<a href="/tools/">View all rider tools »</a>
+			</div>
+			<div class="col-sm-4">
+				<div class="row">
+				<h4>Plan a trip</h4>
+				{% comment %}
+				{% include tripplan-widget.html %}
+				{% endcomment %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

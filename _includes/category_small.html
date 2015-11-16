@@ -13,7 +13,7 @@
 			<div class="media-body">
 				<h4 class="media-heading">{{ item.title }}</h4>
 				
-				<p>{% if item.tagline %}{{ item.tagline }}{% else %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endif %}</p>
+				<p>{% if item.tagline %}{% assign sentences = item.tagline | split: '. ' %}{{ sentences[0] }}{% else %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endif %}</p>
 			</div>
 		</a>
 		</li>

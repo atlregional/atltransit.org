@@ -1,0 +1,37 @@
+<ul class="mega-collapse mega-dropdown-menu row">
+	<li class="col-sm-3">
+		<ul>
+		</ul>
+	</li>
+	{% for item in site.data.nav %}
+	{% if item.dropdown %}
+	{% if forloop.index == 1 or forloop.index == 3 or forloop.index == 5 %}
+	<li class="col-sm-3 col-xs-6">
+		{% endif %}
+		<ul id="{{ item.category }}-subnav">
+			<li class="dropdown-header"><a href="{{ item.url }}">{{ item.title }}</a></li>
+			{% for subitem in item.subitems %}
+			{% if subitem.include != false %}	
+			<li><a href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+			{% endif %}
+			{% endfor %}
+			{% if forloop.first or forloop.index == 5 or forloop.index == 3 %}
+			<li class="divider"></li>
+			{% endif %}
+			{% if forloop.index == 5 %}
+			<li class="dropdown-header"><a href="/blog">Blog</a></li>
+			<form class="form" role="form">
+				<div class="form-group">
+					<label class="sr-only" for="email">Email address</label>
+					<input type="email" class="form-control" id="email" placeholder="Enter email">
+				</div>
+				<button type="submit" class="btn btn-primary btn-block">Sign up!</button>
+			</form>
+			{% endif %}
+		</ul>
+		{% if forloop.index == 2 or forloop.index == 4 %}
+	</li>
+	{% endif %}
+	{% endif %}
+	{% endfor %}
+</ul>

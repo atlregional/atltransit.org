@@ -1,0 +1,46 @@
+<div id="fares-transfers-navbar" class="collapse hidden-xs nav-collapse-container">
+	<div class="container-fluid">
+		<div class="row bottom-20">
+			<div class="col-sm-4">
+				<!-- <h3><a href="https://is.breezecard.com/marta/">Top off your Breeze Card <img src="/build/images/fares/breeze_shadow.png" height="28px" class="" alt="Breeze Card" title="Purchase or reload your Breeze Card"></a></h3> -->
+				<h4>Basic fare prices</h4>
+				<table class="table table-condensed table-hover">
+					<thead><th>Agency</th><th>1 Trip</th></thead>
+					{% for agency in site.data.fares %}
+					<tr>
+						<td>{{agency.name}}</td>
+						<td>
+						{% for fare in agency.base %}{% if forloop.index != 1 %}<span>, </span>{% endif %}<span {% if fare.description %}class="tip" data-toggle="tooltip" data-placement="bottom" title="{{ fare.description }}"{% endif %}>{{fare.cost}}</span>{% endfor %}
+						</td>
+					</tr>
+					{% endfor %}
+				</table>
+				<p><a href="/fares/products">Learn more about fare products »</a></p>
+			</div>
+			<div class="col-sm-4">
+				<!-- <div class="row"> -->
+				<h4>Fare</h4>
+				{% include category_small.html category="fares" %}
+				<p><a href="/fares">View all »</a></p>
+				<!-- </div> -->
+
+			</div>
+			<div class="col-sm-4">
+				<!-- <div class="row"> -->
+				<h4>Transfers</h4>
+				<div>
+					<a href="/maps/interactive">
+						<p>Find regionals connection on the interactive map »</p>
+						<!-- <svg width="5cm" height="4cm" version="1.1"
+						     xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+							<image xlink:href="/build/images/regional_map_final_legend.svg" x="0" y="0" height="300px"/>
+						</svg> -->
+						<img src="/build/images/interactive-map.png" class="img-responsive" alt="Regional map">
+					</a>
+				</div>
+				<p><a href="/fares/transfers">Learn how to transfer »</a></p>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+</div>

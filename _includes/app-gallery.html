@@ -1,0 +1,12 @@
+{% assign category = site.data.apps | where:"category",include.category %}
+{% for app in category %}
+
+### {{ app.name }}
+
+{{ app.description }}
+
+Platforms: {% for platform in app.platforms %}<a href="{{ platform[1] }}"><i class="fa fa-{{ platform[0] }}"></i></a> {% endfor %}
+
+{% if app.agencies.size > 0 %}Agencies: {{ app.agencies | array_to_sentence_string }}{% endif %}
+
+{% endfor %}
