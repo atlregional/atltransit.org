@@ -6,7 +6,7 @@ order: 3
 category: 'tools'
 permalink: '/tools/alerts/'
 related: ["Contact us", "Agency information"]
-tagline: Be the first to know about service disruptions and grab a coffee to pass the time.
+tagline: Be the first to know about service disruptions. Sign up for email/SMS alerts or follow our Twitter feeds.
 ---
 
 * toc goes here

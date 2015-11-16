@@ -82,11 +82,11 @@
   # ],
   # newsletter: []
 
-- title: "More"
-  main: true
-  tagline: "Hours of operation, System map, Timetables"
-  dropdown: true
-  url: "/getting-around"
+# - title: "More"
+#   main: false
+#   tagline: "Hours of operation, System map, Timetables"
+#   dropdown: true
+#   url: "/getting-around"
 
 # - title: "Basic info"
 #   main: true
@@ -96,7 +96,7 @@
 
 - title: Rider tools
   category: tools
-  main: true
+  main: false
   dropdown: true
   url: "/tools"
   subitems: 
@@ -116,7 +116,7 @@
 
 - title: "Fares & transfers"
   category: fares
-  main: true
+  main: false
   dropdown: true
   url: "/fares"
   subitems:

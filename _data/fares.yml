@@ -50,8 +50,10 @@
   base: 
     - name: Local
       cost: "$2.50"
+      description: Local bus fare
     - name: Express
       cost: "$5.00"
+      description: Express bus fare
   passes:
   - name: Local 10 Ride
     cost: "$18.00"
@@ -83,10 +85,13 @@
   base: 
     - name: Local
       cost: "$2.50"
+      description: Local bus fare
     - name: Zone 1
       cost: "$3.75"
+      description: Zone 1 express bus fare
     - name: Zone 2
       cost: "$5.00"
+      description: Zone 2 express bus fare
   passes:
   - name: Zone1 Exp 10 Ride
     cost: "$32.50"
@@ -116,8 +121,10 @@
   base:
     - name: Green Zone
       cost: "$3.00"
+      description: Green zone express bus fare
     - name: Blue Zone
       cost: "$4.00"
+      description: Blue zone express bus fare
   passes:
   - name: Green Zone Round Trip
     cost: "$5.00"

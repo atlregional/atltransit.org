@@ -6,7 +6,7 @@ order: 2
 category: 'tools'
 permalink: '/tools/schedules/'
 related: ["Fares & transfers", "Maps", "Agency information"]
-tagline: View schedules for any route or line with the interactive tool below or check out schedule information and maps on individual agencies' websites.
+tagline: View schedules for any route or line with our interactive tool. Or check out schedule information and maps on individual agencies' websites.
 sections: ["Stop-specific schedules", "General schedule information"]
 image: "/build/images/train_schedule.jpeg"
 ---

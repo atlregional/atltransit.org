@@ -7,56 +7,43 @@
 {% include header.html %}
 <body>
 	{% include nav.html %}
-	{% include page-header.html %}
-	<div class="container site-container">
-		<!-- <div class="row"> -->
-		<!-- </div> -->
-		<div class="row">
-			{% if page.id == page.category %}
-				<div class="col-md-8 col-md-offset-2 page-content">
-					{% include category_list.html %}
-					{{content}}
-				</div>
-			{% else %}
-				<div class="col-md-8 col-md-offset-2 {{ page.design }}">
-					<div class="page-content">
-					{% if page.sidebar != false %}
-						{% include anchor-nuggets.html %}
-					{% endif %}
-					{{content}}
+	<div class="content">
+		{% include page-header.html %}
+		<div class="container site-container">
+			<!-- <div class="row"> -->
+			<!-- </div> -->
+			<div class="row">
+				{% if page.id == page.category %}
+					<div class="col-md-8 col-md-offset-2 page-content">
+						{% include category_list.html %}
+						{{content}}
 					</div>
-					<div class="row top-buffer bottom-buffer">
+				{% else %}
+					<div class="col-md-8 col-md-offset-2 {{ page.design }}">
+						<div class="page-content">
+						{% if page.sidebar != false %}
+							{% include anchor-nuggets.html %}
+						{% endif %}
+						{{content}}
+						</div>
+						<div class="row top-buffer bottom-buffer">
+						{% if page.sidebar != false %}
+							{% include sidebar.html %}
+						{% endif %}
+						</div>
+					</div>
+					{%comment%}
 					{% if page.sidebar != false %}
 						{% include sidebar.html %}
 					{% endif %}
-					</div>
-				</div>
-				{%comment%}
-				{% if page.sidebar != false %}
-					{% include sidebar.html %}
+					{%endcomment%}
 				{% endif %}
-				{%endcomment%}
-			{% endif %}
+			</div>
 		</div>
 	</div>
 	{% include footer.html %}
 	{% include scripts.html %}
 <script type="text/javascript" src="{{ site.baseurl }}/build/js/atltransit.js"></script>
-<script type="text/javascript">
-	// console.log(atltransit.nav);
-	// console.log(atltransit.nav['{{ page.category }}']);
-	// $('.nav-sidebar').append('<li><a href="/{{ page.category }}">{{ page.category }}</a></li>');
-	// $.each(atltransit.nav['{{ page.category }}'], function(i, item){
-	// 	var activeLabel = '';
-	// 	var activeBar = '';
-	// 	if ('{{ page.id }}' === item ){
-	// 		activeLabel = '<span class="sr-only">(current)</span>';
-	// 		activeBar = 'class="active"';
-	// 	}
-	// 	$('.nav-sidebar').append('<li ' + activeBar + '><a href="/{{ page.category }}/' + item + '">'+item + activeLabel + '</a></li>');
-	// });
-	
-</script>
 </body>
 
 </html>

@@ -14,7 +14,7 @@ permalink: '/'
 					{% include planner-widget.html %}
 				</div>
 			</div>
-			<div class="col-xs-12">
+			<div class="col-xs-12 hidden-sm hidden-xs">
 				<div class="list-group">
 					<a class="list-group-item" href="#"><strong>90 Elizabeth St NE</strong> to <strong>40 Courtland...</strong><span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a>
 					<a class="list-group-item" href="#"><strong>Georgia Dome</strong> to <strong>Midtown, Atlanta...</strong><span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span></a>

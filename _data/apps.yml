@@ -1,0 +1,52 @@
+- name: OneBusAway
+  url: http://atlanta.onebusaway.org
+  platforms:
+    android: https://play.google.com/store/apps/details?id=com.joulespersecond.seattlebusbot&hl=en
+    apple: https://itunes.apple.com/us/app/onebusaway/id329380089?mt=8
+    windows: http://onebusaway.org/wp-content/uploads/windows_40.png
+  description: OneBusAway provides real-time info for the entire Atlanta region.  Set reminders, yadda yadda
+  category: realtime
+  agencies: ["MARTA", "GRTA Xpress", "CCT", "GCT"]
+- name: The Transit app
+  url: http://transitapp.com/
+  platforms:
+    android: https://play.google.com/store/apps/details?id=com.thetransitapp.droid
+    apple: https://itunes.apple.com/app/the-transit-app/id498151501?ls=1&mt=8
+  description: The Transit App provides real-time arrival information for 
+  category: realtime
+  agencies: []
+- name: MARTA On the Go
+  url: http://www.itsmarta.com/developers/app-station.aspx
+  platforms:
+    android: https://play.google.com/store/apps/details?id=com.itsmarta.martaapp&feature=search_result#?t=W10.
+    apple: https://itunes.apple.com/us/app/marta/id386648039?mt=8
+  description: MARTA On the Go provides scheduling information for bus and rail services. The app will also provide real-time bus and rail information, service alerts, and connecting bus route(s) information. 
+  category: realtime
+  agencies: []
+
+- name: The Transit app
+  url: http://transitapp.com/
+  platforms:
+    android: http://transitapp.com/download/android.html?c=website
+    apple: https://itunes.apple.com/app/the-transit-app/id498151501?ls=1&mt=8
+  description: The Transit App provides real-time arrival information for 
+  category: none
+  agencies: []
+
+- name: Google Transit
+  url: https://maps.google.com/
+  platforms:
+    android: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en
+    apple: https://itunes.apple.com/us/app/google-maps/id585027354?mt=8
+  description: Google Maps is an excellent trip planner.
+  category: planning
+  agencies: []
+
+- name: Google Transit
+  url: https://maps.google.com/
+  platforms:
+    android: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en
+    apple: https://itunes.apple.com/us/app/google-maps/id585027354?mt=8
+  description: Google Maps is an excellent trip planner.
+  category: planning
+  agencies: []
