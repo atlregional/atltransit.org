@@ -6,7 +6,7 @@ order: 1
 category: 'tools'
 permalink: '/tools/realtime/'
 related: ["Fares & transfers"]
-tagline: 
+tagline: Get real-time arrival information to reduce your wait and make your commute that much sweeter.
 image: "/build/images/train_realtime.jpeg"
 ---
 

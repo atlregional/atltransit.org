@@ -6,7 +6,7 @@ order: 1
 category: 'about'
 permalink: '/about/history/'
 related: 
-sections: ["Stitching transit together", "Multiple agencies working in partnership", "History of atltransit.org"]
+tagline: ATLtransit was launched as a pilot program in 2014.  We hope you find this regional information hub useful!
 image: "/build/images/marta_airport_historic.png"
 ---
 

@@ -6,9 +6,8 @@ order: 3
 category: 'destinations'
 permalink: '/destinations/airport/'
 related: ["Park 'n' Ride"]
+tagline: Atlanta has one of the most transit-accessible airports in the country.  Find the quickest path to your flight here.
 image: "/build/images/marta_airport_historic.png"
 ---
 
-## ATLtransit
-
-ATLtransit is a joint pilot project of the major transit agencies in metro Atlanta, who are working together to provide a unified resource for customers of transit in the region.
+Page under construction!

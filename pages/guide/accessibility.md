@@ -21,24 +21,32 @@ Every transit agency that operates fixed route service is required by federal la
 
 Here is a listing of all the paratransit services available in the Atlanta region:
 
+<div class="row">
 <div class="col-sm-6">
 	<table class="table">
 		<thead>
 			<th>Agency</th><th>Service</th><th>Description</th>
 		</thead>
 		<tbody>
-			<tr><td>MARTA</td><td>MARTA Mobility</td><td>Provides paratransit to Fulton and DeKalb.</td></tr>
+			{% for agency in site.agencies %}
+			{% if agency.paratransit %}
+			<tr><td>{{ agency.acronym }}</td><td>{{ agency.paratransit.name }}</td><td>{{ agency.paratransit.description | truncate: 30}} <a href="{{ agency.url }}#paratransit">more »</a></td></tr>
+			{% endif %}
+			{% endfor %}
 		</tbody>
 	</table>
 </div>
+</div>
 
+{% include row_break.html %}
 
 ## Eligibility
 
-{% include right_image.html alt="mobility services" src="http://i.istockimg.com/image-zoom/34098832/3/380/253/zoom-34098832-3.jpg" title="Accessible transit is available throughout the region." %}
+{% include right_image.html alt="mobility services" src="http://i.istockimg.com/image-zoom/54648578/3/380/253/stock-photo-54648578-african-american-woman-sitting-at-table-completing-job-application.jpg" title="Accessible transit is available throughout the region." %}
 
 Determining your eligibility is different for each provider in the region.
 
+{% include row_break.html %}
 
 ## Planning your trip
 

@@ -8,6 +8,5 @@ permalink: '/guide/tips/'
 image: "//c1.staticflickr.com/1/27/55889442_46912b86ca_b.jpg"
 tagline: Looking to remove every ounce of stress from your commute?  We've got your tips and tricks here.
 ---
-{% for page in site.categories %}
-	{{page}}
-{% endfor %}
+
+Page under construction!

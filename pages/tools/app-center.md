@@ -6,7 +6,7 @@ order: 5
 category: 'tools'
 permalink: '/tools/apps/'
 related: 
-tagline: 
+tagline: Find the best apps available for your transit agency.
 image: 
 ---
 
