@@ -27,7 +27,7 @@ image: "/build/images/bus_transfer.png"
 * MARTA **must** begin or end your journey. (No transfers between suburban operators.)
 * Your Breeze Card **must** have an operator-specific fare product or stored cash value to begin a regional trip.
 
-[Learn more about the cost of trips involving multiple operators »](/fares/calculator)
+[Learn more about the cost of trips involving multiple operators »](/fares/calculator#free-transfer-eligibility)
 
 
 ## How transfers work
