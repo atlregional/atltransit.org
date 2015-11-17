@@ -1,11 +1,11 @@
 <ul class="media-list col-sm-12">
 {% assign pages = site.pages | where:"category",include.category %}
 {% assign sorted = pages | sort:"order" %}
-{% for item in sorted limit:4 %}
+{% for item in sorted limit:include.limit %}
 	{% if item.id != include.category %}
 		<!-- <div class=""> -->
 		
-		<li class="category-item-small media">
+		<li class="category-item-small media {% if include.columns == 2 %}col-sm-6{% endif %}">
 		<a href="{{ item.url }}">
 			<div class="media-left">
 				<img class="media-object img-rounded" height="40px" src="{% if item.image %}{{ item.image }}{% else %}/build/images/atl-placeholder.png{% endif %}" alt="{{ item.title }}" title="{{ item.title }}">
@@ -13,7 +13,8 @@
 			<div class="media-body">
 				<h4 class="media-heading">{{ item.title }}</h4>
 				
-				<p>{% if item.tagline %}{% assign sentences = item.tagline | split: '. ' %}{{ sentences[0] }}{% else %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endif %}</p>
+				<!-- <p>{% if item.tagline %}{% assign sentences = item.tagline | split: '. ' %}{{ sentences[0] }}{% else %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endif %}</p> -->
+				<p>{% if item.tagline %}{{ item.tagline | truncate:40 }}{% else %}{% capture lipsum %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endcapture %}{{ lipsum truncate:40 }}{% endif %}</p>
 			</div>
 		</a>
 		</li>

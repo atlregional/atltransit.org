@@ -2,72 +2,20 @@
 	<div class="container-fluid">
 		<div class="row bottom-20">
 			<div class="col-sm-3">
-				<h4>About</h4>
-				<ul class="list-inline top-buffer">
-				{% assign category = "about" %}
-				{% assign pages = site.pages | where:"category",category %}
-				{% assign sorted = pages | sort:"order" %}
-				{% for item in sorted %}
-					{% if item.id != category %}
-						<li class="col-sm-12">
-						<a href="{{ item.url }}">
-							<i class="fa fa-caret-right right-5"></i>{{ item.title }}
-						</a>
-						</li>
-					{% endif %}
-				{% endfor %}
-				</ul>
+				<h4>About <a class="small" href="/about">View all »</a></h4>
+				{% include category_small.html category="about" limit=4 %}
 			</div>
 			<div class="col-sm-3">
-				<h4>Rider tools</h4>
-				<ul class="list-inline top-buffer">
-				{% assign category = "tools" %}
-				{% assign pages = site.pages | where:"category",category %}
-				{% assign sorted = pages | sort:"order" %}
-				{% for item in sorted %}
-					{% if item.id != category %}
-						<li class="col-sm-12">
-						<a href="{{ item.url }}">
-							<i class="fa fa-caret-right right-5"></i>{{ item.title }}
-						</a>
-						</li>
-					{% endif %}
-				{% endfor %}
-				</ul>
+				<h4>Rider tools <a class="small" href="/tools">View all »</a></h4>
+				{% include category_small.html category="tools" limit=4 %}
 			</div>
 			<div class="col-sm-3">
-				<h4>Maps</h4>
-				<ul class="list-inline top-buffer">
-				{% assign category = "maps" %}
-				{% assign pages = site.pages | where:"category",category %}
-				{% assign sorted = pages | sort:"order" %}
-				{% for item in sorted %}
-					{% if item.id != category %}
-						<li class="col-sm-12">
-						<a href="{{ item.url }}">
-							<i class="fa fa-caret-right right-5"></i>{{ item.title }}
-						</a>
-						</li>
-					{% endif %}
-				{% endfor %}
-				</ul>
+				<h4>Maps <a class="small" href="/maps">View all »</a></h4>
+				{% include category_small.html category="maps" limit=4 %}
 			</div>
 			<div class="col-sm-3">
-				<h4>Destinations</h4>
-				<ul class="list-inline top-buffer">
-				{% assign category = "destinations" %}
-				{% assign pages = site.pages | where:"category",category %}
-				{% assign sorted = pages | sort:"order" %}
-				{% for item in sorted %}
-					{% if item.id != category %}
-						<li class="col-sm-12">
-						<a href="{{ item.url }}">
-							<i class="fa fa-caret-right right-5"></i>{{ item.title }}
-						</a>
-						</li>
-					{% endif %}
-				{% endfor %}
-				</ul>
+				<h4>Destinations <a class="small" href="/destinations">View all »</a></h4>
+				{% include category_small.html category="destinations" limit=4 %}
 			</div>
 		</div>
 	</div>

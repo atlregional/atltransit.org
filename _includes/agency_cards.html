@@ -1,9 +1,9 @@
-<div class="row">
+<!-- <div class="row"> -->
 {% for agency in site.agencies %}
 {% if forloop.index0 == 0 or forloop.index0 == 3 %}
-<!-- <div class="row"> -->
+<div class="row">
 {% endif %}
-	<div class="col-md-4 col-sm-6">
+	<div class="col-sm-4">
 		<a href="{{ agency.url }}" class="thumbnail thumbnail-link equal-height">
 			<img class="img-rounded hidden-xs" src="{{ agency.logo }}" alt="{{ agency.name }}">
 			<div class="caption">
@@ -15,7 +15,7 @@
 		</a>
 	</div>
 {% if forloop.index0 == 2 or forloop.last %}
-<!-- </div> -->
+</div>
 {% endif %}
 {% endfor %}
-</div>
+<!-- </div> -->

@@ -1,0 +1,19 @@
+{% assign agencies = site.agencies | where:"acronym","marta" %}
+{% for agency in site.agencies %}
+{% if agency.maps.size > 0 %}
+## {{ agency.acronym }}
+{% for map in agency.maps %}[<i class="fa fa-download right-5"></i>{{ map.name }}]({{ map.url }})  
+{%comment%}
+<div class="col-md-4 col-sm-6">
+  <a href="{{ map.url }}" class="thumbnail thumbnail-link equal-height">
+    <img class="img-rounded hidden-xs" src="{% if map.thumbnail %}{{ map.thumbnail }}{% else %}/build/images/atl-placeholder.png{% endif %}" alt="{{ map.name }}">
+    <div class="caption">
+      <h3><i class="fa fa-download right-5"></i>{{ map.name }}</h3>
+    </div>
+  </a>
+</div>
+{%endcomment%}{% endfor %}
+
+[Learn more about {{ agency.acronym }} service »]({{ agency.url }})
+{% endif%}
+{% endfor %}

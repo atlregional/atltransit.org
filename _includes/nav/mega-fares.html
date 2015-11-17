@@ -19,16 +19,15 @@
 			</div>
 			<div class="col-sm-4">
 				<!-- <div class="row"> -->
-				<h4>Fare</h4>
-				{% include category_small.html category="fares" %}
-				<p><a href="/fares">View all »</a></p>
+				<h4>Fare <a class="small" href="/fares">View all »</a></h4>
+				{% include category_small.html category="fares" limit=5 %}
 				<!-- </div> -->
 
 			</div>
 			<div class="col-sm-4">
 				<!-- <div class="row"> -->
 				<h4>Transfers</h4>
-				<div>
+				<div class="bottom-buffer">
 					<a href="/maps/interactive">
 						<p>Find regionals connection on the interactive map »</p>
 						<!-- <svg width="5cm" height="4cm" version="1.1"

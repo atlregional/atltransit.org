@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer nocontent">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3 col-sm-6">
@@ -13,8 +13,9 @@
 				</p> -->
 			</div>
 			<div class="col-md-3 col-sm-6">
-				<h3><a href="http://www.sf311.org/" target="_blank">311</a></h3>
-				<p>Contact us 24/7/365: dial 311 (415.701.2311 outside SF).</p>
+				<h3><a href="{{ site.baseurl }}/guide/accessibility">Accessibility</a></h3>
+				<p>Find out how to access transit in your community.</p>
+				<p></p>
 			</div>
 			<div class="col-md-3 col-sm-6">
 				<h3><a href="/about/feedback">Feedback</a></h3>
@@ -23,33 +24,33 @@
 
 				<p><a class="notactive" href="/about/feedback">Submit feedback</a></p>
 				&nbsp;
-
-				<p><a class="notactive" href="/feedback/title-vi-discrimination-complaints">Discrimination Complaints</a></p>
 			</div>
 			<div class="col-md-3 col-sm-6">
-				<p class="top-buffer">
+				<!-- <p class="top-buffer">
 					<a href="#"><i class="fa fa-2x fa-twitter"></i></a>
 					<a href="#"><i class="fa fa-2x fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-2x fa-instagram"></i></a>
 					<a href="#"><i class="fa fa-2x fa-info-circle"></i></a>
-				</p>
+				</p> -->
 				<h3>
 					<a href="{{ site.baseurl }}/about/agencies">Agencies</a>
 				</h3>
-				<h3>
-					<ul class="list-inline anchor">
-						<!-- <a href="#"><img src="{{ site.baseurl }}/assets/images/marta_badge.png" class="brighten" title="MARTA" alt="MARTA" height="24" width="24"></a>
-						<a href="#"><img src="{{ site.baseurl }}/assets/images/cct_badge.png" class="brighten" title="CCT" alt="CCT" height="24" width="24"></a>
-						<a href="#"><img src="{{ site.baseurl }}/assets/images/gct_badge.png" class="brighten" title="GCT" alt="GCT" height="24" width="24"></a>
-						<a href="#"><img src="{{ site.baseurl }}/assets/images/grta_badge.png" class="brighten" title="GRTA" alt="GRTA" height="24" width="24"></a>
-						<a href="#"><img src="{{ site.baseurl }}/assets/images/streetcar_badge.png" class="brighten" title="Atlanta Streetcar" alt="Atlanta Streetcar" height="24" width="24"></a> -->
-						<li><a  class="btn btn-primary" style="background-color:#E67C06; color:#eee!important" href="http://itsmarta.com">MARTA</a></li>
-						<li><a  class="btn btn-primary" style="background-color:#B87AD2; color:#eee!important" href="#">CCT</a></li>
-						<li><a  class="btn btn-primary" style="background-color:#A3BADC; color:#eee!important" href="#">GRTA</a></li>
-						<li><a  class="btn btn-primary" style="background-color:#8B3155; color:#eee!important" href="#">GCT</a></li>
-						<li><a  class="btn btn-primary" style="background-color:#0096A1; color:#eee!important" href="#">ATL Streetcar</a></li>
-					</ul>
-				</h3>
+				<div class="row">
+				{% for agency in site.agencies %}
+					<div class="col-xs-4 bottom-buffer">
+						<a href="{{ agency.website }}" target="_new">
+							<img class="img-rounded img-responsive" src="{{ agency.logo }}" alt="{{ agency.name }}" title="{{ agency.name }}">
+						</a>
+					</div>
+				{% endfor %}
+				</div>
+				<div id="google_translate_element"></div>
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+					  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-61466318-1'}, 'google_translate_element');
+					}
+				</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 			</div>
 		</div>
 		<hr class="col-md-12">

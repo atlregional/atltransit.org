@@ -1,0 +1,14 @@
+<ul class="list-inline top-buffer">
+{% assign category = "about" %}
+{% assign pages = site.pages | where:"category",category %}
+{% assign sorted = pages | sort:"order" %}
+{% for item in sorted %}
+	{% if item.id != category %}
+		<li class="col-sm-12">
+		<a href="{{ item.url }}">
+			<i class="fa fa-caret-right right-5"></i>{{ item.title }}
+		</a>
+		</li>
+	{% endif %}
+{% endfor %}
+</ul>
