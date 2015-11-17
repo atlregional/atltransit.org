@@ -15,19 +15,30 @@ website: http://itsmarta.com/
 fare_website: http://breezecard.com/
 twitter: martaservice
 phone: (404) 848-5000
-logo: "/build/images/marta_train_motion.jpg"
+logo: "/assets/images/logos/marta_logo.png"
+image: "/build/images/marta_train_motion.jpg"
 path: marta
 tagline: MARTA serves Fulton, DeKalb, and Clayton counties.
 maps: 
-  - name: System Map
-    type: pdf
-    url: /build/images/maps/marta_test.pdf
-  - name: Rail Map
-    type: pdf
-    url: /build/images/maps/marta_test2.pdf
+- url: build/images/maps/MARTA_system_map_2-2012.pdf
+  type: pdf
+  name: System Map
+- url: build/images/maps/MARTA_central-atlanta-2012.pdf
+  type: pdf
+  name: Central Atlanta/Midtown Map
+- url: build/images/maps/MARTA_downtown2-2012.pdf
+  type: pdf
+  name: Downtown Atlanta Map
+- url: build/images/maps/Five-Points-Station-Bus-Connections-December-14-2013.pdf
+  type: pdf
+  name: Five Points Connections Map
+- url: build/images/maps/MARTA_rail_lines.pdf
+  type: pdf
+  name: Rail Lines Map
 services:
   - heavy_rail
   - local_bus
+  - paratransit
 paratransit:
   name: MARTA Mobility
   website: http://www.itsmarta.com/accessibility-Mobility.aspx

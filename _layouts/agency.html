@@ -9,23 +9,19 @@
 	{% include page-header.html %}
 	<div class="container site-container">
 		<div class="row">
-			<div class="col-md-9 page-content">
-				{% include anchor-nuggets.html %}
-				{{content}}
-				{{ page.name }}
-
-				<h3>Maps</h3>
-				{% for map in page.maps %}
-					<p><a href="{{ map.url }}">{{ map.name }}</a></p>
-				{% endfor %}
-				<h3>Contact information</h3>
-				{% include address_card.html %}
-
-				<p>Looking for another agency's contact information?</p>
-				<a href="/about/contact" class="btn btn-primary">Find contact info</a>
-
+			<div class="col-md-8 col-md-offset-2">
+				<div class="page-content">
+					{% include anchor-nuggets.html %}
+					<img class="img-responsive center-block" style="max-height:170px" src="{{ page.logo }}">
+					<h2 class="row-heading">General</h2>
+					{{content}}
+					{% include agency_page_content.html %}
+				</div>
+				<div class="row top-buffer bottom-buffer">
+					{% include sidebar.html %}
+				</div>
 			</div>
-				{% include sidebar.html %}
+			
 		</div>
 	</div>
 	{% include footer.html %}

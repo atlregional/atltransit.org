@@ -13,12 +13,27 @@ email: transit@gwinnettcounty.com
 website: http://gctransit.com/
 twitter: gctransit
 phone: (770) 822-5010
-logo: "/build/images/atl-placeholder.png"
+logo: "/assets/images/logos/gct_logo.png"
 path: gct
 tagline: GCT serves Gwinnett County with local and express bus routes.
 services:
   - local_bus
   - express_bus
+  - paratransit
+maps:
+- url: build/images/maps/GCT_LocalSystemMap.pdf
+  type: pdf
+  name: Local System Map
+- url: build/images/maps/GCT_paratransit_routes.pdf
+  type: pdf
+  name: Paratransit Routes
+- url: build/images/maps/GCT_Express_Systems_Maps_LEP.pdf
+  type: pdf
+  name: Express System Map
+paratransit:
+  name: GCT Paratransit
+  url: https://www.gwinnettcounty.com/portal/gwinnett/Departments/Transportation/GwinnettCountyTransit/ParatransitInformation
+  description: Gwinnett County's paratransit service is a specialized transportation service of Gwinnett County Transit, providing curb-to-curb shared ride bus service for eligible persons with disabilities.
 ---
 
 GCT provides local bus service within Gwinnett County and commuter bus to and from Downtown and Midtown Atlanta.  
