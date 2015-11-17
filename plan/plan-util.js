@@ -898,11 +898,21 @@ function renderItinerary(index, focus, el, click){
 		dollarFormatter = d3.format('$,.2f');
 		distanceFormatter = d3.format('.2f');
 		var fare;
+    var agencyNest = d3.nest()
+      .key(function(d) { return d.agencyId; })
+      .map(itin.legs);
+    delete agencyNest["null"];
 		if ( itin.fare !== null){
-			fare = dollarFormatter(itin.fare.fare.regular.cents / 100);
+      if (Object.keys(agencyNest).length > 1){
+        fare = 'See <a href="/fares/calculator">fare calculator</a>.';
+      }
+      else{
+        fare = dollarFormatter(itin.fare.fare.regular.cents / 100);
+      }
+			
 		}
 		else{
-			fare = 'N/A'
+			fare = 'N/A';
 		}
 		$('#planner-advice-msg').html('');
 		$('#planner-leg-list').html('');
