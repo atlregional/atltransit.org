@@ -54,17 +54,19 @@
 		        </div> <!-- End Item -->
 		        <div class="item">
 		        	<div class="row">
-		        		<div class="col-xs-2 hidden-home">	
-							<a class="btn btn-default back-btn" id="next-back-btn" href="#next-carousel" data-slide="prev">Back</a>
+		        		<div class="col-xs-2 {% if include.type == "home" %}hidden{% endif %}">	
+							<a class="btn btn-default btn-block back-btn" id="next-back-btn" href="#next-carousel" data-slide="prev">Back</a>
 						</div>
 						<div class="col-xs-10">
 							<p class="stop-id-label" id="next-stop-id"></p>
 							<p class="stop-name" id="next-stop-name"></p>
-							<p class="last-updated" id="next-last-updated"></p>
+							<p class="last-updated" id="next-last-updated">
+								<a class="get-arrivals next btn"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> <span class="time"></span></a>
+							</p>
 						</div>
-						<div class="col-xs-2">
+						<!-- <div class="col-xs-2">
 							<button class="get-arrivals next btn btn-primary pull-right"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
-						</div>
+						</div> -->
 					</div>
 		            <div class="row">
 						<div class="next-arrivals table-responsive col-xs-12">

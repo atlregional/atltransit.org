@@ -56,7 +56,7 @@
 		        </div> <!-- End Item -->
 		        <div class="item">
 		        	<div class="row">
-		        		<div class="col-xs-2 hidden-home">	
+		        		<div class="col-xs-2 {% if include.type == "home" %}hidden{% endif %}">	
 							<a class="btn btn-default btn-block back-btn" id="schedules-back-btn" href="#schedules-carousel" data-slide="prev">Back</a>
 						</div>
 						<div class="col-xs-10">
