@@ -60,7 +60,15 @@ window.onload = function(){
 		console.log(poly);
 
 		L.geoJson(poly, {
-			style: style
+			style: style,
+			onEachFeature: function (feature, layer) {
+		      // ADD A POPUP
+		      layer.bindPopup(
+		        // "<h1>" + 
+		        feature.properties['Agency']
+		        // "</h1>"
+		      );
+		    },
 		}).addTo(map);
 	});
 	$('#paratransit-clear').click(function(){
@@ -68,15 +76,23 @@ window.onload = function(){
 		$('.paratransit').val('');
 		$('#paratransit-message').html('');
 		// clear markers on map
-		map.removeLayer(markers['originMarker']);
-		map.removeLayer(markers['destinationMarker']);
+		if (typeof markers['originMarker'] !== 'undefined')
+			map.removeLayer(markers['originMarker']);
+		if (typeof markers['destinationMarker'] !== 'undefined')
+			map.removeLayer(markers['destinationMarker']);
 		markers = {};
+		map.setView([33.82251188219802, -84.50408935546875], 9);
 	});
 	$('.latlng').change(function(){
 		
-		var latlng = this.value.split(',')
-		console.log(latlng)
+		var latlng = this.value.split(',');
+		console.log(latlng);
 		map.setView([+latlng[0], +latlng[1]], 12);
+		var markerArray = $.map(markers, function(value, index) {
+		    return [value];
+		});
+		var group = new L.featureGroup(markerArray);
+ 		map.fitBounds(group.getBounds());
 	});
 	$('#paratransit-submit').click(function(){
 		var originLatlng = $('#planner-options-from-latlng').val().split(',')
