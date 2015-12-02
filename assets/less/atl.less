@@ -248,14 +248,39 @@ h6 {
 
 .nav-collapse-container {
   background-color: #fff;
-  padding: 0 68px 0 68px;
-  margin: 0px;
+  position: absolute;
+  z-index: 1000;
+  left: 0px;
+  /*padding: 0 68px 0 68px;*/
+  /*margin: 0px !important;*/
+  width: 100%;
+  border-bottom: solid #ddd 5px;
 }
 
-.has-children > a, .go-back a {
+@media (min-width: @screen-lg-min) {
+  .navbar, .home-container, .nav-collapse-container {
+    padding: 0 120px 0 120px !important;
+    width: 100%;
+  }
+}
+@media (min-width: @screen-md-min) {
+  .navbar, .home-container, .nav-collapse-container {
+    padding: 0 60px 0 60px !important;
+    width: 100%;
+  }
+}
+#double li  { 
+  float:left;
+  display:inline;
+  width:50%;
+}
+
+
+
+.has-children > a.dropdown-link, .go-back a.dropdown-link {
   position: relative;
 }
-.has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {
+.has-children > a.dropdown-link::before, .has-children > a.dropdown-link::after, .go-back a.dropdown-link::before, .go-back a.dropdown-link::after {
   /* arrow icon in CSS - for element with nested unordered lists */
   content: '';
   position: absolute;
@@ -268,14 +293,14 @@ h6 {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.has-children > a::before, .go-back a::before {
+.has-children > a.dropdown-link::before, .go-back a.dropdown-link::before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.has-children > a::after, .go-back a::after {
+.has-children > a.dropdown-link::after, .go-back a.dropdown-link::after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -283,18 +308,18 @@ h6 {
   transform: rotate(-45deg);
 }
 @media only screen and (min-width: 1170px) {
-  .has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {
+  .has-children > a.dropdown-link::before, .has-children > a.dropdown-link::after, .go-back a.dropdown-link::before, .go-back a.dropdown-link::after {
     background: #c9cbc4;
   }
-  .has-children > a:hover::before, .has-children > a:hover::after, .go-back a:hover::before, .go-back a:hover::after {
+  .has-children > a.dropdown-link:hover::before, .has-children > a.dropdown-link:hover::after, .go-back a.dropdown-link:hover::before, .go-back a.dropdown-link:hover::after {
     background: black;
   }
 }
 
-.has-children > a {
+.has-children > a.dropdown-link {
   padding-right: 40px;
 }
-.has-children > a::before, .has-children > a::after {
+.has-children > a.dropdown-link::before, .has-children > a.dropdown-link::after {
   /* arrow goes on the right side - children navigation */
   right: 20px;
   -webkit-transform-origin: 9px 50%;
@@ -309,15 +334,15 @@ h6 {
 
 /*********************************/
 
-  .has-children > a::before, .has-children > a::after {
+  .has-children > a.dropdown-link::before, .has-children > a.dropdown-link::after {
     right: 15%;
   }
 
-  .has-children > a {
+  .has-children > a.dropdown-link {
     /* main navigation arrows on larger devices */
     padding-right: 30px !important;
   }
-  .has-children > a::before, .has-children > a::after {
+  .has-children > a.dropdown-link::before, .has-children > a.dropdown-link::after {
     width: 9px;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
@@ -331,23 +356,23 @@ h6 {
     -moz-transition: width 0.3s, -moz-transform 0.3s;
     transition: width 0.3s, transform 0.3s;
   }
-  .has-children > a::before {
+  .has-children > a.dropdown-link::before {
     right: 12px;
   }
-  .has-children > a::after {
+  .has-children > a.dropdown-link::after {
     right: 7px;
   }
-  .has-children > a:not(.collapsed)::before, .has-children > a:not(.collapsed)::after {
+  .has-children > a.dropdown-link:not(.collapsed)::before, .has-children > a.dropdown-link:not(.collapsed)::after {
     width: 14px;
   }
-  .has-children > a:not(.collapsed)::before {
+  .has-children > a.dropdown-link:not(.collapsed)::before {
     -webkit-transform: translateX(5px) rotate(-45deg);
     -moz-transform: translateX(5px) rotate(-45deg);
     -ms-transform: translateX(5px) rotate(-45deg);
     -o-transform: translateX(5px) rotate(-45deg);
     transform: translateX(5px) rotate(-45deg);
   }
-  .has-children > a:not(.collapsed)::after {
+  .has-children > a.dropdown-link:not(.collapsed)::after {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -607,6 +632,9 @@ h6 {
 .top-buffer { margin-top:20px; }
 .left-buffer { margin-left:20px; }
 .bottom-buffer { margin-bottom:40px; }
+.bottom-20 { margin-bottom:20px; }
+.right-5 { margin-right:5px; }
+
 
 .btn-align {
     padding: 6px 12px;
@@ -625,8 +653,10 @@ h6 {
   margin-bottom: 0px;
 }
 
-#map { position:absolute; top:0; bottom:0; width:100%; z-index:-99999;}
+.full-map { position:absolute; top:82px; bottom:0; width:100%; z-index:-99999;}
+.inline-map { width:100%; height:400px }
 
+ul.ui-autocomplete { z-index: 2000 !important; }
 /*#map {
   position:absolute !important;
 
@@ -849,7 +879,11 @@ div.new_html_code {
   border-bottom: 1px dotted #000;
 }
 
-
+.tip {
+  /*text-decoration: underline;*/
+  .emphasis;
+  cursor: help;
+}
 
 
 /* Sidebar navigation */
@@ -910,7 +944,7 @@ div.new_html_code {
 /* Page Elements */
 .page-title {
   padding-top: 70px;
-  background-image: url("http://trimet.org/global/img/header-bg.png");
+  background-image: url("/build/images/header-bg.png");
   /*background-color: #eff6fd;*/
   background-color: rgb(90, 90, 90);
   color: #fff;
@@ -1305,6 +1339,15 @@ ul.anchor > li {
   padding-top: 5px;
 }
 
+
+
+
+/* Mode classes for transit services */
+
+/*.heavy_rail {
+  .fa;
+  .fa-subway;
+}*/
 
 /* Sticky footer styles
 -------------------------------------------------- */
