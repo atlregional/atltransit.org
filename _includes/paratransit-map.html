@@ -117,10 +117,12 @@ window.onload = function(){
 		    "coordinates": [+destinationLatlng[1], +destinationLatlng[0]]
 		  }
 		};
-		// TODO: Account for transfers between GCT/MARTA at Doraville and CCT/MARTA at Cumberland
-		// GCT/MARTA transfer not free, but CCT/MARTA transfer is.
+		
 		var qualificationResults = [];
-		var qualifies = false;
+		var qualResults = [];
+		var origins = [];
+		var destinations = [];
+		var agencies = [];
 		for (var i = 0; i < poly.length; i++) {
 			console.log(origin);
 			var isInsideOrigin = turf.inside(origin, poly[i]);
@@ -128,22 +130,63 @@ window.onload = function(){
 			console.log(destination);
 			var isInsideDestination = turf.inside(destination, poly[i]);
 			console.log(isInsideDestination);
-			// qualificationResults[i] = {
-			// 	agency: poly[i].properties['Agency'],
-			// 	origin: isInsideOrigin,
-			// 	destination: isInsideDestination
-			// };
+			qualResults.push({
+				agency: poly[i].properties['Agency'],
+				origin: isInsideOrigin,
+				destination: isInsideDestination
+			});
 			if (isInsideDestination && isInsideOrigin){
 				qualificationResults.push({bool: true, agency: poly[i].properties['Agency']});
 			}
+			if (isInsideOrigin){
+				origins.push(poly[i].properties['Agency']);
+				agencies.push(poly[i].properties['Agency']);
+			}
+			if (isInsideDestination){
+				agencies.push(poly[i].properties['Agency']);
+				destinations.push(poly[i].properties['Agency']);
+			}
 		};
-		
+
 		var message;
+		var simplyButton = '<a href="http://oneclick-arc.camsys-apps.com/?is_round_trip=true&modes=mode_bicycle,mode_rideshare,mode_car,mode_paratransit,mode_taxi,mode_transit,mode_bus,mode_rail&purpose=undefined&from_place='+ $('#planner-options-from').val() + '&to_place=' + $('#planner-options-dest').val() +'" class="btn btn-default" target="_blank">View trip in Simply Get There</a>';
+	
+		// If both origin/destination fall in single agency service boundary
 		if (qualificationResults.length > 0 ){
-			message = 'Both your origin and destination fall within <strong>' + qualificationResults[0].agency + '\'s</strong> service area, so your trip <strong>most likely does qualify</strong>.' ;
+			message = 'Both your origin and destination fall within <strong>' + qualificationResults[0].agency + '\'s</strong> service area, so your trip <strong>does qualify</strong>.' ;
+			message += '<br>' + simplyButton;
 		}
+		// Else If only two agencies have jurisdiction.  All we need to do is determine transfer rules.
+		else if (origins.length == 1 && destinations.length == 1){
+			if (agencies.indexOf('Cobb Community Transit') > -1 && agencies.indexOf('Metropolitan Atlanta Rapid Transit Authority') > -1 ){
+				message = 'MARTA and CCT have a free transfer rule. You will need to transfer at Cumberland Transfer Center.';
+				message += '<br>' + simplyButton;
+			}
+			else if (agencies.indexOf('Gwinnett County Transit') > -1 && agencies.indexOf('Metropolitan Atlanta Rapid Transit Authority') > -1 ){
+				message = 'The trip is possible, but you must pay full-priced fare for both MARTA and GCT. You will need to transfer at the Doraville MARTA Station.';
+				message += '<br>' + simplyButton;
+			}
+			else if (agencies.indexOf('Gwinnett County Transit') > -1 && agencies.indexOf('Cobb Community Transit') > -1 ){
+				message = 'The trip is technically possible, but may be impractical because of excess and unpredictable wait time along with multiple fare payments.'
+			}
+			else
+				message = 'Because both your origin and destination <strong>do not</strong> fall within contiguous agencies\' service areas, your trip <strong>does not qualify</strong>.';
+		}
+		// Else if there are overlapping service boundaries, we know one of them has to be MARTA.
+		else if (agencies.length > 2){
+			var singleAgency = origins.length === 1 ? origins : destinations;
+			console.log(singleAgency)
+			if (singleAgency.indexOf('Cobb Community Transit') > -1 ){
+				message = 'MARTA and CCT have a free transfer rule. You will need to transfer at Cumberland Transfer Center.';
+			}
+			else{
+				message = 'The trip is possible, but you must pay full-priced fare for both MARTA and GCT. You will need to transfer at the Doraville MARTA Station.';
+			}
+			message += '<br>' + simplyButton;	
+		}
+		// Either origin or destination do not fall within 
 		else{
-			message = 'Because both your origin and destination <strong>do not</strong> fall within a single agency\'s service area, your trip <strong>does not qualify</strong>.'
+			message = 'Because both your origin and destination <strong>do not</strong> fall within the agencies\' service areas, your trip <strong>does not qualify</strong>.';
 		}
 		// var message = '<h3>Results</h3><p>Your origin falls ';
 		// message += isInsideOrigin ? '<em>inside</em> ' : '<em>outside</em> ';
