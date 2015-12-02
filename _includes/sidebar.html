@@ -60,7 +60,7 @@
 	<ul class="nav">
 			{% for category in page.related %}
 				{% for item in site.pages %}
-					{% if item.title == category %}
+					{% if item.id == category %}
 						<li><a class="thumbnail thumbnail-link" href="{{ item.url }}">{{ item.title }}</a></li>
 					{% else %}
 						{% for subitem in item.subitems %}

@@ -6,11 +6,11 @@
 				<h4>Basic fare prices</h4>
 				<table class="table table-condensed table-hover">
 					<thead><th>Agency</th><th>1 Trip</th></thead>
-					{% for agency in site.data.fares %}
+					{% for agency in site.agencies %}
 					<tr>
-						<td>{{agency.name}}</td>
+						<td>{{agency.acronym}}</td>
 						<td>
-						{% for fare in agency.base %}{% if forloop.index != 1 %}<span>, </span>{% endif %}<span {% if fare.description %}class="tip" data-toggle="tooltip" data-placement="bottom" title="{{ fare.description }}"{% endif %}>{{fare.cost}}</span>{% endfor %}
+						{% for fare in agency.fares.base %}{% if forloop.index != 1 %}<span>, </span>{% endif %}<span {% if fare.description %}class="tip" data-toggle="tooltip" data-placement="bottom" title="{{ fare.description }}"{% endif %}>{{fare.cost}}</span>{% endfor %}
 						</td>
 					</tr>
 					{% endfor %}

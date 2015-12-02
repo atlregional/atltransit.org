@@ -8,6 +8,7 @@ category: 'guide'
 permalink: '/guide/accessibility/'
 image: "http://i.istockimg.com/image-zoom/34098832/3/380/253/zoom-34098832-3.jpg"
 tagline: Transit in Atlanta is accessible to people of all abilities.  Paratransit, as well as most fixed route (i.e., bus and train) service, is available to eligible seniors and persons with disabilities.
+scripts: ["/plan/plan-util.js", "https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"]
 ---
 
 * toc goes here
@@ -38,6 +39,8 @@ Here is a listing of all the paratransit services available in the Atlanta regio
 </div>
 </div>
 
+[View agency information for more on each agency's paratransit offerings »](/about/agencies)
+
 {% include row_break.html %}
 
 ## Eligibility
@@ -45,6 +48,18 @@ Here is a listing of all the paratransit services available in the Atlanta regio
 {% include right_image.html alt="mobility services" src="http://i.istockimg.com/image-zoom/54648578/3/380/253/stock-photo-54648578-african-american-woman-sitting-at-table-completing-job-application.jpg" title="Accessible transit is available throughout the region." %}
 
 Determining your eligibility is different for each provider in the region.
+
+{% include row_break.html %}
+
+## Trip qualification check
+
+Looking for a quick way to check if your trip might qualify for paratransit in the region?
+
+Type in your origin and destination into the below form to see if both fall within the service area of a service provider.
+
+[Find more curb-to-curb and door-to-door options with Simply Get There »](http://oneclick-arc.camsys-apps.com/)
+
+{% include paratransit-map.html %}
 
 {% include row_break.html %}
 

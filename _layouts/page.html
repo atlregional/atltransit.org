@@ -15,8 +15,9 @@
 			<div class="row">
 				{% if page.id == page.category %}
 					<div class="col-md-8 col-md-offset-2 page-content">
-						{% include category_list.html %}
 						{{content}}
+						{% include category_list.html %}
+						
 					</div>
 				{% else %}
 					<div class="col-md-8 col-md-offset-2 {{ page.design }}">
@@ -44,6 +45,11 @@
 	{% include footer.html %}
 	{% include scripts.html %}
 <script type="text/javascript" src="{{ site.baseurl }}/build/js/atltransit.js"></script>
+{% if page.scripts %}
+{% for script in page.scripts %}
+<script type="text/javascript" src="{{ script }}"></script>
+{% endfor %}
+{% endif %}
 </body>
 
 </html>

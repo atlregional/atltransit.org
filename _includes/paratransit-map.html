@@ -1,0 +1,144 @@
+<link rel="stylesheet" href="/assets/css/jquery-ui-1.10.3.custom.css" />
+
+<div class="row">
+	<div class="form-group hidden">
+		<input class="form-control paratransit latlng" type="text" id="planner-options-from-latlng" >
+	</div>
+	<div class="form-group col-sm-6">
+		<input class="form-control paratransit " id="planner-options-from" placeholder="From"/>
+	</div>
+	<div class="form-group hidden">
+		<input class="form-control paratransit latlng" type="text" id="planner-options-dest-latlng" >
+	</div>
+	<div class="form-group col-sm-6">
+		<input class="form-control paratransit " id="planner-options-dest" placeholder="To"/>
+	</div>
+</div>
+<div class="form-group">
+	<button class="btn btn-success" id="paratransit-submit">Submit</button>
+	<button class="btn btn-danger" id="paratransit-clear">Clear</button>
+</div>
+<p><span id="paratransit-message"></span></p>
+<div class="col-md-12 inline-map" id="map"></div>
+
+<script type="text/javascript">
+function getPolyColor(d) {
+    return /Metropolitan Atlanta/g.test(d) ? 'rgb(247, 144, 68)' :
+           /Cobb/g.test(d) ? 'rgb(165, 56, 149)' :
+           /Cherokee/g.test(d) ? 'rgb(239, 193, 19)' :
+           /Gwinnett/g.test(d) ? 'rgb(154, 14, 52)'
+           : '#ddd' ;
+}
+function style(feature) {
+    return {
+        fillColor: getPolyColor(feature.properties['Agency']),
+        weight: 1,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+    };
+}
+
+window.onload = function(){
+	// Get planning script
+	// $.getScript("/plan/plan-util.js", function(){
+	//    console.log("Script loaded and executed.");
+	//  });
+	setupAutoComplete();
+	// setupAutoComplete('paratransit-origin')
+	// setupAutoComplete('paratransit-destination')
+	// Provide your access token
+	L.mapbox.accessToken = 'pk.eyJ1IjoiYXRscmVnaW9uYWwiLCJhIjoiQmZ6d2tyMCJ9.oENm3NSf--qHrimdm9Vvdw';
+	// Create a map in the div #map
+	map = L.mapbox.map('map', 'atlregional.nlcec3mc', {scrollWheelZoom: false});
+	var url = 'http://arc.garc.opendata.arcgis.com/datasets/c703b228249a47f18fbeb5531b9e1fd5_110.geojson'; // add url for arc.garc.opendata.arcgis.com here
+	var poly;
+	$.getJSON( url,function(data){
+		console.log(data);
+		poly = data.features;
+		console.log(poly);
+
+		L.geoJson(poly, {
+			style: style
+		}).addTo(map);
+	});
+	$('#paratransit-clear').click(function(){
+		// clear form
+		$('.paratransit').val('');
+		$('#paratransit-message').html('');
+		// clear markers on map
+		map.removeLayer(markers['originMarker']);
+		map.removeLayer(markers['destinationMarker']);
+		markers = {};
+	});
+	$('.latlng').change(function(){
+		
+		var latlng = this.value.split(',')
+		console.log(latlng)
+		map.setView([+latlng[0], +latlng[1]], 12);
+	});
+	$('#paratransit-submit').click(function(){
+		var originLatlng = $('#planner-options-from-latlng').val().split(',')
+		var destinationLatlng = $('#planner-options-dest-latlng').val().split(',')
+		var origin = {
+		  "type": "Feature",
+		  "properties": {
+		    "marker-color": "#f00"
+		  },
+		  "geometry": {
+		    "type": "Point",
+		    "coordinates": [+originLatlng[1], +originLatlng[0]]
+		  }
+		};
+		var destination = {
+		  "type": "Feature",
+		  "properties": {
+		    "marker-color": "#0f0"
+		  },
+		  "geometry": {
+		    "type": "Point",
+		    "coordinates": [+destinationLatlng[1], +destinationLatlng[0]]
+		  }
+		};
+		// TODO: Account for transfers between GCT/MARTA at Doraville and CCT/MARTA at Cumberland
+		// GCT/MARTA transfer not free, but CCT/MARTA transfer is.
+		var qualificationResults = [];
+		var qualifies = false;
+		for (var i = 0; i < poly.length; i++) {
+			console.log(origin);
+			var isInsideOrigin = turf.inside(origin, poly[i]);
+			console.log(isInsideOrigin);
+			console.log(destination);
+			var isInsideDestination = turf.inside(destination, poly[i]);
+			console.log(isInsideDestination);
+			// qualificationResults[i] = {
+			// 	agency: poly[i].properties['Agency'],
+			// 	origin: isInsideOrigin,
+			// 	destination: isInsideDestination
+			// };
+			if (isInsideDestination && isInsideOrigin){
+				qualificationResults.push({bool: true, agency: poly[i].properties['Agency']});
+			}
+		};
+		
+		var message;
+		if (qualificationResults.length > 0 ){
+			message = 'Both your origin and destination fall within <strong>' + qualificationResults[0].agency + '\'s</strong> service area, so your trip <strong>most likely does qualify</strong>.' ;
+		}
+		else{
+			message = 'Because both your origin and destination <strong>do not</strong> fall within a single agency\'s service area, your trip <strong>does not qualify</strong>.'
+		}
+		// var message = '<h3>Results</h3><p>Your origin falls ';
+		// message += isInsideOrigin ? '<em>inside</em> ' : '<em>outside</em> ';
+		// message += 'the service boundary and your destination falls '
+		// message += isInsideDestination ? '<em>inside</em> ' : '<em>outside</em> ';
+		// message += 'the service boundary.</p><p>So, your trip '
+		// message += isInsideDestination && isInsideOrigin ? '<strong><em>probably does</em></strong> ' : '<strong><em>most likely does not</em></strong> ';
+		// message += 'qualify for paratransit service.</p><p>Find more specialized services at <a href="http://oneclick-arc.camsys-apps.com/" target="_blank">Simply Get There</a> or <a href="" target="_blank">view agency information for more on each agency\'s paratransit offerings</a>.</p>'
+
+		
+		$('#paratransit-message').html(message)
+	})
+}
+</script>

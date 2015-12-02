@@ -8,14 +8,14 @@ image: "/build/images/trip-planner.png"
 tagline: Plan a trip using the atltransit trip planner.
 ---
 <!-- Leaflet map div -->
-<div id="map"></div>
+<div class="full-map" id="map"></div>
 <!-- Planner options div -->
-<div class="row col-md-4 col-sm-6 col-xs-12">
+<div class="row col-md-5 col-sm-6 col-xs-12">
 	<div id="modal-simple" class="chubi">
 		<form role="form" class="planner-options-form validateDontSubmit form-inline" id="planner-options-form">
 			<div class="row">
 				<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-6">
-					<div class="input-group input-group-sm  planner-options-inputgroup-from" id="planner-options-inputgroup-from">
+					<div class="input-group  planner-options-inputgroup-from" id="planner-options-inputgroup-from">
 						<!-- <label class="input-group-addon planner-options-input-addon required label-from" for="planner-options-from"> -->
 						<span id="origin-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-play-circle"></span>
 						<!-- </label> -->
@@ -25,7 +25,7 @@ tagline: Plan a trip using the atltransit trip planner.
 					</div>
 				</div>
 				<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-6">
-					<div class="input-group navbar-input-group input-group-sm  planner-options-inputgroup-dest" id="planner-options-inputgroup-dest">
+					<div class="input-group navbar-input-group  planner-options-inputgroup-dest" id="planner-options-inputgroup-dest">
 						<!-- <label class="input-group-addon planner-options-input-addon required label-dest" for="planner-options-dest"> -->
 							<span id="dest-glyph" class="input-group-addon input-group-glyph glyphicon glyphicon-record"></span>
 						<!-- </label> -->
@@ -36,14 +36,14 @@ tagline: Plan a trip using the atltransit trip planner.
 			</div>
 				<div class="row hidden-xs">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-time">
+						<div class="input-group planner-options-dateinput" id="planner-options-inputgroup-time">
 							<span id="time-glyph" class="input-group-addon input-group-glyph"><i class="fa fa-clock-o"></i></span>
 							<input aria-describedby="time-glyph" id="planner-options-time" style="line-height:20px;" type="time" title="Time" aria-described-by="planner-options-timeformat" aria-required="true" class="form-control" required="required" />
 							<div class="input-group-addon planner-options-input-addon"  id="planner-options-timeformat">h:mma</div>
 						</div>
 					</div>
 					 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-						<div class="input-group input-group-sm planner-options-dateinput" id="planner-options-inputgroup-date">
+						<div class="input-group planner-options-dateinput" id="planner-options-inputgroup-date">
 							<span id="date-glyph" class="input-group-addon input-group-glyph"><i class="fa fa-calendar"></i></span>
 							<input aria-describedby="date-glyph" id="planner-options-date" type="text" title="Date" aria-label="Datumkiezer, gebruik Ctrl en pijltjes om te navigeren" aria-required="true" class="form-control" required="required"  />
 						</div>
@@ -55,28 +55,28 @@ tagline: Plan a trip using the atltransit trip planner.
 		</form>
 		<div class="row">
 			<div class="col-md-12 btn-align">
-				<button type="button" class="btn btn-sm btn-danger" onclick="clearHash()"><i class="fa fa-times"></i></button>
-				<button type="button" class="btn btn-sm btn-info" id="plan-trip" onclick="submit()"><i class="fa fa-play"></i></button>
+				<button type="button" class="btn btn-md btn-danger" onclick="clearHash()">Clear</button>
+				<button type="button" class="btn btn-md btn-info" id="plan-trip" onclick="submit()">Plan trip</button>
 				<div role="group" class="btn-group" data-toggle="buttons">
-					<label class="btn btn-sm btn-default mode-option">
+					<label class="btn btn-md btn-default mode-option">
 						<input type="radio" name="mode-select" value="TRANSIT,WALK" id="train" checked><i class="fa fa-lg fa-train"></i>
 					</label>
-					<!-- <label class="btn btn-sm btn-default mode-option">
+					<!-- <label class="btn btn-md btn-default mode-option">
 						<input type="radio" name="mode-select" value="BUS,WALK" id="bus"><i class="fa fa-lg fa-bus"></i>
 					</label> -->
-					<label class="btn btn-sm btn-default mode-option">
+					<label class="btn btn-md btn-default mode-option">
 						<input type="radio" name="mode-select" value="BICYCLE" id="bike"><i class="fa fa-lg fa-bicycle"></i>
 					</label>
-					<label class="btn btn-sm btn-default mode-option">
+					<label class="btn btn-md btn-default mode-option">
 						<input type="radio" name="mode-select" value="BICYCLE,TRANSIT" id="bike"><i class="fa fa-lg fa-bicycle"></i> + <i class="fa fa-lg fa-train"></i>
 					</label>
-					<label class="btn btn-sm btn-default mode-option">
+					<label class="btn btn-md btn-default mode-option">
 						<input type="radio" name="mode-select" value="CAR" id="car"><i class="fa fa-lg fa-car"></i>
 					</label>
-					<label class="btn btn-sm btn-default mode-option">
+					<label class="btn btn-md btn-default mode-option">
 						<input type="radio" name="mode-select" value="WALK" id="pedestrian"><img src="/assets/images/pedestrian.svg" width="18" height="17">
 					</label>
-					<label class="btn btn-sm btn-default mode-option popover-dismiss" data-toggle="popover">
+					<label class="btn btn-md btn-default mode-option popover-dismiss" data-toggle="popover">
 						<input type="radio" name="mode-select" value="specialized" id="specialized"><i class="fa fa-lg fa-wheelchair"></i>
 					</label>
 				</div>
@@ -85,7 +85,7 @@ tagline: Plan a trip using the atltransit trip planner.
 	</div>
 </div>
 <div class="row col-xs-12"></div>
-<div class="row col-md-4 col-sm-6 col-xs-12">
+<div class="row col-md-5 col-sm-6 col-xs-12">
 	<div id="planner-advice-div" class="hidden chubi">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id ="planner-advice-msg" data-toggle="buttons">
 		</div>

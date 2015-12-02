@@ -1,5 +1,5 @@
 <div  class="row">
-	{% for agency in site.data.fares %}
+	{% for agency in site.agencies %}
 	<div class="col-sm-4 equal-height">
 			<h3>{{ agency.name }}</h3>
 			<table class="table">
@@ -7,7 +7,7 @@
 					<th>Fare product</th>
 					<th>Cost</th>
 				</thead>
-				{% for product in agency.base %}
+				{% for product in agency.fares.base %}
 				<tr>
 					<td>{{ product.name }}</td><td>{{ product.cost }}</td>
 				</tr>

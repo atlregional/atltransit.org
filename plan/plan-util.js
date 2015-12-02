@@ -707,7 +707,11 @@ function earlierAdvice(){
       type: "GET",
       dataType: "jsonp", 
       success: function( data ) {
-        if (!('itineraries' in data.plan) || data.plan.itineraries.length == 0){
+        if (
+            typeof data.plan == "undefined" // ||
+            // typeof data.plan.itineraries == "undefined" || // !('itineraries' in data.plan) || 
+            // data.plan.itineraries.length == 0
+          ){
           return;
         }
         // var startDate = $('#planner-advice-list').find('.planner-advice-dateheader').first().html();
@@ -747,7 +751,11 @@ function laterAdvice(){
       type: "GET",
       dataType: "jsonp", 
       success: function( data ) {
-        if (!('itineraries' in data.plan) || data.plan.itineraries.length == 0){
+        if (
+            typeof data.plan == "undefined" // ||
+            // typeof data.plan.itineraries == "undefined" || // !('itineraries' in data.plan) || 
+            // data.plan.itineraries.length == 0
+          ){
             return;
         }
         // var startDate = $('#planner-advice-list').find('.planner-advice-dateheader').last().html();
@@ -1101,7 +1109,11 @@ function planItinerary(plannerreq){
         itineraries = []
         $('#planner-advice-list').html('');
         $('.progress.progress-striped.active').remove();
-        if (!('itineraries' in data.plan) || data.plan.itineraries.length == 0){
+        if (
+            typeof data.plan == "undefined" // ||
+            // typeof data.plan.itineraries == "undefined" || // !('itineraries' in data.plan) || 
+            // data.plan.itineraries.length == 0
+          ){
             $('#planner-advice-container').prepend('<div class="row alert alert-danger" role="alert">'+Locale.noAdviceFound+'</div>');
             return;
         }
@@ -1270,11 +1282,83 @@ function setupSubmit(){
 
 function setupAutoComplete(){
   console.log('setting up')
+  // if (typeof inputId !== 'undefined'){
+  //   $( "#" + inputId ).autocomplete({
+  //         autoFocus: true,
+  //         minLength: 0,
+  //         //appendTo: "#planner-options-from-autocompletecontainer",
+  //         messages : Locale.autocompleteMessages,
+  //         source: Geocoder.geocoder,
+  //         search: function( event, ui ) {
+  //             $( "#" + inputId + "-latlng" ).val( "" );
+  //         },
+  //         focus: function( event, ui ) {
+  //             // $( "#planner-options-from" ).val( ui.item.label );
+  //             //$( "#planner-options-from-latlng" ).val( ui.item.latlng );
+  //             console.log('focus up toPlace')
+  //             return false;
+  //         },
+  //     select: function( event, ui ) {
+  //       $( "#project-description" ).html( ui.item.desc );
+  //       console.log(ui.item)
+  //       var point;
+  //       if (typeof markers['originMarker'] !== 'undefined'){
+  //         map.removeLayer(markers['originMarker']);
+  //       }
+  //       if (/Your location/g.test(ui.item.label)){
+  //         console.log('your location selected')
+  //         $( "#" + inputId ).val( ui.item.desc );
+  //         point = ui.item.desc.split(",");
+  //         if (typeof map !== 'undefined'){
+  //           addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "originMarker", 'form')
+  //         }
+  //         $( "#planner-options-from-latlng" ).val( ui.item.desc );
+  //         return false;
+  //       }
+  //       else{
+  //         $( "#" + inputId ).val( ui.item.label );
+  //         var params = {
+  //           text: ui.item.label,
+  //           magicKey: ui.item.key,
+  //           f: 'pjson'
+  //         };
+  //         $.ajax(esri_url + 'find', {
+  //           data : params,
+  //           success: function( data ) {
+  //           var json = JSON.parse(data)
+  //           console.log(json)
+  //           var geometry = json.locations[0].feature.geometry;
+  //           if (typeof map !== 'undefined'){
+  //             addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "originMarker", 'form')
+  //           }
+  //           $( "#" + inputId + "-latlng" ).val( geometry.y + ',' + geometry.x );
+  //           return false;
+  //                 }
+  //               });
+  //             } 
+  //         }
+
+  //     })
+  //   .focus(function(){
+  //     console.log('focus')
+  //     if (typeof lat !== 'undefined'){
+  //       $(this).autocomplete('search');
+  //     }
+  //     console.log(this.id)
+  //   })
+  //   .data("ui-autocomplete")._renderItem = function (ul, item) {
+  //     return $("<li></li>")
+  //       .data("item.autocomplete", item)
+  //       .append("<b>" + item.label + "</b><br>" + item.desc) //+ "</a>")
+  //       .appendTo(ul);
+  //   };
+  // }
+  // else{
     $( "#planner-options-from" ).autocomplete({
         autoFocus: true,
         minLength: 0,
         //appendTo: "#planner-options-from-autocompletecontainer",
-        messages : Locale.autocompleteMessages,
+        // messages : Locale.autocompleteMessages,
         source: Geocoder.geocoder,
         search: function( event, ui ) {
             $( "#planner-options-from-latlng" ).val( "" );
@@ -1292,6 +1376,7 @@ function setupAutoComplete(){
 			if (typeof markers['originMarker'] !== 'undefined'){
 				map.removeLayer(markers['originMarker']);
 			}
+      // If geolocation is used
 			if (/Your location/g.test(ui.item.label)){
         console.log('your location selected')
 				$( "#planner-options-from" ).val( ui.item.desc );
@@ -1299,9 +1384,10 @@ function setupAutoComplete(){
 				if (typeof map !== 'undefined'){
 					addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "originMarker", 'form')
 				}
-				$( "#planner-options-from-latlng" ).val( ui.item.desc );
+				$( "#planner-options-from-latlng" ).val( ui.item.desc ).trigger('change');
 				return false;
 			}
+      // If user types in address
       else{
       	$( "#planner-options-from" ).val( ui.item.label );
         var params = {
@@ -1318,7 +1404,7 @@ function setupAutoComplete(){
 					if (typeof map !== 'undefined'){
 						addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "originMarker", 'form')
 					}
-					$( "#planner-options-from-latlng" ).val( geometry.y + ',' + geometry.x );
+					$( "#planner-options-from-latlng" ).val( geometry.y + ',' + geometry.x ).trigger('change');
 					return false;
                 }
               });
@@ -1343,7 +1429,7 @@ function setupAutoComplete(){
         autoFocus: true,
         minLength: 3,
         //appendTo: "#planner-options-dest-autocompletecontainer",
-        messages : Locale.autocompleteMessages,
+        // messages : Locale.autocompleteMessages,
         source: Geocoder.geocoder,
         search: function( event, ui ) {
             $( "#planner-options-dest-latlng" ).val( "" );
@@ -1367,7 +1453,7 @@ function setupAutoComplete(){
 				if (typeof map !== 'undefined'){
 					addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "destinationMarker", 'form')
 				}
-				$( "#planner-options-dest-latlng" ).val( ui.item.latlng );
+				$( "#planner-options-dest-latlng" ).val( ui.item.latlng ).trigger('change');
 				return false;
             }
             else{
@@ -1385,7 +1471,7 @@ function setupAutoComplete(){
 					if (typeof map !== 'undefined'){
 						addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "destinationMarker", 'form')
 					}
-					$( "#planner-options-dest-latlng" ).val( geometry.y + ',' + geometry.x );
+					$( "#planner-options-dest-latlng" ).val( geometry.y + ',' + geometry.x ).trigger('change');
 					return false;
                 }
               });
@@ -1398,6 +1484,7 @@ function setupAutoComplete(){
                    .append("<b>" + item.label + "</b><br>" + item.desc) //+ "</a>")
                    .appendTo(ul);
     };
+  // } // end else
 }
 function switchLocale() {
   $(".label-from").text(Locale.from);
