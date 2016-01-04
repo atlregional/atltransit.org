@@ -13,10 +13,13 @@ image: "http://i.istockimg.com/image-zoom/66321341/3/380/253/zoom-66321341-3.jpg
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
 ## ATLtransit
+{: .row-heading }
+
+
 
 Have comments, questions, or concerns about this website? 
 
-<a class="btn btn-lg btn-primary" href="/about/feedback">Share your feedback!</a>
+<a class="btn btn-lg btn-primary center-block" href="/about/feedback">Share your feedback!</a>
 
 You can also get in touch with us with the following:
 
@@ -27,11 +30,13 @@ You can also get in touch with us with the following:
 	Atlanta, GA 30303<br><br>
 	<abbr title="Email"><i class="fa fa-envelope-o"></i></abbr> 
 	<a href="mailto:info@atltransit.org">info@atltransit.org</a><br>
-	<!-- <abbr title="Phone"><i class="fa fa-phone"></i></abbr> <a href="tel:{{ page.phone }}">(404) 463-3291</a> -->
+	<!-- <abbr title="Phone"><i class="fa fa-phone"></i></abbr> <a href="tel:{{ page.phone }}">No phone</a> -->
 </address>
 
 
+
 ## Transit operators
+{: .row-heading }
 
 Have questions for a specific transit agency? Contact them using the information below.
 

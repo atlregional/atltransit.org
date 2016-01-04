@@ -1,11 +1,11 @@
 ---
 layout: page
-title: About regional transit
+title: Regional transit
 id: regional-transit
 order: 3
 category: 'about'
 permalink: '/about/regional-transit/'
-related: ["Interactive map"]
+related: ["interactive-map"]
 image: "/build/images/concept_3.png"
 tagline: The transit agencies in Atlanta are working together to build a more seamless transit system.  Here are a few of the projects they're working on.
 ---

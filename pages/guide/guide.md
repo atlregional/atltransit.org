@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Rider's Guide
+title: Rider's guide
 id: guide
+icon: fa-book
+more: false
 category: 'guide'
 permalink: '/guide/'
-related: ["Agency information"]
+related: ["agencies"]
 tagline: It's easy to get around Atlanta on public transit.  Whether you walk, bike, or drive to transit, it can save you time, money, and, maybe most importantly, headaches.
 ---

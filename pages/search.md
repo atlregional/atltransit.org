@@ -2,10 +2,12 @@
 layout: search
 title: Search results
 id: search
+category: ""
 permalink: '/search/'
 tagline: "Search the site"
 
 ---
+{% include forms/search.html class="bottom-buffer" %}
 
 <script>
   (function() {

@@ -5,7 +5,7 @@ id: transfers
 order: 4
 category: 'fares'
 permalink: '/fares/transfers/'
-related: ["Schedules", "Real-time arrivals"]
+related: ["schedules", "realtime"]
 tagline: Wondering what makes a successful transfer? Here, you can learn when, where, and how.
 sections: ["Transfer basics", "Transfer information", "Major transfer stations"]
 image: "/build/images/bus_transfer.png"
@@ -16,16 +16,16 @@ image: "/build/images/bus_transfer.png"
 
 ## The basics
 
-### Trips involving one transit agency (e.g. MARTA)
+### Trips involving **a single** transit agency (e.g. MARTA)
 
 * Transfers between buses of the same operator are **free** (except for GRTA Xpress).
 * Bus to rail (and vice versa) transfers are always free (according to transfer rules).
 
-### Trips involving more than one transit agency (e.g. MARTA + CCT)
+### Trips involving **more than one** transit agency (e.g. MARTA + CCT)
 
 * You **must** use a Breeze Card to receive a free transfer.
-* MARTA **must** begin or end your journey. (No transfers between suburban operators.)
-* Your Breeze Card **must** have an operator-specific fare product or stored cash value to begin a regional trip.
+* MARTA must **begin or end** your journey. (No transfers between suburban operators.)
+* Your Breeze Card must have an **stored cash value** or **the specific operator's fare product** to begin a regional trip.
 
 [Learn more about the cost of trips involving multiple operators »](/fares/calculator#free-transfer-eligibility)
 
@@ -36,7 +36,7 @@ image: "/build/images/bus_transfer.png"
 2. Arrive at your point of transfer (see major transfer stations below).
 3. Using the same Breeze Card, board the next vehicle on your trip.
 
-**Note:** If you do not have a Breeze Card, you will have to pay the full-priced fare for each bus or train you board.
+**Note:** If you do **not** have a Breeze Card, you will have to pay the **full-priced fare** for each bus or train you board.
 
 
 ## Transfer rules
@@ -63,7 +63,7 @@ Each agency has its own specific rules about transfers, but here are some genera
     </div>
 </div>
 
-[Use the fare calculator to get specific details about transfer rules for your trip »](/fares/calculator)
+[<i class="fa fa-calculator right-5"></i>Use the fare calculator to get specific details about transfer rules for your trip](/fares/calculator)
 
 
 ## Transfer restrictions

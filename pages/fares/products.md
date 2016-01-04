@@ -19,6 +19,8 @@ image: "/build/images/breezecard_hand.png"
 
 You can purchase fare at any Breeze vending machine which are located at every MARTA rail station.  Breeze vending machines are also at major regional transfer centers. 
 
+[<i class="fa fa-search-plus right-5"></i>View map of rail stations and regional transfer centers](/maps/interactive)
+
 {% include row_break.html %}
 
 ## Online
@@ -29,7 +31,7 @@ Any of the fare products available at the Breeze vending machines are also avail
 
 [Learn more about discounts and passes available online »](/fares/passes)
 
-[Purchase Breeze Card](http://breezecard.com){: .btn .btn-default }
+[Purchase or Reload Breeze Card <i class="fa fa-external-link"></i>](http://breezecard.com){: .btn .btn-default }
 
 {% include row_break.html %}
 
@@ -40,13 +42,13 @@ Any of the fare products available at the Breeze vending machines are also avail
 
 If you already have a Breeze Card, you may load cash value onto your card when boarding a bus.  The process involves three easy steps:
 
-1. Tap Breeze Card on the bus farebox
-2. Insert cash (bills and/or coins)
-3. Tap your card again to load the value and transfer
+1. **Tap Breeze Card** on the bus farebox
+2. **Insert cash** (bills and/or coins)
+3. **Tap your card again** to load the value and transfer
 
 **Note:** change cannot be made for cash provided to the bus farebox.
 
-[Learn more about discounts and passes available online »](/fares/passes)
+[View discounts and passes available online »](/fares/passes)
 
 {% include row_break.html %}
 

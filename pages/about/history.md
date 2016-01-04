@@ -1,6 +1,6 @@
 ---
 layout: page
-title: History of ATLtransit
+title: History
 id: history
 order: 1
 category: 'about'
@@ -38,9 +38,9 @@ Anchored by MARTA and served by three additional transit providers, the Atlanta 
 While it may seem like transit in Atlanta is fragmented, there are great coordination efforts going on to make public transit more efficient and easier to use.  [Learn more about efforts to build better regional transit »](/about/regional-transit)
 
 
-## History of atltransit.org
+## History of ATLtransit
 
-<a href="/">atltransit.org</a> was originally devised of by State Senator Brandon Beach, who encountered difficulties when travelling between transit agencies.
+A regional transit information portal was originally devised of by State Senator Brandon Beach, who encountered difficulties when travelling between transit agencies.
 
 He documented his journey from <a href="/plan/#fromPlace=34.03469763500044%2C-84.58262787899969&fromName=Kennesaw+State+University%2C+1000+Chastain+Rd+NW+Kennesaw%2C+GA+30144&toPlace=33.99136160395591%2C-84.0904314499507&toName=6400+Sugarloaf+Pkwy%2C+Duluth%2C+Georgia%2C+30097%2C+USA&mode=TRANSIT%2CWALK&time=04%3A30+pm&date=2015-10-15&arriveBy=false">Kennesaw State University to the Infinite Energy Center (Gwinnett Arena)</a> in the youtube video below:
 

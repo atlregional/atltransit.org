@@ -2,7 +2,7 @@
 layout: page
 title: App center
 id: appcenter
-order: 5
+order: 4
 category: 'tools'
 permalink: '/tools/apps/'
 related: 
@@ -22,9 +22,9 @@ image:
 
 ## Trip planning
 
-### atltransit
-
-The atltransit trip planner runs on OpenTripPlanner.
+{% include app-gallery.html category="planning" %}
 
 
 ## Accessibility
+
+{% include app-gallery.html category="accessibility" %}

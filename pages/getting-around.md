@@ -3,9 +3,9 @@ layout: page
 title: Getting around
 id: getting-around
 order: 2
-category: 'none'
+category: ""
 permalink: '/getting-around/'
-related: ["Maps", "Schedules", "Agency information", "Fares & transfers"]
+related: ["maps", "schedules", "agencies", "fares"]
 tagline: Looking for the cliffsnotes version of how transit in Atlanta works?  You've come to the right place.
 image: "/build/images/train_schedule.jpeg"
 ---
@@ -13,16 +13,15 @@ image: "/build/images/train_schedule.jpeg"
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
+## Maps
 
+Our [interactive map](/maps/interactive) is the best way to understand where transit reaches in the Atlanta region.
 
-## Hours of operation
+<a href="/maps/interactive">![Interactive map](/build/images/interactive-map.png){: .img-responsive .center-block style="max-height:200px"}</a>
 
-Each transit agency has different hours of operation.
+[<i class="fa fa-search-plus right-5"></i>View interactive map for the Atlanta region](/maps/interactive)
 
-[Find schedules for a specific route or stop »](/tools/schedule)
-
-{% include hours_of_operation.html %}
-
+[<i class="fa fa-map-marker right-5"></i>Check out the individual system maps](/maps/systems)
 
 
 ## Service coverage
@@ -55,9 +54,19 @@ Express Park & Ride lots are located in the following counties:
 - Paulding, 
 - and Rockdale.
 
-[Find a Park & Ride location near you »](/guide/parking)
+[<i class="fa fa-car right-5"></i>Find a Park & Ride location near you](/maps/parknride)
 
-[View map of regional transit connections »](/maps/interactive)
+[<i class="fa fa-map-marker right-5"></i>View map of regional transit connections](/maps/interactive)
+
+
+
+## Hours of operation
+
+Each transit agency has different hours of operation.
+
+[<i class="fa fa-calendar right-5"></i>Find schedules for a specific route or stop](/tools/schedule)
+
+{% include hours_of_operation.html %}
 
 
 ## Fares
@@ -72,15 +81,5 @@ The Breeze Card is the *only way* to access free transfers between transit agenc
 
 [Learn more about available discounts and passes »](/fares/passes)
 
-
-## Maps
-
-Our [interactive map](/maps/interactive) is the best way to understand where transit reaches in the Atlanta region.
-
-![Interactive map](/build/images/interactive-map.png){: .img-responsive .center-block style="max-height:200px"}
-
-[View interactive map for the Atlanta region »](/maps/interactive)
-
-[Check out our individual system maps »](/maps/systems)
 
 

@@ -5,13 +5,20 @@ id: alerts
 order: 3
 category: 'tools'
 permalink: '/tools/alerts/'
-related: ["Contact us", "Agency information"]
+related: ["contact", "agencies"]
 tagline: Be the first to know about service disruptions. Sign up for email/SMS alerts or follow our Twitter feeds.
 image: "http://i.istockimg.com/image-zoom/53730702/3/380/285/stock-photo-53730702-bell.jpg"
 ---
 
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
+
+## Email/SMS updates
+
+Sign up for email or SMS service updates to stay informed to get info on just the routes you care about.
+
+{% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}
+
 
 ## Twitter alert list
 
@@ -29,9 +36,3 @@ Follow one or more of Atlanta's transit providers on Twitter for real-time updat
 <div class="row">
 	{% include twitter_list.html %}
 </div>
-
-## Email/SMS updates
-
-Sign up for email or SMS service updates to stay informed to get info on just the routes you care about.
-
-{% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Fare calculator
+title: Transfer fare calculator
 id: calculator
 order: 2
 category: 'fares'
@@ -12,6 +12,17 @@ image: "/build/images/calculator.png"
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
+## <i class="fa fa-calculator right-5"></i>Free transfer eligibility
+
+Do you qualify for a free transfer between agencies?  Find out below.
+
+<small>**Note:** you must use your Breeze Card to receive a free transfer.</small>
+
+<div class="top-buffer"></div>
+
+{% include fare-calculator.html %}
+
+
 ## Basic fare prices
 
 A single ride on any transit system can be taken with the following fares:
@@ -22,15 +33,7 @@ A single ride on any transit system can be taken with the following fares:
 
 [Learn more about discounts and passes available online »](/fares/passes)
 
-## Free transfer eligibility
 
-Do you qualify for a free transfer?  Find out below.
-
-<small>**Note:** you must use your Breeze Card to receive a free transfer.</small>
-
-<div class="top-buffer"></div>
-
-{% include fare-calculator.html %}
 
 ## Estimated savings over driving
 
