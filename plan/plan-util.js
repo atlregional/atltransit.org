@@ -127,16 +127,19 @@ var photon_geocoder = function(request, response) {
 // NOT IN USE
 var esri_find = function(request, response) {
 
-  if (request.term.length === 0){
-  	console.log('hello geocoder');
-  	response([{
-		label: '<i class="fa fa-location-arrow"></i> Your location',
-		value: lat + ', ' + lon,
-		// latlng: lat + ', ' + lon,
-		desc: lat + ', ' + lon,
-		key: '123'
-	}]);
-  }
+  // if (request.term.length === 0){
+  // 	console.log('hello geocoder');
+  // 	response([
+  //   {
+  // 		label: '<i class="fa fa-location-arrow"></i> Your location',
+  // 		value: lat + ', ' + lon,
+  // 		// latlng: lat + ', ' + lon,
+  // 		desc: lat + ', ' + lon,
+  // 		key: '123'
+  // 	},
+
+  // ]);
+  // }
   var data = {
     location: '-84.388847,33.750159',
     distance: 20000,
@@ -168,16 +171,26 @@ var esri_find = function(request, response) {
 var esri_suggest = function(request, response) {
   // if (typeof request.term === 'undefined')
     console.log(request.term);
-  if (request.term.length === 0){
-  	console.log('hello geocoder');
-  	response([{
-		label: '<i class="fa fa-location-arrow"></i> Your location',
-		value: lat + ', ' + lon,
-		// latlng: lat + ', ' + lon,
-		desc: lat + ', ' + lon,
-		key: '123'
-	}]);
+  if (request.term.length === 0) {
+    	console.log('hello geocoder');
+    	response([
+        {
+      		label: '<i class="fa fa-location-arrow right-5"></i>Your location',
+      		value: lat + ', ' + lon,
+      		// latlng: lat + ', ' + lon,
+      		desc: lat + ', ' + lon,
+      		key: '123'
+      	},
+        {
+          label: '<i class="fa fa-plane right-5"></i>Hartsfield-Jackson International Airport',
+          value: '33.64076290141101, -84.44622337818146',
+          // latlng: lat + ', ' + lon,
+          desc: '33.64076290141101, -84.44622337818146',
+          key: '1234'
+        },
+      ]);
   }
+  // Unused code for intersections.  Not applicable.
   // if (/&/.test(request.term)){
   // 	$.ajax({
 	 //    url: esri_url + 'find',
@@ -211,12 +224,12 @@ var esri_suggest = function(request, response) {
 	    data: data,
 	    success: function( data ) {
 	      response( $.map( data.suggestions, function( item ) {
-	        var parts = item.text.split(', ')
+	        var parts = item.text.split(', ');
 	        return {
 	          label: item.text,
 	          value: item.text,
 	          // latlng: '33,85',
-	          desc: parts[parts.length - 2] + ', ' + parts[parts.length - 1],
+	          desc: parts[1] + ', ' + parts[0],
 	          key: item.magicKey
 	        };
 	      }));
@@ -250,7 +263,8 @@ var nominatim_geocoder = function(request, response) {
   });
 };
 
-var planningserver = whitelabel_prefix+'ws/plan?';
+var planningserver = whitelabel_prefix + 'otp/routers/default/plan?';
+  // + 'ws/plan?';
 
 String.prototype.lpad = function(padString, length) {
     var str = this;
@@ -531,7 +545,7 @@ function initializeForms(){
         container: 'body',
         html: true,
         // viewport: '#containz',
-        content: '<p>ARC\'s <a target="_blank" href="http://oneclick-arc.camsys-apps.com/">One-Click</a> combines data from this trip planner with services like <strong>MARTA Mobility</strong>, transport for veterans and disabled persons, and other on-demand services.</p><a target="_blank" href="http://oneclick-arc.camsys-apps.com/" type="button" class="center-block btn btn-primary">Visit the One-Click!</a>',
+        content: '<p><a target="_blank" href="http://oneclick-arc.camsys-apps.com/">Simply Get There</a> combines data from this trip planner with services like <strong>MARTA Mobility</strong>, transport for veterans and disabled persons, and other on-demand services.</p><a target="_blank" href="http://oneclick-arc.camsys-apps.com/" type="button" class="center-block btn btn-primary">Visit Simply Get There!</a>',
         trigger: 'click',
         title: 'Looking for specialized services?' + '<button type="button" onclick="$(\'.popover-dismiss\').popover(\'hide\');" class="close">&times;</button>'
     });
@@ -705,7 +719,7 @@ function earlierAdvice(){
   $.ajax({
       url: url,
       type: "GET",
-      dataType: "jsonp", 
+      dataType: "json", 
       success: function( data ) {
         if (
             typeof data.plan == "undefined" // ||
@@ -749,7 +763,7 @@ function laterAdvice(){
   $.ajax({
       url: url,
       type: "GET",
-      dataType: "jsonp", 
+      dataType: "json", 
       success: function( data ) {
         if (
             typeof data.plan == "undefined" // ||
@@ -813,10 +827,12 @@ function legItem(leg, legName){
     } else {
       var headsign = leg.routeLongName;
 
-      if (leg.headsign !== null)
-        headsign = trimHeadsign(leg.headsign);
-      else{
+      if (leg.headsign == null || typeof leg.headsign === 'undefined' ) {
         headsign = "";
+      }
+      else{
+        console.log(leg.headsign)
+        headsign = trimHeadsign(leg.headsign);
       }
 
       console.log(headsign);
@@ -910,11 +926,13 @@ function renderItinerary(index, focus, el, click){
       .key(function(d) { return d.agencyId; })
       .map(itin.legs);
     delete agencyNest["null"];
-		if ( itin.fare !== null){
+    delete agencyNest["undefined"];
+    console.log(agencyNest);
+		if ( itin.fare !== null ){
       if (Object.keys(agencyNest).length > 1){
         fare = 'See <a href="/fares/calculator">fare calculator</a>.';
       }
-      else{
+      else if (typeof itin.fare !== 'undefined') {
         fare = dollarFormatter(itin.fare.fare.regular.cents / 100);
       }
 			
@@ -1042,7 +1060,7 @@ function itinButton(index, itin){
     // }
     // var itinButton = $('<button type="button" class="btn btn-sm btn-secondary planner-advice-itinbutton" onclick="renderItinerary('+itineraries.length+',true)"></button>');
 	var itinButton = $(
-		'<label class="btn btn-sm btn-default planner-advice-itinbutton" style="margin-bottom:0" onmouseout="renderItinerary('+itineraries.length+',false, this, false)" onmouseover="renderItinerary('+itineraries.length+',true, this, false)" onclick="renderItinerary('+itineraries.length+',true, this, true)">' +
+		'<label class="btn btn-default planner-advice-itinbutton" style="margin-bottom:0" onmouseout="renderItinerary('+itineraries.length+',false, this, false)" onmouseover="renderItinerary('+itineraries.length+',true, this, false)" onclick="renderItinerary('+itineraries.length+',true, this, true)">' +
 			'<input type="radio" name="options" id="option1" autocomplete="off" checked>' +
 		'</label>'
 	);
@@ -1102,7 +1120,7 @@ function planItinerary(plannerreq){
   $.ajax({
       url: url,
       type: "GET",
-      dataType: "jsonp", 
+      dataType: "json", 
       success: function( data ) {
         console.log(data)
         $('#planner-leg-list').html('');
@@ -1119,20 +1137,27 @@ function planItinerary(plannerreq){
         }
         $('#planner-advice-container').find('.alert').remove();
         var startDate = null;
-        // $('#planner-advice-list').append('<button type="button" class="btn btn-primary" id="planner-advice-earlier" data-loading-text="'+Locale.loading+'" onclick="earlierAdvice()">'+Locale.earlier+'</button>');
-        $.each( data.plan.itineraries , function( index, itin ){
-            // var prettyStartDate = prettyDateEpoch(itin.startTime);
-            // if (startDate != prettyStartDate){
-            //     $('#planner-advice-list').append('<div class="planner-advice-dateheader">'+prettyStartDate+'</div>');
-            //     startDate = prettyStartDate;
-            // }
-            $('#planner-advice-list').append(itinButton(index, itin));
-        });
-        // $('#planner-advice-list').append('<button type="button" class="btn btn-primary" id="planner-advice-later" data-loading-text="'+Locale.loading+'" onclick="laterAdvice()">'+Locale.later+'</button>');
-        $('#planner-advice-list').find('.planner-advice-itinbutton').first().click();
-        $('#planner-options-submit').button('reset');
-        // earlierAdvice();
-        // laterAdvice();
+        if ( data.plan !== null){        
+          // $('#planner-advice-list').append('<button type="button" class="btn btn-primary" id="planner-advice-earlier" data-loading-text="'+Locale.loading+'" onclick="earlierAdvice()">'+Locale.earlier+'</button>');
+          $.each( data.plan.itineraries , function( index, itin ){
+              // var prettyStartDate = prettyDateEpoch(itin.startTime);
+              // if (startDate != prettyStartDate){
+              //     $('#planner-advice-list').append('<div class="planner-advice-dateheader">'+prettyStartDate+'</div>');
+              //     startDate = prettyStartDate;
+              // }
+              $('#planner-advice-list').append(itinButton(index, itin));
+          });
+          // $('#planner-advice-list').append('<button type="button" class="btn btn-primary" id="planner-advice-later" data-loading-text="'+Locale.loading+'" onclick="laterAdvice()">'+Locale.later+'</button>');
+          $('#planner-advice-list').find('.planner-advice-itinbutton').first().trigger('click');
+          $('#planner-advice-list').find('.planner-advice-itinbutton').first().trigger('click');
+          $('#planner-options-submit').button('reset');
+          // earlierAdvice();
+          // laterAdvice();
+        }
+        else{
+          console.log('invalid trip plan');
+          $('#planner-advice-msg').html('You trip plan was unsuccessful.  Please modify your trip details and try again.');
+        }
       }
   });
 }
@@ -1161,10 +1186,14 @@ function makePlanRequest(){
   plannerreq.fromName = $('#planner-options-from').val();
   plannerreq.toPlace = $('#planner-options-dest-latlng').val();
   plannerreq.toName = $('#planner-options-dest').val();
-  plannerreq.mode = $('input[name=mode-select]:checked').val()
-  plannerreq.time = getTime();
+  plannerreq.mode = $('input[name=mode-select]:checked').val() || $('.mode-option').val()
+  plannerreq.time = $(".planner-time-btn:first-child").val() === 'Leave now' ? moment().valueOf() : getTime();
   plannerreq.date = getDate();
-  plannerreq.arriveBy = false;
+  plannerreq.arriveBy = $(".planner-time-btn:first-child").val() === 'Arrive by' ? true : false;
+  // plannerreq.transferPenalty = 3000;
+  // plannerreq.walkReluctance = 3;
+  plannerreq.maxWalkDistance = 5000;
+  // plannerreq.preferredRoutes = 'MARTA_RED,MARTA_BLUE,MARTA_GREEN,MARTA_GOLD'
   return plannerreq;
 }
 function truncate(word, num){
@@ -1209,6 +1238,7 @@ function submit(){
 	// });
 }
 function clearHash(){
+  $('.alert').hide();
 	history.pushState({id: "base"}, document.title, '/plan/');
 	initializeForms();
 	showForm();
@@ -1251,6 +1281,7 @@ function restoreFromHash(){
     if ('mode' in plannerreq){
         $('#train').parent().removeClass('active')
         $('input[type=radio][value="' + plannerreq.mode + '"]').prop('checked', true).parent().addClass('active');
+        $('.mode-option').val(plannerreq.mode);
     }
     if ('toPlace' in plannerreq){
         $('#planner-options-dest-latlng').val(plannerreq['toPlace']);
@@ -1259,18 +1290,33 @@ function restoreFromHash(){
         addMarker({lat:Number(latlng[0]),lng:Number(latlng[1])}, plannerreq['toName'], "destinationMarker", 'form')
     }
     if ('arriveBy' in plannerreq && plannerreq['arriveBy'] == "true"){
-        $('#planner-options-arrivebefore').click();
+        // $('#planner-options-arrivebefore').click();
+        $(".planner-time-menu li a:eq(1)").trigger('click')
     }else{
-        $('#planner-options-departureafter').click();
+        // $('#planner-options-departureafter').click();
+        $(".planner-time-menu li a:eq(2)").trigger('click')
     }
     if (validate()){submit();}
 }
 function setupSubmit(){
+  var mainMessage = 'This trip planner is in beta.  If trip itineraries are not what you expect, try <a href="https://maps.google.com">Google Transit</a> as results may vary.';
+  var carMessage = 'Looking for Park & Ride directions?  First, <a href="/maps/parknride">choose a Park & Ride location</a>.'
     $(document).on('submit','.validateDontSubmit',function (e) {
         //prevent the form from doing a submit
         e.preventDefault();
         return false;
     });
+
+    $('input:radio[name="mode-select"]').change(
+    function(){
+        if ($(this).is(':checked') && $(this).val() == 'CAR') {
+            $('.main-message').html(carMessage);
+        }
+        else{
+          $('.main-message').html(mainMessage);
+        }
+    });
+    $('.main-message').html(mainMessage);
     $('#planner-options-submit').click(function(e){
        var $theForm = $(this).closest('form');
        if (( typeof($theForm[0].checkValidity) == "function" ) && !$theForm[0].checkValidity()) {
@@ -1278,7 +1324,37 @@ function setupSubmit(){
        }
        if (validate()){submit();}
     });
+    // Reverse locations button
+    $('.reverse-locations').click(function(e){
+      var originLatlng = $( "#planner-options-from-latlng" ).val();
+      var origin = $( "#planner-options-from" ).val(); 
+      var destLatlng = $( "#planner-options-dest-latlng" ).val();
+      var dest = $( "#planner-options-dest" ).val(); 
+      $( "#planner-options-from-latlng" ).val(destLatlng)
+      $( "#planner-options-from" ).val(dest)
+      $( "#planner-options-dest-latlng" ).val(originLatlng)
+      $( "#planner-options-dest" ).val(origin)
+      // TODO: change markers up
+      var originArr = originLatlng.split(',');
+      var destArr = destLatlng.split(',');
+      if (originLatlng !== ''){
+        markers.destinationMarker.getLayers()[0].setLatLng(new L.LatLng(+originArr[0], +originArr[1]))
+      }
+      if (destLatlng !== ''){
+        markers.originMarker.getLayers()[0].setLatLng(new L.LatLng(+destArr[0], +destArr[1]))
+      }
+    })
+    // Setup auto resubmittal of trip plan
+    $('.planner-control').change(resubmit);
+    $('.reverse-locations').click(resubmit);
 };
+
+function resubmit() {
+  // console.log('trip details changed');
+  if ($( "#planner-options-dest-latlng" ).val() && $( "#planner-options-from-latlng" ).val()){
+    if (validate()){submit();}
+  }
+}
 
 function setupAutoComplete(){
   console.log('setting up')
@@ -1377,9 +1453,9 @@ function setupAutoComplete(){
 				map.removeLayer(markers['originMarker']);
 			}
       // If geolocation is used
-			if (/Your location/g.test(ui.item.label)){
+			if (/<i class="fa/g.test(ui.item.label)){
         console.log('your location selected')
-				$( "#planner-options-from" ).val( ui.item.desc );
+				$( "#planner-options-from" ).val( ui.item.label.split('</i>')[1] );
 				point = ui.item.desc.split(",");
 				if (typeof map !== 'undefined'){
 					addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "originMarker", 'form')
@@ -1398,20 +1474,20 @@ function setupAutoComplete(){
         $.ajax(esri_url + 'find', {
           data : params,
           success: function( data ) {
-					var json = JSON.parse(data)
-					console.log(json)
-					var geometry = json.locations[0].feature.geometry;
-					if (typeof map !== 'undefined'){
-						addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "originMarker", 'form')
-					}
-					$( "#planner-options-from-latlng" ).val( geometry.y + ',' + geometry.x ).trigger('change');
-					return false;
-                }
-              });
-            } 
-        }
+  					var json = JSON.parse(data)
+  					console.log(json)
+  					var geometry = json.locations[0].feature.geometry;
+  					if (typeof map !== 'undefined'){
+  						addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "originMarker", 'form')
+  					}
+  					$( "#planner-options-from-latlng" ).val( geometry.y + ',' + geometry.x ).trigger('change');
+  					return false;
+          }
+        });
+      } 
+    }
 
-    })
+  })
 	.focus(function(){
     console.log('focus')
 		if (typeof lat !== 'undefined'){
@@ -1427,7 +1503,7 @@ function setupAutoComplete(){
 	};
     $( "#planner-options-dest" ).autocomplete({
         autoFocus: true,
-        minLength: 3,
+        minLength: 0,
         //appendTo: "#planner-options-dest-autocompletecontainer",
         // messages : Locale.autocompleteMessages,
         source: Geocoder.geocoder,
@@ -1440,21 +1516,33 @@ function setupAutoComplete(){
             return false;
         },
         select: function( event, ui ) {
+          // If geolocation is used
+          if (/<i class="fa/g.test(ui.item.label)){
+            console.log('your location selected')
+            $( "#planner-options-dest" ).val( ui.item.label.split('</i>')[1] );
+            point = ui.item.desc.split(",");
+            if (typeof map !== 'undefined'){
+              addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "originMarker", 'form')
+            }
+            $( "#planner-options-dest-latlng" ).val( ui.item.desc ).trigger('change');
+            return false;
+          }
+          else{
             $( "#planner-options-dest" ).val( ui.item.label );
             
             $( "#project-description" ).html( ui.item.desc );
             console.log(ui.item)
             var point;
             if (typeof markers['destinationMarker'] !== 'undefined'){
-				map.removeLayer(markers['destinationMarker']);
-			}
-            if (typeof ui.item.latlng !== 'undefined'){
-				point = ui.item.latlng.split(",");
-				if (typeof map !== 'undefined'){
-					addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "destinationMarker", 'form')
-				}
-				$( "#planner-options-dest-latlng" ).val( ui.item.latlng ).trigger('change');
-				return false;
+      				map.removeLayer(markers['destinationMarker']);
+      			}
+                  if (typeof ui.item.latlng !== 'undefined'){
+      				point = ui.item.latlng.split(",");
+      				if (typeof map !== 'undefined'){
+      					addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "destinationMarker", 'form')
+      				}
+      				$( "#planner-options-dest-latlng" ).val( ui.item.latlng ).trigger('change');
+      				return false;
             }
             else{
               var params = {
@@ -1465,25 +1553,33 @@ function setupAutoComplete(){
               $.ajax(esri_url + 'find', {
                 data : params,
                 success: function( data ) {
-					// console.log(data);
-					var json = JSON.parse(data)
-					var geometry = json.locations[0].feature.geometry;
-					if (typeof map !== 'undefined'){
-						addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "destinationMarker", 'form')
-					}
-					$( "#planner-options-dest-latlng" ).val( geometry.y + ',' + geometry.x ).trigger('change');
-					return false;
+        					// console.log(data);
+        					var json = JSON.parse(data)
+        					var geometry = json.locations[0].feature.geometry;
+        					if (typeof map !== 'undefined'){
+        						addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "destinationMarker", 'form')
+        					}
+        					$( "#planner-options-dest-latlng" ).val( geometry.y + ',' + geometry.x ).trigger('change');
+        					return false;
                 }
               });
             } 
         }
-    })
-    .data("ui-autocomplete")._renderItem = function (ul, item) {
-               return $("<li></li>")
-                   .data("item.autocomplete", item)
-                   .append("<b>" + item.label + "</b><br>" + item.desc) //+ "</a>")
-                   .appendTo(ul);
-    };
+      }
+  })
+  .focus(function(){
+    console.log('focus')
+    if (typeof lat !== 'undefined'){
+      $(this).autocomplete('search');
+    }
+    console.log(this.id)
+  })
+  .data("ui-autocomplete")._renderItem = function (ul, item) {
+     return $("<li></li>")
+         .data("item.autocomplete", item)
+         .append("<b>" + item.label + "</b><br>" + item.desc) //+ "</a>")
+         .appendTo(ul);
+  };
   // } // end else
 }
 function switchLocale() {
