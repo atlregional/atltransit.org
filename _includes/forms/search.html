@@ -1,0 +1,13 @@
+<form id="searchbox_XXXXXXXXXX:YYYYYYYYY" action="/search" class="{% if include.class %}{{ include.class }}{% endif %}">
+	<div class="input-group navbar-input-group">
+		<input id="q" name="q" type="text" class="form-control navbar-search nav-search" placeholder="Search">
+		<input value="012656238249604753028:qzpqrvzllsa" name="cx" type="hidden"/>
+		<input value="FORID:11" name="cof" type="hidden"/>
+		<span class="input-group-btn">
+			<button class="btn btn-primary nav-search" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+		</span>
+	</div>
+	<div style="width:0px;overflow:hidden;height:0px;"> <!-- if you use display:nonw here it doesn't work-->
+		<gcse:searchbox-only></gcse:searchbox-only>
+	</div>
+</form>

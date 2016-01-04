@@ -1,0 +1,14 @@
+{% assign pages = site.pages | where:"category",include.category | sort:"order" %}
+{% for item in pages | limit:5 %}
+	{% if forloop.first %}
+	{% capture category_url %}{{ item.url }}{% endcapture %}
+	<!-- <li><a href="{{ item.url }}">{{ item.title }}</a></li> -->
+	{% else %}
+	<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+	{% endif %}
+	{% if forloop.last %}
+		<!-- <li role="separator" class="divider"></li> -->
+        <li><a href="{{ category_url }}"><i class="fa fa-arrow-circle-right right-5"></i>View all in {{ include.category }}</a></li>
+		<!-- <li role="separator" class="divider"></li> -->
+	{% endif %}
+{% endfor %}

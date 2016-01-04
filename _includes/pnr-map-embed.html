@@ -1,0 +1,6 @@
+<div markdown="0" class="bottom-buffer"> 
+<button id="{{ include.name }}" class="btn btn-default show-pnr"><i class="fa fa-map-marker right-5"></i>View map</button>
+<div id="{{ include.name }}-div" class="pnr-static-map hidden top-buffer embed-responsive embed-responsive-16by9">
+<iframe id="{{ include.name }}-iframe" width="600" height="450" class="embed-responsive-item" data-src="https://www.google.com/maps/embed/v1/view?center={{ include.latlng }}&zoom=18&maptype=satellite&key=AIzaSyD8jNdClRfj8GjpVeZ2hBD8ztCt-qu6NFM" allowfullscreen></iframe>
+</div>
+</div>

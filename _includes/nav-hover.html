@@ -1,0 +1,94 @@
+<style type="text/css">
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+</style>
+<nav class="navbar navbar-default navbar-static-top nocontent">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span>Menu</span>
+				<!-- <span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> --> 
+			</button>
+			<a class="navbar-brand atltransit-logo" href="/">
+				<img src="/build/images/logos/atltransit-logo-blue.png" width="180">
+			</a>
+		</div>
+		<div id="main-navbar" class="collapse navbar-collapse" aria-expanded="false">
+			<ul class="nav navbar-nav">
+				<li class="dropdown nav-dropdown-li">
+					<a class="nav-dropdown-link" href="/plan"  aria-haspopup="true" aria-expanded="false">
+						<h3 class="menu-item-header">
+							<i class="fa fa-map-marker fa-4x visible-xs text-center"></i>
+							Plan trip
+						</h3>
+					</a>
+				</li>
+				<li class="dropdown nav-dropdown-li hidden-xs">
+					<a class="nav-dropdown-link" href="/getting-around"  aria-haspopup="true" aria-expanded="false">
+						<h3 class="menu-item-header">
+							<i class="fa fa-info-circle fa-4x visible-xs text-center"></i>
+							Getting around
+						</h3>
+					</a>
+				</li>
+				{% include nav/category-dropdown.html category="fares" %}
+				{% include nav/category-dropdown.html category="guide" %}
+				{% include nav/category-dropdown.html category="maps" hidden="true" %}
+				{% include nav/category-dropdown.html category="tools" hidden="true" %}
+				{% include nav/category-dropdown.html category="about" hidden="true" %}
+
+				<li class="dropdown nav-dropdown-li hidden-xs">
+					<a class="nav-dropdown-link" href="javascript:void(0)"   aria-haspopup="true" aria-expanded="false">
+						<h3 class="menu-item-header">More</h3>
+					</a>
+					<ul class="dropdown-menu nav-dropdown-menu hidden-xs">
+						{% include nav/more-list.html category="maps" %}
+						<li role="separator" class="divider"></li>
+						{% include nav/more-list.html category="tools" %}
+						<li role="separator" class="divider"></li>
+						{% include nav/more-list.html category="about" %}
+					</ul>
+				</li>
+
+
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown nav-dropdown-li">
+				<a href="/languages" class="nav-dropdown-link" aria-haspopup="true" aria-expanded="false" title="Languages">
+					<h3 class="menu-item-header">
+						<i class="fa fa-language hidden-xs"></i>
+						<!-- <i class="fa fa-language fa-4x visible-xs"></i> -->
+						<span class="sr-only">Languages</span>
+						<span class="visible-xs">Languages</span>
+					</h3>
+				</a>
+					<ul class="dropdown-menu nav-dropdown-menu dropdown-menu-right hidden-xs">
+						<li><a href="https://translate.google.com/translate?tl=es&js=y&u=atltransit.org">Español</a></li>
+						<li><a href="https://translate.google.com/translate?tl=zh-CN&js=y&u=atltransit.org">中文</a></li>
+						<li><a href="https://translate.google.com/translate?tl=ko&js=y&u=atltransit.org">한국어</a></li>
+						<li><a href="https://translate.google.com/translate?tl=vi&js=y&u=atltransit.org">Tiếng Việt</a></li>
+					</ul>
+				</li>
+				<li class="dropdown nav-dropdown-li">
+				<a href="/search" class="nav-dropdown-link" aria-haspopup="true" aria-expanded="false" title="Search">
+					<h3 class="menu-item-header">
+						<i class="fa fa-search hidden-xs"></i>
+						<!-- <i class="fa fa-search fa-4x visible-xs"></i> -->
+						<span class="sr-only">Search</span>
+						<span class="visible-xs">Search</span>
+					</h3>
+				</a>
+					<ul class="dropdown-menu nav-dropdown-menu dropdown-menu-right hidden-xs">
+						{% include forms/search.html class="right-20 left-20" %}
+					</ul>  <!-- Search -->
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+</nav>

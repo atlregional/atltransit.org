@@ -1,0 +1,11 @@
+{% if include.label %}<label>Choose a city to find a Park 'n' Ride near you:</label>{% endif %} 
+<select 
+	{% if include.scroll %}onchange="scrollToAnchor(this.value)"{% endif %} 
+	name="lot" 
+	class="form-control input-lg"
+>
+{% assign cities = site.data.parknride.features | group_by:'CITY' | sort:'name' %}
+{% for city in cities %}
+	<option value="{{ city.name | slugify }}">{{ city.name }}</option>
+{% endfor %}
+</select>

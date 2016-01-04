@@ -1,0 +1,47 @@
+{% assign pages = site.pages | where:"category",include.category | sort:"order" %}
+{% for item in pages %}
+	{% if forloop.first %}
+	{% capture category_url %}{{ item.url }}{% endcapture %}
+	<li class="dropdown nav-dropdown-li {% if include.hidden %}visible-xs{% endif %}">
+	<a class="nav-dropdown-link" href="{{ item.url }}"  aria-haspopup="true" aria-expanded="false">
+		<h3 class="menu-item-header">
+			{% if item.icon %}
+			<i class="fa {{ item.icon }} fa-4x visible-xs text-center"></i>
+			{% endif %}
+			{{ item.title }}
+		</h3>
+	</a>
+	<ul class="dropdown-menu nav-dropdown-menu hidden-xs">
+	{% else %}
+		{% comment %}
+		{% if item.order == 1%}
+			<!-- <li>
+			<a href="{{ item.url }}">
+			<img src="{{ item.image }}" width="80">
+			<p>{{ item.title }}</p>
+			</a></li> -->
+			<li class="category-item-small media {% if include.columns == 2 %}col-sm-6{% endif %}">
+			<a href="{{ item.url }}">
+					<img class="center-block media-object img-rounded" width="100px" src="{% if item.image %}{{ item.image }}{% else %}/build/images/atl-placeholder.png{% endif %}" alt="{{ item.title }}" title="{{ item.title }}">
+					<p class="media-heading text-center"><strong>{{ item.title }}</strong></p>
+					
+					<!-- <p>{% if item.tagline %}{% assign sentences = item.tagline | split: '. ' %}{{ sentences[0] }}{% else %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endif %}</p> -->
+					<!-- <p> -->
+					<!-- {% if item.tagline %}{{ item.tagline | truncate:40 }}{% else %}{% capture lipsum %}Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit{% endcapture %}{{ lipsum truncate:40 }}{% endif %} -->
+					<!-- </p> -->
+			</a>
+			</li>
+			{% else %}
+			
+			<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+		{% endif %}
+		{% endcomment %}
+		<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+	{% endif %}
+	{% if forloop.last %}
+		<li role="separator" class="divider"></li>
+        <li><a href="{{ category_url }}"><i class="fa fa-arrow-circle-right right-5"></i>View all in {{ include.category }}</a></li>
+		</ul>
+		</li>
+	{% endif %}
+{% endfor %}

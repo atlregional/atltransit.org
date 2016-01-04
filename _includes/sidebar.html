@@ -1,6 +1,6 @@
 {% for item in site.data.nav %}
 	{% if item.category == page.category %}
-	<div class="col-sm-6 col-xs-12 sidebar">
+	<div class="col-sm-6 col-xs-12 sidebar nocontent">
 		<h4>More in <a href="{{ item.url }}">{{ item.title }}</a></h4>
 		<ul class="nav">
 		{% comment %}
@@ -55,7 +55,7 @@
 {% endfor %}
 
 {% if page.related %}
-<div class="col-sm-6 col-xs-12 sidebar">
+<div class="col-sm-6 col-xs-12 sidebar nocontent">
 	<h4>Learn more</h4>
 	<ul class="nav">
 			{% for category in page.related %}

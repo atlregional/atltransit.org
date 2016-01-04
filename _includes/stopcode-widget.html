@@ -14,7 +14,7 @@
 							<p class="text-right" style="margin-top:6px;">Enter ID</p>
 						</div> -->
 						<div class="form-group col-xs-6">
-							<input class="form-control typeahead" id="stop-code" type="number" placeholder="103134">
+							<input class="form-control typeahead" id="stop-code" placeholder="103134">
 						</div>
 					</div>
 					<div class="row">
@@ -40,13 +40,14 @@
 		        		<div class="col-xs-2 {% if include.type == "home" %}hidden{% endif %}">	
 							<a class="btn btn-default back-btn" id="stop-code-back-btn" href="#test-carousel" data-slide="prev">Back</a>
 						</div>
-						<div class="col-xs-8">
-							<p class="text-center stop-name" id="stop-code-stop-name"></p>
-							<p class="text-center last-updated" id="stop-code-last-updated"></p>
+						<div class="col-xs-12">
+							<p class="stop-id-label" id="stop-code-stop-id"></p>
+							<p class="stop-name" id="stop-code-stop-name"></p>
+							<p class="last-updated" id="stop-code-last-updated"></p>
 						</div>
-						<div class="col-xs-2">
+						<!-- <div class="col-xs-2">
 							<button class="get-arrivals stop-code btn btn-primary pull-right"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
-						</div>
+						</div> -->
 					</div>
 		            <div class="row">
 						<div class="stop-code-arrivals table-responsive col-xs-12">
