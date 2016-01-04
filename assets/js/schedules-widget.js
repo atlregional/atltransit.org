@@ -171,6 +171,8 @@ setupDatetime();
 						// var headsign = tripMap[routeId][tripId][0].tripHeadsign;
 						// headsigns.push(headsign);
 						var tripLabel = trip.name.name === '' ? trip.id : trimHeadsign(trip.name.name);
+						tripLabel = +tripLabel === 1 ? 'Inbound' : tripLabel;
+						tripLabel = +tripLabel === 0 ? 'Outbound' : tripLabel;
 						var tripOption = $("<option></option>");
 						tripOption.val(trip.id);
 						tripOption.text(tripLabel);
@@ -257,12 +259,14 @@ setupDatetime();
 		if (this.value !== ''){
 			$('#schedules-btn')
 				.removeClass('disabled')
+				.removeAttr('disabled')
 				.val(this.value);
 			$('.get-realtime').removeClass('disabled');
 		}
 		else {
 			$('#schedules-btn')
 				.addClass('disabled')
+				.attr('disabled', 'disabled')
 				.val('');
 			$('.get-realtime').addClass('disabled');
 		}
@@ -322,6 +326,7 @@ setupDatetime();
 								var numTrips = directions.length * routes.length;
 								var gridWidth = numTrips > 4 ? 3 : 12 / numTrips;
 								gridWidth = numTrips === 1 ? 6 : gridWidth;
+								gridWidth = 6; // modified gridWidth for narrow layout
 								var gridWidthSm = numTrips > 4 ? 6 : 12 / numTrips * 2;
 								// var tableId = '#' + widgetClass + '-table';
 								var columnDiv = $('<div class="schedule-table table-responsive col-xs-12 col-md-'+gridWidth+' col-sm-6"></div>')
@@ -352,6 +357,7 @@ setupDatetime();
 										var seconds = stopTimes[k].arrivalTime;
 										// console.log(seconds);
 										var arrivalTime = moment(seconds);
+										var arrivalTimeMinutes = arrivalTime.minutes() < 10 ? '0' + arrivalTime.minutes() : arrivalTime.minutes();
 										var nextArrivalTime;
 										if (k !== stopTimes.length - 1){
 											nextArrivalTime = moment(stopTimes[k + 1].arrivalTime);
@@ -373,12 +379,12 @@ setupDatetime();
 											}
 											
 											row.append('<td class="text-right"><strong>' + meridian + arrivalTime.format('h') + ':</strong></td>');
-											minuteCell = $('<td class="text-left">' + arrivalTime.minutes() + '</td>');
+											minuteCell = $('<td class="text-left">' + arrivalTimeMinutes + '</td>');
 											row.append();
 											currentHour = arrivalTime.hour();
 										}
 										else {
-											minuteCell.append(' ' + arrivalTime.minutes());
+											minuteCell.append(' ' + arrivalTimeMinutes);
 											// console.log($('.'+i+j+'-hour-'+arrivalTime.hour()).html());
 										}
 
@@ -475,4 +481,5 @@ setupDatetime();
 				}
 			});
 		}
+		$('#schedules-carousel').carousel('next');
 	});

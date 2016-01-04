@@ -1,4 +1,4 @@
-var whitelabel_prefix = 'http://opentrip.atlantaregion.com/otp-rest-servlet/';
+var whitelabel_prefix = 'http://localhost:8082/';
 
 var whitelabel_minDate = new Date(2014, 02, 08);
 var whitelabel_maxDate = new Date(2020, 03, 30);
@@ -11,8 +11,8 @@ Locale.dateAriaLabel = 'Date, use Ctrl en arrow keys to navigate, enter to choos
 Locale.loading = "Loading...";
 Locale.edit = "Change trip";
 Locale.plan = "Plan trip";
-Locale.geocoderInput = "Enter starting address, or click on the map...";
-Locale.originInput = "Enter starting address, or click on the map...";
+Locale.geocoderInput = "Enter starting address...";
+Locale.originInput = "Enter starting address...";
 Locale.destinationInput = "Enter destination...";
 Locale.startpointEmpty = "No starting point entered";
 Locale.noStartpointSelected = "No starting point selected";

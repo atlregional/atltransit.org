@@ -15,6 +15,80 @@ function findBootstrapEnvironment() {
         }
     }
 }
+// function setupAutoComplete(inputId){
+//   console.log('setting up autocomplete for ' + inputId)
+//   if (typeof inputId !== 'undefined'){
+//     $( "#" + inputId ).autocomplete({
+//           autoFocus: true,
+//           minLength: 0,
+//           //appendTo: "#planner-options-from-autocompletecontainer",
+//           messages : Locale.autocompleteMessages,
+//           source: Geocoder.geocoder,
+//           search: function( event, ui ) {
+//               $( "#" + inputId + "-latlng" ).val( "" );
+//           },
+//           focus: function( event, ui ) {
+//               // $( "#planner-options-from" ).val( ui.item.label );
+//               //$( "#planner-options-from-latlng" ).val( ui.item.latlng );
+//               console.log('focus up toPlace')
+//               return false;
+//           },
+//       select: function( event, ui ) {
+//         $( "#project-description" ).html( ui.item.desc );
+//         console.log(ui.item)
+//         var point;
+//         if (typeof markers['originMarker'] !== 'undefined'){
+//           map.removeLayer(markers['originMarker']);
+//         }
+//         if (/Your location/g.test(ui.item.label)){
+//           console.log('your location selected')
+//           $( "#" + inputId ).val( ui.item.desc );
+//           point = ui.item.desc.split(",");
+//           if (typeof map !== 'undefined'){
+//             addMarker({lat:Number(point[0]),lng:Number(point[1])}, ui.item.label, "originMarker", 'form')
+//           }
+//           $( "#planner-options-from-latlng" ).val( ui.item.desc );
+//           return false;
+//         }
+//         else{
+//           $( "#" + inputId ).val( ui.item.label );
+//           var params = {
+//             text: ui.item.label,
+//             magicKey: ui.item.key,
+//             f: 'pjson'
+//           };
+//           $.ajax(esri_url + 'find', {
+//             data : params,
+//             success: function( data ) {
+//             var json = JSON.parse(data)
+//             console.log(json)
+//             var geometry = json.locations[0].feature.geometry;
+//             if (typeof map !== 'undefined'){
+//               addMarker({lat:Number(geometry.y),lng:Number(geometry.x)}, ui.item.label, "originMarker", 'form')
+//             }
+//             $( "#" + inputId + "-latlng" ).val( geometry.y + ',' + geometry.x );
+//             return false;
+//                   }
+//                 });
+//               } 
+//           }
+
+//       })
+//     .focus(function(){
+//       console.log('focus')
+//       if (typeof lat !== 'undefined'){
+//         $(this).autocomplete('search');
+//       }
+//       console.log(this.id)
+//     })
+//     .data("ui-autocomplete")._renderItem = function (ul, item) {
+//       return $("<li></li>")
+//         .data("item.autocomplete", item)
+//         .append("<b>" + item.label + "</b><br>" + item.desc) //+ "</a>")
+//         .appendTo(ul);
+//     };
+//   }
+// }
 function setupDatetime(){
     // if(Modernizr.inputtypes.time){
         $('#planner-options-timeformat').hide();
@@ -86,11 +160,20 @@ function getTime(){
 }
 // Scrolls to anchor tag from subnav link
 function scrollToAnchor(aid){
+  if (typeof aid !== 'undefined'){
     console.log(aid)
     var aTag = $("[id='"+ aid +"']");
-    console.log(aTag)
-    $('html,body').animate({
-      scrollTop: aTag.offset().top // - 60
+    console.log(aTag);
+    scrollToOffset(aTag.offset().top);
+  }
+  else{
+    scrollToOffset(0);
+  }
+}
+
+function scrollToOffset(offset){
+  $('html,body').animate({
+      scrollTop: offset // - 60
     },'slow');
 }
 
@@ -99,7 +182,7 @@ $(".toc a").click(function(e) {
   
   var hash = $(this).attr('href').split('#')[1];
   history.pushState(null, null, '#' + hash);
-   scrollToAnchor($(this).attr('href').split('#')[1]);
+  scrollToAnchor($(this).attr('href').split('#')[1]);
 });
 
 // Set all thumbnails to same height
@@ -214,6 +297,7 @@ function trimHeadsign(headsign){
   headsign = headsign.split('TO').length > 1 ? headsign.split('TO')[1] : headsign;
 	headsign = headsign.replace(/STATION/i, '');
 	headsign = toTitleCase(headsign);
+  
 	return headsign;
 }
 function cleanStopName(name){
