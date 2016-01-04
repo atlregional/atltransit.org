@@ -12,9 +12,9 @@
   platforms:
     android: https://play.google.com/store/apps/details?id=com.thetransitapp.droid
     apple: https://itunes.apple.com/app/the-transit-app/id498151501?ls=1&mt=8
-  description: The Transit App provides real-time arrival information for 
+  description: The Transit App provides real-time arrival information in a sleek, user-friendly interface.
   category: realtime
-  agencies: []
+  agencies: ["MARTA", "GRTA Xpress"]
 - name: MARTA On the Go
   url: http://www.itsmarta.com/developers/app-station.aspx
   platforms:
@@ -22,31 +22,20 @@
     apple: https://itunes.apple.com/us/app/marta/id386648039?mt=8
   description: MARTA On the Go provides scheduling information for bus and rail services. The app will also provide real-time bus and rail information, service alerts, and connecting bus route(s) information. 
   category: realtime
-  agencies: []
+  agencies: ["MARTA"]
 
-- name: The Transit app
-  url: http://transitapp.com/
+- name: ATLtransit
+  url: /plan/
   platforms:
-    android: http://transitapp.com/download/android.html?c=website
-    apple: https://itunes.apple.com/app/the-transit-app/id498151501?ls=1&mt=8
-  description: The Transit App provides real-time arrival information for 
-  category: none
-  agencies: []
-
-- name: Google Transit
-  url: https://maps.google.com/
-  platforms:
-    android: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en
-    apple: https://itunes.apple.com/us/app/google-maps/id585027354?mt=8
-  description: Google Maps is an excellent trip planner.
+  description: "While we absolutely love Google Transit, the ATLtransit trip planner offers some great additional features.  It currently supports biking + transit option and offers more accurate fare information about the trip."
   category: planning
-  agencies: []
+  agencies: ["MARTA", "GRTA Xpress", "CCT", "GCT"]
 
 - name: Google Transit
   url: https://maps.google.com/
   platforms:
     android: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en
     apple: https://itunes.apple.com/us/app/google-maps/id585027354?mt=8
-  description: Google Maps is an excellent trip planner.
+  description: "Google Transit (AKA Google Maps) is a great trip planner for all modes of travel, espcially transit! This is a perfect option if you're a frequent user of Google Maps."
   category: planning
   agencies: []
