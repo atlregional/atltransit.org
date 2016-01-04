@@ -1,0 +1,2331 @@
+  type: "FeatureCollection"
+  crs: 
+    type: "name"
+    properties: 
+      name: "urn:ogc:def:crs:OGC:1.3:CRS84"
+  features: 
+    - 
+      type: "Feature"
+      OBJECTID: 1
+      NAME: "Griffin"
+      LOCATION: "Old Atlanta Rd at North Expressway (SR 3/SR 7/US 19/US 41)"
+      CITY: "Griffin"
+      COUNTY: "Spalding"
+      SPACES: 141
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "No"
+      Route: null
+      SERVICE_PROVIDER: "Georgia Rideshare"
+      LAT: 33.266742
+      LONG_: -84.289159
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2259143.83576
+      SP83_Y: 1188280.523292
+      GlobalID: "{8555C12D-6CD8-4738-A6A3-76AC723D4146}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.28916300954478
+          - 33.266748358324456
+    - 
+      type: "Feature"
+      OBJECTID: 2
+      NAME: "Atlanta Motor Speedway"
+      LOCATION: "Tara Blvd (US 19/41) at I-20"
+      CITY: "Hampton"
+      COUNTY: "Henry"
+      SPACES: 100
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "440 - Tara Blvd to Atlanta "
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.386282
+      LONG_: -84.311468
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2252385.58363
+      SP83_Y: 1231782.917118
+      GlobalID: "{0F4046BA-76A9-456B-9815-944B33FF55E7}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.31147181138599
+          - 33.3862882998251
+    - 
+      type: "Feature"
+      OBJECTID: 3
+      NAME: "Newnan"
+      LOCATION: "70 Hollz Parkway"
+      CITY: "Newnan"
+      COUNTY: "Coweta"
+      SPACES: 150
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "450/451/455 - Newnan to Downtown/Midtown Atlanta"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.392513
+      LONG_: -84.763726
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2114354.040195
+      SP83_Y: 1234542.026183
+      GlobalID: "{8546F5BF-F4BD-411B-89F6-E71034AD07C9}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.76373042718573
+          - 33.39251968631979
+    - 
+      type: "Feature"
+      OBJECTID: 4
+      NAME: "McDonough"
+      LOCATION: "1059 Industrial Pkwy at McDonough Hampton Rd (SR 20)"
+      CITY: "McDonough"
+      COUNTY: "Henry"
+      SPACES: 250
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "430 - McDonough to Atlanta"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.417815
+      LONG_: -84.180333
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2292413.548767
+      SP83_Y: 1243225.660106
+      GlobalID: "{7C79C2A6-7E1A-4FDA-A64E-8CB74F9FAEA6}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.18033681195345
+          - 33.417821421950876
+    - 
+      type: "Feature"
+      OBJECTID: 5
+      NAME: "Flippen"
+      LOCATION: "Octagon Rd at Jodeco Rd & I-75"
+      CITY: "McDonough"
+      COUNTY: "Henry"
+      SPACES: 15
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "No"
+      Route: null
+      SERVICE_PROVIDER: "Georgia Rideshare"
+      LAT: 33.482791
+      LONG_: -84.215792
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2281605.304877
+      SP83_Y: 1266870.489407
+      GlobalID: "{8EC9435A-CA2A-4B2E-AE12-1E9E49705AA8}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.21579629628289
+          - 33.482797726812855
+    - 
+      type: "Feature"
+      OBJECTID: 6
+      NAME: "Stockbridge "
+      LOCATION: "656 Highway 138 W at I-75"
+      CITY: "Stockbridge"
+      COUNTY: "Henry"
+      SPACES: 404
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "431/432 - Stockbridge to Midtown/Downtown Atlanta"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.547794
+      LONG_: -84.278944
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2262376.386441
+      SP83_Y: 1290536.808141
+      GlobalID: "{DCBD4CC7-8A46-412C-8D91-48CB1D49D773}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.27894794524946
+          - 33.54780022180527
+    - 
+      type: "Feature"
+      OBJECTID: 7
+      NAME: "Riverdale"
+      LOCATION: "6842 Lamar Hutchinson Pkwy"
+      CITY: "Riverdale"
+      COUNTY: "Clayton"
+      SPACES: 271
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "442 - Riverdale to Downtown Atlanta"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.56777
+      LONG_: -84.403329
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2224496.972224
+      SP83_Y: 1297868.8995
+      GlobalID: "{43394176-9FE8-4A34-B934-984CB4AC5DB6}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.40333347080505
+          - 33.5677760042949
+    - 
+      type: "Feature"
+      OBJECTID: 8
+      NAME: "South Fulton"
+      LOCATION: "Royal S Pkwy at Flat Shoals Rd & I-85"
+      CITY: "Union City"
+      COUNTY: "Fulton"
+      SPACES: 350
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: "455 - Union City to Downtown"
+      SERVICE_PROVIDER: "Xpress, MARTA, Georgia Rideshare"
+      LAT: 33.587222
+      LONG_: -84.512516
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2191262.613933
+      SP83_Y: 1305040.201019
+      GlobalID: "{09373FC4-DC73-430B-B872-8D939E9E5B0F}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.5125204606807
+          - 33.58722809877624
+    - 
+      type: "Feature"
+      OBJECTID: 9
+      NAME: "Covington"
+      LOCATION: "SR 12/US 278 at I-20"
+      CITY: "Covington"
+      COUNTY: "Newton"
+      SPACES: 107
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "No"
+      Route: null
+      SERVICE_PROVIDER: "Georgia Rideshare"
+      LAT: 33.60635
+      LONG_: -83.875963
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2385090.89908
+      SP83_Y: 1311948.755068
+      GlobalID: "{FE13626A-D3C2-4954-A0C7-41158415A1F2}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -83.87596739635241
+          - 33.60635683535479
+    - 
+      type: "Feature"
+      OBJECTID: 10
+      NAME: "East Conyers"
+      LOCATION: "1877 Iris Dr SE at Klondike Rd & I-20"
+      CITY: "Conyers"
+      COUNTY: "Rockdale"
+      SPACES: 58
+      LIGHTING: "Unlighted"
+      SURFACE: "Asphalt"
+      SHELTER: "No"
+      Route: null
+      SERVICE_PROVIDER: "Georgia Rideshare"
+      LAT: 33.665361
+      LONG_: -84.032032
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2337546.126655
+      SP83_Y: 1333322.723278
+      GlobalID: "{A156EE54-A5FF-4875-91CF-7621EEAEF3F9}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.03203639644106
+          - 33.66536736189833
+    - 
+      type: "Feature"
+      OBJECTID: 11
+      NAME: "Sigman Road"
+      LOCATION: "2115 Sigman Rd at Chambers Dr"
+      CITY: "Conyers"
+      COUNTY: "Rockdale"
+      SPACES: 560
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: "425 - E. Conyers to Downtown Atlanta"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.68523
+      LONG_: -84.05773
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2329719.907479
+      SP83_Y: 1340543.212147
+      GlobalID: "{401EF421-F24E-4F14-966F-88E2D062799B}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.05773414818576
+          - 33.68523668614847
+    - 
+      type: "Feature"
+      OBJECTID: 12
+      NAME: "Sigman Road"
+      LOCATION: "911 Chambers Dr NW at Sigman Rd NW"
+      CITY: "Conyers"
+      COUNTY: "Rockdale"
+      SPACES: 421
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "420/421 - West Conyers to Downtown/Midtown Atlanta"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.686086
+      LONG_: -84.058706
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2329422.59197
+      SP83_Y: 1340854.189648
+      GlobalID: "{43E5D109-35D6-4438-A8B8-029C5E77E10B}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.0587105039908
+          - 33.6860921980086
+    - 
+      type: "Feature"
+      OBJECTID: 13
+      NAME: "Barge Rd"
+      LOCATION: "Barge Rd SW at Campbellton Rd SW (SR 166/SR 154) & I-285"
+      CITY: "Atlanta"
+      COUNTY: "Fulton"
+      SPACES: 200
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA, Georgia Rideshare"
+      LAT: 33.68911
+      LONG_: -84.506856
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2193108.237538
+      SP83_Y: 1342107.9015
+      GlobalID: "{604FA013-A0FC-4F6F-B526-D64915CD3940}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.50686028943272
+          - 33.68911661079172
+    - 
+      type: "Feature"
+      OBJECTID: 14
+      NAME: "Panola Road"
+      LOCATION: "5290 Minola Rd at I-20"
+      CITY: "Lithonia"
+      COUNTY: "DeKalb"
+      SPACES: 644
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "422/423/428 - Panola Road to Downtown/Midtown/Perimeter Center"
+      SERVICE_PROVIDER: "Xpress, MARTA "
+      LAT: 33.701002
+      LONG_: -84.172554
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2294792.879419
+      SP83_Y: 1346264.720019
+      GlobalID: "{78D9CF8A-BCCA-4170-A972-DEE2F7035D53}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.17255800576554
+          - 33.701008894429854
+    - 
+      type: "Feature"
+      OBJECTID: 15
+      NAME: "South DeKalb Mall"
+      LOCATION: "2801 Candler Rd (SR 155) at Flat Shoals Rd"
+      CITY: "Decatur"
+      COUNTY: "DeKalb"
+      SPACES: 100
+      LIGHTING: "Unknown"
+      SURFACE: "Asphalt"
+      SHELTER: "Unknown"
+      Route: null
+      SERVICE_PROVIDER: "Emory"
+      LAT: 33.706336
+      LONG_: -84.274233
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2263871.461363
+      SP83_Y: 1348222.235623
+      GlobalID: "{3632B129-0ED8-4EF3-BAEE-02925A267343}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.27423754273538
+          - 33.706342001378935
+    - 
+      type: "Feature"
+      OBJECTID: 16
+      NAME: "Gresham Road"
+      LOCATION: "2505 Brannen Rd SE at Flat Shoals Rd & I-20"
+      CITY: "Decatur"
+      COUNTY: "DeKalb"
+      SPACES: 225
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "Georgia Rideshare"
+      LAT: 33.713954
+      LONG_: -84.306696
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2254003.226357
+      SP83_Y: 1351006.278408
+      GlobalID: "{A7E79AED-753B-46FE-B5AD-B8AA901C90D5}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.30669969002541
+          - 33.71396078247182
+    - 
+      type: "Feature"
+      OBJECTID: 17
+      NAME: "Post Rd"
+      LOCATION: "3096 Post Road"
+      CITY: "Winston"
+      COUNTY: "Douglas"
+      SPACES: 52
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "Douglas Rideshare, Georgia Rideshare"
+      LAT: 33.720161
+      LONG_: -84.83143
+      Bike_Racks: "No"
+      Parking_Fee: "None"
+      Hours_of_Operation: "None"
+      Special_Instructions: "None"
+      SP83_X: 2094454.367379
+      SP83_Y: 1353886.690935
+      GlobalID: "{8A740B65-DBAF-4FFD-82A7-DD99C405DDDA}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.83143418691333
+          - 33.72016727934943
+    - 
+      type: "Feature"
+      OBJECTID: 18
+      NAME: "Douglas County Multi-Modal Transportation Center"
+      LOCATION: "8800 Dorris Dr"
+      CITY: "Douglasville"
+      COUNTY: "Douglas"
+      SPACES: 650
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: "460/461/462 - Douglasville to Downtown/Midtown"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.742918
+      LONG_: -84.725799
+      Bike_Racks: "Yes"
+      Parking_Fee: "None"
+      Hours_of_Operation: "None"
+      Special_Instructions: "None"
+      SP83_X: 2126617.969185
+      SP83_Y: 1361976.824642
+      GlobalID: "{10253D63-B91C-4203-9631-141D6AACC494}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.72580327612228
+          - 33.74292411228064
+    - 
+      type: "Feature"
+      OBJECTID: 19
+      NAME: "Thornton Road Park and Ride"
+      LOCATION: "1100 North Blairs Bridge Road"
+      CITY: "Lithia Springs"
+      COUNTY: "Douglas"
+      SPACES: 110
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: "477 to Downtown/Midtown"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.777917
+      LONG_: -84.604833
+      Bike_Racks: "No"
+      Parking_Fee: "None"
+      Hours_of_Operation: "None"
+      Special_Instructions: "None"
+      SP83_X: 2163443.703571
+      SP83_Y: 1374534.294474
+      GlobalID: "{28E9303E-72F0-49FB-A44C-65CE26FB4211}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.60483730702838
+          - 33.77792340862834
+    - 
+      type: "Feature"
+      OBJECTID: 20
+      NAME: "North DeKalb Mall"
+      LOCATION: "2050 Lawrenceville Hwy (SR 8/US 29/US 78) at N Druid Hills Rd"
+      CITY: "Decatur"
+      COUNTY: "DeKalb"
+      SPACES: 400
+      LIGHTING: "Unknown"
+      SURFACE: "Asphalt"
+      SHELTER: "Unknown"
+      Route: null
+      SERVICE_PROVIDER: "Emory"
+      LAT: 33.809453
+      LONG_: -84.274101
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2263950.937967
+      SP83_Y: 1385743.428434
+      GlobalID: "{49A5635A-1E15-4197-A8DE-FC54B4A34C71}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.27410476235303
+          - 33.80945990409828
+    - 
+      type: "Feature"
+      OBJECTID: 21
+      NAME: "Eastmont Shopping Center"
+      LOCATION: "1475 East Park Place"
+      CITY: "Stone Mountain"
+      COUNTY: "Gwinnett"
+      SPACES: 400
+      LIGHTING: "Unknown"
+      SURFACE: "Asphalt"
+      SHELTER: "Unknown"
+      Route: "424 - Stone Mountain to Downtown"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.8224
+      LONG_: -84.1096
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2313914.369489
+      SP83_Y: 1390442.076507
+      GlobalID: "{FA76996C-D4BC-4E51-A6B7-136299A47E10}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.10960412629261
+          - 33.8224064599945
+    - 
+      type: "Feature"
+      OBJECTID: 22
+      NAME: "Hewatt Rd"
+      LOCATION: "Hewatt Rd SW at Oakland Park Blvd SW & Stone Mountain Hwy (SR 10/US 78)"
+      CITY: "Snellville"
+      COUNTY: "Gwinnett"
+      SPACES: 125
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "418 - Snellville to Downtown Atlanta"
+      SERVICE_PROVIDER: "Xpress, Georgia Rideshare"
+      LAT: 33.838912
+      LONG_: -84.059858
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2329014.628013
+      SP83_Y: 1396462.530563
+      GlobalID: "{48593369-1298-4E36-8CCA-2531A6E36359}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.0598623097992
+          - 33.83891895967425
+    - 
+      type: "Feature"
+      OBJECTID: 23
+      NAME: "Faith Baptist Church "
+      LOCATION: "SR 101 at Buchanan Hwy (SR 113/SR 120)"
+      CITY: "Dallas"
+      COUNTY: "Paulding"
+      SPACES: 34
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "Georgia Rideshare"
+      LAT: 33.842554
+      LONG_: -84.980137
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2049588.704691
+      SP83_Y: 1398747.2594
+      GlobalID: "{6C33F9A9-5AEB-4B9E-AC8B-D3092EE88150}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.98014161596404
+          - 33.842560430592506
+    - 
+      type: "Feature"
+      OBJECTID: 24
+      NAME: "Snellville Baptist Church"
+      LOCATION: "2400 E Main St at Henry Clower Blvd"
+      CITY: "Snellville"
+      COUNTY: "Gwinnett"
+      SPACES: 278
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "418 - Snellville to Downtown Atlanta"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.854016
+      LONG_: -84.015241
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2342554.055194
+      SP83_Y: 1401975.39067
+      GlobalID: "{643F56F7-EC38-4F5A-B34A-C80C66D79B83}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.01524525422629
+          - 33.854022754369154
+    - 
+      type: "Feature"
+      OBJECTID: 25
+      NAME: "Powder Springs"
+      LOCATION: "5100 Powder Springs Dallas Rd at Florence Rd"
+      CITY: "Powder Springs"
+      COUNTY: "Cobb"
+      SPACES: 271
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "470/477 - to Downtown/Midtown"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.867312
+      LONG_: -84.701122
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2134354.399758
+      SP83_Y: 1407201.203412
+      GlobalID: "{0FC1DABE-B444-4B77-AAB9-9892F9EF63BD}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.70112595820665
+          - 33.86731855756862
+    - 
+      type: "Feature"
+      OBJECTID: 26
+      NAME: "Hiram 278 Theater Park and Ride"
+      LOCATION: "185 Metromont Rd at Wendy Bagwell Pkwy (SR 6/US 278)"
+      CITY: "Hiram"
+      COUNTY: "Paulding"
+      SPACES: 160
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "470/477  - Hiram/Powder Springs to Downtown/Midtown Atlanta"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.884237
+      LONG_: -84.738541
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2123030.346667
+      SP83_Y: 1413420.977142
+      GlobalID: "{5962E815-6C5D-47CE-A205-FF505AF7A1E9}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.73854491106965
+          - 33.88424349244446
+    - 
+      type: "Feature"
+      OBJECTID: 27
+      NAME: "Dallas"
+      LOCATION: "Simmonds Industrial Blvd at Nathan Deal Blvd (SR 61) & Jimmy Campbell Pkwy (SR 6/SR 120/US 278)"
+      CITY: "Dallas"
+      COUNTY: "Paulding"
+      SPACES: 167
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "No"
+      Route: null
+      SERVICE_PROVIDER: "Georgia Rideshare"
+      LAT: 33.911126
+      LONG_: -84.825121
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2096817.047446
+      SP83_Y: 1423362.633655
+      GlobalID: "{BF70AB97-26F1-497E-A5E5-55E9B9499056}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.82512559265342
+          - 33.91113214731083
+    - 
+      type: "Feature"
+      OBJECTID: 28
+      NAME: "Indian Trail"
+      LOCATION: "Indian Trail Lilburn Rd at I-85"
+      CITY: "Norcross"
+      COUNTY: "Gwinnett"
+      SPACES: 500
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: "102 - Indian Tr to Downtown Atlanta"
+      SERVICE_PROVIDER: "GCT"
+      LAT: 33.930064
+      LONG_: -84.175471
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2293912.745436
+      SP83_Y: 1429613.547557
+      GlobalID: "{FBD49D86-7DC3-4D4B-A094-44806F7292DC}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.17547543006106
+          - 33.93007052198965
+    - 
+      type: "Feature"
+      OBJECTID: 29
+      NAME: "Marietta Transfer Center"
+      LOCATION: "800 S Marietta Pkwy at Aviation Rd"
+      CITY: "Marietta"
+      COUNTY: "Cobb"
+      SPACES: 287
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "101 - Marietta to Downtown"
+      SERVICE_PROVIDER: "CCT"
+      LAT: 33.942154
+      LONG_: -84.53004
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2186381.348546
+      SP83_Y: 1434207.820416
+      GlobalID: "{14840A4C-2F0A-4DCD-B81A-37BFDB3B6F40}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.53004425396902
+          - 33.94216047059613
+    - 
+      type: "Feature"
+      OBJECTID: 30
+      NAME: "Sugarloaf Mills"
+      LOCATION: "5900 Sugarloaf Pkwy at N Brown Rd & I-85"
+      CITY: "Lawrenceville"
+      COUNTY: "Gwinnett"
+      SPACES: 1304
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: "410/412 - Discover Mills to Lindbergh/Midtown/Downtown, 103 Discover Mills to Downtown Atlanta"
+      SERVICE_PROVIDER: "Xpress, GCT, Georgia Rideshare"
+      LAT: 33.984921
+      LONG_: -84.078482
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2323314.13005
+      SP83_Y: 1449586.084643
+      GlobalID: "{1D8C7A96-1461-421A-8EF2-CBB0D4608BD6}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.07848595340879
+          - 33.984927112511166
+    - 
+      type: "Feature"
+      OBJECTID: 31
+      NAME: "Towns Center - Big Shanty"
+      LOCATION: "3019 George Busbee Pkwy"
+      CITY: "Kennesaw"
+      COUNTY: "Cobb"
+      SPACES: 375
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "100 - Town Center to Downtown                   481 - Town Center to Midtown"
+      SERVICE_PROVIDER: "CCT, Xpress"
+      LAT: 34.026305
+      LONG_: -84.570609
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2174198.395274
+      SP83_Y: 1464875.004732
+      GlobalID: "{95335878-93A2-4306-B850-7A5CABB5C077}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.5706132584154
+          - 34.026311442303495
+    - 
+      type: "Feature"
+      OBJECTID: 32
+      NAME: "Busbee Park and Ride - Brandsmart"
+      LOCATION: "3221 Busbee Dr at George Busbee Pkwy NW"
+      CITY: "Kennesaw"
+      COUNTY: "Cobb"
+      SPACES: 364
+      LIGHTING: "Unknown"
+      SURFACE: "Asphalt"
+      SHELTER: "Unknown"
+      Route: "100 - Town Center to Downtown                  480/481 - Town Center to Downtown/Midtown"
+      SERVICE_PROVIDER: "CCT, Xpress"
+      LAT: 34.028929
+      LONG_: -84.571032
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2174073.98567
+      SP83_Y: 1465830.434069
+      GlobalID: "{B98ECB72-C62D-45A7-A828-EB5ABCC7EF8D}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.57103632843274
+          - 34.02893567734606
+    - 
+      type: "Feature"
+      OBJECTID: 33
+      NAME: "Mansell Rd"
+      LOCATION: "2175 Mansell Rd at SR 400/US 19"
+      CITY: "Roswell"
+      COUNTY: "Fulton"
+      SPACES: 418
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA, Georgia Rideshare"
+      LAT: 34.038747
+      LONG_: -84.31308
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2252230.188989
+      SP83_Y: 1469192.75449
+      GlobalID: "{38C67F44-DD51-4FF7-8851-F4A3845E4210}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.31308411058427
+          - 34.03875346001948
+    - 
+      type: "Feature"
+      OBJECTID: 34
+      NAME: "Acworth"
+      LOCATION: "6045 Lake Acworth Dr (SR 92) at I-75"
+      CITY: "Acworth"
+      COUNTY: "Cobb"
+      SPACES: 250
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "102 - Acworth to Midtown Atlanta            480 - Acworth to Downtown Atlanta"
+      SERVICE_PROVIDER: "CCT, Xpress"
+      LAT: 34.077023
+      LONG_: -84.656205
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2148352.961954
+      SP83_Y: 1483444.069882
+      GlobalID: "{EECD505C-7CA7-4C9E-8368-3555C7F317B8}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.65620914555157
+          - 34.077029900039435
+    - 
+      type: "Feature"
+      OBJECTID: 35
+      NAME: "Buford"
+      LOCATION: "Buford Dr (SR 20) at I-985"
+      CITY: "Buford"
+      COUNTY: "Gwinnett"
+      SPACES: 718
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: "101 - Buford to Downtown Atlanta"
+      SERVICE_PROVIDER: "GCT"
+      LAT: 34.086077
+      LONG_: -83.995452
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2348420.855553
+      SP83_Y: 1486426.998892
+      GlobalID: "{36C517CA-A7F3-4C0B-881C-562F162FC80B}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -83.9954558711999
+          - 34.08608313401208
+    - 
+      type: "Feature"
+      OBJECTID: 36
+      NAME: "Windward Pkwy"
+      LOCATION: "Morris Rd at Windward Pkwy & SR 400/US 19"
+      CITY: "Alpharetta"
+      COUNTY: "Fulton"
+      SPACES: 493
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA, Georgia Rideshare"
+      LAT: 34.08636
+      LONG_: -84.260879
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2268059.465397
+      SP83_Y: 1486499.98972
+      GlobalID: "{9290B22E-6DE9-4A39-8DA0-C757311327EB}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.26088309804365
+          - 34.08636687967885
+    - 
+      type: "Feature"
+      OBJECTID: 37
+      NAME: "Cumming"
+      LOCATION: "163 Old Atlanta Rd at SR 400/US 19"
+      CITY: "Cumming"
+      COUNTY: "Forsyth"
+      SPACES: 486
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "400 - Cumming to North Springs and Downtown"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 34.182273
+      LONG_: -84.143535
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2303578.6677
+      SP83_Y: 1521389.171076
+      GlobalID: "{F3B1DE3E-DBBF-4D20-A3F2-5347869EF465}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.14353962643386
+          - 34.182279364990144
+    - 
+      type: "Feature"
+      OBJECTID: 38
+      NAME: "Canton - Boling Park "
+      LOCATION: "1358 Marietta Hwy (SR 140)"
+      CITY: "Canton"
+      COUNTY: "Cherokee"
+      SPACES: 173
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "No"
+      Route: "490 - Canton/Woodstock to Downtwown Atlanta"
+      SERVICE_PROVIDER: "Xpress (CATS), Georgia Rideshare"
+      LAT: 34.230384
+      LONG_: -84.500759
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2195604.306668
+      SP83_Y: 1539061.357533
+      GlobalID: "{5320AB4D-8B4A-43D8-B188-595BFB121FB8}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.50076335687565
+          - 34.230390578626086
+    - 
+      type: "Feature"
+      OBJECTID: 39
+      NAME: "Avondale"
+      LOCATION: "915 East Ponce de Leon Ave"
+      CITY: "Decatur"
+      COUNTY: null
+      SPACES: 734
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.775024
+      LONG_: -84.282333
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2261436.212615
+      SP83_Y: 1373218.46154
+      GlobalID: "{7C1369DD-8DF4-4826-82FC-17DAA52BFED6}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.28233754763869
+          - 33.77503085777671
+    - 
+      type: "Feature"
+      OBJECTID: 40
+      NAME: "Chamblee"
+      LOCATION: "5200 New Peachtree Road"
+      CITY: "Chamblee"
+      COUNTY: null
+      SPACES: 939
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.887424
+      LONG_: -84.30632
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2254202.943289
+      SP83_Y: 1414126.711088
+      GlobalID: "{DCE6614F-16DA-4F50-8FC9-44B00902D5E9}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.3063243767644
+          - 33.88743093604384
+    - 
+      type: "Feature"
+      OBJECTID: 41
+      NAME: "Lakewood-Ft. McPherson"
+      LOCATION: "2020 Lee Street, SW"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 727
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.700325
+      LONG_: -84.42894
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2216818.384528
+      SP83_Y: 1346119.464885
+      GlobalID: "{7BB57F7A-FD46-4443-B134-29F7BF672396}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.4289440309677
+          - 33.700331434235736
+    - 
+      type: "Feature"
+      OBJECTID: 42
+      NAME: "Oakland City"
+      LOCATION: "1400 Lee Street SW"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 342
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.717026
+      LONG_: -84.425156
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2217984.482261
+      SP83_Y: 1352193.39073
+      GlobalID: "{3CC868CB-6952-4AE4-AA71-C6AB51615B2E}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.42515985144823
+          - 33.717032182767
+    - 
+      type: "Feature"
+      OBJECTID: 43
+      NAME: "West End"
+      LOCATION: "680 Lee Street, SW"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 469
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.735817
+      LONG_: -84.413666
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2221494.585806
+      SP83_Y: 1359022.325563
+      GlobalID: "{6EB0C404-97C1-4228-A86F-51B917ADCC89}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.41366998137127
+          - 33.735823386471694
+    - 
+      type: "Feature"
+      OBJECTID: 44
+      NAME: "Arts Center"
+      LOCATION: "1255 West Peachtree Street NW"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 29
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.789078
+      LONG_: -84.386803
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2229702.476214
+      SP83_Y: 1378383.762889
+      GlobalID: "{5EC2BB61-A9CF-463F-A7BD-54ECEE188D97}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.3868068781822
+          - 33.78908420196111
+    - 
+      type: "Feature"
+      OBJECTID: 45
+      NAME: "Lindbergh Center"
+      LOCATION: "2424 Piedmont Road, NE"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 1403
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.822479
+      LONG_: -84.36953
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2234974.227153
+      SP83_Y: 1390526.818
+      GlobalID: "{8D206A38-0FD4-4954-8843-46D1FBE05E21}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.36953392502532
+          - 33.822485699019616
+    - 
+      type: "Feature"
+      OBJECTID: 46
+      NAME: "Kensington"
+      LOCATION: "3350 Kensington Road"
+      CITY: "Decatur"
+      COUNTY: null
+      SPACES: 1530
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.772591
+      LONG_: -84.251915
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2270678.583894
+      SP83_Y: 1372323.878028
+      GlobalID: "{3BF5CB92-295B-4DC1-9407-9C1D13331FA5}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.25191914320045
+          - 33.77259708180039
+    - 
+      type: "Feature"
+      OBJECTID: 47
+      NAME: "King Memorial"
+      LOCATION: "377 Decatur Street, SE"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 21
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.749802
+      LONG_: -84.375542
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2233094.790952
+      SP83_Y: 1364085.285253
+      GlobalID: "{51CDD483-CE4A-46FB-8AC1-4C2BD178AD66}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.37554588614684
+          - 33.7498080710845
+    - 
+      type: "Feature"
+      OBJECTID: 48
+      NAME: "Inman Park-Reynoldstown"
+      LOCATION: "1055 DeKalb Avenue"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 302
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.757404
+      LONG_: -84.352753
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2240026.616983
+      SP83_Y: 1366838.394576
+      GlobalID: "{E504CE3F-4AF7-4631-BA75-C3E7BABCE26B}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.35275687836776
+          - 33.757410764920266
+    - 
+      type: "Feature"
+      OBJECTID: 49
+      NAME: "Edgewood-Candler Park"
+      LOCATION: "1475 DeKalb Avenue NE"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 487
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.761799
+      LONG_: -84.339882
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2243941.098655
+      SP83_Y: 1368430.607599
+      GlobalID: "{26483ED1-3978-42BD-B051-C7330EA8627E}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.33988608658737
+          - 33.76180529716046
+    - 
+      type: "Feature"
+      OBJECTID: 50
+      NAME: "East Lake"
+      LOCATION: "2260 College Ave"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 581
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.765106
+      LONG_: -84.313049
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2252097.56561
+      SP83_Y: 1369621.403774
+      GlobalID: "{2CDCD18A-2170-46AC-BE13-6F478F86C114}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.3130534980389
+          - 33.76511264129406
+    - 
+      type: "Feature"
+      OBJECTID: 51
+      NAME: "Indian Creek"
+      LOCATION: "3901 Durham Park Road"
+      CITY: "Stone Mountain"
+      COUNTY: null
+      SPACES: 2367
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.769733
+      LONG_: -84.22966
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2277440.649766
+      SP83_Y: 1371279.367978
+      GlobalID: "{A1B86B4D-3755-4087-BB7B-78CEBA3B41F5}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.2296641921564
+          - 33.7697398736949
+    - 
+      type: "Feature"
+      OBJECTID: 52
+      NAME: "Vine City"
+      LOCATION: "502 Rhodes Street, NW"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 27
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.756458
+      LONG_: -84.404732
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2224227.907439
+      SP83_Y: 1366526.652089
+      GlobalID: "{128A4C8A-73EF-4603-A0B0-9AFC92CFF669}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.4047359585507
+          - 33.75646471801999
+    - 
+      type: "Feature"
+      OBJECTID: 53
+      NAME: "Ashby"
+      LOCATION: "65 Joseph E. Lowery Blvd"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 159
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.756275
+      LONG_: -84.416786
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2220564.014504
+      SP83_Y: 1366468.698793
+      GlobalID: "{7B069F7C-ADA5-4DE5-A088-7B2F04E4C050}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.41679040586273
+          - 33.75628161202332
+    - 
+      type: "Feature"
+      OBJECTID: 54
+      NAME: "Bankhead"
+      LOCATION: "1335 Donald Lee Hollowell Parkway NW"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 12
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.77214
+      LONG_: -84.428932
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2216887.135047
+      SP83_Y: 1372250.77089
+      GlobalID: "{3292344F-B2BD-480C-AE36-6F28ADA57B0B}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.42893640542505
+          - 33.77214694057539
+    - 
+      type: "Feature"
+      OBJECTID: 55
+      NAME: "West Lake"
+      LOCATION: "80 Anderson Avenue, SW"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 219
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.753242
+      LONG_: -84.445381
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2211870.081433
+      SP83_Y: 1365387.486717
+      GlobalID: "{4CD7E417-A323-4AEF-A203-77BC6097E4F2}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.44538538387829
+          - 33.753248925490155
+    - 
+      type: "Feature"
+      OBJECTID: 56
+      NAME: "Hamilton E. Holmes"
+      LOCATION: "70 Hamilton E. Holmes Dr, NW"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 939
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.754406
+      LONG_: -84.470436
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2204256.037278
+      SP83_Y: 1365832.349672
+      GlobalID: "{D8BB40EA-1954-46D4-87FC-99A45DEE251B}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.47044032274184
+          - 33.75441240733814
+    - 
+      type: "Feature"
+      OBJECTID: 57
+      NAME: "Midtown"
+      LOCATION: "41 10th Street NE"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 12
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.780758
+      LONG_: -84.386452
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2229802.643665
+      SP83_Y: 1375356.191517
+      GlobalID: "{9A191EF8-95E4-4C54-A1DE-FE47B96C6CD0}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.3864559255166
+          - 33.780764345314715
+    - 
+      type: "Feature"
+      OBJECTID: 58
+      NAME: "Dunwoody"
+      LOCATION: "1111 Hammond Drive"
+      CITY: "Sandy Springs"
+      COUNTY: null
+      SPACES: 1225
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.921066
+      LONG_: -84.344414
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2242663.93159
+      SP83_Y: 1426386.029089
+      GlobalID: "{6F44B918-C21C-4D1D-A506-60C7D49162B2}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.34441795668336
+          - 33.92107275696099
+    - 
+      type: "Feature"
+      OBJECTID: 59
+      NAME: "Medical Center"
+      LOCATION: "5711 Peachtree-Dunwoody Rd, NE"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 208
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.910553
+      LONG_: -84.351456
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2240520.881742
+      SP83_Y: 1422564.248347
+      GlobalID: "{72E4C35B-43CE-4ABE-9309-19E9B32915DC}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.35145988922012
+          - 33.91055944900886
+    - 
+      type: "Feature"
+      OBJECTID: 60
+      NAME: "Sandy Springs"
+      LOCATION: "1101 Mount Vernon Highway"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 833
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.932606
+      LONG_: -84.353149
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2240021.603213
+      SP83_Y: 1430589.683412
+      GlobalID: "{329038B1-28EC-485E-9E4C-5643DF9F2139}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.3531536163913
+          - 33.9326122185127
+    - 
+      type: "Feature"
+      OBJECTID: 61
+      NAME: "North Springs"
+      LOCATION: "7010 Peachtree Dunwoody Road"
+      CITY: "Sandy Springs"
+      COUNTY: null
+      SPACES: 2294
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.943817
+      LONG_: -84.357315
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2238765.704807
+      SP83_Y: 1434671.59093
+      GlobalID: "{F7BEAC38-3765-4FEC-83E0-0C18F3D117CC}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.35731926791782
+          - 33.94382361542961
+    - 
+      type: "Feature"
+      OBJECTID: 62
+      NAME: "Lenox"
+      LOCATION: "955 East Paces Ferry Rd, NE"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 533
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.845955
+      LONG_: -84.356911
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2238822.395966
+      SP83_Y: 1399061.640497
+      GlobalID: "{633806BE-D4DD-44EA-9E5E-03AE16075D6F}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.35691490411479
+          - 33.84596135091343
+    - 
+      type: "Feature"
+      OBJECTID: 63
+      NAME: "Brookhaven"
+      LOCATION: "4047 Peachtree Road NE"
+      CITY: "Atlanta"
+      COUNTY: null
+      SPACES: 1733
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.85997
+      LONG_: -84.339264
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2244188.789761
+      SP83_Y: 1404151.949214
+      GlobalID: "{A1999694-86B9-4F04-B660-5F4E72BBFA23}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.33926811033817
+          - 33.85997655223855
+    - 
+      type: "Feature"
+      OBJECTID: 64
+      NAME: "Doraville"
+      LOCATION: "6000 New Peachtree Road"
+      CITY: "Doraville"
+      COUNTY: null
+      SPACES: 1270
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.902386
+      LONG_: -84.281006
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2261891.098188
+      SP83_Y: 1419561.247135
+      GlobalID: "{93B83898-A35E-4645-98B4-E18E77CB3EE2}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.28101003943794
+          - 33.90239218259417
+    - 
+      type: "Feature"
+      OBJECTID: 65
+      NAME: "College Park"
+      LOCATION: "3800 Main Street"
+      CITY: "College Park"
+      COUNTY: null
+      SPACES: 1971
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.651527
+      LONG_: -84.448799
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2210730.086337
+      SP83_Y: 1328379.692294
+      GlobalID: "{EE95A021-3D8A-4EA3-BD7D-A79A53275EE2}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.44880334830002
+          - 33.65153381617883
+    - 
+      type: "Feature"
+      OBJECTID: 66
+      NAME: "East Point"
+      LOCATION: "2848 Main Street"
+      CITY: "East Point"
+      COUNTY: null
+      SPACES: 907
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: null
+      SERVICE_PROVIDER: "MARTA "
+      LAT: 33.676868
+      LONG_: -84.440796
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2213189.94231
+      SP83_Y: 1337593.811661
+      GlobalID: "{83F61CFD-2C96-40B1-86A6-0937D3755DCF}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.44080011253337
+          - 33.6768748554687
+    - 
+      type: "Feature"
+      OBJECTID: 67
+      NAME: "Floyd Road Park and Ride"
+      LOCATION: "4342 Floyd Road"
+      CITY: "Mableton"
+      COUNTY: "Cobb"
+      SPACES: 213
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "30 - to MARTA H.E. Holmes and Marietta Transfer Center"
+      SERVICE_PROVIDER: "CCT"
+      LAT: 33.8471
+      LONG_: -84.585768
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2169355.654322
+      SP83_Y: 1399793.275188
+      GlobalID: "{583BD228-EFA9-4F59-8979-12F0C47FCAC1}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.58571969647006
+          - 33.84740663212906
+    - 
+      type: "Feature"
+      OBJECTID: 68
+      NAME: "Turner Field"
+      LOCATION: "755 Hank Aaron Drive, SE"
+      CITY: "Atlanta"
+      COUNTY: "Fulton"
+      SPACES: 1700
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Unknown"
+      Route: null
+      SERVICE_PROVIDER: "Georgia State"
+      LAT: 33.735639
+      LONG_: -84.388034
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2229286.576127
+      SP83_Y: 1358939.78078
+      GlobalID: "{A60CB9FA-496A-46E0-BBF5-2FFD305B772F}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.38803836923321
+          - 33.7356451432448
+    - 
+      type: "Feature"
+      OBJECTID: 69
+      NAME: "Douglas Blvd Park and Ride"
+      LOCATION: "7500 Douglas Blvd"
+      CITY: "Douglasville"
+      COUNTY: "Douglas"
+      SPACES: 527
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
+      Route: "461/462 to Downtown & Midtown Atlanta"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.723007
+      LONG_: -84.771262
+      Bike_Racks: "Yes"
+      Parking_Fee: "None"
+      Hours_of_Operation: "None"
+      Special_Instructions: "None"
+      SP83_X: 2112755.309846
+      SP83_Y: 1354809.686022
+      GlobalID: "{B764A23F-B2E2-4A77-B535-72C0B275E654}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.77126675716252
+          - 33.72301306262469
+    - 
+      type: "Feature"
+      OBJECTID: 70
+      NAME: "Hamilton Mill Station"
+      LOCATION: "3220 Sardis Church Road"
+      CITY: "Buford"
+      COUNTY: "Gwinnett"
+      SPACES: 900
+      LIGHTING: "Unknown"
+      SURFACE: "Asphalt"
+      SHELTER: "Unknown"
+      Route: "413 - Hamilton Mill to Downtown"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 34.076373
+      LONG_: -83.920576
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2371099.130428
+      SP83_Y: 1482942.13973
+      GlobalID: "{3B6AEE36-5ADC-44FE-BFE3-BC77119F7078}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -83.92057966409536
+          - 34.07637923856854
+    - 
+      type: "Feature"
+      OBJECTID: 71
+      NAME: "Hebron Baptist Church - Dacula"
+      LOCATION: "202 Hebron Church Rd"
+      CITY: "Dacula"
+      COUNTY: "Gwinnett"
+      SPACES: 400
+      LIGHTING: "Unknown"
+      SURFACE: "Asphalt"
+      SHELTER: "Unknown"
+      Route: "416 - Dacula to Downtown"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.997155
+      LONG_: -83.908723
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2374760.820283
+      SP83_Y: 1454124.974268
+      GlobalID: "{75C3DC7E-A7A6-4390-9116-B115A9E02995}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -83.90872671404567
+          - 33.99716186569528
+    - 
+      type: "Feature"
+      OBJECTID: 72
+      NAME: "Mableton Park and Ride"
+      LOCATION: "5239 Floyd Road"
+      CITY: "Mableton"
+      COUNTY: "Cobb"
+      SPACES: 205
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "475 - Mableton to Downtown"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.827253
+      LONG_: -84.575485
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2172432.741344
+      SP83_Y: 1392449.877474
+      GlobalID: "{16CD264A-9DF0-4328-9010-E667F0FCC999}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.57548884711335
+          - 33.82725990071423
+    - 
+      type: "Feature"
+      OBJECTID: 73
+      NAME: "Mall of Georgia "
+      LOCATION: "3333 Buford Drive"
+      CITY: "Buford"
+      COUNTY: "Gwinnett"
+      SPACES: 750
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Unknown"
+      Route: "411 - Mall of GA to Midtown"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 34.068899
+      LONG_: -83.985175
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2351543.306679
+      SP83_Y: 1480181.632784
+      GlobalID: "{CDBDA031-24F7-4145-B3EC-B38E979B6904}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -83.9851793341422
+          - 34.06890544224473
+    - 
+      type: "Feature"
+      OBJECTID: 74
+      NAME: "His Hands Church"
+      LOCATION: "550 Molly Lane"
+      CITY: "Woodstock"
+      COUNTY: "Cherokee"
+      SPACES: 400
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "491 - Woodstock to Downtwown Atlanta"
+      SERVICE_PROVIDER: "Xpress (CATS)"
+      LAT: 34.081549
+      LONG_: -84.541236
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2183171.31698
+      SP83_Y: 1484943.715123
+      GlobalID: "{79D39CB9-194C-479E-80BA-ED144C8814B2}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.54124039337746
+          - 34.08155528188407
+    - 
+      type: "Feature"
+      OBJECTID: 75
+      NAME: "Jonesboro Park and Ride"
+      LOCATION: "8488 Tara Blvd"
+      CITY: "Jonesboro"
+      COUNTY: "Clayton"
+      SPACES: 350
+      LIGHTING: "Unknown"
+      SURFACE: "Unknown"
+      SHELTER: "Unknown"
+      Route: "440- Tara Blvd to Atlanta, 441 - Jonesboro to Midtown Atlanta"
+      SERVICE_PROVIDER: "Xpress"
+      LAT: 33.504496
+      LONG_: -84.355958
+      Bike_Racks: null
+      Parking_Fee: null
+      Hours_of_Operation: null
+      Special_Instructions: null
+      SP83_X: 2238883.912739
+      SP83_Y: 1274816.689864
+      GlobalID: "{A5024D7B-6274-4FBA-949F-1F9D6F6E2C66}"
+      created_user: null
+      created_date: null
+      last_edited_user: null
+      last_edited_date: null
+      geometry: 
+        type: "Point"
+        coordinates: 
+          - -84.36236520413145
+          - 33.523798369749564
