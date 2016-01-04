@@ -9,12 +9,12 @@ exclude:
 # source:	_src
 url: http://test.atlb.us
 title: atltransit
-gems:
-  - jekyll-sitemap
+# gems:
+  # - jekyll-sitemap
 
 prose:
   rooturl: pages
-  media: build/images
+  media: assets/images
 
 collections:
   agencies:
