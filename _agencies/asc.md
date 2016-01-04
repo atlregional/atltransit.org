@@ -1,5 +1,6 @@
 ---
 layout: agency
+id: asc
 title: Atlanta Streetcar
 category: about
 name: Atlanta Streetcar
@@ -25,6 +26,10 @@ maps:
     url: http://streetcar.atlantaga.gov/wp-content/uploads/2013/06/AtlStreetcar-System-Map-FINAL-8-march22-2013.pdf
 services:
   - streetcar
+fares:
+  base: 
+    - name: Local
+      cost: "$1.00"
 ---
 
 The Atlanta Streetcar is one of the newest additions to public transit in the Atlanta region.

@@ -1,5 +1,6 @@
 ---
 layout: agency
+id: cats
 title: CATS
 category: about
 name: Cherokee Area Trans. System
@@ -17,6 +18,14 @@ tagline: CATS operates two routes in Cherokee County.
 services:
   - local_bus
   - express_bus
+fares:
+  base: 
+    - name: Local
+      cost: "$1.25"
+paratransit:
+  name: CATS Demand Response
+  website: http://www.cherokeega.com/Transportation/countywidedemandresponseservice/
+  description: Provides paratransit to Cherokee County.
 ---
 
 CATS provides fixed route service in and around Downtown Canton.
