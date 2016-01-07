@@ -10,6 +10,9 @@ image: "http://www.peachpass.com/uploads/GACommuteOptions.jpg"
 tagline: Georgia Commute Options offers free services that help commuters and employers make the switch from driving alone to a commute alternative, all part of regional effort to reduce traffic congestion and improve air quality.
 ---
 
+* toc goes here
+{:toc class="list-inline anchor toc text-center col-sm-12"}
+
 ## Commuter Services Available
 
 More than 1,600 employers and 100,000 metro Atlanta commuters have used our services--saving thousands of dollars a year on their commute, earning cash and winning prizes. Learn how you can participate below:
