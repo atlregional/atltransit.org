@@ -3,12 +3,15 @@ layout: page
 title: Georgia Commute Options
 id: gco
 order: 6
-category: 'guide'
-permalink: '/guide/gco/'
-related: ["parknride"]
+category: guide
+permalink: /guide/gco/
+related: 
+  - parknride
 image: "http://www.peachpass.com/uploads/GACommuteOptions.jpg"
-tagline: Georgia Commute Options offers free services that help commuters and employers make the switch from driving alone to a commute alternative, all part of regional effort to reduce traffic congestion and improve air quality.
+tagline: "Georgia Commute Options offers free services that help commuters and employers make the switch from driving alone to a commute alternative, all part of a regional effort to reduce traffic congestion and improve air quality."
+published: true
 ---
+
 
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
@@ -24,7 +27,7 @@ More than 1,600 employers and 100,000 metro Atlanta commuters have used our serv
 
 ## Who’s Eligible
 
-Commuters and businesses interested in participating in the Georgia Commute Options programs must live or work in the following Georgia counties: Barrow, Bartow, Bibb, Carroll, Cherokee, Clayton, Cobb, Coweta, DeKalb, Douglas, Fayette, Floyd, Forsyth, Fulton, Gwinnett, Hall, Henry, Newton, Paulding, Rockdale, Spalding, Walton.
+Commuters interested in participating in the Georgia Commute Options programs must live or work in the following Georgia counties: Barrow, Bartow, Bibb, Carroll, Cherokee, Clayton, Cobb, Coweta, DeKalb, Douglas, Fayette, Floyd, Forsyth, Fulton, Gwinnett, Hall, Henry, Newton, Paulding, Rockdale, Spalding, Walton.
 
 ## Find Assistance in your Area
 
