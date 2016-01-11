@@ -3,15 +3,21 @@ layout: page
 title: How to pay your fare
 id: products
 order: 1
-category: 'fares'
-permalink: '/fares/products/'
+category: fares
+permalink: /fares/products/
 tagline: Paying your fare is easy. Your Breeze Card lets you access most of the transit in the Atlanta region.
-image: "/build/images/breezecard_hand.png"
+image: /build/images/breezecard_hand.png
+published: true
 ---
+
 
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
+You can purchase fare:
+- at a Breeze vending machine,
+- online, or
+- on the bus.
 
 ## Breeze vending machine
 
@@ -37,7 +43,6 @@ Any of the fare products available at the Breeze vending machines are also avail
 
 ## On the bus
 
-
 {% include right_image.html alt="breeze farebox" src="/build/images/fares/breeze_farebox.png" title="Purchase fare at your bus farebox" %}
 
 If you already have a Breeze Card, you may load cash value onto your card when boarding a bus.  The process involves three easy steps:
@@ -51,4 +56,3 @@ If you already have a Breeze Card, you may load cash value onto your card when b
 [View discounts and passes available online »](/fares/passes)
 
 {% include row_break.html %}
-
