@@ -1,0 +1,24 @@
+<div  class="row">
+{% assign agencies = site.agencies %}
+{% if include.agency %}
+{% assign agencies = site.agencies | where:"id",include.agency %}
+{% endif %}
+	{% for agency in agencies %}
+	{% if include.agency %}
+	<div class="col-sm-4 col-sm-offset-4 equal-height">
+	{% else %}
+	{% endif %}
+			<table class="table">
+				<thead>
+					<th>Fare product</th>
+					<th>Cost</th>
+				</thead>
+				{% for product in agency.fares.passes %}
+				<tr>
+					<td>{{ product.name }}</td><td>{{ product.cost }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+	</div>
+	{% endfor %}
+</div>

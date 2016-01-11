@@ -16,7 +16,7 @@ phone: (404) 304-5863
 logo: "/assets/images/logos/atlanta_streetcar_logo.png"
 image: "/build/images/streetcar_auburn_ave.jpg"
 path: asc
-tagline: The Atlanta Streetcar runs from the MLK historic district to Centennial Olympic Park.
+tagline: The Atlanta Streetcar connects the Centennial Olympic Park area to the Martin Luther King, Jr. National Historic Site.
 maps:
   - name: Map of attractions
     type: pdf
@@ -27,11 +27,15 @@ maps:
 services:
   - streetcar
 fares:
+  description: Breeze cards (loaded with cash value) are accepted at ticket vending machines at all 12 stops. The Atlanta Streetcar does not currently provide a free transfer to/from other bus or rail services in the region (MARTA, CCT, GCT, GRTA Xpress).<br/><br/>A mobile fare payment app will launch, providing additional fare options, later in 2016.
   base: 
     - name: Local
       cost: "$1.00"
+  passes: 
+  - name: 1 Trip
+    cost: "$2.50"
+  - name: 1 Day Pass
+    cost: "$3.00"
 ---
 
-The Atlanta Streetcar is one of the newest additions to public transit in the Atlanta region.
-
-The first phase of the streetcar runs from Centennial Olympic Park to the MLK Historic Center, but there are plans to connect to the BeltLine and reach destinations across the City of Atlanta.
+Phase One of the Atlanta Streetcar consists of a 2.7 mile East-West route that connects the Centennial Olympic Park area to the Martin Luther King, Jr. National Historic Site, with 12 stops along the route. The Atlanta Streetcar expansion will connect to the Atlanta Beltline, and include additional neighborhoods and other popular destinations around the city.
