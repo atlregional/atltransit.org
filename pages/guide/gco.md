@@ -28,7 +28,7 @@ More than 1,600 employers and 100,000 metro Atlanta commuters have used our serv
 
 ## Who’s Eligible
 
-Commuters interested in participating in the Georgia Commute Options programs must live or work in the following Georgia counties: Barrow, Bartow, Bibb, Carroll, Cherokee, Clayton, Cobb, Coweta, DeKalb, Douglas, Fayette, Floyd, Forsyth, Fulton, Gwinnett, Hall, Henry, Newton, Paulding, Rockdale, Spalding, Walton.
+Commuters interested in participating in the Georgia Commute Options programs must live or work in the following Georgia counties: Barrow, Bartow, Carroll, Cherokee, Clayton, Cobb, Coweta, DeKalb, Douglas, Fayette, Forsyth, Fulton, Gwinnett, Hall, Henry, Newton, Paulding, Rockdale, Spalding, Walton.
 
 ## Find Assistance in your Area
 
