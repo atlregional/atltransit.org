@@ -8,7 +8,7 @@ permalink: /guide/gco/
 related: 
   - parknride
 image: "http://www.peachpass.com/uploads/GACommuteOptions.jpg"
-tagline: "Georgia Commute Options offers free services that help commuters and employers make the switch from driving alone to a commute alternative, all part of a regional effort to reduce traffic congestion and improve air quality."
+tagline: "Georgia Commute Options offers free services and incentives that help commuters and employers make the switch from driving alone to a commute alternative, all part of a regional effort to reduce traffic congestion and improve air quality."
 published: true
 ---
 
