@@ -1,0 +1,14 @@
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.2/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.2/mapbox-gl.css' rel='stylesheet' />
+<div id="map" class="col-md-12 inline-map"></div>
+<script>
+window.onload = function(){
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYXRscmVnaW9uYWwiLCJhIjoiQmZ6d2tyMCJ9.oENm3NSf--qHrimdm9Vvdw';
+	var map = new mapboxgl.Map({
+	    container: 'map', // container id
+	    style: 'mapbox://styles/atlregional/cijdae96100b0l2ksc941gldp', //hosted style id
+	    center: [-84.344558, 33.761443], // starting position
+	    zoom: 9.6 // starting zoom
+	});
+}
+</script>
