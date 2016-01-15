@@ -3,11 +3,13 @@ layout: page
 title: How to pay your fare
 id: products
 order: 1
-category: 'fares'
-permalink: '/fares/products/'
+category: fares
+permalink: /fares/products/
 tagline: Paying your fare is easy. Your Breeze Card lets you access most of the transit in the Atlanta region.
-image: "/build/images/breezecard_hand.png"
+image: /build/images/breezecard_hand.png
+published: true
 ---
+
 
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
@@ -17,7 +19,7 @@ image: "/build/images/breezecard_hand.png"
 
 {% include right_image.html alt="breeze machine" src="/build/images/fares/breeze_machine.jpg" title="Purchase fare at a Breeze vending machine" %}
 
-You can purchase fare at any Breeze vending machine which are located at every MARTA rail station.  Breeze vending machines are also at major regional transfer centers. 
+You can buy fare at any Breeze vending machine which are located at every MARTA rail station.  Breeze vending machines are also at major regional transfer centers. 
 
 [<i class="fa fa-search-plus right-5"></i>View map of rail stations and regional transfer centers](/maps/interactive)
 
@@ -51,4 +53,3 @@ If you already have a Breeze Card, you may load cash value onto your card when b
 [View discounts and passes available online »](/fares/passes)
 
 {% include row_break.html %}
-
