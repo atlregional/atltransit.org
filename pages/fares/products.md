@@ -19,7 +19,7 @@ published: true
 
 {% include right_image.html alt="breeze machine" src="/build/images/fares/breeze_machine.jpg" title="Purchase fare at a Breeze vending machine" %}
 
-You can buy fare at any Breeze vending machine which are located at every MARTA rail station.  Breeze vending machines are also at major regional transfer centers. 
+You can purchase fare at any Breeze vending machine which are located at every MARTA rail station.  Breeze vending machines are also at major regional transfer centers. 
 
 [<i class="fa fa-search-plus right-5"></i>View map of rail stations and regional transfer centers](/maps/interactive)
 
