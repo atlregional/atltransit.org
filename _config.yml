@@ -1,4 +1,4 @@
-highlighter: pygments
+highlighter: rouge
 github: [Repository metadata]
 exclude:
   - "bower_components"
@@ -8,7 +8,7 @@ exclude:
   - "gulpfile.js"
 # source:	_src
 url: http://test.atlb.us
-title: atltransit
+title: ATLtransit
 # gems:
   # - jekyll-sitemap
 
