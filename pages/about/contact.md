@@ -29,8 +29,7 @@ You can also get in touch with us with the following:
 	40 Courtland St NE<br>
 	Atlanta, GA 30303<br><br>
 	<abbr title="Email"><i class="fa fa-envelope-o"></i></abbr> 
-	<a href="mailto:info@atltransit.org">info@atltransit.org</a><br>
-	<!-- <abbr title="Phone"><i class="fa fa-phone"></i></abbr> <a href="tel:{{ page.phone }}">No phone</a> -->
+	<a href="/about/feedback">Send us your feedback!</a><br>
 </address>
 
 
