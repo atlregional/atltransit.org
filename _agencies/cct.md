@@ -21,6 +21,9 @@ services:
   - local_bus
   - express_bus
   - paratransit
+schedules:
+  - url: http://cobbcounty.org/index.php?option=com_content&view=article&id=462&Itemid=431
+    name: CCT Local and Express Route Schedules
 maps:
   - url: build/images/maps/CCTSystem.pdf
     type: pdf
@@ -54,12 +57,16 @@ fares:
   passes:
   - name: Local 10 Ride
     cost: "$18.00"
+    breeze: false
   - name: Local 31 Day Pass
     cost: "$72.00"
+    breeze: false
   - name: Express 20 Ride
     cost: "$65.00"
+    breeze: false
   - name: Express 31 Day Pass
     cost: "$125.00"
+    breeze: false
   discounts: 
   - name: Youth
     cost: "$1.50" 

@@ -20,29 +20,34 @@ logo: "/assets/images/logos/marta_logo.png"
 image: "/build/images/marta_train_motion.jpg"
 path: marta
 tagline: MARTA serves Fulton, DeKalb, and Clayton counties.
+schedules:
+  - url: http://www.itsmarta.com/bus-schedules.aspx
+    name: MARTA Bus Schedules
+  - url: http://www.itsmarta.com/rail-schedules-or-route.aspx
+    name: MARTA Rail Schedules
 maps: 
-- url: build/images/maps/MARTA_system_map_2-2012.pdf
-  type: pdf
-  name: System Map
-- url: build/images/maps/MARTA_central-atlanta-2012.pdf
-  type: pdf
-  name: Central Atlanta/Midtown Map
-- url: build/images/maps/MARTA_downtown2-2012.pdf
-  type: pdf
-  name: Downtown Atlanta Map
-- url: build/images/maps/Five-Points-Station-Bus-Connections-December-14-2013.pdf
-  type: pdf
-  name: Five Points Connections Map
-- url: build/images/maps/MARTA_rail_lines.pdf
-  type: pdf
-  name: Rail Lines Map
+  - url: build/images/maps/MARTA_system_map_2-2012.pdf
+    type: pdf
+    name: System Map
+  - url: build/images/maps/MARTA_central-atlanta-2012.pdf
+    type: pdf
+    name: Central Atlanta/Midtown Map
+  - url: build/images/maps/MARTA_downtown2-2012.pdf
+    type: pdf
+    name: Downtown Atlanta Map
+  - url: build/images/maps/Five-Points-Station-Bus-Connections-December-14-2013.pdf
+    type: pdf
+    name: Five Points Connections Map
+  - url: build/images/maps/MARTA_rail_lines.pdf
+    type: pdf
+    name: Rail Lines Map
 services:
   - heavy_rail
   - local_bus
   - paratransit
 paratransit:
   name: MARTA Mobility
-  website: http://www.itsmarta.com/accessibility-Mobility.aspx
+  url: http://www.itsmarta.com/accessibility-Mobility.aspx
   description: Provides paratransit to Fulton and DeKalb.
 fares:
   info_url: "http://www.itsmarta.com/fares-passes.aspx"
@@ -53,24 +58,34 @@ fares:
   passes: 
   - name: 1 Trip
     cost: "$2.50"
+    breeze: true
   - name: 2 Trip
     cost: "$5.00"
+    breeze: true
   - name: 10 Trip
     cost: "$25.00"
+    breeze: true
   - name: 20 Trip
     cost: "$42.50"
+    breeze: true
   - name: 1 Day Pass
     cost: "$9.00"
+    breeze: true
   - name: 2 Day Pass
     cost: "$14.00"
+    breeze: true
   - name: 3 Day Pass
     cost: "$16.00"
+    breeze: true
   - name: 4 Day Pass
     cost: "$19.00"
+    breeze: true
   - name: 7 Day Pass
     cost: "$23.75"
+    breeze: true
   - name: 30 Day Pass
     cost: "$95.00"
+    breeze: true
   discounts: 
   - name: Children
     cost: "Free"

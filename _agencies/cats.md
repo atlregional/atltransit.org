@@ -18,13 +18,20 @@ tagline: CATS operates two routes in Cherokee County.
 services:
   - local_bus
   - express_bus
+schedules:
+  - url: http://www.cherokeega.com/Transportation/canton-fixed-route-service/
+    name: "CATS Local Bus Route Schedules (see brochure link at bottom)"
 fares:
   base: 
     - name: Local
       cost: "$1.25"
+  passes:
+    - name: 1 Trip
+      cost: "$1.25"
+      breeze: false
 paratransit:
-  name: CATS Demand Response
-  website: http://www.cherokeega.com/Transportation/countywidedemandresponseservice/
+  name: CATS Paratransit
+  url: http://www.cherokeega.com/Transportation/documents.cfm
   description: Provides paratransit to Cherokee County.
 ---
 

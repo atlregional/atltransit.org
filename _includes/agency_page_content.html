@@ -2,26 +2,28 @@
 <ul class="list-inline text-center">
 {% for service in page.services %}
 	<li>
-		{% if service == 'heavy_rail' %}<i class="fa fa-subway fa-5x" title="Heavy rail"></i><span class="sr-only">Heavy rail</span>{% endif %}
-		{% if service == 'streetcar' %}<i class="fa fa-train fa-5x" title="Streetcar"></i><span class="sr-only">Streetcar</span>{% endif %}
-		{% if service == 'local_bus' %}<i class="fa fa-bus fa-5x" title="Local bus"></i><span class="sr-only">Local bus</span>{% endif %}
-		{% if service == 'express_bus' %}
-		<span class="fa fa-bus fa-5x" title="Express bus">
-		  <!-- <i class="fa fa-bus fa-stack-2x"></i> -->
-		  <!-- <i class="fa fa-bolt"></i> -->
-		  <span class="sr-only">Express bus</span>
-		</span>
-		{% endif %}
-		{% if service == 'paratransit' %}<i class="fa fa-wheelchair fa-5x" title="Paratransit"></i><span class="sr-only">Paratransit</span>{% endif %}
+		{% if service == 'heavy_rail' %}<div class="left-20 right-20"><i class="fa fa-subway fa-5x" title="Heavy rail"></i><h6>Heavy rail</h6></div>{% endif %}
+		{% if service == 'streetcar' %}<div class="left-20 right-20"><i class="fa fa-train fa-5x" title="Streetcar"></i><h6>Streetcar</h6></div>{% endif %}
+		{% if service == 'local_bus' %}<div class="left-20 right-20"><i class="fa fa-bus fa-5x" title="Local bus"></i><h6>Local bus</h6></div>{% endif %}
+		{% if service == 'express_bus' %}<div class="left-20 right-20"><i class="fa fa-bus fa-5x" title="Express bus"></i><h6>Express bus</h6></div>{% endif %}
+		{% if service == 'paratransit' %}<div class="left-20 right-20"><i class="fa fa-wheelchair fa-5x" title="Paratransit"></i><h6>Paratransit</h6></div>{% endif %}
 	</li>
 {% endfor %}
 </ul>
+
+{% if page.fares %}
+<h2 class="row-heading" id="fares"></i>Fares</h2>
+<p>{{ page.fares.description }}</p>
+{% include tables/agency_fare_passes.html agency=page.id %}
+{% endif %}
+
 {% if page.paratransit %}
 <h2 class="row-heading" id="paratransit"><i class="fa fa-wheelchair right-5"></i>Paratransit</h2>
 <h3>{{ page.paratransit.name }}</h3>
 <p>{{ page.paratransit.description }}</p>
 <p><a href="{{ page.paratransit.url }}"><i class="fa fa-external-link right-5"></i>View {{ page.paratransit.name }} website</a></p>
 {% endif %}
+
 {% if page.maps.size > 0 %}
 <h2 class="row-heading" id="maps">Maps</h2>
 <p>
@@ -31,6 +33,18 @@
 </p>
 <p><a href="/maps/">View more transit maps from around the region »</a></p>
 {% endif %}
+
+{% if page.schedules.size > 0 %}
+<h2 class="row-heading" id="schedules"><i class="fa fa-calendar right-5"></i>Schedules</h2>
+<p>
+{% for schedule in page.schedules %}
+<a href="{{ schedule.url }}"><i class="fa fa-external-link right-5"></i>{{ schedule.name }}</a><br>
+{% endfor %}
+</p>
+<p><a href="/tools/schedules/">Find schedule info for specific route »</a></p>
+<p><a href="/getting-around/#hours-of-operation/">View hours of operation for all services »</a></p>
+{% endif %}
+
 <h2 class="row-heading" id="contact">Contact</h2>
 {% include address_card.html %}
 

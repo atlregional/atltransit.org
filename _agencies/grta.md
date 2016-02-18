@@ -19,6 +19,9 @@ path: grta
 tagline: GRTA Xpress serves 12 counties in the metro Atlanta region.
 services:
   - express_bus
+schedules:
+  - url: http://xpressga.com/index.php?option=com_content&task=view&id=38&Itemid=75
+    name: Xpress Route Schedules
 maps:
 - url: build/images/maps/xpress_system_pnr_map.pdf
   type: pdf

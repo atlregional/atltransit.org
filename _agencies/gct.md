@@ -21,21 +21,25 @@ services:
   - local_bus
   - express_bus
   - paratransit
+schedules:
+  - url: https://www.gwinnettcounty.com/portal/gwinnett/Departments/Transportation/GwinnettCountyTransit/RoutesandSchedules
+    name: GCT Local and Express Route Schedules
 maps:
-- url: build/images/maps/GCT_LocalSystemMap.pdf
-  type: pdf
-  name: Local System Map
-- url: build/images/maps/GCT_paratransit_routes.pdf
-  type: pdf
-  name: Paratransit Routes
-- url: build/images/maps/GCT_Express_Systems_Maps_LEP.pdf
-  type: pdf
-  name: Express System Map
+  - url: build/images/maps/GCT_LocalSystemMap.pdf
+    type: pdf
+    name: Local System Map
+  - url: build/images/maps/GCT_paratransit_routes.pdf
+    type: pdf
+    name: Paratransit Routes
+  - url: build/images/maps/GCT_Express_Systems_Maps_LEP.pdf
+    type: pdf
+    name: Express System Map
 paratransit:
   name: GCT Paratransit
   url: https://www.gwinnettcounty.com/portal/gwinnett/Departments/Transportation/GwinnettCountyTransit/ParatransitInformation
   description: Gwinnett County's paratransit service is a specialized transportation service of Gwinnett County Transit, providing curb-to-curb shared ride bus service for eligible persons with disabilities.
 fares:
+  description: <strong>Note:</strong> If riding multiple GCT express services (e.g., Zone 1 and Zone 2), you should use a separate Breeze Card for each service to avoid overcharging.
   info_url: "https://www.gwinnettcounty.com/portal/gwinnett/Departments/Transportation/GwinnettCountyTransit/PassesandTickets"
   purchase_url: "http://www.gwinnettcounty.com/portal/gwinnett/Departments/Transportation/GwinnettCountyTransit/PassesandTickets"
   base: 
@@ -49,11 +53,11 @@ fares:
       cost: "$5.00"
       description: Zone 2 express bus fare
   passes:
-  - name: Zone1 Exp 10 Ride
+  - name: Zone 1 Express 10 Ride
     cost: "$32.50"
   - name: Zone 2 Express 10 Ride
     cost: "$45.00"
-  - name: Zone1 Express 30 Day
+  - name: Zone 1 Express 30 Day
     cost: "$130.00"
   - name: Zone 2 Express 30 Day
     cost: "$180.00"
