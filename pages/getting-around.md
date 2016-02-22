@@ -1,14 +1,20 @@
 ---
 layout: page
 title: Getting around
-id: getting-around
+id: "getting-around"
 order: 2
 category: ""
-permalink: '/getting-around/'
-related: ["maps", "schedules", "agencies", "fares"]
-tagline: Looking for the cliffsnotes version of how transit in Atlanta works?  You've come to the right place.
-image: "/build/images/train_schedule.jpeg"
+permalink: "/getting-around/"
+related: 
+  - maps
+  - schedules
+  - agencies
+  - fares
+tagline: "Looking for the cliffsnotes version of how transit in Atlanta works?  You've come to the right place."
+image: /build/images/train_schedule.jpeg
+published: true
 ---
+
 
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
@@ -75,11 +81,8 @@ Boarding a bus or train in Atlanta is as simple as tapping your Breeze Card.
 
 The Breeze Card is the *only way* to access free transfers between transit agencies (e.g., MARTA and GCT).
 
-![Breeze Card](/build/images/fares/breeze_shadow.png){: .img-responsive .center-block style="max-height:200px"}
+![Breeze Card]({{site.baseurl}}/atltransit.org/build/images/Breeze.png){: .img-responsive .center-block style="max-height:200px"}
 
 [Find out how to purchase a Breeze Card »](/fares/products)
 
 [Learn more about available discounts and passes »](/fares/passes)
-
-
-
