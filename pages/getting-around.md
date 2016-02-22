@@ -79,7 +79,7 @@ Each transit agency has different hours of operation.
 
 Boarding a bus or train in Atlanta is as simple as tapping your Breeze Card.
 
-The Breeze Card is the *only way* to access free transfers between transit agencies (e.g., MARTA and GCT).
+The Breeze Card is the *only way* to access a free transfer between MARTA and a Breeze partner transit agency (Cobb, Gwinnett and GRTA).  Free transfers are not valid between the partner transit agencies (e.g. Gwinnett to GRTA or Cobb to Gwinnett).
 
 ![Breeze Card]({{site.baseurl}}/atltransit.org/build/images/Breeze.png){: .img-responsive .center-block style="max-height:200px"}
 
