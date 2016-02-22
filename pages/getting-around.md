@@ -82,7 +82,8 @@ Boarding a bus or train in Atlanta is as simple as tapping your Breeze Card.
 
 The Breeze Card is the *only way* to access a free transfer between MARTA and a Breeze partner transit agency (Cobb, Gwinnett and GRTA).  Free transfers are not valid between the partner transit agencies (e.g. Gwinnett to GRTA or Cobb to Gwinnett).
 
-![Breeze.png]({{site.baseurl}}/assets/images/Breeze.png){: .img-responsive .center-block style="max-height:200px"}
+![Breeze.png]
+(/assets/images/Breeze.png){: .img-responsive .center-block style="max-height:200px"}
 
 [Find out how to purchase a Breeze Card »](/fares/products)
 
