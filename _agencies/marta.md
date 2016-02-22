@@ -21,21 +21,21 @@ image: "/build/images/marta_train_motion.jpg"
 path: marta
 tagline: MARTA serves Fulton, DeKalb, and Clayton counties.
 schedules:
-  - url: http://www.itsmarta.com/bus-schedules.aspx
+  - url: "http://www.itsmarta.com/bus-schedules.aspx"
     name: MARTA Bus Schedules
-  - url: http://www.itsmarta.com/rail-schedules-or-route.aspx
+  - url: "http://www.itsmarta.com/rail-schedules-or-route.aspx"
     name: MARTA Rail Schedules
 maps: 
-  - url: build/images/maps/MARTA_system_map_2-2012.pdf
+  - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/System_Map/System-Map-outside2-3-16.pdf"
     type: pdf
     name: System Map
-  - url: build/images/maps/MARTA_central-atlanta-2012.pdf
+  - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/Regional_Map/Regional%20Transit%20System%20Map_2012_Web_Exterior.pdf"
     type: pdf
     name: Central Atlanta/Midtown Map
-  - url: build/images/maps/MARTA_downtown2-2012.pdf
+  - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/Regional_Map/Regional%20Transit%20System%20Map_2012_Web_Exterior.pdf"
     type: pdf
     name: Downtown Atlanta Map
-  - url: build/images/maps/Five-Points-Station-Bus-Connections-December-14-2013.pdf
+  - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/System_Map/Five-Points-Station-Bus-Connections-December-14-2013.pdf"
     type: pdf
     name: Five Points Connections Map
   - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/Rail_Schedules_or_Routes/Rail-Map33x33-2014.pdf"
