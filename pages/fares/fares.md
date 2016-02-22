@@ -1,16 +1,20 @@
 ---
 layout: page
-title: Fares & transfers
+title: "Fares & transfers"
 id: fares
-icon: fa-usd
+icon: "fa-usd"
 more: false
-category: 'fares'
-permalink: '/fares/'
-related: ["schedules"]
+category: fares
+permalink: /fares/
+related: 
+  - schedules
 tagline: Your Breeze Card lets you ride any combination of MARTA rail and local or express buses in the Atlanta region.
+published: true
 ---
 
-<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/fares/breeze_shadow.png">
+
+![Breeze.png]
+(/assets/images/Breeze.png){: .img-responsive .center-block style="max-height:200px"}
 
 ## Basic fare prices
 
