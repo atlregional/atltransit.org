@@ -14,7 +14,9 @@ published: true
 
 
 
-![Breeze Card] (/assets/images/Breeze.png){: .img-responsive .center-block style="max-height:200px"}
+
+![Breeze.png](/assets/images/Breeze.png)
+{: .img-responsive .center-block style="max-height:200px"}
 
 ## Basic fare prices
 
