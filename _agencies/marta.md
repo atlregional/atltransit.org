@@ -38,7 +38,7 @@ maps:
   - url: build/images/maps/Five-Points-Station-Bus-Connections-December-14-2013.pdf
     type: pdf
     name: Five Points Connections Map
-  - url: build/images/maps/MARTA_rail_lines.pdf
+  - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/Rail_Schedules_or_Routes/Rail-Map33x33-2014.pdf"
     type: pdf
     name: Rail Lines Map
 services:
