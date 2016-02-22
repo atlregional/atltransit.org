@@ -25,19 +25,19 @@ schedules:
   - url: http://cobbcounty.org/index.php?option=com_content&view=article&id=462&Itemid=431
     name: CCT Local and Express Route Schedules
 maps:
-  - url: build/images/maps/CCTSystem.pdf
+  - url: "http://cobbcounty.org/images/documents/dot/cct/CCT_RouteMapMay5_2015.pdf"
     type: pdf
     name: System Map
   - url: build/images/maps/CCTInset.pdf
     type: pdf
     name: System Inset Map
-  - url: build/images/maps/CCTParatransit.pdf
+  - url: "http://cobbcounty.org/images/documents/dot/cct/aug2011_cctinset_update.pdf"
     type: pdf
     name: Paratransit Map
-  - url: build/images/maps/CCTParkandRide.pdf
+  - url: "http://cobbcounty.org/images/documents/dot/cct/aug2011_cctparatransit.pdf"
     type: pdf
     name: Park and Ride Map
-  - url: build/images/maps/CCT_RidersGuide.pdf
+  - url: "http://cobbcounty.org/images/documents/dot/cct/aug2011_cctparkandride.pdf"
     type: pdf
     name: Riders Guide
 paratransit:
