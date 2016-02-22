@@ -13,7 +13,7 @@ published: true
 ---
 
 
-![Breeze.png]
+![Breeze Card]
 (/assets/images/Breeze.png){: .img-responsive .center-block style="max-height:200px"}
 
 ## Basic fare prices
