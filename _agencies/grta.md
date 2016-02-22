@@ -23,7 +23,7 @@ schedules:
   - url: http://xpressga.com/index.php?option=com_content&task=view&id=38&Itemid=75
     name: Xpress Route Schedules
 maps:
-- url: build/images/maps/xpress_system_pnr_map.pdf
+- url: "http://xpressga.com/images/images/documents/xpress_system_pnr_map_6-13.pdf"
   type: pdf
   name: System Map
 fares:
