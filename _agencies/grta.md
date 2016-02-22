@@ -5,7 +5,7 @@ title: GRTA Xpress
 category: about
 name: Georgia Regional Trans. Authority
 acronym: GRTA Xpress
-address: 2424 Piedmont Road NE
+address: 245 Peachtree Center Ave, NE
 address2: Suite 400
 city: Atlanta
 state: GA
