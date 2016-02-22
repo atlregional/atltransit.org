@@ -25,13 +25,13 @@ schedules:
   - url: https://www.gwinnettcounty.com/portal/gwinnett/Departments/Transportation/GwinnettCountyTransit/RoutesandSchedules
     name: GCT Local and Express Route Schedules
 maps:
-  - url: build/images/maps/GCT_LocalSystemMap.pdf
+  - url: "https://www.gwinnettcounty.com/static/departments/transportation/pdf/LocalSystemMapMay.pdf"
     type: pdf
     name: Local System Map
-  - url: build/images/maps/GCT_paratransit_routes.pdf
+  - url: "https://www.gwinnettcounty.com/static/departments/transportation/pdf/GCTAdoptedRoutes.pdf"
     type: pdf
     name: Paratransit Routes
-  - url: build/images/maps/GCT_Express_Systems_Maps_LEP.pdf
+  - url: "https://www.gwinnettcounty.com/static/departments/transportation/pdf/ExpressSystemMapMay.pdf"
     type: pdf
     name: Express System Map
 paratransit:
