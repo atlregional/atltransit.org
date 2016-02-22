@@ -28,16 +28,16 @@ maps:
   - url: "http://cobbcounty.org/images/documents/dot/cct/CCT_RouteMapMay5_2015.pdf"
     type: pdf
     name: System Map
-  - url: build/images/maps/CCTInset.pdf
-    type: pdf
-    name: System Inset Map
   - url: "http://cobbcounty.org/images/documents/dot/cct/aug2011_cctinset_update.pdf"
     type: pdf
-    name: Paratransit Map
+    name: System Inset Map
   - url: "http://cobbcounty.org/images/documents/dot/cct/aug2011_cctparatransit.pdf"
     type: pdf
-    name: Park and Ride Map
+    name: Paratransit Map
   - url: "http://cobbcounty.org/images/documents/dot/cct/aug2011_cctparkandride.pdf"
+    type: pdf
+    name: Park and Ride Map
+  - url: "https://cobbcounty.org/images/documents/dot/cct/march2011_cct_ridersguide.pdf"
     type: pdf
     name: Riders Guide
 paratransit:
