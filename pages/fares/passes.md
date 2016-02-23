@@ -1,13 +1,15 @@
 ---
 layout: page
-title: Discounts & passes
+title: "Discounts & passes"
 id: passes
 order: 3
-category: 'fares'
-permalink: '/fares/passes/'
-tagline: Buy in bulk and reap the rewards. Also, find info on discounts for seniors, youth, and more.
-image: "/build/images/breeze_multi_agency.jpeg"
+category: fares
+permalink: /fares/passes/
+tagline: "Buy in bulk and reap the rewards. Also, find info on discounts for seniors, youth, and more."
+image: /build/images/breeze_multi_agency.jpeg
+published: true
 ---
+
 
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
@@ -45,7 +47,7 @@ If you regularly ride with more than one agency (e.g., MARTA and CCT), **your mo
 ## List of all fare passes
 
 <div class="col-sm-6 col-xs-12 pull-right">
-	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/fares/breeze_shadow.png">
+	<img class="img-responsive center-block" style="max-height: 285px" src="/assets/images/Breeze.png">
 </div>
 
 Wondering about the best way to pay for your trip?  Below is a complete listing of all fare passes available in the region.
@@ -90,5 +92,3 @@ Most discounts and passes for each individual transit agency are available on yo
 		</div>
 	</div>
 </div>
-
-
