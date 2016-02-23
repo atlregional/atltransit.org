@@ -29,7 +29,7 @@ A single ride on any transit system can be taken with the following fares:
 
 {% include row_break.html %}
 
-{% include tables/agency_fare_tables.html %}
+{% include tables/agency_fare_tables.html name=true %}
 
 [Learn more about discounts and passes available online »](/fares/passes)
 
