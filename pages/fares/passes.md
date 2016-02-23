@@ -47,7 +47,7 @@ If you regularly ride with more than one agency (e.g., MARTA and CCT), **your mo
 ## List of all fare passes
 
 <div class="col-sm-6 col-xs-12 pull-right">
-	<img class="img-responsive center-block" style="max-height: 285px" src="/assets/images/Breeze.png">
+	<img class="img-responsive center-block" style="max-height: 285px" src="/assets/images/Breeze.png">{: .img-responsive .center-block style="max-height:150px"}
 </div>
 
 Wondering about the best way to pay for your trip?  Below is a complete listing of all fare passes available in the region.
