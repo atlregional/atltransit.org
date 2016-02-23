@@ -54,6 +54,6 @@ fares:
     details: under 46"
 ---
 
-Phase One of the Atlanta Streetcar consists of a 2.7 mile East-West route that connects the Centennial Olympic Park area to the Martin Luther King, Jr. National Historic Site, with 12 stops along the route. 
+The Atlanta Streetcar consists of a 2.7 mile East-West route that connects the Centennial Olympic Park area to the Martin Luther King, Jr. National Historic Site, with 12 stops along the route. 
  
 The Atlanta Streetcar expansion will connect to the Atlanta Beltline, and include additional neighborhoods and other popular destinations around the city.
