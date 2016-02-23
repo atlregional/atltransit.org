@@ -16,10 +16,11 @@ image: "/build/images/bus_transfer.png"
 
 ## The basics
 
-### Trips involving **a single** transit agency (e.g. MARTA)
+### Local trips involving **a single** transit agency (e.g. MARTA)
 
-* Transfers between buses of the same operator are **free** (except for GRTA Xpress).
+* Transfers between local buses of the same operator are **free** (except for GRTA Xpress).
 * Bus to rail (and vice versa) transfers are always free (according to transfer rules).
+* Tranfers from a local bus to an express bus may require an upcharge (e.g. Cobb Local to Cobb Express).
 
 ### Trips involving **more than one** transit agency (e.g. MARTA + CCT)
 
