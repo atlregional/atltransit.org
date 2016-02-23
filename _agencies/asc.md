@@ -34,22 +34,20 @@ fares:
   base: 
     - name: Local
       cost: "$1.00"
+      breeze: cash
   passes: 
-  - name: 1 Trip
-    cost: "$2.50"
-    breeze: false
   - name: 1 Day Pass
     cost: "$3.00"
-    breeze: false
+    breeze: cash
   - name: 7 Day Pass
     cost: "$11.00"
-    breeze: false
+    breeze: cash
   - name: 30 Day Pass
     cost: "$40.00"
-    breeze: false
+    breeze: cash
   - name: Visitor Pass (5 days)
     cost: "$10.00"
-    breeze: false
+    breeze: cash
   discounts:
   - name: Children
     cost: "Free"

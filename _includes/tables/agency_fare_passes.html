@@ -1,4 +1,4 @@
-<div  class="row">
+<!-- <div  class="row"> -->
 {% assign agencies = site.agencies %}
 {% if include.agency %}
 {% assign agencies = site.agencies | where:"id",include.agency %}
@@ -8,6 +8,7 @@
 	<div class="col-sm-4 col-sm-offset-4 equal-height">
 	{% else %}
 	{% endif %}
+			{% if include.title %}<h3>Fare passes</h3>{% endif %}
 			<table class="table">
 				<thead>
 					<th>Fare product</th>
@@ -21,4 +22,4 @@
 			</table>
 	</div>
 	{% endfor %}
-</div>
+<!-- </div> -->

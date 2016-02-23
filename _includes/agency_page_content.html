@@ -14,7 +14,8 @@
 {% if page.fares %}
 <h2 class="row-heading" id="fares"></i>Fares</h2>
 <p>{{ page.fares.description }}</p>
-{% include tables/agency_fare_passes.html agency=page.id %}
+{% include tables/agency_fare_tables.html title=true name=false agency=page.id %}
+{% include tables/agency_fare_passes.html title=true agency=page.id %}
 {% endif %}
 
 {% if page.paratransit %}

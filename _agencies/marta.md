@@ -55,10 +55,8 @@ fares:
   base: 
     - name: Local
       cost: "$2.50"
+      breeze: true
   passes: 
-  - name: 1 Trip
-    cost: "$2.50"
-    breeze: true
   - name: 2 Trip
     cost: "$5.00"
     breeze: true

@@ -25,10 +25,11 @@ fares:
   base: 
     - name: Local
       cost: "$1.25"
-  passes:
-    - name: 1 Trip
-      cost: "$1.25"
       breeze: false
+  # passes:
+  #   - name: 1 Trip
+  #     cost: "$1.25"
+  #     breeze: false
 paratransit:
   name: CATS Paratransit
   url: http://www.cherokeega.com/Transportation/documents.cfm

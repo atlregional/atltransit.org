@@ -1,7 +1,12 @@
-<div  class="row">
-	{% for agency in site.agencies %}
+{% if include.name %}<div  class="row">{% endif %}
+{% assign agencies = site.agencies %}
+{% if include.agency %}
+{% assign agencies = site.agencies | where:"id",include.agency %}
+{% endif %}
+	{% for agency in agencies %}
 	<div class="col-sm-4 equal-height">
-			<h3>{{ agency.name }}</h3>
+			{% if include.name %}<h3>{{ agency.name }}</h3>{% endif %}
+			{% if include.title %}<h3>Base fare</h3>{% endif %}
 			<table class="table">
 				<thead>
 					<th>Fare product</th>
@@ -15,4 +20,4 @@
 			</table>
 	</div>
 	{% endfor %}
-</div>
+{% if include.name %}</div>{% endif %}

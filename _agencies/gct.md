@@ -45,26 +45,35 @@ fares:
   base: 
     - name: Local
       cost: "$2.50"
-      description: Local bus fare
+      description: Local bus fares
+      breeze: false
     - name: Zone 1
       cost: "$3.75"
       description: Zone 1 express bus fare
+      breeze: false
     - name: Zone 2
       cost: "$5.00"
       description: Zone 2 express bus fare
+      breeze: false
   passes:
   - name: Zone 1 Express 10 Ride
     cost: "$32.50"
+    breeze: true
   - name: Zone 2 Express 10 Ride
     cost: "$45.00"
+    breeze: true
   - name: Zone 1 Express 30 Day
     cost: "$130.00"
+    breeze: true
   - name: Zone 2 Express 30 Day
     cost: "$180.00"
+    breeze: true
   - name: Local 30 Day
     cost: "$80.00"
+    breeze: true
   - name: Local 10 Ride
     cost: "$22.50"
+    breeze: true
   discounts: 
   - name: Youth
     cost: "$1.50"
