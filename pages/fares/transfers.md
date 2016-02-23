@@ -24,7 +24,7 @@ image: "/build/images/bus_transfer.png"
 ### Trips involving **more than one** transit agency (e.g. MARTA + CCT)
 
 * You **must** use a Breeze Card to receive a free transfer.
-* MARTA must **begin or end** your journey. (No transfers between suburban operators.)
+* MARTA must **begin or end** your journey. (No transfers between regional transit operators.)
 * Your Breeze Card must have an **stored cash value** or **the specific operator's fare product** to begin a regional trip.
 
 [Learn more about the cost of trips involving multiple operators »](/fares/calculator#free-transfer-eligibility)
@@ -71,12 +71,12 @@ Each agency has its own specific rules about transfers, but here are some genera
 It's a little confusing, but there are some restrictions about when you can collect a free transfer, depending on which transit agencies your trip involves.
 
 ### <i class="fa fa-check"></i> Does your journey involve MARTA?
-* If so, you may transfer for free to (or from) any suburban/express operator.
-* Suburban operators include GCT, CCT, and GRTA Xpress. 
+* If so, you may transfer for free to (or from) any regional transit operator (except Streetcar).
+* Regional transit operators include Cobb, Gwinnett and GRTA Xpress.
 
-### <i class="fa fa-times"></i> Does your journey involve two different suburban services?
-* Sorry, direct free transfers between suburban/express transit agencies are currently **not allowed**. 
-* You must travel on MARTA directly before or after one of the suburban/express transit agencies in order to collect a free transfer.
+### <i class="fa fa-times"></i> Does your journey involve two different regional/express bus transit operators?
+* Sorry, free transfers directly between Cobb, Gwinnett and GRTA is **not allowed**. 
+* You must start or end your transit trip on MARTA to qualify for a free transfer.
 
 {% comment %}
 #### Quick Glance at Free Regional Transfers
