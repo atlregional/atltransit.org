@@ -42,17 +42,20 @@ If you regularly ride with more than one agency (e.g., MARTA and CCT), **your mo
 
 [Find out more on efforts to make fare payment easier in Atlanta »](/about/regional-transit)
 
-## Breeze Card passes
+## List of all fare passes
 
 <div class="col-sm-6 col-xs-12 pull-right">
 	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/fares/breeze_shadow.png">
 </div>
 
+Wondering about the best way to pay for your trip?  Below is a complete listing of all fare passes available in the region.
+
 Most discounts and passes for each individual transit agency are available on your Breeze Card.
 
 <p class="text-center bottom-buffer"><a class="btn btn-lg btn-primary top-buffer" href="http://breezecard.com/">Visit breezecard.com <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p>
 
-Here's a complete listing of Breeze Card fare products:
+<i class="fa fa-circle right-5"></i> = available on Breeze Card  
+<i class="fa fa-circle-thin right-5"></i> = can be purchased with Breeze Card stored value
 
 {% include fare-passes.html %}
 
