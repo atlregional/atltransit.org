@@ -10,7 +10,7 @@ city: Atlanta
 state: GA
 zip: 30303
 email: streetcar@atlantaga.gov
-website: http://theatlantastreetcar.com/
+website: http://streetcar.atlantaga.gov/
 twitter: atlstreetcar
 phone: (404) 546-0311
 logo: "/assets/images/logos/atlanta_streetcar_logo.png"
@@ -30,7 +30,7 @@ schedules:
   - url: http://streetcar.atlantaga.gov/schedule-fares/
     name: Streetcar Schedules
 fares:
-  description: Breeze cards (loaded with cash value) are accepted at ticket vending machines at all 12 stops. The Atlanta Streetcar does not currently provide a free transfer to/from other bus or rail services in the region (MARTA, CCT, GCT, GRTA Xpress).<br/><br/>A mobile fare payment app will launch, providing additional fare options, later in 2016.<br/><br/>Cash is accepted for ticket purchase at vending machines at four (4) stops (King Historic District, Centennial Olympic Park, Woodruff Park, Park Place).<br/><br/>Visit <a href="http://theatlantastreetcar.com">theatlantastreetcar.com</a> for more information on other payment options and how to purchase fares.
+  description: Passengers must have a valid paper ticket to ride the Streetcar.  Ticket vending machines are located at each Streetcar stop, and fare can be purchased with credit/ debit cards, stored value on a BreezeCard, as well as with cash at some of the stops (King Historic District, Centennial Olympic Park, Woodruff Park, Park Place).  The Atlanta Streetcar does not currently provide a free transfer to other transit agencies.<br/><br/>A mobile fare payment app will launch, providing additional fare options, later in 2016.<br/><br/><br/><br/>Visit <a href="http://theatlantastreetcar.com">theatlantastreetcar.com</a> for more information on other payment options and how to purchase fares.
   base: 
     - name: Local
       cost: "$1.00"
