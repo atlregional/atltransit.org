@@ -32,13 +32,11 @@ Seniors, youth, and students may qualify for special discounted fare.  Check the
 
 
 
-## Regional fare pass
+## Regional Fare Card
 
-Currently, a single regional fare pass **does not exist** for the Atlanta region. 
+BreezeCard is the regional transit fare card for Atlanta.  To pay for your trip, you can either pre-load cash value onto your BreezeCard, or you can pre-load a multi-trip pass product for a specific transit agency (MARTA, Cobb, Gwinnett or GRTA).  Purchasing a multi-trip or monthly pass provides added discounts for purchasing in bulk.  To receive a free transfer between MARTA and any Breeze partner agency, you must use a BreezeCard.  Currently the region does not have one regional fare that can be used across multiple agencies (i.e. a MARTA fare is only valid on MARTA, and a Cobb fare is only valid on Cobb).
 
-To receive bulk or monthly discounts you must buy a pass for a single transit agency.
 
-If you regularly ride with more than one agency (e.g., MARTA and CCT), **your monthly pass will not give you a free transfer between agencies**.
 
 [Find out more on free transfers »](/fares/transfers)
 
