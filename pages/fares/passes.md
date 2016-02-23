@@ -1,13 +1,15 @@
 ---
 layout: page
-title: Discounts & passes
+title: "Discounts & passes"
 id: passes
 order: 3
-category: 'fares'
-permalink: '/fares/passes/'
-tagline: Buy in bulk and reap the rewards. Also, find info on discounts for seniors, youth, and more.
-image: "/build/images/breeze_multi_agency.jpeg"
+category: fares
+permalink: /fares/passes/
+tagline: "Buy in bulk and reap the rewards. Also, find info on discounts for seniors, youth, and more."
+image: /build/images/breeze_multi_agency.jpeg
+published: true
 ---
+
 
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
@@ -30,13 +32,11 @@ Seniors, youth, and students may qualify for special discounted fare.  Check the
 
 
 
-## Regional fare pass
+## Regional Fare Card
 
-Currently, a single regional fare pass **does not exist** for the Atlanta region. 
+Breeze Card is the regional transit fare card for Atlanta.  To pay for your trip, you can either pre-load cash value onto your Breeze Card, or you can pre-load a multi-trip pass product for a specific transit agency (MARTA, Cobb, Gwinnett or GRTA).  Frequent riders should consider purchasing a multi-trip or monthly pass, as it provides added discounts by purchasing in bulk.  To receive a free transfer between MARTA and any Breeze partner agency, you must use a Breeze Card.  Currently the region does not have one regional fare that can be used across multiple agencies (i.e. a MARTA fare is only valid on MARTA, and a Cobb fare is only valid on Cobb).
 
-To receive bulk or monthly discounts you must buy a pass for a single transit agency.
 
-If you regularly ride with more than one agency (e.g., MARTA and CCT), **your monthly pass will not give you a free transfer between agencies**.
 
 [Find out more on free transfers »](/fares/transfers)
 
@@ -45,14 +45,14 @@ If you regularly ride with more than one agency (e.g., MARTA and CCT), **your mo
 ## List of all fare passes
 
 <div class="col-sm-6 col-xs-12 pull-right">
-	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/fares/breeze_shadow.png">
+	<img class="img-responsive center-block" style="max-height: 285px" src="/assets/images/Breeze.png">
 </div>
 
 Wondering about the best way to pay for your trip?  Below is a complete listing of all fare passes available in the region.
 
 Most discounts and passes for each individual transit agency are available on your Breeze Card.
 
-<p class="text-center bottom-buffer"><a class="btn btn-lg btn-primary top-buffer" href="http://breezecard.com/">Visit breezecard.com <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p>
+<p class="text-center bottom-buffer"><a class="btn btn-lg btn-primary top-buffer" href="http://breezecard.com/">Visit BreezeCard.com <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p>
 
 <i class="fa fa-circle right-5"></i> = available on Breeze Card  
 <i class="fa fa-circle-thin right-5"></i> = can be purchased with Breeze Card stored value
@@ -66,7 +66,7 @@ Most discounts and passes for each individual transit agency are available on yo
 <div class="row">
 	<div class="col-sm-6">
 		<p>
-			In addition to the Breeze Card, GRTA Xpress, CCT, and GCT each have their own fare products to use on their services. 
+			In addition to the Breeze Card, GRTA Xpress, Cobb, and GCT each have their own fare products to use on their services. 
 		</p>
 		<p>
 			Riders may choose to purchase passes from each transit service directly. Passes can be purchased from each individual agency at the links below.
@@ -90,5 +90,3 @@ Most discounts and passes for each individual transit agency are available on yo
 		</div>
 	</div>
 </div>
-
-

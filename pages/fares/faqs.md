@@ -14,9 +14,9 @@ image: "/build/images/confused_customers.jpg"
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
 ## Inter-agency transfers
-**Question:**{: .lead} Can I get a free transfer between CCT and GCT buses?
+**Question:**{: .lead} Can I get a free transfer between Cobb and GCT buses?
 
-**Answer:**{: .lead} No, in order to transfer between any of the suburban/express operators (GCT, CCT, GRTA Xpress), you must ride MARTA between the two suburban/express transit services. [More info »](/fares/transfers)
+**Answer:**{: .lead} Unfortunately not.  Free transfers are only given when transfering from MARTA or to MARTA from one of the regional transit operators (Cobb, Gwinnett County TRansit or GRTA Xpress). [More info »](/fares/transfers)
 
 **Question:**{: .lead} How long is my free transfer valid?
 
@@ -24,7 +24,7 @@ image: "/build/images/confused_customers.jpg"
 
 * Transfer from MARTA: 3 hours
 * Transfer from GCT: 1.5 hours
-* Transfer from CCT: 3 hours
+* Transfer from Cobb: 3 hours
 * Transfer from GRTA: 3 hours
 
 [More info...](/fares/passes)

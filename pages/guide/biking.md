@@ -11,7 +11,7 @@ tagline: Atlanta is hilly and spread out.  Taking your bike on a bus or train fo
 
 ## Biking/transit connections
 
-Atlanta is an ideal city to combine biking and transit.  If you've ever biked in the city, you've noticed the hilly landscape.  What better way to conquer those hills than with the aid of a bus or train?!
+The Atlanta region is ideal to combine biking and transit.  If you've ever biked around Atlanta, you've noticed the hilly landscape.  What better way to conquer those hills than with the aid of a bus or train?!
 
 ### Bike Facility and Transit Station Map
 
@@ -19,11 +19,11 @@ Atlanta is an ideal city to combine biking and transit.  If you've ever biked in
 
 ### <i class="fa fa-wrench right-5"></i>Bike repair stations
 
-Have a flat?  You're in luck!  Bike repair stations are available (or soon-to-be) at seven MARTA train stations: Lindbergh Center, Chamblee, East Point, Edgewood/Candler Park, Five Points, North Avenue and West End.
+Have a flat?  You're in luck!  Bike repair stations are available (or soon-to-be) at seven MARTA train stations: Chamblee, East Point, Edgewood/Candler Park, Five Points, Lindbergh Center, North Avenue and West End.
 
 ### <i class="fa fa-map-marker right-5"></i>Plan a transit trip with your bike!
 
-In addition to planning transit-only or bike-only trips, ATLtransit supports multimodal, bike-to-transit trips!
+In addition to planning transit-only or bike-only trips, ATLtransit supports multimodal, bike-to-transit trips.
 
 The ATLtransit trip planner optimizes your bike ride and transit trip to help you extend the distance you can travel with your bike.
 
@@ -31,7 +31,7 @@ The ATLtransit trip planner optimizes your bike ride and transit trip to help yo
 
 ## Bikes on the bus
 
-Nearly every bus in the entire region has space for two bikes on the front bike rack (many of the express services **do not** have bike racks).
+Nearly every local bus in the region has space for two bikes on the front bike rack (some express services **do not** have bike racks, so please check with your commuter bus provider about specific routes).
 
 Never tried to bring your bike to the bus?  Don't worry: it's so easy, even a zombie can do it.
 
