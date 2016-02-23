@@ -30,7 +30,7 @@ schedules:
   - url: http://streetcar.atlantaga.gov/schedule-fares/
     name: Streetcar Schedules
 fares:
-  description: Passengers must have a valid paper ticket to ride the Streetcar.  Ticket vending machines are located at each Streetcar stop, and fare can be purchased with credit/ debit cards, stored value on a BreezeCard, as well as with cash at some of the stops (King Historic District, Centennial Olympic Park, Woodruff Park, Park Place).  The Atlanta Streetcar does not currently provide a free transfer to other transit agencies.<br/><br/>A mobile fare payment app will launch, providing additional fare options, later in 2016.<br/><br/><br/><br/>Visit <a href="http://theatlantastreetcar.com">theatlantastreetcar.com</a> for more information on other payment options and how to purchase fares.
+  description: Passengers must have a Streetcar ticket to ride the Streetcar, and may be requested to verify purchase while riding.  Tickets can be purchased at each Streetcar stop with credit/debit cards, BreezeCard (stored cash value), as well as with cash at select stops (King Historic District, Centennial Olympic Park, Woodruff Park, Park Place).  The Atlanta Streetcar does not currently provide a free transfer to other transit agencies.<br/><br/>A mobile fare payment app will launch, providing additional fare options, later in 2016.<br/><br/><br/><br/>Visit <a href="http://theatlantastreetcar.com">theatlantastreetcar.com</a> for more information on other payment options and how to purchase fares.
   base: 
     - name: Local
       cost: "$1.00"
