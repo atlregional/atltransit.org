@@ -34,7 +34,7 @@ Seniors, youth, and students may qualify for special discounted fare.  Check the
 
 ## Regional Fare Card
 
-BreezeCard is the regional transit fare card for Atlanta.  To pay for your trip, you can either pre-load cash value onto your BreezeCard, or you can pre-load a multi-trip pass product for a specific transit agency (MARTA, Cobb, Gwinnett or GRTA).  Frequent riders should consider purchasing a multi-trip or monthly pass, as it provides added discounts by purchasing in bulk.  To receive a free transfer between MARTA and any Breeze partner agency, you must use a BreezeCard.  Currently the region does not have one regional fare that can be used across multiple agencies (i.e. a MARTA fare is only valid on MARTA, and a Cobb fare is only valid on Cobb).
+Breeze Card is the regional transit fare card for Atlanta.  To pay for your trip, you can either pre-load cash value onto your Breeze Card, or you can pre-load a multi-trip pass product for a specific transit agency (MARTA, Cobb, Gwinnett or GRTA).  Frequent riders should consider purchasing a multi-trip or monthly pass, as it provides added discounts by purchasing in bulk.  To receive a free transfer between MARTA and any Breeze partner agency, you must use a Breeze Card.  Currently the region does not have one regional fare that can be used across multiple agencies (i.e. a MARTA fare is only valid on MARTA, and a Cobb fare is only valid on Cobb).
 
 
 
@@ -52,7 +52,7 @@ Wondering about the best way to pay for your trip?  Below is a complete listing 
 
 Most discounts and passes for each individual transit agency are available on your Breeze Card.
 
-<p class="text-center bottom-buffer"><a class="btn btn-lg btn-primary top-buffer" href="http://breezecard.com/">Visit breezecard.com <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p>
+<p class="text-center bottom-buffer"><a class="btn btn-lg btn-primary top-buffer" href="http://breezecard.com/">Visit BreezeCard.com <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p>
 
 <i class="fa fa-circle right-5"></i> = available on Breeze Card  
 <i class="fa fa-circle-thin right-5"></i> = can be purchased with Breeze Card stored value
