@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Regional transit
+title: Regional Transit
 id: regional-transit
 order: 3
 category: 'about'
