@@ -1,6 +1,6 @@
 ---
 layout: page
-title: System maps
+title: System Maps
 id: systems
 order: 2
 category: 'maps'
