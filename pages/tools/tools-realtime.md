@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Real-time arrivals
+title: Real-time Arrivals
 id: realtime
 order: 1
 category: 'tools'
