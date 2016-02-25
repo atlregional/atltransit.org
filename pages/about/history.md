@@ -13,7 +13,7 @@ image: "/build/images/marta_airport_historic.png"
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
-## Stitching transit together
+## Stitching Transit Together
 
 <div class="col-sm-6 col-xs-12 pull-right text-center bottom-buffer">
 	<img class="img-responsive center-block" style="max-height:300px" src="">
