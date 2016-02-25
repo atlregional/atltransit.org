@@ -16,8 +16,7 @@ image: "/build/images/marta_airport_historic.png"
 ## Stitching transit together
 
 <div class="col-sm-6 col-xs-12 pull-right text-center bottom-buffer">
-	<img class="img-responsive center-block" style="max-height:300px" src="/build/images/about/transit_cross_stitch.png">
-	<caption>Source: <a href="http://thesketchypixel.com/about">Emily Marsh</a></caption>
+	<img class="img-responsive center-block" style="max-height:300px" src="">
 </div>
 
 
