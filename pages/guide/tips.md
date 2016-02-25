@@ -9,7 +9,7 @@ image: "//c1.staticflickr.com/1/27/55889442_46912b86ca_b.jpg"
 tagline: We've all been first time transit riders before, so here are 6 tips to get you going.
 ---
 
-##Top 6 Transit Tips for New Riders
+## Top 6 Transit Tips for New Riders
 
 1.  No one likes guessing when the bus or train will arrive.  Check the schedule online, or **download the OneBusAway App** to look up real-time and scheduled arrivals.
 
