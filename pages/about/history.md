@@ -6,7 +6,7 @@ order: 1
 category: 'about'
 permalink: '/about/history/'
 related: 
-tagline: ATLtransit was launched as a pilot program in 2014.  We hope you find this regional information hub useful!
+tagline: ATLtransit was initially launched as a pilot program in 2014.  
 image: "/build/images/marta_airport_historic.png"
 ---
 
@@ -23,7 +23,7 @@ image: "/build/images/marta_airport_historic.png"
 
 ### Pilot project
 
-ATLtransit is a joint pilot project of the major transit agencies in metro Atlanta, who are working together to provide a unified resource for transit customers in the region.
+ATLtransit is a joint project of the major transit agencies in metro Atlanta, who are working together to provide a unified resource for transit customers in the region.
 
 ### Regional information hub
 
@@ -33,9 +33,9 @@ Whether you're looking for [real-time data](/tools/realtime/), [trip planning](/
 
 ## Multiple agencies working in partnership
 
-Anchored by MARTA and served by three additional transit providers, the Atlanta region offers citizens and visitors a coordinated network of transit options.
+MARTA, CobbLinc, Gwinnett County Transit, and GRTA Xpress provide the Atlanta region a coordinated network of transit options.
 
-While it may seem like transit in Atlanta is fragmented, there are great coordination efforts going on to make public transit more efficient and easier to use.  [Learn more about efforts to build better regional transit »](/about/regional-transit)
+[Learn more about efforts to build better regional transit »](/about/regional-transit)
 
 
 ## History of ATLtransit
