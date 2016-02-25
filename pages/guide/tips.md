@@ -6,7 +6,12 @@ order: 4
 category: 'guide'
 permalink: '/guide/tips/'
 image: "//c1.staticflickr.com/1/27/55889442_46912b86ca_b.jpg"
-tagline: Looking to remove every ounce of stress from your commute?  We've got your tips and tricks here.
+tagline: We've all been first time transit riders before, so here are 6 tips to get you going.
 ---
-
-Page under construction!
+Top 6 Transit Tips for New Riders
+1.  No one likes guessing when the bus or train will arrive.  Check the schedule online, or download the OneBusAway App to look up real-time and scheduled arrivals.
+2.  Arrive a few minutes early to your stop or station.
+3.  If you're waiting for a bus, stand near the stop's signage and give eye contact to the driver as they approach.
+4.  Save time fiddling with coins and cash by pre-loading cash fare onto a Breeze Card.
+5.  Transit staff are your friends.  Let a bus driver know if you're unfamiliar with where to get off, or ask a rail station agent if you're unfamiliar with the system.
+6.  Take advatnage of your new found productivity time on transit: bring a book, listen to a podcast, or catch-up on emails.
