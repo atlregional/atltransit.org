@@ -20,7 +20,7 @@ Sign up for email or SMS service updates to stay informed to get info on just th
 {% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}
 
 
-## Twitter alert list
+## Regional Transit Twitter Alerts
 
 The following Twitter list aggregates all of the service alert feeds available in the Atlanta region. [Subscribe to the list](https://twitter.com/eltiar/lists/atl-transit-alerts) or check back here for real-time updates.
 
@@ -29,9 +29,9 @@ The following Twitter list aggregates all of the service alert feeds available i
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 
-## Tweet much?
+## Agency Twitter Accounts
 
-Follow one or more of Atlanta's transit providers on Twitter for real-time updates on significant service delays or other alerts (e.g. elevator outages).
+Follow Atlanta's transit providers on Twitter for real-time updates on significant service delays or other alerts.
 
 <div class="row">
 	{% include twitter_list.html %}
