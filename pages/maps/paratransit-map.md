@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Paratransit map
+title: Paratransit Map
 id: paratransit-map
 order: 2
 category: 'maps'
