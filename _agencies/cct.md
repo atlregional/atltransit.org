@@ -1,10 +1,10 @@
 ---
 layout: agency
-title: CCT
+title: CobbLinc
 id: cct
 category: about
-name: Cobb Community Transit
-acronym: CCT
+name: CobbLinc
+acronym: CobbLinc
 attn: Transit Division
 address: 463 Commerce Park Dr
 city: Marietta
@@ -14,16 +14,16 @@ email: cobbtransit@cobbcounty.org
 website: http://gocct.org/
 twitter: cobbtransit
 phone: (770) 427-4444
-logo: "/assets/images/logos/cct_logo.png"
+logo: "/assets/images/logos/CobbLinc_Logo.png"
 path: cct
-tagline: CCT serves Cobb County with local and express bus routes.
+tagline: CobbLinc serves Cobb County with local and express bus routes.
 services:
   - local_bus
   - express_bus
   - paratransit
 schedules:
   - url: http://cobbcounty.org/index.php?option=com_content&view=article&id=462&Itemid=431
-    name: CCT Local and Express Route Schedules
+    name: CobbLinc Local and Express Route Schedules
 maps:
   - url: "http://cobbcounty.org/images/documents/dot/cct/CCT_RouteMapMay5_2015.pdf"
     type: pdf
@@ -41,9 +41,9 @@ maps:
     type: pdf
     name: Riders Guide
 paratransit:
-  name: CCT Paratransit
+  name: CobbLinc Paratransit
   url: http://www.cobbcounty.org/index.php?option=com_content&view=article&id=469&Itemid=427
-  description: Complementary curb to curb paratransit service is provided to individuals who cannot use the regular CCT bus. Passengers must be certified to use paratransit service.
+  description: Complementary curb to curb paratransit service is provided to individuals who cannot use the regular CobbLinc bus. Passengers must be certified to use paratransit service.
 fares:
   info_url: "http://www.cobbcounty.org/index.php?option=com_content&view=article&id=471&Itemid=422"
   purchase_url: "http://egov.cobbcountyga.gov/index.php/estore-categories/2/168/cct-bus-passes"
@@ -72,7 +72,7 @@ fares:
   discounts: 
   - name: Youth
     cost: "$1.50" 
-    details: see CCT website
+    details: see CobbLinc website
   - name: Elderly/disabled
     cost: "$1.00"
   paratransit: 
@@ -86,7 +86,7 @@ fares:
     cost: "$3.00"
 ---
 
-CCT provides local bus service within Cobb County and commuter bus to and from Downtown and Midtown Atlanta.  
+CobbLinc provides local bus service within Cobb County and commuter bus to and from Downtown and Midtown Atlanta.  
 
 Services operate Monday through Saturday.  Breeze Cards can be used by passengers to transfer between the MARTA system.  Breeze Cards can be used for non-transfer trips as well, if they are loaded with stored cash value or a CCT fare product.  
 
