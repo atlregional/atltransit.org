@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Safety & security
+title: Safety & Security
 id: safety
 order: 5
 category: 'guide'
