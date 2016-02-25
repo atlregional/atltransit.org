@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Rider's guide
+title: Rider's Guide
 id: guide
 icon: fa-book
 more: false
