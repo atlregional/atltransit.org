@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Fares & transfers"
+title: "Fares & Transfers"
 id: fares
 icon: "fa-usd"
 more: false
