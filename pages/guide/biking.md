@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Biking & transit
+title: Biking & Transit
 id: biking
 order: 2
 category: 'guide'
