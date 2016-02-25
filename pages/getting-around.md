@@ -43,23 +43,13 @@ Regularly scheduled buses and trains serve the five core counties of the Atlanta
 
 [Learn more about Atlanta's transit agencies and where they operate »](/about/agencies)
 
-### Express service
+### Commuter Bus & Express Services
 
-GRTA Xpress (along with GCT and CobbLinc) brings commuters to and from central business districts during peak commute times.
+GRTA Xpress, GCT and CobbLinc bring commuters to and from central business districts during peak commute times, and offer services with limited stops.
 
 Express Park & Ride lots are located in the following counties:
 
-- Clayton, 
-- Cherokee, 
-- Cobb, 
-- DeKalb, 
-- Douglas, 
-- Forsyth, 
-- Fulton, 
-- Gwinnett, 
-- Henry, 
-- Paulding, 
-- and Rockdale.
+Clayton, Cherokee, Cobb, DeKalb, Douglas, Forsyth, Fulton, Gwinnett, Henry, Paulding, and Rockdale.
 
 [<i class="fa fa-car right-5"></i>Find a Park & Ride location near you](/maps/parknride)
 
