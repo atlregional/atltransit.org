@@ -64,7 +64,7 @@ Eligibility for paratransit trips is determined on two levels:
 {% include right_image.html alt="SimplyGetThere website" src="/build/images/guide/simplygetthere.png" title="Simply Get There helps you plan trips for accessible modes." %}
 
 
-[Simply Get There](http://oneclick-arc.camsys-apps.com/) is a trip planning tool specifically designed for comparing specialized services like paratransit with other mobility options.
+[Simply Get There](http://www.simplygetthere.org) is a trip planning tool specifically designed for comparing specialized services like paratransit with other mobility options.
 
 [<i class="fa fa-arrow-circle-o-right right-5"></i>Plan my trip](http://oneclick-arc.camsys-apps.com/)
 
