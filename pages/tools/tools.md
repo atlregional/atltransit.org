@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Rider tools
+title: Rider Tools
 id: tools
 icon: fa-mobile
 more: true
