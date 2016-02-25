@@ -4,7 +4,7 @@ title: "Fares & Transfers"
 id: fares
 icon: "fa-usd"
 more: false
-category: Fares
+category: fares
 permalink: /fares/
 related: 
   - schedules
