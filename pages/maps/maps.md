@@ -4,7 +4,7 @@ title: Maps
 id: maps
 icon: fa-globe
 more: true
-category: 'Maps'
+category: 'maps'
 permalink: '/maps/'
 related: ["agencies"]
 tagline: Find your way around the region!
