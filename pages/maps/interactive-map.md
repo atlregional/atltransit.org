@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Interactive map
+title: Interactive Map
 order: 1
 id: interactive
 category: 'maps'
