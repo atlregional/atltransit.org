@@ -4,7 +4,7 @@ title: Destinations
 id: destinations
 more: true
 icon: fa-map-marker
-category: 'destinations'
+category: 'Destinations'
 permalink: '/destinations/'
 related: ["parknride"]
 ---
