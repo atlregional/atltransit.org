@@ -1,6 +1,6 @@
 ---
 layout: page
-title: App center
+title: App Center
 id: appcenter
 order: 4
 category: 'tools'
