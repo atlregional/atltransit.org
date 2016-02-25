@@ -11,7 +11,7 @@ tagline: Atlanta is hilly and spread out.  Taking your bike on a bus or train fo
 
 ## Biking/transit connections
 
-The Atlanta region is ideal to combine biking and transit.  If you've ever biked around Atlanta, you've noticed the hilly landscape.  What better way to conquer those hills than with the aid of a bus or train?!
+The Atlanta region is ideal to combine biking and transit.  If you've ever biked around Atlanta, you've noticed the hilly landscape.  Let transit help you conquer those hills.
 
 ### Bike Facility and Transit Station Map
 
