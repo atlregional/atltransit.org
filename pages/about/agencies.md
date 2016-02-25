@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Agency info
+title: Agency Info
 id: agencies
 order: 2
 category: 'about'
