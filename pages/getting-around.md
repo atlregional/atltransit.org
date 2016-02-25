@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Getting around
+title: Getting Around
 id: "getting-around"
 order: 2
 category: ""
