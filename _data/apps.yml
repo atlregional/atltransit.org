@@ -6,7 +6,7 @@
     windows: http://onebusaway.org/wp-content/uploads/windows_40.png
   description: OneBusAway provides real-time info for the entire Atlanta region.  Set reminders, yadda yadda
   category: realtime
-  agencies: ["MARTA", "GRTA Xpress", "CCT", "GCT"]
+  agencies: ["MARTA", "GRTA Xpress", "CobbLinc", "GCT"]
 - name: The Transit app
   url: http://transitapp.com/
   platforms:
@@ -29,7 +29,7 @@
   platforms:
   description: "While we absolutely love Google Transit, the ATLtransit trip planner offers some great additional features.  It currently supports biking + transit option and offers more accurate fare information about the trip."
   category: planning
-  agencies: ["MARTA", "GRTA Xpress", "CCT", "GCT"]
+  agencies: ["MARTA", "GRTA Xpress", "CobbLinc", "GCT"]
 
 - name: Google Transit
   url: https://maps.google.com/
