@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How-tos & tips
+title: Transit Tips for New Riders
 id: tips
 order: 4
 category: 'guide'
