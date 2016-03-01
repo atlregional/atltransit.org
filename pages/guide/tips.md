@@ -11,7 +11,7 @@ tagline: The top 6 transit riding tips for new riders.
 
 ## Top 6 Tips for New Transit Riders
 
-1.  No one likes guessing when the bus or train will arrive.  Check the schedule online, or **download the OneBusAway App** to look up real-time and scheduled arrivals.
+1.  No one likes guessing when the bus or train will arrive.  Check the schedule online, or <a href="http://test.atlb.us/guide/safety/#real-time-info"> **download the OneBusAway App** </a> to look up real-time and scheduled arrivals.
 
 2.  **Arrive a few minutes early** to your stop or station.
 
