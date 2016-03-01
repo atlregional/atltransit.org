@@ -29,8 +29,8 @@ Follow these accounts for real-time service updates and delays.
 The following Twitter list aggregates all of the service alert feeds available in the Atlanta region. [Subscribe to the list](https://twitter.com/eltiar/lists/atl-transit-alerts) or check back here for real-time updates.
 
 <div class="col-md-offset-2">
-	<a class="twitter-timeline" height="300" href="https://twitter.com/ATLtransit/lists/atltransit-alerts" data-widget-id="469587949617553409">Tweets from https://twitter.com/atltransit/lists/atltransit-alerts</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<a class="twitter-timeline"  href="https://twitter.com/atltransit/lists/atltransit-alerts" data-widget-id="704775734599012352">Tweets from https://twitter.com/atltransit/lists/atltransit-alerts</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 
 
