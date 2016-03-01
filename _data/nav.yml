@@ -42,16 +42,16 @@
   - title: Accessibility
     url: "/guide/accessibility"
     image: "http://i.istockimg.com/image-zoom/34098832/3/380/253/zoom-34098832-3.jpg"
-  - title: "Biking & transit"
+  - title: "Biking & Transit"
     url: "/guide/biking"
     image: "/build/images/marta_bike.jpg"
   - title: Parking
     url: "/guide/parking"
     image: "http://i.istockimg.com/image-zoom/47646808/3/380/254/zoom-47646808-3.jpg"
-  - title: "How-tos & tips"
+  - title: "Tips for New Riders"
     url: "/guide/tips"
     image: "/build/images/atl-placeholder.png"
-  - title: "Safety & security"
+  - title: "Safety & Security"
     url: "/guide/safety"
     image: "/build/images/atl-placeholder.png"
   - title: "Georgia Commute Options"
@@ -66,11 +66,11 @@
   - title: History of ATLtransit
     url: "/about/history"
     image: "/assets/images/logos/logo.png"
-  - title: Agency information
+  - title: Agency Information
     slug: agency
     url: "/about/agencies"
     image: "/assets/images/guide/group_using_map.jpg"
-  - title: "About regional transit"
+  - title: "About Regional Transit"
     url: "/about/regional-transit"
     image: "/build/images/concept_3.png"
   - title: Contact Us
@@ -91,17 +91,17 @@
 #   dropdown: false
 #   url: "/schedules"
 
-- title: Rider tools
+- title: Rider Tools
   category: tools
   main: false
   dropdown: true
   url: "/tools"
   subitems: 
-  - title: Plan a trip
+  - title: Plan a Trip
     url: "/plan"
     image: "/build/images/tools/trip-planner.png"
     include: false
-  - title: Real-time arrivals
+  - title: Real-time Arrivals
     url: "/tools/realtime"
     image: "/build/images/tools/train_realtime.jpeg"
   - title: Schedules
@@ -111,7 +111,7 @@
     url: "/tools/alerts"
     image: "/build/images/atl-placeholder.png"
 
-- title: "Fares & transfers"
+- title: "Fares & Transfers"
   category: fares
   main: false
   dropdown: true
