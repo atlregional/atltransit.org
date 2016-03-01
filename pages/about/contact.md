@@ -6,7 +6,7 @@ order: 5
 category: 'about'
 permalink: '/about/contact/'
 related: 
-image: "http://i.istockimg.com/image-zoom/66321341/3/380/253/zoom-66321341-3.jpg"
+image: "/assets/images/guide/tapping_smartphone.jpg"
 ---
 
 * toc goes here
