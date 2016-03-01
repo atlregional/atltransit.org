@@ -7,6 +7,7 @@ category: 'about'
 permalink: '/about/contact/'
 related: 
 image: "/assets/images/guide/tapping_smartphone.jpg"
+tagline: "Please share any comments, questions, or concerns you may have about ATLtransit."
 ---
 
 * toc goes here
