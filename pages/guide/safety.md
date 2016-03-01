@@ -20,7 +20,7 @@ tagline: Manage your trip with these apps, service alerts, and safety features.
 
 ## Twitter Accounts
 
-Follow Atlanta's transit providers on Twitter for real-time updates on significant service delays or other alerts.
+Follow these accounts for real-time service updates and delays.
 
 <div class="row">
 	{% include twitter_list.html %}
