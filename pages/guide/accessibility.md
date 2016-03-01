@@ -45,7 +45,7 @@ Here is a listing of all the paratransit services available in the Atlanta regio
 
 ## Eligibility
 
-{% include right_image.html alt="mobility services" src="http://i.istockimg.com/image-zoom/54648578/3/380/253/stock-photo-54648578-african-american-woman-sitting-at-table-completing-job-application.jpg" title="Accessible transit is available throughout the region." %}
+{% include right_image.html alt="mobility services" src="/assets/images/guide/woman_application.jpg" title="Accessible transit is available throughout the region." %}
 
 Eligibility for paratransit trips is determined on two levels:
 
