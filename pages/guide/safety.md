@@ -26,7 +26,7 @@ Follow these accounts for real-time service updates and delays.
 	{% include twitter_list.html %}
 </div>
 
-The following Twitter list aggregates all of the service alert feeds available in the Atlanta region. [Subscribe to the list](https://twitter.com/ATLtransit/lists/atltransit-alerts) or check back here for real-time updates.
+You can [subscribe](https://twitter.com/ATLtransit/lists/atltransit-alerts) to the @ATLtransit Twitter list, which aggregates all the service alerts in metro Atlanta.
 
 <div class="col-md-offset-2">
 <a class="twitter-timeline"  href="https://twitter.com/atltransit/lists/atltransit-alerts" data-widget-id="704775734599012352">Tweets from https://twitter.com/atltransit/lists/atltransit-alerts</a>
