@@ -41,27 +41,26 @@ The vision was officially adopted in 2008 and now serves as the transit element 
 
 {% include row_break.html %}
 
-## Regional fare
+## Regional Fare Card
 
 <div class="col-sm-6 col-xs-12 pull-right">
 	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/fares/breeze_farebox.png">
 </div>
 
-Currently travelling with multiple transit agencies requires having either multiple fare products (e.g., GRTA fare and MARTA fare) or cash stored on your Breeze Card.  There is no option for a regional "all-access" pass.
+Currently travelling among multiple transit providers is simplified by having the Breeze regional fare card.  Riders can load passes and cash value onto their Breeze Card without having to carry around multiple agency transit passes.
 
-In addition to work to support the Breeze fare payment system, the transit agencies are working towards a regional fare product, so that customers could purchase a single monthly pass and travel anywhere in the region.
+
 
 [Learn more about discounts and passes in the region »](/fares/passes)
 
 {% include row_break.html %}
 
 
-## Unified bus stop signage
+## Unified Bus Stop Signage
 
 <div class="col-sm-6 col-xs-12 pull-right">
-	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/about/bus-stop-sign-01.png">
+	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/about/RegionalSignage.png">
 </div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci lectus. In tristique lorem eu lectus aliquam posuere. Sed vestibulum arcu et velit condimentum, eget ullamcorper massa interdum. Pellentesque luctus mauris non sem scelerisque, et vestibulum nisi malesuada. Aliquam lacus ex, blandit ac risus nec, iaculis porta augue. 
+The regional transit partners are collaborating on a unified bus stop design.  This new signgage will better enable passengers to look up real-time arrival and service schedules for each stop.  Implementation for the core Downtown and Midtown regional bus stops is expected in 2017.
 
-Curabitur dictum justo tortor, eu egestas ligula tincidunt et. Integer dictum dui quam, nec consequat urna lobortis non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
