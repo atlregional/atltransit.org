@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact Us
+title: Contact us
 id: contact
 order: 4
 category: 'about'
