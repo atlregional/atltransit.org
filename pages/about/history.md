@@ -7,7 +7,7 @@ category: 'about'
 permalink: '/about/history/'
 related: 
 tagline: ATLtransit was initially launched as a pilot program in 2014.  
-image: "/build/images/marta_airport_historic.png"
+image: "/assets/images/logos/logo.png"
 ---
 
 * toc goes here
