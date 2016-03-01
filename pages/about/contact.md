@@ -2,7 +2,7 @@
 layout: page
 title: Contact us
 id: contact
-order: 5
+order: 4
 category: 'about'
 permalink: '/about/contact/'
 related: 
