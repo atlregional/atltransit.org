@@ -14,7 +14,7 @@ tagline: "Find the nearest Park & Ride station near you."
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
 
-## Find a Park 'n' Ride
+## Park 'n' Ride Locations
 
 Many of the region's bus and rail stations offer convenient parking facilities for transit commuters.
 
