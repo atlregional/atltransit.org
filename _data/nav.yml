@@ -65,20 +65,17 @@
   subitems:
   - title: History of ATLtransit
     url: "/about/history"
-    image: "/build/images/marta_airport_historic.png"
+    image: "/assets/images/logos/logo.png"
   - title: Agency information
     slug: agency
     url: "/about/agencies"
-    image: "/build/images/atl-placeholder.png"
+    image: "/assets/images/guide/group_using_map.jpg"
   - title: "About regional transit"
     url: "/about/regional-transit"
     image: "/build/images/concept_3.png"
-  - title: Feedback
-    url: "/about/feedback"
-    image: "/build/images/atl-placeholder.png"
   - title: Contact us
     url: "/about/contact"
-    image: "http://i.istockimg.com/image-zoom/66321341/3/380/253/zoom-66321341-3.jpg"
+    image: "/assets/images/guide/woman_application.jpg"
   # ],
   # newsletter: []
 
