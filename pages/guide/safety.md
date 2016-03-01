@@ -2,7 +2,7 @@
 layout: page
 title: Apps, Alerts & Safety
 id: safety
-order: 1
+order: 2
 category: 'guide'
 permalink: '/guide/safety/'
 image: "/assets/images/guide/alert_bells.jpg"
