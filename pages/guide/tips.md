@@ -5,7 +5,7 @@ id: tips
 order: 4
 category: 'guide'
 permalink: '/guide/tips/'
-image: "//c1.staticflickr.com/1/27/55889442_46912b86ca_b.jpg"
+image: "/assets/images/guide/lost_couple.jpg"
 tagline: We've all been first time transit riders before, so here are 6 tips to get you going.
 ---
 
