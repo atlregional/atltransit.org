@@ -2,7 +2,7 @@
 layout: page
 title: Tips for New Riders
 id: tips
-order: 4
+order: 5
 category: 'guide'
 permalink: '/guide/tips/'
 image: "/assets/images/guide/lost_couple.jpg"
