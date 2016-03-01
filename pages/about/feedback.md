@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Feedback Form
+title: Feedback
 id: feedback
 order: 5
 category: 'about'
