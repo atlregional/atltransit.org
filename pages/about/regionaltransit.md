@@ -7,7 +7,7 @@ category: 'about'
 permalink: '/about/regional-transit/'
 related: ["interactive-map"]
 image: "/build/images/concept_3.png"
-tagline: The transit agencies in Atlanta are working together to build a more seamless transit system.  Here are a few of the projects they're working on.
+tagline: Working to create a seamless regional transit system.
 ---
 
 * toc goes here
