@@ -13,9 +13,6 @@ tagline: "Please share any comments, questions, or concerns you may have about A
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
-## ATLtransit
-{: .row-heading }
-
 
 <div class="row">
 	<div class="panel panel-default top-buffer col-md-12" style="padding-top:10px; background-color:#ddd">
