@@ -34,11 +34,13 @@ The following Twitter list aggregates all of the service alert feeds available i
 </div>
 
 
+
 ## Email/SMS updates
 
 Sign up for future email and SMS service updates to stay informed to get info on just the routes you care about. (Expected Late 2016)
 
 {% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}
+
 
 
 ## Safety
