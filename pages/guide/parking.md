@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Parking
+title: Park 'n' Ride
 id: parking
-order: 3
+order: 4
 category: 'guide'
 permalink: '/guide/parking/'
 related: ["parknride", "plan", "interactive"]
