@@ -7,7 +7,7 @@ order: 1
 category: 'guide'
 permalink: '/guide/accessibility/'
 image: "/assets/images/accessibility.png"
-tagline: Transit in Atlanta is accessible to people of all abilities.  Paratransit, as well as most fixed route (i.e., bus and train) service, is available to eligible seniors and persons with disabilities.
+tagline: Paratransit, as well as most fixed route (i.e., bus and train) services, are available to eligible seniors and persons with disabilities.
 scripts: ["/plan/plan-util.js", "https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"]
 ---
 
