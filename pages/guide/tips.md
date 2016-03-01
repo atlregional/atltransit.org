@@ -6,7 +6,7 @@ order: 4
 category: 'guide'
 permalink: '/guide/tips/'
 image: "/assets/images/guide/lost_couple.jpg"
-tagline: We've all been first time transit riders before, so here are 6 tips to get you going.
+tagline: The top 6 transit riding tips for new riders.
 ---
 
 ## Top 6 Tips for New Transit Riders
