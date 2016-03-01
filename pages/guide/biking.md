@@ -2,7 +2,7 @@
 layout: page
 title: Biking & Transit
 id: biking
-order: 2
+order: 3
 category: 'guide'
 permalink: '/guide/biking/'
 image: "/build/images/marta_bike.jpg"
