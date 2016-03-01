@@ -6,8 +6,7 @@ order: 5
 category: 'about'
 permalink: '/about/feedback/'
 related: 
-image: /assets/images/guide/man_using_phone.jpg
-tagline: "Please share any comments, questions, or concerns you may have about ATLtransit."
+tagline: 
 ---
 <div class="row">
 	<div class="panel panel-default top-buffer col-md-12" style="padding-top:10px; background-color:#ddd">
