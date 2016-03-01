@@ -2,7 +2,7 @@
 layout: page
 title: Feedback
 id: feedback
-order: 4
+order: 5
 category: 'about'
 permalink: '/about/feedback/'
 related: 
