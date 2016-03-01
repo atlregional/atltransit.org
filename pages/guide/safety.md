@@ -18,15 +18,13 @@ tagline: Manage your trip with these apps, service alerts, and safety features.
 
 {% include app-gallery.html category="realtime" %}
 
-## Agency Twitter Accounts
+## Twitter Accounts
 
 Follow Atlanta's transit providers on Twitter for real-time updates on significant service delays or other alerts.
 
 <div class="row">
 	{% include twitter_list.html %}
 </div>
-
-## Regional Transit Twitter Alerts
 
 The following Twitter list aggregates all of the service alert feeds available in the Atlanta region. [Subscribe to the list](https://twitter.com/eltiar/lists/atl-transit-alerts) or check back here for real-time updates.
 
