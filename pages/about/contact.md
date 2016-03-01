@@ -7,7 +7,7 @@ category: 'about'
 permalink: '/about/contact/'
 related: 
 image: "/assets/images/guide/woman_application.jpg"
-tagline: "Please share any comments, questions, or concerns you may have about ATLtransit."
+tagline: "Please share any comments, questions, or concerns."
 ---
 
 * toc goes here
