@@ -7,7 +7,7 @@ category: 'guide'
 permalink: '/guide/parking/'
 related: ["parknride", "plan", "interactive"]
 image: "/assets/images/guide/carpool.jpg"
-tagline: "Public transit is not just ITP!  Find out where and how to park your car to stay out the traffic mess and keep your gas gauge away from 'empty.'"
+tagline: "Many regional bus and rail stations offer parking.  Find the nearest Park & Ride station near you."
 ---
 
 * toc goes here
