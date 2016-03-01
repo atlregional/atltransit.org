@@ -16,7 +16,7 @@ scripts: ["/plan/plan-util.js", "https://api.tiles.mapbox.com/mapbox.js/plugins/
 
 ## Services
 
-{% include right_image.html alt="mobility services" src="http://i.istockimg.com/image-zoom/34098832/3/380/253/zoom-34098832-3.jpg" title="Accessible transit is available throughout the region." %}
+{% include right_image.html alt="mobility services" src="/assets/images/accessibility.png" title="Accessible transit is available throughout the region." %}
 
 Every transit agency that operates fixed route service is required by federal law to operate a complementary paratransit service.
 
