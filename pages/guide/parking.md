@@ -7,22 +7,16 @@ category: 'guide'
 permalink: '/guide/parking/'
 related: ["parknride", "plan", "interactive"]
 image: "/assets/images/guide/carpool.jpg"
-tagline: "Many regional bus and rail stations offer parking.  Find the nearest Park & Ride station near you."
+tagline: "Find the nearest Park & Ride station near you."
 ---
 
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
-## Save money and avoid stress
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
 
 ## Find a Park 'n' Ride
+
+Many of the region's bus and rail stations offer convenient parking facilities for transit commuters.
 
 {% include forms/parknride-go.html inline=false %}
 
