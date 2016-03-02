@@ -61,7 +61,7 @@ Clayton, Cherokee, Cobb, DeKalb, Douglas, Forsyth, Fulton, Gwinnett, Henry, Paul
 
 Each transit agency has different hours of operation.
 
-[<i class="fa fa-calendar right-5"></i>Find schedules for a specific route or stop](/tools/schedule-schedules)
+[<i class="fa fa-calendar right-5"></i>Find schedules for a specific route or stop](/tools/tools-schedules)
 
 {% include hours_of_operation.html %}
 
