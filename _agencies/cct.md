@@ -1,7 +1,7 @@
 ---
 layout: agency
-title: CobbLinc
 id: cct
+title: CobbLinc
 category: about
 name: CobbLinc
 acronym: CobbLinc
