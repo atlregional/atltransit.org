@@ -28,7 +28,7 @@ You can also get in touch with us with the following:
 	40 Courtland St NE<br>
 	Atlanta, GA 30303<br><br>
 	<abbr title="Email"><i class="fa fa-envelope-o"></i></abbr> 
-	<a href="/about/feedback">Send us your feedback!</a><br>
+	<a href="/about/contact">Send us your feedback!</a><br>
 </address>
 
 
