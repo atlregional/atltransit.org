@@ -2,7 +2,7 @@
 {% if category.size != 0 %}
 {% for app in category %}
 
-### {% for image in app.image %}<img class="img-responsive center-block top-buffer col-sm-3"> **{{ app.name }}** <br> Mobile Platforms: {% for platform in app.platforms %}<a href="{{ platform[1] }}"><i class="fa fa-{{ platform[0] }} 16sp"></i></a> {% endfor %} <br> {% if app.agencies.size > 0 %}Agencies: {{ app.agencies | array_to_sentence_string }}{% endif %}
+### **{{ app.name }}** <br> Mobile Platforms: {% for platform in app.platforms %}<a href="{{ platform[1] }}"><i class="fa fa-{{ platform[0] }} 16sp"></i></a> {% endfor %} <br> {% if app.agencies.size > 0 %}Agencies: {{ app.agencies | array_to_sentence_string }}{% endif %}
 
 {% endfor %}
 {% else %}
