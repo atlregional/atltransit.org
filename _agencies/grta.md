@@ -3,7 +3,7 @@ layout: agency
 id: grta
 title: GRTA Xpress
 category: about
-name: Georgia Regional Transportation Authority
+name: GRTA Xpress
 acronym: GRTA Xpress
 address: 245 Peachtree Center Ave, NE
 address2: Suite 400
