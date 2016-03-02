@@ -1,7 +1,7 @@
 ---
 layout: agency
-title: GCT
 id: gct
+title: GCT
 category: about
 name: Gwinnett County Transit
 acronym: GCT
