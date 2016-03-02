@@ -14,7 +14,7 @@ tagline: Manage your trip with these apps, service alerts, and safety features.
 
 
 
-## Real-time info
+## Transit Apps
 
 {% include app-gallery.html category="realtime" %}
 
