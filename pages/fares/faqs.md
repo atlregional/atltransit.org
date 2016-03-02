@@ -37,4 +37,4 @@ image: "/build/images/confused_customers.jpg"
 
 ## Is your question missing?
 
-Contact us with our <a href="/about/feedback">feedback form</a>.
+Contact us with our <a href="/about/contact">feedback form</a>.
