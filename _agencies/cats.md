@@ -3,7 +3,7 @@ layout: agency
 id: cats
 title: CATS
 category: about
-name: Cherokee Area Trans. System
+name: Cherokee Area Transit System
 acronym: CATS
 address: 1130 Bluffs Pkwy
 city: Canton
