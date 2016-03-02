@@ -1,7 +1,7 @@
 ---
 layout: agency
-title: MARTA
 id: marta
+title: MARTA
 label: marta
 category: about
 name: Metropolitan Atlanta Rapid Transit Authority
