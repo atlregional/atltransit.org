@@ -96,4 +96,4 @@ GRTA Xpress, CobbLinc, and GCT all have connection points at major MARTA station
 
 {% include transfer_stations.html %}
 
-Still have some unanswered questions about transfers?  Visit our [Frequently Asked Questions](/fares/faqs) page, or leave us some [feedback](/about/feedback).
+Still have some unanswered questions about transfers?  Visit our [Frequently Asked Questions](/fares/faqs) page, or leave us some [feedback](/about/contact).
