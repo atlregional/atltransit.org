@@ -33,9 +33,9 @@ Follow these accounts for real-time service updates and delays.
   Follow @CobbTransit</a>
 
 <a class="twitter-follow-button"
-  href="https://twitter.com/gcttransit"
+  href="https://twitter.com/gctransit"
   data-size="large">
-  Follow @GCTtransit</a>
+  Follow @GCTransit</a>
 
 <a class="twitter-follow-button"
   href="https://twitter.com/xpressga"
