@@ -54,8 +54,6 @@ Most discounts and passes for each individual transit agency are available on yo
 
 <p class="text-center bottom-buffer"><a class="btn btn-lg btn-primary top-buffer" href="http://breezecard.com/">Visit BreezeCard.com <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p>
 
-<i class="fa fa-circle right-5"></i> = available on Breeze Card  
-<i class="fa fa-circle-thin right-5"></i> = can be purchased with Breeze Card stored value
 
 {% include fare-passes.html %}
 
