@@ -22,9 +22,33 @@ tagline: Manage your trip with these apps, service alerts, and safety features.
 
 Follow these accounts for real-time service updates and delays.
 
-<div class="row">
-	{% include twitter_list.html %}
-</div>
+<a class="twitter-follow-button"
+  href="https://twitter.com/atlstreetcar"
+  data-size="large">
+  Follow @ATLstreetcar</a>
+
+<a class="twitter-follow-button"
+  href="https://twitter.com/cobbtransit"
+  data-size="large">
+  Follow @CobbTransit</a>
+
+<a class="twitter-follow-button"
+  href="https://twitter.com/gcttransit"
+  data-size="large">
+  Follow @GCTtransit</a>
+
+<a class="twitter-follow-button"
+  href="https://twitter.com/xpressga"
+  data-size="large">
+Follow @XpressGA</a>
+
+<a class="twitter-follow-button"
+  href="https://twitter.com/martaservice"
+  data-size="large">
+Follow @MARTAservice</a>
+
+
+
 
 You can [subscribe](https://twitter.com/ATLtransit/lists/atltransit-alerts) to the @ATLtransit Twitter list, which aggregates all the service alerts in metro Atlanta.
 
