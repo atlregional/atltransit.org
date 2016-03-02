@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Discounts & passes"
+title: "Discounts & Passes"
 id: passes
 order: 3
 category: fares
