@@ -3,9 +3,8 @@
 {% for app in category %}
 
 ### {{ app.name }} <br> Mobile Platforms: {% for platform in app.platforms %}<a href="{{ platform[1] }}"><i class="fa fa-{{ platform[0] }} 
-{% if app.agencies.size > 0 %}Agencies: {{ app.agencies | array_to_sentence_string }}{% endif %} 14sp"></i></a> {% endfor %}
-
-
+ 
+ -{% if app.agencies.size > 0 %}Agencies: {{ app.agencies | array_to_sentence_string }}{% endif %}
 
 {% endfor %}
 {% else %}
