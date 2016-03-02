@@ -4,7 +4,7 @@
     android: https://play.google.com/store/apps/details?id=com.joulespersecond.seattlebusbot&hl=en
     apple: https://itunes.apple.com/us/app/onebusaway/id329380089?mt=8
     windows: http://onebusaway.org/wp-content/uploads/windows_40.png
-  description: OneBusAway provides real-time info for the entire Atlanta region.  Set reminders, yadda yadda
+  description: OneBusAway provides real-time info for the entire Atlanta region.
   category: realtime
   agencies: ["MARTA", "GRTA Xpress", "CobbLinc", "GCT"]
 - name: The Transit App 
