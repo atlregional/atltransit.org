@@ -8,15 +8,6 @@
   description: OneBusAway provides real-time info for the entire Atlanta region.
   category: realtime
   agencies: ["MARTA", "GRTA Xpress", "CobbLinc", "GCT"]
-- name: The Transit App 
-  url: http://transitapp.com/
-  image: "/assets/images/guide/Transit_App_Logo.png"
-  platforms:
-    android: https://play.google.com/store/apps/details?id=com.thetransitapp.droid
-    apple: https://itunes.apple.com/app/the-transit-app/id498151501?ls=1&mt=8
-  description: The Transit App provides real-time arrival information in a sleek, user-friendly interface.
-  category: realtime
-  agencies: ["MARTA", "GRTA Xpress"]
 - name: MARTA On the Go 
   url: http://www.itsmarta.com/developers/app-station.aspx
   image: "/assets/images/guide/MARTA_App_Logo.png"
