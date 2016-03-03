@@ -7,7 +7,7 @@ category: 'maps'
 permalink: '/maps/paratransit/'
 related: ["accessibility"]
 tagline: Locate where paratransit service operates in the region and whether or not your trip falls into the service area.
-image: "http://i.istockimg.com/image-zoom/34098832/3/380/253/zoom-34098832-3.jpg"
+image: "/assets/images/guide/accessibility.jpg"
 scripts: ["/plan/plan-util.js", "https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"]
 ---
 
