@@ -8,13 +8,11 @@
     image: "/build/images/tools/interactive-map.png"
   - title: System maps
     url: "/maps/systems"
-    image: "/build/images/atl-placeholder.png"
+    image: "/assets/images/guide/group_using_map.jpg"
   - title: "Park 'n' Ride"
     url: "/maps/parknride"
     image: "/build/images/atl-placeholder.png"
-  - title: Wayfinding
-    url: "/maps/wayfinding"
-    image: "/build/images/atl-placeholder.png"
+
 
 - title: Destinations
   category: destinations
@@ -41,19 +39,19 @@
   subitems:
   - title: Accessibility
     url: "/guide/accessibility"
-    image: "http://i.istockimg.com/image-zoom/34098832/3/380/253/zoom-34098832-3.jpg"
+    image: "/assets/images/guide/accessibility.jpg"
   - title: "Biking & Transit"
     url: "/guide/biking"
     image: "/build/images/marta_bike.jpg"
   - title: Parking
     url: "/guide/parking"
-    image: "http://i.istockimg.com/image-zoom/47646808/3/380/254/zoom-47646808-3.jpg"
+    image: "/assets/images/guide/carpool.jpg"
   - title: "Tips for New Riders"
     url: "/guide/tips"
     image: "/build/images/atl-placeholder.png"
   - title: "Safety & Security"
     url: "/guide/safety"
-    image: "/build/images/atl-placeholder.png"
+    image: "/assets/images/guide/alert_bells.jpg"
   - title: "Georgia Commute Options"
     url: "/guide/gco"
     image: "http://www.peachpass.com/uploads/GACommuteOptions.jpg"
@@ -109,7 +107,7 @@
     image: "/build/images/tools/train_schedule.jpeg"
   - title: Alerts
     url: "/tools/alerts"
-    image: "/build/images/atl-placeholder.png"
+    image: "/assets/images/guide/alert_bells.jpg"
 
 - title: "Fares & Transfers"
   category: fares
@@ -131,7 +129,7 @@
     image: "/build/images/bus_transfer.png"
   - title: FAQs
     url: "/fares/faqs"
-    image: "http://i.istockimg.com/image-zoom/22041580/3/380/294/zoom-22041580-3.jpg"
+    image: "/build/images/atl-placeholder.png"
 # - title: Search
 #   category: search
 #   dropdown: false
