@@ -22,6 +22,8 @@ Many of the region's bus and rail stations offer convenient parking facilities f
 
 ## Map of Park 'n' Ride Lots
 
+<a href="/maps/interactive">![Interactive map](/build/images/interactive-map.png){: .img-responsive .center-block style="max-height:200px"}</a>
+
 The interactive map shows Park 'n' Ride lots across the region.  Park 'n' Ride lots allow you to drive your personal vehicle to a train station or express bus stop and take transit the rest of the way.
 
 [View map of Park 'n' Ride lots](/maps/interactive)
