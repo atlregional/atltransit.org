@@ -6,7 +6,7 @@ id: interactive
 category: 'maps'
 permalink: '/maps/interactive/'
 related: ["agencies", "products", "calculator", "plan", "parking"]
-image: "/build/images/interactive-map.png"
+image: "/build/images/tools/interactive-map.png"
 tagline: Easily find regional connections and the closest rail station or park 'n' ride lot to you.
 ---
 
