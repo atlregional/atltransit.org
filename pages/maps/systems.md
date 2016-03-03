@@ -6,8 +6,8 @@ order: 2
 category: 'maps'
 permalink: '/maps/systems/'
 related: ["agencies"]
-tagline: Find your way around Atlanta with confidence
-image: "http://i.istockimg.com/image-zoom/53771630/3/380/253/stock-photo-53771630-friends-at-subway-station-studying-the-map-.jpg"
+tagline: 
+image: "/assets/images/guide/group_using_map.jpg"
 ---
 
 * toc goes here
