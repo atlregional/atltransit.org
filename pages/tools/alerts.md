@@ -7,7 +7,7 @@ category: 'tools'
 permalink: '/tools/alerts/'
 related: ["contact", "agencies"]
 tagline: Be the first to know about service disruptions. Sign up for email/SMS alerts or follow our Twitter feeds.
-image: "http://i.istockimg.com/image-zoom/53730702/3/380/285/stock-photo-53730702-bell.jpg"
+image: "/assets/images/guide/alert_bells.jpg"
 ---
 
 * toc goes here
