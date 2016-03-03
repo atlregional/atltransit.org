@@ -104,8 +104,8 @@ permalink: '/'
 	<div class="col-xs-12 col-sm-12 col-md-6">
 		<a href="/about/history" class="thumbnail thumbnail-link main-item">
 			<div class="caption">
-				<h3>What is atltransit?</h3>
-				<p class="">atltransit is <em>the</em> regional transit information hub. Whether you're looking for tools or tips, you've come to the right place.</p>
+				<h3>What is ATLtransit?</h3>
+				<p class="">ATLtransit is <em>the</em> regional transit information hub. Whether you're looking for tools or tips, you've come to the right place.</p>
 			</div>
 		</a>
 	</div>
