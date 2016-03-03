@@ -12,7 +12,7 @@ image: "/assets/images/guide/group_using_map.jpg"
 
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
-
+<base target="_blank">
 Get a detailed look at the entire transit system, from Avondale to Acworth. 
 
 Or, drill down to a single agency's service coverage to find out where transit is in your neighborhood.
