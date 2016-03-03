@@ -28,11 +28,8 @@ You can also get in touch with us with the following:
 	40 Courtland St NE<br>
 	Atlanta, GA 30303
 	  
-  
+  	  
 
-
-## Transit operators
-{: .row-heading }
 
 Have questions for a specific transit agency? Contact them using the information below.
 
