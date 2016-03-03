@@ -19,8 +19,8 @@ Or, drill down to a single agency's service coverage to find out where transit i
 
 ## Regional Transit System
 
-<a href="/assets/images/maps/Regional_Transit_System_Map_2012_Web_Interior.pdf" target="_new"><i class="fa fa-download right-5"></i>Atlanta Metro Area</a><br>
-<a href="/assets/images/maps/Regional_Transit_System_Map_2012_Web_Exterior.pdf" target="_new"><i class="fa fa-download right-5"></i>Atlanta City Inset Area</a><br>
+<a href="/assets/pdf/Regional_Transit_System_Map_2012_Web_Interior.pdf" target="_new"><i class="fa fa-download right-5"></i>Atlanta Metro Area</a><br>
+<a href="/assets/pdf/Regional_Transit_System_Map_2012_Web_Exterior.pdf" target="_new"><i class="fa fa-download right-5"></i>Atlanta City Inset Area</a><br>
 
 [View stylized interactive map »](/maps/interactive)
 
