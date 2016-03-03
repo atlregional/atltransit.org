@@ -17,7 +17,7 @@
 - title: "From Avondale to Acworth"
   tagline: "View our interactive maps to see where transit can take you."
   url: "/maps/interactive"
-  image: "/build/images/carousel/carousel2_blank_serviceMap.png"
+  image: "/asset/images/carousel/interactive_map_carousel.png"
 - title: "Turn your 20 mile trip into 2"
   tagline: "Bike or carpool to your station to save gas for trips you <em>want</em> to take."
   url: "/guide/parking"
