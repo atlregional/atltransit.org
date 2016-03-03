@@ -13,11 +13,11 @@ tagline: Manage your trip with these apps, service alerts, and safety features.
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
 
-## Transit Apps
+## **Transit Apps**
 
 {% include app-gallery.html category="realtime" %}
 
-## Twitter Accounts
+## **Twitter Accounts**
 
 Follow these accounts for real-time service updates and delays.
 
@@ -58,7 +58,7 @@ You can [subscribe](https://twitter.com/ATLtransit/lists/atltransit-alerts) to t
 
 
 
-## Email/SMS Updates
+## **Email/SMS Updates**
 
 Sign up for future email and SMS service updates to stay informed to get info on just the routes you care about. (Expected Late 2016)
 
@@ -66,5 +66,5 @@ Sign up for future email and SMS service updates to stay informed to get info on
 
 
 
-## Safety
+## **Safety**
 
