@@ -26,12 +26,20 @@ Here is a listing of all the paratransit services available in the Atlanta regio
 <div class="col-sm-6">
 	<table class="table">
 		<thead>
-			<th>Agency</th><th>Service</th><th>Description</th><th>Website</th>
+			<th>Agency</th>
+			<th>Service</th>
+			<!-- <th>Description</th> -->
+			<th>Links</th>
 		</thead>
 		<tbody>
 			{% for agency in site.agencies %}
 			{% if agency.paratransit %}
-			<tr><td>{{ agency.acronym }}</td><td>{{ agency.paratransit.name }}</td><td>{{ agency.paratransit.description | truncate: 30}} <a href="{{ agency.url }}#paratransit">more »</a></td><td><a target="_blank" href="{{ agency.paratransit.url }}">link<i class="fa fa-external-link left-5"></i><span class="sr-only">Paratransit website link</span></a></td></tr>
+			<tr>
+				<td>{{ agency.acronym }}</td>
+				<td>{{ agency.paratransit.name }}</td>
+				<!-- <td>{{ agency.paratransit.description | truncate: 30}} <a href="{{ agency.url }}#paratransit">more »</a></td> -->
+				<td><a href="{{ agency.url }}#paratransit" title="More details"><i class="fa fa-info-circle right-10"></i><span class="sr-only">More details</span></a><a target="_blank" href="{{ agency.paratransit.url }}" title="Paratransit website"><i class="fa fa-laptop left-10"></i><span class="sr-only">Paratransit website link</span></a></td>
+			</tr>
 			{% endif %}
 			{% endfor %}
 		</tbody>
