@@ -26,9 +26,9 @@ You can also get in touch with us with the following:
 	<strong>Atlanta Regional Commission</strong><br>
 	ATLtransit<br>
 	40 Courtland St NE<br>
-	Atlanta, GA 30303<br><br>
-
-
+	Atlanta, GA 30303
+	  
+  
 
 
 ## Transit operators
