@@ -7,7 +7,7 @@ more: true
 category: 'maps'
 permalink: '/maps/'
 related: ["agencies"]
-tagline: Find your way around the region!
+tagline: 
 ---
 
 
