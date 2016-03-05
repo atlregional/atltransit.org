@@ -5,3 +5,5 @@ _site/
 .jekyll-metadata
 s3_website.yml
 vendor/**/*
+assets/ai
+assets/source_images
