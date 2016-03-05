@@ -6,6 +6,8 @@ exclude:
   - "node_modules"
   - "package.json"
   - "gulpfile.js"
+  # We want to include vendor files at root but not those in sub dirs
+  - "vendor/**/*"
 # source:	_src
 url: http://test.atlb.us
 title: ATLtransit
