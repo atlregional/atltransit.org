@@ -40,6 +40,11 @@
       "main": [
         "less/**/!(variables).less", "dist/fonts/*", "dist/js/*.min.js"
       ]
+    },
+    "font-awesome": {
+      "main": [
+        "fonts/*", "less/!(variables).less"
+      ]
     }
   },
   "resolutions": {
