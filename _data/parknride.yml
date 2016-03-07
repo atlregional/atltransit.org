@@ -2091,7 +2091,7 @@
       SPACES: 1700
       LIGHTING: "Lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Unknown"
+      SHELTER: "No"
       Route: null
       SERVICE_PROVIDER: "Georgia State"
       LAT: 33.735639
@@ -2151,9 +2151,9 @@
       CITY: "Buford"
       COUNTY: "Gwinnett"
       SPACES: 900
-      LIGHTING: "Unknown"
+      LIGHTING: "Yes"
       SURFACE: "Asphalt"
-      SHELTER: "Unknown"
+      SHELTER: "Yes"
       Route: "413 - Hamilton Mill to Downtown"
       SERVICE_PROVIDER: "Xpress"
       LAT: 34.076373
@@ -2249,8 +2249,8 @@
       SHELTER: "Unknown"
       Route: "411 - Mall of GA to Midtown"
       SERVICE_PROVIDER: "Xpress"
-      LAT: 34.068899
-      LONG_: -83.985175
+      LAT: 34.067807
+      LONG_: -83.982641
       Bike_Racks: null
       Parking_Fee: null
       Hours_of_Operation: null
