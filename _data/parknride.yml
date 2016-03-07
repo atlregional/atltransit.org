@@ -1071,8 +1071,8 @@
       SHELTER: "Yes"
       Route: "101 - Buford to Downtown Atlanta"
       SERVICE_PROVIDER: "GCT"
-      LAT: 34.086077
-      LONG_: -83.995452
+      LAT: 34.085269
+      LONG_: -83.995534
       Bike_Racks: null
       Parking_Fee: null
       Hours_of_Operation: null
