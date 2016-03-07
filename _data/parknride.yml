@@ -12,9 +12,9 @@
       CITY: "Griffin"
       COUNTY: "Spalding"
       SPACES: 141
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "No"
+      SHELTER: "no shelter"
       Route: null
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.266742
@@ -136,9 +136,9 @@
       CITY: "McDonough"
       COUNTY: "Henry"
       SPACES: 15
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "No"
+      SHELTER: "no shelter"
       Route: null
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.482791
@@ -229,9 +229,9 @@
       CITY: "Union City"
       COUNTY: "Fulton"
       SPACES: 350
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: "455 - Union City to Downtown"
       SERVICE_PROVIDER: "Xpress, MARTA, Georgia Rideshare"
       LAT: 33.587222
@@ -260,9 +260,9 @@
       CITY: "Covington"
       COUNTY: "Newton"
       SPACES: 107
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "No"
+      SHELTER: "no shelter"
       Route: null
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.60635
@@ -291,9 +291,9 @@
       CITY: "Conyers"
       COUNTY: "Rockdale"
       SPACES: 58
-      LIGHTING: "Unlighted"
+      LIGHTING: "not lighted"
       SURFACE: "Asphalt"
-      SHELTER: "No"
+      SHELTER: "no shelter"
       Route: null
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.665361
@@ -322,9 +322,9 @@
       CITY: "Conyers"
       COUNTY: "Rockdale"
       SPACES: 560
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: "425 - E. Conyers to Downtown Atlanta"
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.68523
@@ -384,9 +384,9 @@
       CITY: "Atlanta"
       COUNTY: "Fulton"
       SPACES: 200
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA, Georgia Rideshare"
       LAT: 33.68911
@@ -477,9 +477,9 @@
       CITY: "Decatur"
       COUNTY: "DeKalb"
       SPACES: 225
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.713954
@@ -508,9 +508,9 @@
       CITY: "Winston"
       COUNTY: "Douglas"
       SPACES: 52
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "Douglas Rideshare, Georgia Rideshare"
       LAT: 33.720161
@@ -539,9 +539,9 @@
       CITY: "Douglasville"
       COUNTY: "Douglas"
       SPACES: 650
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: "460/461/462 - Douglasville to Downtown/Midtown"
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.742918
@@ -570,9 +570,9 @@
       CITY: "Lithia Springs"
       COUNTY: "Douglas"
       SPACES: 110
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: "477 to Downtown/Midtown"
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.777917
@@ -694,9 +694,9 @@
       CITY: "Dallas"
       COUNTY: "Paulding"
       SPACES: 34
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.842554
@@ -818,9 +818,9 @@
       CITY: "Dallas"
       COUNTY: "Paulding"
       SPACES: 167
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "No"
+      SHELTER: "no shelter"
       Route: null
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.911126
@@ -849,9 +849,9 @@
       CITY: "Norcross"
       COUNTY: "Gwinnett"
       SPACES: 500
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: "102 - Indian Tr to Downtown Atlanta"
       SERVICE_PROVIDER: "GCT"
       LAT: 33.930064
@@ -911,9 +911,9 @@
       CITY: "Lawrenceville"
       COUNTY: "Gwinnett"
       SPACES: 1304
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: "410/412 - Discover Mills to Lindbergh/Midtown/Downtown, 103 Discover Mills to Downtown Atlanta"
       SERVICE_PROVIDER: "Xpress, GCT, Georgia Rideshare"
       LAT: 33.984921
@@ -1004,9 +1004,9 @@
       CITY: "Roswell"
       COUNTY: "Fulton"
       SPACES: 418
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA, Georgia Rideshare"
       LAT: 34.038747
@@ -1035,9 +1035,9 @@
       CITY: "Acworth"
       COUNTY: "Cobb"
       SPACES: 250
-      LIGHTING: "Unknown"
-      SURFACE: "Unknown"
-      SHELTER: "Unknown"
+      LIGHTING: "lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "shelter"
       Route: "102 - Acworth to Midtown Atlanta            480 - Acworth to Downtown Atlanta"
       SERVICE_PROVIDER: "CCT, Xpress"
       LAT: 34.077023
@@ -1066,13 +1066,13 @@
       CITY: "Buford"
       COUNTY: "Gwinnett"
       SPACES: 718
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: "101 - Buford to Downtown Atlanta"
       SERVICE_PROVIDER: "GCT"
-      LAT: 34.086077
-      LONG_: -83.995452
+      LAT: 34.085269
+      LONG_: -83.995534
       Bike_Racks: null
       Parking_Fee: null
       Hours_of_Operation: null
@@ -1097,9 +1097,9 @@
       CITY: "Alpharetta"
       COUNTY: "Fulton"
       SPACES: 493
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA, Georgia Rideshare"
       LAT: 34.08636
@@ -1159,9 +1159,9 @@
       CITY: "Canton"
       COUNTY: "Cherokee"
       SPACES: 173
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "No"
+      SHELTER: "no shelter"
       Route: "490 - Canton/Woodstock to Downtwown Atlanta"
       SERVICE_PROVIDER: "Xpress (CATS), Georgia Rideshare"
       LAT: 34.230384
@@ -1190,9 +1190,9 @@
       CITY: "Decatur"
       COUNTY: null
       SPACES: 734
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.775024
@@ -1221,9 +1221,9 @@
       CITY: "Chamblee"
       COUNTY: null
       SPACES: 939
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.887424
@@ -1252,9 +1252,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 727
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.700325
@@ -1283,9 +1283,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 342
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.717026
@@ -1314,9 +1314,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 469
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.735817
@@ -1345,9 +1345,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 29
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.789078
@@ -1376,9 +1376,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 1403
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.822479
@@ -1407,9 +1407,9 @@
       CITY: "Decatur"
       COUNTY: null
       SPACES: 1530
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.772591
@@ -1438,9 +1438,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 21
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.749802
@@ -1469,9 +1469,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 302
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.757404
@@ -1500,9 +1500,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 487
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.761799
@@ -1531,9 +1531,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 581
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.765106
@@ -1562,9 +1562,9 @@
       CITY: "Stone Mountain"
       COUNTY: null
       SPACES: 2367
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.769733
@@ -1593,9 +1593,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 27
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.756458
@@ -1624,9 +1624,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 159
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.756275
@@ -1655,9 +1655,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 12
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.77214
@@ -1682,13 +1682,13 @@
       type: "Feature"
       OBJECTID: 55
       NAME: "West Lake"
-      LOCATION: "80 Anderson Avenue, SW"
+      LOCATION: "80 Anderson Avenue SW"
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 219
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.753242
@@ -1713,13 +1713,13 @@
       type: "Feature"
       OBJECTID: 56
       NAME: "Hamilton E. Holmes"
-      LOCATION: "70 Hamilton E. Holmes Dr, NW"
+      LOCATION: "70 Hamilton E. Holmes Dr NW"
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 939
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.754406
@@ -1748,9 +1748,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 12
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.780758
@@ -1779,9 +1779,9 @@
       CITY: "Sandy Springs"
       COUNTY: null
       SPACES: 1225
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.921066
@@ -1806,13 +1806,13 @@
       type: "Feature"
       OBJECTID: 59
       NAME: "Medical Center"
-      LOCATION: "5711 Peachtree-Dunwoody Rd, NE"
+      LOCATION: "5711 Peachtree-Dunwoody Rd NE"
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 208
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.910553
@@ -1841,9 +1841,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 833
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.932606
@@ -1872,9 +1872,9 @@
       CITY: "Sandy Springs"
       COUNTY: null
       SPACES: 2294
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.943817
@@ -1899,13 +1899,13 @@
       type: "Feature"
       OBJECTID: 62
       NAME: "Lenox"
-      LOCATION: "955 East Paces Ferry Rd, NE"
+      LOCATION: "955 East Paces Ferry Rd NE"
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 533
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.845955
@@ -1934,9 +1934,9 @@
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 1733
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.85997
@@ -1965,9 +1965,9 @@
       CITY: "Doraville"
       COUNTY: null
       SPACES: 1270
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.902386
@@ -1996,9 +1996,9 @@
       CITY: "College Park"
       COUNTY: null
       SPACES: 1971
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.651527
@@ -2027,9 +2027,9 @@
       CITY: "East Point"
       COUNTY: null
       SPACES: 907
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: null
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.676868
@@ -2085,13 +2085,13 @@
       type: "Feature"
       OBJECTID: 68
       NAME: "Turner Field"
-      LOCATION: "755 Hank Aaron Drive, SE"
+      LOCATION: "755 Hank Aaron Drive SE"
       CITY: "Atlanta"
       COUNTY: "Fulton"
       SPACES: 1700
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Unknown"
+      SHELTER: "no shelter"
       Route: null
       SERVICE_PROVIDER: "Georgia State"
       LAT: 33.735639
@@ -2120,9 +2120,9 @@
       CITY: "Douglasville"
       COUNTY: "Douglas"
       SPACES: 527
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Yes"
+      SHELTER: "shelter"
       Route: "461/462 to Downtown & Midtown Atlanta"
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.723007
@@ -2151,13 +2151,13 @@
       CITY: "Buford"
       COUNTY: "Gwinnett"
       SPACES: 900
-      LIGHTING: "Unknown"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
-      SHELTER: "Unknown"
+      SHELTER: "shelter"
       Route: "413 - Hamilton Mill to Downtown"
       SERVICE_PROVIDER: "Xpress"
-      LAT: 34.076373
-      LONG_: -83.920576
+      LAT: 34.075196
+      LONG_: -83.921598
       Bike_Racks: null
       Parking_Fee: null
       Hours_of_Operation: null
@@ -2244,13 +2244,13 @@
       CITY: "Buford"
       COUNTY: "Gwinnett"
       SPACES: 750
-      LIGHTING: "Lighted"
+      LIGHTING: "lighted"
       SURFACE: "Asphalt"
       SHELTER: "Unknown"
       Route: "411 - Mall of GA to Midtown"
       SERVICE_PROVIDER: "Xpress"
-      LAT: 34.068899
-      LONG_: -83.985175
+      LAT: 34.067807
+      LONG_: -83.982641
       Bike_Racks: null
       Parking_Fee: null
       Hours_of_Operation: null
