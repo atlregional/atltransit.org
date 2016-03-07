@@ -45,6 +45,12 @@
       "main": [
         "fonts/*", "less/!(variables).less"
       ]
+    },
+    "mapbox.js": {
+      "main": [
+        // "mapbox.standalone.css", 
+        "mapbox.js"
+      ]
     }
   },
   "resolutions": {
