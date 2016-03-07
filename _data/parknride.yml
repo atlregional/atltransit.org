@@ -1713,7 +1713,7 @@
       type: "Feature"
       OBJECTID: 56
       NAME: "Hamilton E. Holmes"
-      LOCATION: "70 Hamilton E. Holmes Dr, NW"
+      LOCATION: "70 Hamilton E. Holmes Dr NW"
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 939
@@ -1806,7 +1806,7 @@
       type: "Feature"
       OBJECTID: 59
       NAME: "Medical Center"
-      LOCATION: "5711 Peachtree-Dunwoody Rd, NE"
+      LOCATION: "5711 Peachtree-Dunwoody Rd NE"
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 208
@@ -1899,7 +1899,7 @@
       type: "Feature"
       OBJECTID: 62
       NAME: "Lenox"
-      LOCATION: "955 East Paces Ferry Rd, NE"
+      LOCATION: "955 East Paces Ferry Rd NE"
       CITY: "Atlanta"
       COUNTY: null
       SPACES: 533
@@ -2085,7 +2085,7 @@
       type: "Feature"
       OBJECTID: 68
       NAME: "Turner Field"
-      LOCATION: "755 Hank Aaron Drive, SE"
+      LOCATION: "755 Hank Aaron Drive SE"
       CITY: "Atlanta"
       COUNTY: "Fulton"
       SPACES: 1700
