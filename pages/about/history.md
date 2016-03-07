@@ -16,7 +16,7 @@ image: "/assets/images/logos/logo.png"
 ## Stitching Transit Together
 
 <div class="col-sm-6 col-xs-12 pull-right text-center bottom-buffer">
-	<img class="img-responsive center-block" style="max-height:300px" src="">
+	<img class="img-responsive center-block" style="max-height:300px" src="" alt="transit cross stitch">
 </div>
 
 

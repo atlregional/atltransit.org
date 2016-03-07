@@ -48,7 +48,7 @@ permalink: '/'
 			
 			<!-- <div class="top-buffer">
 				<a href="/maps/interactive">
-					<img src="/build/images/interactive-map.png" class="img-responsive">
+					<img src="/build/images/interactive-map.png" class="img-responsive" alt="interactive map">
 					<p>Find out where regional transit takes you!</p>
 				</a>
 			</div> -->

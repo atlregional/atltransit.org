@@ -25,7 +25,7 @@ The RTC builds upon the work of its predecessors, the Transit Implementation Boa
 ## Concept 3
 
 <div class="col-sm-6 col-xs-12 pull-right">
-	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/concept_3.png">
+	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/concept_3.png" alt="Concept 3">
 </div>
 
 Concept 3 is the Atlanta region's official long-range transit vision. It was developed through a collaborative, multi-year effort led by the Transit Planning Board, a predecessor to today's (RTC). 
@@ -44,7 +44,7 @@ The vision was officially adopted in 2008 and now serves as the transit element 
 ## Regional Fare Card
 
 <div class="col-sm-6 col-xs-12 pull-right">
-	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/fares/breeze_farebox.png">
+	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/fares/breeze_farebox.png" alt="Breeze Farebox">
 </div>
 
 Currently travelling among multiple transit providers is simplified by having the Breeze regional fare card.  Riders can load passes and cash value onto their Breeze Card without having to carry around multiple agency transit passes.
@@ -59,7 +59,7 @@ Currently travelling among multiple transit providers is simplified by having th
 ## Unified Bus Stop Signage
 
 <div class="col-sm-6 col-xs-12 pull-right">
-	<img class="img-responsive center-block" style="max-height: 285px" src="/assets/images/about/RegionalSignage.png">
+	<img class="img-responsive center-block" style="max-height: 285px" src="/assets/images/about/RegionalSignage.png" alt="Unified Regional Signage">
 </div>
 
 The regional transit partners are collaborating on a unified bus stop design.  This new signgage will better enable passengers to look up real-time arrival and service schedules for each stop.  Implementation for the core Downtown and Midtown regional bus stops is expected in 2017.

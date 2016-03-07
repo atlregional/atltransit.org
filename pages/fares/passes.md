@@ -45,7 +45,7 @@ Breeze Card is the regional transit fare card for Atlanta.  To pay for your trip
 ## List of all fare passes
 
 <div class="col-sm-6 col-xs-12 pull-right">
-	<img class="img-responsive center-block" style="max-height: 285px" src="/assets/images/Breeze.png">
+	<img class="img-responsive center-block" style="max-height: 285px" src="/assets/images/Breeze.png" alt="Breeze Card">
 </div>
 
 Wondering about the best way to pay for your trip?  Below is a complete listing of all fare passes available in the region.

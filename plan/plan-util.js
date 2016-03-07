@@ -1081,7 +1081,7 @@ function getDiff (startTime, endTime) {
   return diffDisplay
 }
 function getIcon (leg) {
-  return leg.mode === 'WALK' ? ' <img src="/assets/images/pedestrian.svg" alt="Walk" height="20"> ' :
+  return leg.mode === 'WALK' ? ' <img src="/assets/images/pedestrian.svg" alt="Walk" height="20" alt="Walking"> ' :
     leg.mode === 'SUBWAY' ? ' <span class="' + labelMap[leg.routeShortName] + '"><i class="fa fa-lg fa-train" alt="' + leg.agencyId + '"></i> ' + leg.routeShortName + '</span> ' :
       leg.mode === 'CAR' ? ' <i class="fa fa-lg fa-car" alt="Drive" height="20"></i> ' :
         leg.mode === 'BICYCLE' ? ' <i class="fa fa-lg fa-bicycle" alt="Bike" height="20"></i> ' :
