@@ -34,7 +34,7 @@ image: "http://www.clker.com/cliparts/2/4/8/f/131672402079289369Park%20and%20Rid
 
 Address: {{ parknride.LOCATION }}  
 Route: {{ parknride.Route }}  Provider: {{ parknride.SERVICE_PROVIDER }}  
-Facility description: {{ parknride.SPACES }} parking spaces, {{ parknride.LIGHTING }}, {{ parknride.SHELTER }}.  
+Description: {{ parknride.SPACES }} parking spaces, {{ parknride.LIGHTING }}, with {{ parknride.SHELTER }}.  
 
 
 {% capture latlng %}{{ parknride.geometry.coordinates[1] }},{{ parknride.geometry.coordinates[0] }}{% endcapture %}
