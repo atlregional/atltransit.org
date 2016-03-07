@@ -1035,9 +1035,9 @@
       CITY: "Acworth"
       COUNTY: "Cobb"
       SPACES: 250
-      LIGHTING: "Unknown"
-      SURFACE: "Unknown"
-      SHELTER: "Unknown"
+      LIGHTING: "Lighted"
+      SURFACE: "Asphalt"
+      SHELTER: "Yes"
       Route: "102 - Acworth to Midtown Atlanta            480 - Acworth to Downtown Atlanta"
       SERVICE_PROVIDER: "CCT, Xpress"
       LAT: 34.077023
