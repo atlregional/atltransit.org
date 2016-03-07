@@ -2156,8 +2156,8 @@
       SHELTER: "Yes"
       Route: "413 - Hamilton Mill to Downtown"
       SERVICE_PROVIDER: "Xpress"
-      LAT: 34.076373
-      LONG_: -83.920576
+      LAT: 34.075196
+      LONG_: -83.921598
       Bike_Racks: null
       Parking_Fee: null
       Hours_of_Operation: null
