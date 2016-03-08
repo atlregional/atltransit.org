@@ -29,13 +29,10 @@ Wondering about the best way to pay for your trip?  Below is a complete listing 
 
 Most discounts and passes for each individual transit agency are available on your Breeze Card.
 
-<p class="text-center bottom-buffer"><a class="btn btn-lg btn-primary top-buffer" href="http://breezecard.com/">Visit BreezeCard.com <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p>
-
-
 {% include fare-passes.html %}
 
 {% include row_break.html %}
-
+<p class="text-center bottom-buffer"><a class="btn btn-lg btn-primary top-buffer" href="http://breezecard.com/">Visit BreezeCard.com <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p>
 
 ## Reduced Fare
 
