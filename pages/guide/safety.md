@@ -57,11 +57,11 @@ You can [subscribe](https://twitter.com/ATLtransit/lists/atltransit-alerts) to t
 </div>
    
 
-## **Email/SMS Updates**
+<!--## **Email/SMS Updates**
 
 Sign up for future email and SMS service updates to stay informed to get info on just the routes you care about. (Expected Late 2016)
 
-{% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}
+{% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}-->
    
 
 ## **Safety**
