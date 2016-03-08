@@ -2,7 +2,7 @@
 layout: page
 title: "Fares, Passes & Breeze Card"
 id: passes
-order: 3
+order: 1
 category: fares
 permalink: /fares/passes/
 tagline: "Discounts are available for bulk purchases, multi-day passes, seniors, and youth."
