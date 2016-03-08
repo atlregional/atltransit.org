@@ -56,15 +56,12 @@ Seniors, youth, and students may qualify for special discounted fare.  Check the
 
 [Find out more on efforts to make fare payment easier in Atlanta »](/about/regional-transit)
 
-## Individual Agency Fare Passes
+## Agency Passes
 
 <div class="row">
 	<div class="col-sm-6">
 		<p>
-			In addition to the Breeze Card, GRTA Xpress, CobbLinc, and GCT each have their own fare products to use on their services. 
-		</p>
-		<p>
-			Riders may choose to purchase passes from each transit service directly. Passes can be purchased from each individual agency at the links below.
+			In addition to BreezeCard, most agencies offer their own fare products to use on their services. Agency passes can be purchased from each individual agency.
 		</p>
 	</div>
 	<div class="col-sm-6">
