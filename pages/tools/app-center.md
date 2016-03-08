@@ -23,8 +23,5 @@ image:
 ## Trip planning
 
 {% include app-gallery.html category="planning" %}
-
-
-## Accessibility
-
 {% include app-gallery.html category="accessibility" %}
+

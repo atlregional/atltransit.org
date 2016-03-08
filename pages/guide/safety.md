@@ -12,14 +12,14 @@ tagline: Manage your trip with these apps, service alerts, and safety features.
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
-
 ## **Transit Apps**
 
 {% include app-gallery.html category="realtime" %}
 
-## **Twitter Accounts**
+   
+## **Twitter Alerts**
 
-Follow these accounts for real-time service updates and delays.
+Follow these accounts for real-time service updates.
 
 <a class="twitter-follow-button"
   href="https://twitter.com/atlstreetcar"
@@ -55,16 +55,17 @@ You can [subscribe](https://twitter.com/ATLtransit/lists/atltransit-alerts) to t
 <a class="twitter-timeline"  href="https://twitter.com/atltransit/lists/atltransit-alerts" data-widget-id="704775734599012352">Tweets from https://twitter.com/atltransit/lists/atltransit-alerts</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
+   
 
-
-
-## **Email/SMS Updates**
+<!--## **Email/SMS Updates**
 
 Sign up for future email and SMS service updates to stay informed to get info on just the routes you care about. (Expected Late 2016)
 
-{% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}
-
-
+{% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}-->
+   
 
 ## **Safety**
+
+The [MARTA See & Say App](http://www.itsmarta.com/developers/app-station.aspx#) offers riders a quick and discrete method for reporting suspicious activity directly to MARTA Police. Using this app, riders can send MARTA Police pictures, text messages, and locations of suspicious persons and/or activities.
+
 
