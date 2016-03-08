@@ -1,4 +1,4 @@
-- name: OneBusAway App 
+- name: OneBusAway
   url: http://atlanta.onebusaway.org
   image: "/assets/images/guide/OneBusAway_App_Logo.png"
   platforms:
