@@ -19,7 +19,7 @@ published: true
 {% include row_break.html %}
 {% include tables/agency_fare_tables.html name=true %}
 
-## List of all fare passes
+## Multi-trip Fares
 
 <div class="col-sm-6 col-xs-12 pull-right">
 	<img class="img-responsive center-block" style="max-height: 200px" src="/assets/images/Breeze.png" alt="Breeze Card">
