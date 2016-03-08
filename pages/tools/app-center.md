@@ -24,14 +24,7 @@ image:
 
 {% include app-gallery.html category="planning" %}
 
-
-## Accessibility
-
 {% include right_image.html alt="SimplyGetThere website" src="/build/images/guide/simplygetthere.png" title="Simply Get There helps you plan trips for accessible modes." %}
 
-
-[Simply Get There](http://www.simplygetthere.org) is a trip planning tool specifically designed for comparing specialized services like paratransit with other mobility options.
-
-[<i class="fa fa-arrow-circle-o-right right-5"></i>Plan my trip](http://www.simplygetthere.org)
-
-The website pulls together a large database of door-to-door and curb-to-curb transportation providers, along with public transit and other resources.
+**Simply Get There**
+is a trip planning tool specifically designed for comparing specialized services like paratransit with other mobility options. [<i class="fa fa-arrow-circle-o-right right-5"></i>Plan my trip](http://www.simplygetthere.org)
