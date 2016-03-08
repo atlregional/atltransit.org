@@ -23,7 +23,7 @@
   platforms: Web
   description: "While we absolutely love Google Transit, the ATLtransit trip planner offers some great additional features.  It currently supports biking + transit option and offers more accurate fare information about the trip."
   category: planning
-  agencies: ["MARTA", "GRTA Xpress", "CobbLinc", "GCT"]
+  agencies: ["MARTA", "CobbLinc", "GCT", "GRTA Xpress", ]
 
 - name: Google Transit
   url: https://maps.google.com/
@@ -32,7 +32,7 @@
     apple: https://itunes.apple.com/us/app/google-maps/id585027354?mt=8
   description: "Google Transit (Google Maps) is a great trip planner for all modes of travel, including transit."
   category: planning
-  agencies: [MARTA, CobbLinc, GRTA Xpress, Hartsfield-Jackson Airport]
+  agencies: ["MARTA", "CobbLinc", "GRTA Xpress", "Hartsfield-Jackson Airport"]
   
 - name: Simply Get There
   url: http://www.simplygetthere.org/en/users/230708/trips/new
