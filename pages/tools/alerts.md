@@ -13,11 +13,11 @@ image: "/assets/images/guide/alert_bells.jpg"
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
-<!--## Email updates
+## Email updates
 
 Sign up for email updates to stay informed to get info on just the routes you care about.
 
-{% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}-->
+{% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}
 
 ## Twitter Alerts
 
