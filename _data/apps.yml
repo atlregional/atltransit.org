@@ -20,7 +20,10 @@
 
 - name: ATLtransit.org
   url: /plan/
-  platforms: Web
+  platforms: 
+    internet-explorer: http://www.atltransit.org
+    chrome: http://www.atltransit.org
+    firefox: http://www.atltransit.org
   description: "While we absolutely love Google Transit, the ATLtransit trip planner offers some great additional features.  It currently supports biking + transit option and offers more accurate fare information about the trip."
   category: planning
   agencies: ["MARTA", "CobbLinc", "GCT", "GRTA Xpress", ]
@@ -30,13 +33,19 @@
   platforms:
     android: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en
     apple: https://itunes.apple.com/us/app/google-maps/id585027354?mt=8
+    internet-explorer: https://maps.google.com/landing/transit/index.html
+    chrome: https://maps.google.com/landing/transit/index.html
+    firefox: https://maps.google.com/landing/transit/index.html
   description: "Google Transit (Google Maps) is a great trip planner for all modes of travel, including transit."
   category: planning
   agencies: ["MARTA", "CobbLinc", "GRTA Xpress", "Hartsfield-Jackson Airport"]
   
 - name: Simply Get There
   url: http://www.simplygetthere.org/en/users/230708/trips/new
-  platforms: Web
+  platforms: 
+    internet-explorer: http://www.simplygetthere.org/en/users/230708/trips/1384
+    chrome: http://www.simplygetthere.org/en/users/230708/trips/1384
+    firefox: http://www.simplygetthere.org/en/users/230708/trips/1384
   description: "Simply Get There is a trip planning tool specifically designed for comparing specialized services like paratransit with other mobility options."
   category: accessibility
   agencies: 
