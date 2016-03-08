@@ -149,7 +149,7 @@ window.onload = function(){
 		};
 
 		var message;
-		var simplyButton = '<a href="http://oneclick-arc.camsys-apps.com/?is_round_trip=true&modes=mode_bicycle,mode_rideshare,mode_car,mode_paratransit,mode_taxi,mode_transit,mode_bus,mode_rail&purpose=undefined&from_place='+ $('#planner-options-from').val() + '&to_place=' + $('#planner-options-dest').val() +'" class="btn btn-default" target="_blank">View trip in Simply Get There</a>';
+		var simplyButton = '<a href="http://www.simplygetthere.org/?is_round_trip=true&modes=mode_bicycle,mode_rideshare,mode_car,mode_paratransit,mode_taxi,mode_transit,mode_bus,mode_rail&purpose=undefined&from_place='+ $('#planner-options-from').val() + '&to_place=' + $('#planner-options-dest').val() +'" class="btn btn-default" target="_blank">View trip in Simply Get There</a>';
 	
 		// If both origin/destination fall in single agency service boundary
 		if (qualificationResults.length > 0 ){
@@ -194,7 +194,7 @@ window.onload = function(){
 		// message += isInsideDestination ? '<em>inside</em> ' : '<em>outside</em> ';
 		// message += 'the service boundary.</p><p>So, your trip '
 		// message += isInsideDestination && isInsideOrigin ? '<strong><em>probably does</em></strong> ' : '<strong><em>most likely does not</em></strong> ';
-		// message += 'qualify for paratransit service.</p><p>Find more specialized services at <a href="http://oneclick-arc.camsys-apps.com/" target="_blank">Simply Get There</a> or <a href="" target="_blank">view agency information for more on each agency\'s paratransit offerings</a>.</p>'
+		// message += 'qualify for paratransit service.</p><p>Find more specialized services at <a href="http://www.simplygetthere.org/" target="_blank">Simply Get There</a> or <a href="" target="_blank">view agency information for more on each agency\'s paratransit offerings</a>.</p>'
 
 		
 		$('#paratransit-message').html(message)
