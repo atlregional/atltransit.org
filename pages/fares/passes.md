@@ -52,10 +52,6 @@ Seniors, youth, and students may qualify for special discounted fare.  Check the
 
 
 
-[Find out more on free transfers »](/fares/transfers)
-
-[Find out more on efforts to make fare payment easier in Atlanta »](/about/regional-transit)
-
 ## Agency Passes
 
 <div class="row">
