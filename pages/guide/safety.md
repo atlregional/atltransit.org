@@ -68,3 +68,5 @@ Sign up for future email and SMS service updates to stay informed to get info on
 
 ## **Safety**
 
+The [MARTA See & Say App](http://www.itsmarta.com/developers/app-station.aspx#) offers riders a quick and discrete method for reporting suspicious activity directly to MARTA Police. Using this app, riders can send MARTA Police pictures, text messages, and locations of suspicious persons and/or activities.
+
