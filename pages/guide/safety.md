@@ -17,9 +17,9 @@ tagline: Manage your trip with these apps, service alerts, and safety features.
 {% include app-gallery.html category="realtime" %}
 
    
-## **Twitter Accounts**
+## **Twitter Alerts**
 
-Follow these accounts for real-time service updates and delays.
+Follow these accounts for real-time service updates.
 
 <a class="twitter-follow-button"
   href="https://twitter.com/atlstreetcar"
