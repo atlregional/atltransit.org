@@ -20,6 +20,7 @@
 
 - name: ATLtransit.org
   url: /plan/
+  platforms: Web
   description: "While we absolutely love Google Transit, the ATLtransit trip planner offers some great additional features.  It currently supports biking + transit option and offers more accurate fare information about the trip."
   category: planning
   agencies: ["MARTA", "GRTA Xpress", "CobbLinc", "GCT"]
@@ -35,6 +36,7 @@
   
 - name: Simply Get There
   url: http://www.simplygetthere.org/en/users/230708/trips/new
+  platforms: Web
   description: "Simply Get There is a trip planning tool specifically designed for comparing specialized services like paratransit with other mobility options."
   category: accessibility
   agencies: 
