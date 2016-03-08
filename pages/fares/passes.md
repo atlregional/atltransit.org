@@ -37,7 +37,7 @@ Most discounts and passes for each individual transit agency are available on yo
 {% include row_break.html %}
 
 
-## Discounts
+## Reduced Fare
 
 Seniors, youth, and students may qualify for special discounted fare.  Check the list of available discounts below and visit your agency's website for details on qualification and where to buy.
 
