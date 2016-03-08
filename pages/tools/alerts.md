@@ -19,7 +19,7 @@ Sign up for email updates to stay informed to get info on just the routes you ca
 
 {% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}-->
 
-## **Twitter Alerts**
+## Twitter Alerts
 
 Follow these accounts for real-time service updates.
 
