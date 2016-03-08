@@ -5,7 +5,7 @@ id: passes
 order: 1
 category: fares
 permalink: /fares/passes/
-tagline: "Discounts are available for bulk purchases, multi-day passes, seniors, and youth."
+tagline: 
 image: /build/images/breeze_multi_agency.jpeg
 published: true
 ---
