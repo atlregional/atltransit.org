@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Discounts & Passes"
+title: "Fares, Passes & Breeze Card"
 id: passes
 order: 3
 category: fares
