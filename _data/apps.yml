@@ -32,7 +32,7 @@
     apple: https://itunes.apple.com/us/app/google-maps/id585027354?mt=8
   description: "Google Transit (Google Maps) is a great trip planner for all modes of travel, including transit."
   category: planning
-  agencies: [MARTA, CobbLinc, GRTA Xpress, and Hartsfield-Jackson Airport]
+  agencies: [MARTA, CobbLinc, GRTA Xpress, Hartsfield-Jackson Airport]
   
 - name: Simply Get There
   url: http://www.simplygetthere.org/en/users/230708/trips/new
