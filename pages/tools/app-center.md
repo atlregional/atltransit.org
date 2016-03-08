@@ -15,12 +15,12 @@ image:
 
 
 
-## Real-time info
+## Real-time Info
 
 {% include app-gallery.html category="realtime" %}
 
 
-## Trip planning
+## Trip Planning
 
 {% include app-gallery.html category="planning" %}
 {% include app-gallery.html category="accessibility" %}
