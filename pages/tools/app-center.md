@@ -24,5 +24,5 @@ image:
 
 {% include app-gallery.html category="planning" %}
 {% include app-gallery.html category="accessibility" %}
-"Simply Get There is a trip planning tool specifically designed for comparing specialized services like paratransit with other mobility options."
+Simply Get There is a trip planning tool specifically designed for comparing specialized services like paratransit with other mobility options.
 
