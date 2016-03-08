@@ -6,7 +6,7 @@ order: 3
 category: 'tools'
 permalink: '/tools/alerts/'
 related: ["contact", "agencies"]
-tagline: Be the first to know about service disruptions. Sign up for email/SMS alerts or follow our Twitter feeds.
+tagline: Manage your trip with these service alerts.
 image: "/assets/images/guide/alert_bells.jpg"
 ---
 
