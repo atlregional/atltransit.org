@@ -57,6 +57,10 @@ You can [subscribe](https://twitter.com/ATLtransit/lists/atltransit-alerts) to t
 </div>
 
 
+## **Safety**
+
+The [MARTA See & Say App](http://www.itsmarta.com/developers/app-station.aspx#) offers riders a quick and discrete method for reporting suspicious activity directly to MARTA Police. Using this app, riders can send MARTA Police pictures, text messages, and locations of suspicious persons and/or activities.
+
 
 ## **Email/SMS Updates**
 
@@ -64,9 +68,4 @@ Sign up for future email and SMS service updates to stay informed to get info on
 
 {% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}
 
-
-
-## **Safety**
-
-The [MARTA See & Say App](http://www.itsmarta.com/developers/app-station.aspx#) offers riders a quick and discrete method for reporting suspicious activity directly to MARTA Police. Using this app, riders can send MARTA Police pictures, text messages, and locations of suspicious persons and/or activities.
 
