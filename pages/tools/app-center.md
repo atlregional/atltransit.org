@@ -23,8 +23,5 @@ image:
 ## Trip planning
 
 {% include app-gallery.html category="planning" %}
+{% include app-gallery.html category="accesibility" %}
 
-{% include right_image.html alt="SimplyGetThere website" src="/build/images/guide/simplygetthere.png" title="Simply Get There helps you plan trips for accessible modes." %}
-
-**Simply Get There**
-Trip planning tool specifically designed for comparing specialized services like paratransit with other mobility options. [<i class="fa fa-arrow-circle-o-right right-5"></i>Plan my trip](http://www.simplygetthere.org)
