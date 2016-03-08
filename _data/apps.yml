@@ -33,3 +33,10 @@
   description: "Google Transit (AKA Google Maps) is a great trip planner for all modes of travel, espcially transit! This is a perfect option if you're a frequent user of Google Maps."
   category: planning
   agencies: []
+  
+- name: Simply Get There
+  url: http://www.simplygetthere.org/en/users/230708/trips/new
+  platforms:
+  description: "Simply Get There is a trip planning tool specifically designed for comparing specialized services like paratransit with other mobility options."
+  category: accessibility
+  agencies: 
