@@ -15,7 +15,7 @@ tagline: The top 6 transit riding tips for new riders.
 
 2.  **Arrive a few minutes early** to your stop or station.
 
-3.  If you're waiting for a bus, **stand near the stop's signage and acknowledge the driver** as they approach.
+3.  If you're waiting for a bus, **stand near the stop's signage and signal to the driver** as the approach.
 
 4.  Paying in cash or coins can delay the bus.  Help make the trip faster for everyone and <a href="http://www.breezecard.com/"> **pre-load cash fare onto a Breeze Card.** </a>
 

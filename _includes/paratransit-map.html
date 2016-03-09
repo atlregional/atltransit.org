@@ -159,7 +159,7 @@ window.onload = function(){
 		// Else If only two agencies have jurisdiction.  All we need to do is determine transfer rules.
 		else if (origins.length == 1 && destinations.length == 1){
 			if (agencies.indexOf('Cobb Community Transit') > -1 && agencies.indexOf('Metropolitan Atlanta Rapid Transit Authority') > -1 ){
-				message = 'MARTA and CCT have a free transfer rule. You will need to transfer at Cumberland Transfer Center.';
+				message = 'MARTA and CobbLinc have a free transfer rule. You will need to transfer at Cumberland Transfer Center.';
 				message += '<br>' + simplyButton;
 			}
 			else if (agencies.indexOf('Gwinnett County Transit') > -1 && agencies.indexOf('Metropolitan Atlanta Rapid Transit Authority') > -1 ){
@@ -177,7 +177,7 @@ window.onload = function(){
 			var singleAgency = origins.length === 1 ? origins : destinations;
 			console.log(singleAgency)
 			if (singleAgency.indexOf('Cobb Community Transit') > -1 ){
-				message = 'MARTA and CCT have a free transfer rule. You will need to transfer at Cumberland Transfer Center.';
+				message = 'MARTA and CobbLinc have a free transfer rule. You will need to transfer at Cumberland Transfer Center.';
 			}
 			else{
 				message = 'The trip is possible, but you must pay full-priced fare for both MARTA and GCT. You will need to transfer at the Doraville MARTA Station.';
