@@ -14,9 +14,13 @@
 {% if page.fares %}
 <h2 class="row-heading" id="fares"></i>Fares</h2>
 <p>{{ page.fares.description }}</p>
+<div class="row">
 {% include tables/agency_fare_tables.html title=true name=false agency=page.id %}
 {% include tables/agency_fare_passes.html title=true agency=page.id %}
+</div>
+<p><a href="/fares/passes">Learn more about discounts and passes available online »</a></p>
 {% endif %}
+
 
 {% if page.paratransit %}
 <h2 class="row-heading" id="paratransit"><i class="fa fa-wheelchair right-5"></i>Paratransit</h2>
