@@ -2,7 +2,7 @@
 layout: page
 title: How to transfer
 id: transfers
-order: 4
+order: 3
 category: 'fares'
 permalink: '/fares/transfers/'
 related: ["schedules", "realtime"]

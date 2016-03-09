@@ -2,7 +2,7 @@
 layout: page
 title: Transfer fare calculator
 id: calculator
-order: 2
+order: 4
 category: 'fares'
 permalink: '/fares/calculator/'
 tagline: Travelling across the region?  Find out how much your trip costs!

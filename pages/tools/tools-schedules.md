@@ -15,7 +15,7 @@ image: "/build/images/train_schedule.jpeg"
 
 Choose an agency, route, and stop to view schedules by date.
 
-[<i class="fa fa-calendar right-5"></i>View hours of operations for transit agencies](/schedules) 
+[<i class="fa fa-calendar right-5"></i>View hours of operations for transit agencies](/getting-around) 
 
 {% include schedule-widget.html %}
 

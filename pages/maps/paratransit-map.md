@@ -15,6 +15,6 @@ Looking for a quick way to check if your trip might qualify for paratransit in t
 
 Type in your origin and destination into the below form to see if both fall within the service area of a service provider.
 
-[Find more curb-to-curb and door-to-door options with Simply Get There »](http://oneclick-arc.camsys-apps.com/)
+[Find more curb-to-curb and door-to-door options with Simply Get There »](http://www.simplygetthere.org)
 
 {% include paratransit-map.html %}

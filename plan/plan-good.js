@@ -614,7 +614,7 @@ function initializeForms(){
         container: 'body',
         html: true,
         // viewport: '#containz',
-        content: '<p>ARC\'s <a target="_blank" href="http://oneclick-arc.camsys-apps.com/">One-Click</a> combines data from this trip planner with services like <strong>MARTA Mobility</strong>, transport for veterans and disabled persons, and other on-demand services.</p><a target="_blank" href="http://oneclick-arc.camsys-apps.com/" type="button" class="center-block btn btn-primary">Visit the One-Click!</a>',
+        content: '<p>ARC\'s <a target="_blank" href="http://www.simplygetthere.org/">One-Click</a> combines data from this trip planner with services like <strong>MARTA Mobility</strong>, transport for veterans and disabled persons, and other on-demand services.</p><a target="_blank" href="http://www.simplygetthere.org/" type="button" class="center-block btn btn-primary">Visit the One-Click!</a>',
         trigger: 'click',
         title: 'Looking for specialized services?' + '<button type="button" onclick="$(\'.popover-dismiss\').popover(\'hide\');" class="close">&times;</button>'
     });

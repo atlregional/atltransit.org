@@ -2,7 +2,7 @@
 layout: page
 title: How to pay your fare
 id: products
-order: 1
+order: 2
 category: fares
 permalink: /fares/products/
 tagline: Paying your fare is easy. Your Breeze Card lets you access most of the transit in the Atlanta region.
