@@ -12,12 +12,12 @@ tagline: Manage your trip with these apps, service alerts, and safety features.
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
-## **Transit Apps**
+## Transit Apps
 
 {% include app-gallery.html category="realtime" %}
 
    
-## **Twitter Alerts**
+## Twitter Alerts
 
 Follow these accounts for real-time service updates.
 
@@ -57,14 +57,14 @@ You can [subscribe](https://twitter.com/ATLtransit/lists/atltransit-alerts) to t
 </div>
    
 
-<!--## **Email/SMS Updates**
+## Email/SMS Updates
 
 Sign up for future email and SMS service updates to stay informed to get info on just the routes you care about. (Expected Late 2016)
 
-{% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}-->
+{% include forms/alerts_signup.html size="col-sm-5 col-xs-7 col-md-4" %}
    
 
-## **Safety**
+## Safety
 
 The [MARTA See & Say App](http://www.itsmarta.com/developers/app-station.aspx#) offers riders a quick and discrete method for reporting suspicious activity directly to MARTA Police. Using this app, riders can send MARTA Police pictures, text messages, and locations of suspicious persons and/or activities.
 
