@@ -58,16 +58,16 @@ fares:
       breeze: false
   passes:
   - name: Local 10 Ride
-    cost: "$18.00"
+    cost: "$18"
     breeze: true
   - name: Local 31 Day Pass
-    cost: "$72.00"
+    cost: "$72"
     breeze: true
   - name: Express 20 Ride
-    cost: "$65.00"
+    cost: "$65"
     breeze: true
   - name: Express 31 Day Pass
-    cost: "$125.00"
+    cost: "$125"
     breeze: true
   discounts: 
   - name: Youth
