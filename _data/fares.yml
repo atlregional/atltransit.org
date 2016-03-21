@@ -93,7 +93,7 @@
       cost: "$5.00"
       description: Zone 2 express bus fare
   passes:
-  - name: Zone1 Exp 10 Ride
+  - name: Zone 1 Express 10 Ride
     cost: "$32.50"
   - name: Zone 2 Express 10 Ride
     cost: "$45"
