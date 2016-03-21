@@ -75,9 +75,6 @@ fares:
     cost: "$22.50"
     breeze: true
   discounts: 
-  - name: Youth
-    cost: "$1.50"
-    details: see GCT website
   - name: Elderly/disabled
     cost: "$1.25"
   paratransit: 
