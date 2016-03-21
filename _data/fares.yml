@@ -43,8 +43,8 @@
   - name: 30 Day Pass
     cost: "$128.00"
 
-- name: CCT
-  id: cct
+- name: CobbLinc
+  id: cobblinc
   info_url: "http://www.cobbcounty.org/index.php?option=com_content&view=article&id=471&Itemid=422"
   purchase_url: "http://egov.cobbcountyga.gov/index.php/estore-categories/2/168/cct-bus-passes"
   base: 
