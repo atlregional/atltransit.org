@@ -60,16 +60,16 @@ fares:
     cost: "$32.50"
     breeze: true
   - name: Zone 2 Express 10 Ride
-    cost: "$45.00"
+    cost: "$45"
     breeze: true
   - name: Zone 1 Express 30 Day
-    cost: "$130.00"
+    cost: "$130"
     breeze: true
   - name: Zone 2 Express 30 Day
-    cost: "$180.00"
+    cost: "$180"
     breeze: true
   - name: Local 30 Day
-    cost: "$80.00"
+    cost: "$80"
     breeze: true
   - name: Local 10 Ride
     cost: "$22.50"
