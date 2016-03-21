@@ -56,24 +56,24 @@ fares:
       description: Zone 2 express bus fare
       breeze: false
   passes:
-  - name: Zone 1 Express 10 Ride
-    cost: "$32.50"
-    breeze: true
-  - name: Zone 1 Express 30 Day
-    cost: "$130"
-    breeze: true
-  - name: Zone 2 Express 10 Ride
-    cost: "$45"
-    breeze: true
-  - name: Zone 2 Express 30 Day
-    cost: "$180"
-    breeze: true
-  - name: Local 10 Ride
-    cost: "$22.50"
-    breeze: true
-  - name: Local 30 Day
-    cost: "$80"
-    breeze: true
+    - name: Zone 1 Express 10 Ride
+      cost: "$32.50"
+      breeze: true
+    - name: Zone 1 Express 30 Day
+      cost: "$130"
+      breeze: true
+    - name: Zone 2 Express 10 Ride
+      cost: "$45"
+      breeze: true
+    - name: Zone 2 Express 30 Day
+      cost: "$180"
+      breeze: true
+    - name: Local 10 Ride
+      cost: "$22.50"
+      breeze: true
+    - name: Local 30 Day
+      cost: "$80"
+      breeze: true
   discounts: 
   - name: Elderly/disabled
     cost: "$1.25"
