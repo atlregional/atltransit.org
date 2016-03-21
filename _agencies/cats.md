@@ -12,7 +12,7 @@ zip: 30114
 email: 
 website: http://cats.cherokeega.com/
 phone: (770) 345-6238
-logo: "/build/images/logos/cats.png"
+logo: "/assets/images/logos/cats.png"
 path: cats
 tagline: CATS operates two routes in Cherokee County.
 services:
