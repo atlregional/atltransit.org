@@ -15,7 +15,7 @@ website: http://gocct.org/
 twitter: cobbtransit
 phone: (770) 427-4444
 logo: "/assets/images/logos/CobbLinc_Logo.png"
-path: cct
+path: cobblinc
 tagline: CobbLinc serves Cobb County with local and express bus routes.
 services:
   - local_bus
