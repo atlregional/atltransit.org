@@ -1,6 +1,6 @@
 ---
 layout: agency
-id: cct
+id: cobblinc
 title: CobbLinc
 category: about
 name: CobbLinc
