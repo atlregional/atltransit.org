@@ -41,6 +41,9 @@ fares:
   - name: 1 Day Pass
     cost: "$3.00"
     breeze: cash
+  - name: 1 Day Pass
+    cost: "$3.00"
+    breeze: cash
   - name: 7 Day Pass
     cost: "$11.00"
     breeze: cash
