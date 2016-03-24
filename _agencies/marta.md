@@ -60,6 +60,9 @@ fares:
   - name: 2 Trip
     cost: "$5.00"
     breeze: true
+  - name: 2 Trip
+    cost: "$5.00"
+    breeze: true
   - name: 10 Trip
     cost: "$25.00"
     breeze: true
