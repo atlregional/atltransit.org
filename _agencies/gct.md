@@ -78,7 +78,7 @@ fares:
       cost: "$80"
       breeze: true
   discounts: 
-  - name: Elderly/disabled
+  - name: Elderly/Disabled/Medicare
     cost: "$1.25"
   paratransit: 
   - name: 1 trip
