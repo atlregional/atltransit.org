@@ -59,6 +59,9 @@ fares:
     - name: Zone 1 Express 10 Ride
       cost: "$32.50"
       breeze: true
+    - name: Zone 1 Express 10 Ride
+      cost: "$32.50"
+      breeze: true
     - name: Zone 1 Express 30 Day
       cost: "$130"
       breeze: true
