@@ -42,6 +42,9 @@ fares:
   - name: Green Zone Round Trip
     cost: "$5.00"
     breeze: true
+  - name: Green Zone Round Trip
+    cost: "$5.00"
+    breeze: true
   - name: Green Zone 10-Trip
     cost: "$25.00"
     breeze: true
