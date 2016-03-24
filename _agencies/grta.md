@@ -39,27 +39,27 @@ fares:
       description: Blue zone express bus fare
       breeze: false
   passes:
-  - name: Green Zone Round Trip
-    cost: "$5.00"
-    breeze: true
-  - name: Green Zone Round Trip
-    cost: "$5.00"
-    breeze: true
-  - name: Green Zone 10-Trip
-    cost: "$25.00"
-    breeze: true
-  - name: Green Zone 31-Day
-    cost: "$100.00"
-    breeze: true
-  - name: Blue Zone Round Trip
-    cost: "$7.00"
-    breeze: true
-  - name: Blue Zone 10-Trip
-    cost: "$35.00"
-    breeze: true
-  - name: Blue Zone 31-Day
-    cost: "$125.00"
-    breeze: true
+    - name: Green Zone Round Trip
+      cost: "$5.00"
+      breeze: true
+    - name: Green Zone Round Trip
+      cost: "$5.00"
+      breeze: true
+    - name: Green Zone 10-Trip
+      cost: "$25.00"
+      breeze: true
+    - name: Green Zone 31-Day
+      cost: "$100.00"
+      breeze: true
+    - name: Blue Zone Round Trip
+      cost: "$7.00"
+      breeze: true
+    - name: Blue Zone 10-Trip
+      cost: "$35.00"
+      breeze: true
+    - name: Blue Zone 31-Day
+      cost: "$125.00"
+      breeze: true
   discounts: 
   - name: Children
     cost: "Free"
