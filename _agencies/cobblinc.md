@@ -60,6 +60,9 @@ fares:
   - name: Local 10 Ride
     cost: "$18"
     breeze: true
+  - name: Local 10 Ride
+    cost: "$18"
+    breeze: true
   - name: Local 31 Day Pass
     cost: "$72"
     breeze: true
