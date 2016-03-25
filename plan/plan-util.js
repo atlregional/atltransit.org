@@ -877,10 +877,10 @@ function legItem (leg, legName) {
 }
 function getName (leg) {
   var name
-  if (leg.route === 'BLUE' || leg.route === 'GREEN' || leg.route === 'RED' || leg.route === 'GOLD') {
+  if (leg.route === 'BLUE' || leg.route === 'GREEN' || leg.route === 'RED' || leg.route === 'GOLD' || leg.agencyId == 'ASC') {
     name = leg.route
   }
-  else if (leg.agencyId == 'MARTA' || leg.agencyId == 'GRTA' || leg.agencyId == 'GCT' || leg.agencyId == 'CCT') {
+  else if (leg.agencyId == 'MARTA' || leg.agencyId == 'GRTA' || leg.agencyId == 'GCT' || leg.agencyId == 'CCT' ) {
     name = leg.agencyId
   }
   else if (leg.mode == 'WALK' || leg.mode == 'BICYCLE') {
@@ -1083,10 +1083,11 @@ function getDiff (startTime, endTime) {
 function getIcon (leg) {
   return leg.mode === 'WALK' ? ' <img src="/assets/images/pedestrian.svg" alt="Walk" height="20" alt="Walking"> ' :
     leg.mode === 'SUBWAY' ? ' <span class="' + labelMap[leg.routeShortName] + '"><i class="fa fa-lg fa-train" alt="' + leg.agencyId + '"></i> ' + leg.routeShortName + '</span> ' :
-      leg.mode === 'CAR' ? ' <i class="fa fa-lg fa-car" alt="Drive" height="20"></i> ' :
-        leg.mode === 'BICYCLE' ? ' <i class="fa fa-lg fa-bicycle" alt="Bike" height="20"></i> ' :
-          leg.mode === 'BUS' ? ' <span class="' + labelMap[leg.agencyId] + '"><i class="fa fa-lg fa-bus" alt="' + leg.agencyId + '"></i> ' + leg.routeShortName + ' </span>' :
-            ''
+      leg.mode === 'TRAM' ? ' <span class="' + labelMap[leg.agencyId] + '"><i class="fa fa-lg fa-train" alt="' + leg.agencyId + '"></i> ' + leg.routeShortName + '</span> ' :
+        leg.mode === 'CAR' ? ' <i class="fa fa-lg fa-car" alt="Drive" height="20"></i> ' :
+          leg.mode === 'BICYCLE' ? ' <i class="fa fa-lg fa-bicycle" alt="Bike" height="20"></i> ' :
+            leg.mode === 'BUS' ? ' <span class="' + labelMap[leg.agencyId] + '"><i class="fa fa-lg fa-bus" alt="' + leg.agencyId + '"></i> ' + leg.routeShortName + ' </span>' :
+              ''
 }
 function planItinerary (plannerreq) {
   var url = planningserver + jQuery.param(plannerreq)
@@ -1148,6 +1149,7 @@ function getColor (leg) {
   // else if(leg.route === "GOLD") return 'rgb(255, 215, 0)'
   else if (leg.route === 'GOLD') return 'rgb(255, 215, 0)'
   else if (/MARTA/g.test(leg.agencyId)) return 'rgb(247, 144, 68)'
+  else if (/ASC/g.test(leg.agencyId)) return 'rgb(98, 98, 154)'
   else if (/CCT/g.test(leg.agencyId)) return 'rgb(165, 56, 149)'
   else if (/GCT/g.test(leg.agencyId)) return 'rgb(154, 14, 52)'
   else if (leg.agencyId === '0') return 'rgb(154, 14, 52)'

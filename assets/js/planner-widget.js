@@ -9,6 +9,7 @@ var labelMap = {
 	'CCT': 'label label-magenta',
 	'GCT': 'label label-maroon',
 	'GRTA': 'label label-cyan',
+	'ASC': 'label label-purple'
 };
 
 // window.onload = function(){
