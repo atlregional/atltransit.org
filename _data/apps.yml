@@ -12,11 +12,20 @@
   url: http://www.itsmarta.com/developers/app-station.aspx
   image: "/assets/images/guide/MARTA_App_Logo.png"
   platforms:
-    android: https://play.google.com/store/apps/details?id=com.itsmarta.martaapp&feature=search_result#?t=W10.
+    android: https://play.google.com/store/apps/details?id=com.itsmarta.martaapp
     apple: https://itunes.apple.com/us/app/marta/id386648039?mt=8
   description: MARTA On the Go provides scheduling information for bus and rail services. The app will also provide real-time bus and rail information, service alerts, and connecting bus route(s) information. 
   category: realtime
   agencies: ["MARTA"]
+- name: myStop Mobile 
+  url: 
+  image: 
+  platforms:
+    android: https://play.google.com/store/apps/details?id=com.AvailTec.MyStop&hl=en
+    apple: https://itunes.apple.com/us/app/mystop-mobile/id591959423?mt=8
+  description: myStop® Mobile provides real-time traveler information in the palm of your hand!. 
+  category: realtime
+  agencies: ["GCT"]
 
 - name: ATLtransit.org
   url: /plan/
