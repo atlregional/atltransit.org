@@ -30,7 +30,7 @@
   url: http://gocct.cobbcounty.org/
   image: 
   platforms:
-    explorer: http://gocct.cobbcounty.org/
+    internet-explorer: http://gocct.cobbcounty.org/
   description:
   category: realtime
   agencies: ["CobbLinc"]
