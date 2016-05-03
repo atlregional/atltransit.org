@@ -26,6 +26,14 @@
   description: myStop® Mobile provides real-time traveler information in the palm of your hand!. 
   category: realtime
   agencies: ["GCT"]
+- name: GoCCT Locator
+  url: http://gocct.cobbcounty.org/
+  image: 
+  platforms:
+    explorer: http://gocct.cobbcounty.org/
+  description:
+  category: realtime
+  agencies: ["CobbLinc"]
 
 - name: ATLtransit.org
   url: /plan/
