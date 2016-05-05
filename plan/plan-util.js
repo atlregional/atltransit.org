@@ -828,7 +828,8 @@ function legItem (leg, legName) {
     // if (headsignParts[0] === leg.route || headsignParts[0] === "MARTA"){
     //   headsign = headsign.slice(headsignParts[0].length, headsign.length)
     // }
-    legItem.append('<div class="list-group-item-heading"><h4 class="leg-header"><b>' + icon + ' ' + '</b> ' + headsign + '<span class="leg-header-agency-name pull-right"><small>' + leg.agencyId + '</small></span></h4>')
+    var agency = leg.agencyId ? leg.agencyId : ''
+    legItem.append('<div class="list-group-item-heading"><h4 class="leg-header"><b>' + icon + ' ' + '</b> ' + headsign + '<span class="leg-header-agency-name pull-right"><small>' + agency + '</small></span></h4>')
   }
   var startTime = moment(leg.startTime - (leg.departureDelay ? leg.departureDelay : 0)).format('hh:mm a')
   var delayMin = (leg.departureDelay / 60) | 0
