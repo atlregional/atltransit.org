@@ -1170,6 +1170,26 @@ function makePlanRequest () {
   plannerreq.mode = $('input[name=mode-select]:checked').val() || $('.mode-option').val()
   plannerreq.time = $('.planner-time-btn:first-child').val() === 'Leave now' ? moment().valueOf() : getTime()
   plannerreq.date = getDate()
+  console.log()
+  var bikeTriangle = $('.bike-triangle.active')
+  if (bikeTriangle.length && plannerreq.mode.split(',')[0] === 'BICYCLE') {
+    plannerreq.triangleSafetyFactor = 0
+    plannerreq.triangleSlopeFactor = 0
+    plannerreq.triangleTimeFactor = 0
+    plannerreq.optimize = 'TRIANGLE'
+    for (var i = 0; i < bikeTriangle.length; i++) {
+      console.log(bikeTriangle[i].id)
+      if (bikeTriangle[i].id === 'quick') {
+        plannerreq.triangleTimeFactor = 1 / bikeTriangle.length
+      }
+      if (bikeTriangle[i].id === 'flat') {
+        plannerreq.triangleSlopeFactor = 1 / bikeTriangle.length
+      }
+      if (bikeTriangle[i].id === 'bike-friendly') {
+        plannerreq.triangleSafetyFactor = 1 / bikeTriangle.length
+      }
+    }
+  }
   plannerreq.arriveBy = $('.planner-time-btn:first-child').val() === 'Arrive by' ? true : false
   // plannerreq.transferPenalty = 3000
   // plannerreq.walkReluctance = 3
@@ -1261,6 +1281,9 @@ function restoreFromHash () {
   if ('mode' in plannerreq) {
     $('#train').parent().removeClass('active')
     $('input[type=radio][value="' + plannerreq.mode + '"]').prop('checked', true).parent().addClass('active')
+    if (plannerreq.mode.split(',')[0] === 'BICYCLE') {
+      $('#bike-triangle-container').show()
+    }
     $('.mode-option').val(plannerreq.mode)
   }
   if ('toPlace' in plannerreq) {
@@ -1286,15 +1309,25 @@ function setupSubmit () {
     e.preventDefault()
     return false
   })
-
-  $('input:radio[name="mode-select"]').change(
+  var $modeSelect = $('input:radio[name="mode-select"]')
+  $modeSelect.change(
     function () {
-      if ($(this).is(':checked') && $(this).val() == 'CAR') {
+      var checked = $(this).is(':checked')
+      var val = $(this).val()
+      if (checked && val === 'CAR') {
         $('.main-message').html(carMessage)
+        $('#bike-triangle-container').hide()
+      } else if (checked && val.split(',')[0] === 'BICYCLE') {
+        $('.main-message').html('')
+        $('#bike-triangle-container').show()
       } else {
+        $('#bike-triangle-container').hide()
         $('.main-message').html(mainMessage)
       }
     })
+  $('.bike-triangle').click(function(){
+    $(this).toggleClass('active')
+  })
   $('.main-message').html(mainMessage)
   $('#planner-options-submit').click(function (e) {
     var $theForm = $(this).closest('form')
@@ -1325,6 +1358,7 @@ function setupSubmit () {
   })
   // Setup auto resubmittal of trip plan
   $('.planner-control').change(resubmit)
+  $('.planner-control.bike-triangle').click(resubmit)
   $('.reverse-locations').click(resubmit)
 }
 

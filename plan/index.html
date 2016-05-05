@@ -26,7 +26,7 @@ tagline: Plan a trip using the atltransit trip planner.
 				</div>
 				<!-- <span class="reverse-location horizontal visible-xs"></span> -->
 				<span class="reverse-locations vertical" title="Reverse locations" alt="Reverse locations"></span>
-				
+
 				<div style="margin:0px;" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="input-group navbar-input-group  planner-options-inputgroup-dest" id="planner-options-inputgroup-dest">
 						<!-- <label class="input-group-addon planner-options-input-addon required label-dest" for="planner-options-dest"> -->
@@ -67,9 +67,9 @@ tagline: Plan a trip using the atltransit trip planner.
 				</div>
 			</div>
 					<!-- row -->
-					
+
 					<!-- <div id="planner-options-date-messages" class="accessibility-helper" aria-live="assertive" aria-atomic="true" aria-relevant="additions"></div> -->
-		
+
 			<div class="row">
 				<div class="col-md-12 form-group">
 					<button type="button" class="btn btn-md btn-danger" onclick="clearHash()">Clear</button>
@@ -94,7 +94,7 @@ tagline: Plan a trip using the atltransit trip planner.
 							<input type="radio" class="planner-control" name="mode-select" value="specialized" id="specialized"><i class="fa fa-lg fa-wheelchair"></i><i class="fa hidden fa-wheelchair"></i>
 						</label>
 					</div>
-				
+
 					<!-- <select class="mode-option col-xs-6 pull-right form-control" style="max-width:140px">
 						<option value="TRANSIT,WALK">Transit</option>
 						<option value="BUS,WALK">Bus</option>
@@ -108,6 +108,14 @@ tagline: Plan a trip using the atltransit trip planner.
 			<div class="row">
 				<div class="col-md-12 form-group">
 				<p class="main-message"></p>
+				<span id="bike-triangle-container" style="display: none">
+					<span>Personalize your bike trip</span>
+					<div class="btn-group" role="group" aria-label="Refine your bike trip">
+						<button id="quick" class="planner-control btn btn-default bike-triangle active">Quick</button>
+						<button id="flat" class="planner-control btn btn-default bike-triangle active">Flat</button>
+						<button id="bike-friendly" class="planner-control btn btn-default bike-triangle active">Bike friendly</button>
+					</div>
+				</span>
 				</div>
 			</div>
 		</div>	<!-- End form -->
