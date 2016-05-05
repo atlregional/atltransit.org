@@ -6,6 +6,7 @@ exclude:
   - "node_modules"
   - "package.json"
   - "gulpfile.js"
+  - "s3_website.yml"
   # We want to include vendor files at root but not those in sub dirs
   - "vendor/**/*"
 # source:	_src
