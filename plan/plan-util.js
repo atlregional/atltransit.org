@@ -1283,6 +1283,15 @@ function restoreFromHash () {
     $('input[type=radio][value="' + plannerreq.mode + '"]').prop('checked', true).parent().addClass('active')
     if (plannerreq.mode.split(',')[0] === 'BICYCLE') {
       $('#bike-triangle-container').show()
+      if (!+plannerreq.triangleTimeFactor) {
+        $('#quick').removeClass('active')
+      }
+      if (!+plannerreq.triangleSlopeFactor) {
+        $('#flat').removeClass('active')
+      }
+      if (!+plannerreq.triangleSafetyFactor) {
+        $('#bike-friendly').removeClass('active')
+      }
     }
     $('.mode-option').val(plannerreq.mode)
   }
