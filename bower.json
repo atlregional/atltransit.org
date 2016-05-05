@@ -38,17 +38,19 @@
     },
     "bootstrap": {
       "main": [
-        "less/**/!(variables).less", "dist/fonts/*", "dist/js/*.min.js"
+        "less/**/!(variables).less",
+        "dist/fonts/*",
+        "dist/js/*.min.js"
       ]
     },
     "font-awesome": {
       "main": [
-        "fonts/*", "less/!(variables).less"
+        "fonts/*",
+        "less/!(variables).less"
       ]
     },
     "mapbox.js": {
       "main": [
-        // "mapbox.standalone.css", 
         "mapbox.js"
       ]
     }
