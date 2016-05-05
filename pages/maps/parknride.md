@@ -15,11 +15,18 @@ image: "http://www.clker.com/cliparts/2/4/8/f/131672402079289369Park%20and%20Rid
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
 
- 
+
 <!-- <div markdown="0">
 {% include forms/parknride-select.html scroll=true label=true %}
 </div> -->
-
+<div class="text-center">
+  <h3>Filter Park 'n' Rides by available service</h3>
+  <div class="btn-group" role="group" aria-label="Filter park and ride lots">
+    <button id="all" class="btn btn-default filter active">All</button>
+    <button id="has-routes" class="btn btn-default filter">Transit</button>
+    <button id="no-routes" class="btn btn-default filter">Vanpool/carpool</button>
+  </div>
+</div>
 
 {% assign cities = site.data.parknride.features | group_by:'CITY' | sort:'name' %}
 {% for city in cities %}
@@ -27,12 +34,13 @@ image: "http://www.clker.com/cliparts/2/4/8/f/131672402079289369Park%20and%20Rid
 ## {{ city.name }}
 
 {% for parknride in city.items %}
-<div markdown="1" class="well">
+
+<div markdown="1" class="well {% if parknride.Route != null %}has-routes{% else %}no-routes{% endif %}">
 {% capture pnr_name %}{{ parknride.NAME | slugify }}{% endcapture %}
 ### {{ parknride.NAME }} Park & Ride
 {: .parknride-header}
 
-{{ parknride.LOCATION }}, 
+{{ parknride.LOCATION }},
 {{ parknride.CITY }}, GA  
 
 Routes: {{ parknride.Route }}  
@@ -58,7 +66,25 @@ Description: {{ parknride.SPACES }} parking spaces, {{ parknride.LIGHTING }}, wi
 			console.log(mapDiv)
 			console.log(iframe)
 			mapDiv.removeClass('hidden')
-			iframe.attr('src', iframe.attr('data-src')); 
+			iframe.attr('src', iframe.attr('data-src'));
+		})
+    $('.filter').click(function(){
+			console.log(this.id);
+      $('.filter').removeClass('active')
+      $(this).addClass('active')
+      if (this.id === 'no-routes') {
+        $('.no-routes').show()
+        $('.has-routes').hide()
+      }
+      else if (this.id === 'has-routes') {
+        $('.has-routes').show()
+        $('.no-routes').hide()
+      }
+      else if (this.id === 'all') {
+        $('.has-routes').show()
+        $('.no-routes').show()
+      }
+
 		})
 	}
 </script>
