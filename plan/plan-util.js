@@ -416,7 +416,7 @@ function getBoundingBox (data) {
         latitude = coords[j][1]
 
         // Update the bounds recursively by comparing the current
-        // xMin/xMax and yMin/yMax with the coordinate 
+        // xMin/xMax and yMin/yMax with the coordinate
         // we're currently checking
         bounds.xMin = bounds.xMin < longitude ? bounds.xMin : longitude
         // console.log(bounds.xMin)
@@ -474,7 +474,7 @@ function addMarker (point, title, locationType, source) {
     }
   })
   markers[locationType] = new L.geoJson(geoJSON, {
-    // style: L.mapbox.simplestyle.style 
+    // style: L.mapbox.simplestyle.style
     pointToLayer: function (feature, latlng) {
       return L.marker(latlng, {
         draggable: true,
@@ -493,7 +493,7 @@ function addMarker (point, title, locationType, source) {
     onEachFeature: function (feature, layer) {
       // ADD A POPUP
       layer.bindPopup(
-        // "<h1>" + 
+        // "<h1>" +
         feature.properties.title + ''
       // "</h1>"
       )
@@ -710,7 +710,7 @@ function earlierAdvice () {
     success: function (data) {
       if (
         typeof data.plan == 'undefined' // ||
-      // typeof data.plan.itineraries == "undefined" || // !('itineraries' in data.plan) || 
+      // typeof data.plan.itineraries == "undefined" || // !('itineraries' in data.plan) ||
       // data.plan.itineraries.length == 0
       ) {
         return
@@ -754,7 +754,7 @@ function laterAdvice () {
     success: function (data) {
       if (
         typeof data.plan == 'undefined' // ||
-      // typeof data.plan.itineraries == "undefined" || // !('itineraries' in data.plan) || 
+      // typeof data.plan.itineraries == "undefined" || // !('itineraries' in data.plan) ||
       // data.plan.itineraries.length == 0
       ) {
         return
@@ -997,7 +997,7 @@ function renderItinerary (index, focus, el, click) {
           onEachFeature: function (feature, layer) {
             // // ADD A POPUP
             layer.bindPopup(
-              // "<h1>" + 
+              // "<h1>" +
               getIcon(line.leg) + ''
             // "</h1>"
             )
@@ -1099,7 +1099,7 @@ function planItinerary (plannerreq) {
   $('#planner-leg-list').html('')
 
   $.ajax({
-    url: url,
+    url: url + "&src=atltransit.org",
     type: 'GET',
     dataType: 'jsonp',
     success: function (data) {
@@ -1110,7 +1110,7 @@ function planItinerary (plannerreq) {
       $('.progress.progress-striped.active').remove()
       if (
         typeof data.plan == 'undefined' // ||
-      // typeof data.plan.itineraries == "undefined" || // !('itineraries' in data.plan) || 
+      // typeof data.plan.itineraries == "undefined" || // !('itineraries' in data.plan) ||
       // data.plan.itineraries.length == 0
       ) {
         $('#planner-advice-container').prepend('<div class="row alert alert-danger" role="alert">' + Locale.noAdviceFound + '</div>')
@@ -1185,7 +1185,7 @@ function truncate (word, num) {
   }
 }
 function submit () {
-  // Remove lines when redrawing 
+  // Remove lines when redrawing
   // console.log('submitting')
   if ($("input[type='radio'][name='mode-select']:checked").val() === 'specialized') {
     // alert('Please use the One-Click!')
@@ -1390,7 +1390,7 @@ function setupAutoComplete () {
   //           return false
   //                 }
   //               })
-  //             } 
+  //             }
   //         }
 
   //     })
@@ -1571,7 +1571,7 @@ function switchLocale () {
   $('.planner-options-timeformat').text(Locale.timeFormat)
 
   // $("#planner-options-date").datepicker('option', {
-  //     dateFormat: Locale.dateFormat, 
+  //     dateFormat: Locale.dateFormat,
   //     dayNames: Locale.days,
   //     dayNamesMin : Locale.daysMin,
   //     monthNames: Locale.months
