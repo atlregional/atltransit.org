@@ -1067,7 +1067,7 @@ function itinButton (index, itin) {
     itinSummary += (i == 0 || text == '' || itinSummary == '') ? text : ' <i class="fa fa-chevron-right"></i> ' + text
   })
   // itinButton.append('<div class="text-left">'+itinSummary+'<span class="'+hidden+'"><b>'+timeFromEpoch(itin.startTime)+'</b>  <span class="glyphicon glyphicon-chevron-right"></span> <b>'+timeFromEpoch(itin.endTime)+'</b> | '+Locale.amountTransfers(itin.transfers)+ ' | ' + diffDisplay + '</span></div>')
-  itinButton.append('<div class="text-left">' + itinSummary + '<span class="pull-right' + hidden + '">' + diffDisplay + '</span></div>')
+  itinButton.append('<div class="text-left">' + '<span class="pull-right' + hidden + '">' + diffDisplay + '</span>' + itinSummary + '</div>')
   // itinButton.append('<div class="text-left">'+Locale.amountTransfers(itin.transfers)+ ' | ' + diffDisplay + '</div>')
   return itinButton
 }
