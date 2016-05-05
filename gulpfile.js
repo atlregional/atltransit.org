@@ -131,7 +131,7 @@ gulp.task(cssMetaType(), function () {
     .pipe($.size({ title: cssMetaType() }))
 })
 
-// Compiles LESS > CSS 
+// Compiles LESS > CSS
 gulp.task('build-less', function () {
   return gulp.src('./assets/less/atl.less')
     .pipe($.less())
@@ -202,7 +202,7 @@ gulp.task('clean-bower', del.bind(null, [paths.bower, paths.vendor]))
 // bower install
 // ========================
 gulp.task('install', function (cb) {
-  runSequence('clean-bower', 'bower-install', 'bower-override', cb)
+  runSequence('clean-bower', 'bower-install', 'bower-override', 'bower-concat', cb)
 })
 gulp.task('bower-install', function () { return $.bower();})
 gulp.task('bower-override', function () {
