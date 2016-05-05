@@ -84,7 +84,6 @@ Description: {{ parknride.SPACES }} parking spaces, {{ parknride.LIGHTING }}, wi
         $('.has-routes').show()
         $('.no-routes').show()
       }
-
 		})
 	}
 </script>
