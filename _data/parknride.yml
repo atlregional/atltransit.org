@@ -1,10 +1,10 @@
   type: "FeatureCollection"
-  crs: 
+  crs:
     type: "name"
-    properties: 
+    properties:
       name: "urn:ogc:def:crs:OGC:1.3:CRS84"
-  features: 
-    - 
+  features:
+    -
       type: "Feature"
       OBJECTID: 1
       NAME: "Griffin"
@@ -16,6 +16,8 @@
       SURFACE: "Asphalt"
       SHELTER: "no shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.266742
       LONG_: -84.289159
@@ -30,12 +32,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.28916300954478
           - 33.266748358324456
-    - 
+    -
       type: "Feature"
       OBJECTID: 2
       NAME: "Atlanta Motor Speedway"
@@ -47,6 +49,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "440 - Tara Blvd to Atlanta "
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.386282
       LONG_: -84.311468
@@ -61,12 +65,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.31147181138599
           - 33.3862882998251
-    - 
+    -
       type: "Feature"
       OBJECTID: 3
       NAME: "Newnan"
@@ -78,6 +82,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "450/451/455 - Newnan to Downtown/Midtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.392513
       LONG_: -84.763726
@@ -92,12 +98,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.76373042718573
           - 33.39251968631979
-    - 
+    -
       type: "Feature"
       OBJECTID: 4
       NAME: "McDonough"
@@ -109,6 +115,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "430 - McDonough to Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.417815
       LONG_: -84.180333
@@ -123,12 +131,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.18033681195345
           - 33.417821421950876
-    - 
+    -
       type: "Feature"
       OBJECTID: 5
       NAME: "Flippen"
@@ -140,6 +148,8 @@
       SURFACE: "Asphalt"
       SHELTER: "no shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.482791
       LONG_: -84.215792
@@ -154,12 +164,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.21579629628289
           - 33.482797726812855
-    - 
+    -
       type: "Feature"
       OBJECTID: 6
       NAME: "Stockbridge "
@@ -171,6 +181,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "431/432 - Stockbridge to Midtown/Downtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.547794
       LONG_: -84.278944
@@ -185,12 +197,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.27894794524946
           - 33.54780022180527
-    - 
+    -
       type: "Feature"
       OBJECTID: 7
       NAME: "Riverdale"
@@ -202,6 +214,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "442 - Riverdale to Downtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.56777
       LONG_: -84.403329
@@ -216,12 +230,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.40333347080505
           - 33.5677760042949
-    - 
+    -
       type: "Feature"
       OBJECTID: 8
       NAME: "South Fulton"
@@ -233,6 +247,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: "455 - Union City to Downtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress, MARTA, Georgia Rideshare"
       LAT: 33.587222
       LONG_: -84.512516
@@ -247,12 +263,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.5125204606807
           - 33.58722809877624
-    - 
+    -
       type: "Feature"
       OBJECTID: 9
       NAME: "Covington"
@@ -264,6 +280,8 @@
       SURFACE: "Asphalt"
       SHELTER: "no shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.60635
       LONG_: -83.875963
@@ -278,12 +296,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -83.87596739635241
           - 33.60635683535479
-    - 
+    -
       type: "Feature"
       OBJECTID: 10
       NAME: "East Conyers"
@@ -295,6 +313,8 @@
       SURFACE: "Asphalt"
       SHELTER: "no shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.665361
       LONG_: -84.032032
@@ -309,12 +329,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.03203639644106
           - 33.66536736189833
-    - 
+    -
       type: "Feature"
       OBJECTID: 11
       NAME: "Sigman Road"
@@ -326,6 +346,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: "425 - E. Conyers to Downtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.68523
       LONG_: -84.05773
@@ -340,12 +362,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.05773414818576
           - 33.68523668614847
-    - 
+    -
       type: "Feature"
       OBJECTID: 12
       NAME: "Sigman Road"
@@ -357,6 +379,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "420/421 - West Conyers to Downtown/Midtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.686086
       LONG_: -84.058706
@@ -371,12 +395,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.0587105039908
           - 33.6860921980086
-    - 
+    -
       type: "Feature"
       OBJECTID: 13
       NAME: "Barge Rd"
@@ -388,6 +412,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA, Georgia Rideshare"
       LAT: 33.68911
       LONG_: -84.506856
@@ -402,12 +428,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.50686028943272
           - 33.68911661079172
-    - 
+    -
       type: "Feature"
       OBJECTID: 14
       NAME: "Panola Road"
@@ -419,6 +445,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "422/423/428 - Panola Road to Downtown/Midtown/Perimeter Center"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress, MARTA "
       LAT: 33.701002
       LONG_: -84.172554
@@ -433,12 +461,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.17255800576554
           - 33.701008894429854
-    - 
+    -
       type: "Feature"
       OBJECTID: 15
       NAME: "South DeKalb Mall"
@@ -450,6 +478,8 @@
       SURFACE: "Asphalt"
       SHELTER: "Unknown"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Emory"
       LAT: 33.706336
       LONG_: -84.274233
@@ -464,12 +494,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.27423754273538
           - 33.706342001378935
-    - 
+    -
       type: "Feature"
       OBJECTID: 16
       NAME: "Gresham Road"
@@ -481,6 +511,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.713954
       LONG_: -84.306696
@@ -495,12 +527,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.30669969002541
           - 33.71396078247182
-    - 
+    -
       type: "Feature"
       OBJECTID: 17
       NAME: "Post Rd"
@@ -512,6 +544,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Douglas Rideshare, Georgia Rideshare"
       LAT: 33.720161
       LONG_: -84.83143
@@ -526,12 +560,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.83143418691333
           - 33.72016727934943
-    - 
+    -
       type: "Feature"
       OBJECTID: 18
       NAME: "Douglas County Multi-Modal Transportation Center"
@@ -543,6 +577,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: "460/461/462 - Douglasville to Downtown/Midtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.742918
       LONG_: -84.725799
@@ -557,12 +593,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.72580327612228
           - 33.74292411228064
-    - 
+    -
       type: "Feature"
       OBJECTID: 19
       NAME: "Thornton Road Park and Ride"
@@ -574,6 +610,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: "477 to Downtown/Midtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.777917
       LONG_: -84.604833
@@ -588,12 +626,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.60483730702838
           - 33.77792340862834
-    - 
+    -
       type: "Feature"
       OBJECTID: 20
       NAME: "North DeKalb Mall"
@@ -605,6 +643,8 @@
       SURFACE: "Asphalt"
       SHELTER: "Unknown"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Emory"
       LAT: 33.809453
       LONG_: -84.274101
@@ -619,12 +659,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.27410476235303
           - 33.80945990409828
-    - 
+    -
       type: "Feature"
       OBJECTID: 21
       NAME: "Eastmont Shopping Center"
@@ -636,6 +676,8 @@
       SURFACE: "Asphalt"
       SHELTER: "Unknown"
       Route: "424 - Stone Mountain to Downtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.8224
       LONG_: -84.1096
@@ -650,12 +692,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.10960412629261
           - 33.8224064599945
-    - 
+    -
       type: "Feature"
       OBJECTID: 22
       NAME: "Hewatt Rd"
@@ -667,6 +709,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "418 - Snellville to Downtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress, Georgia Rideshare"
       LAT: 33.838912
       LONG_: -84.059858
@@ -681,12 +725,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.0598623097992
           - 33.83891895967425
-    - 
+    -
       type: "Feature"
       OBJECTID: 23
       NAME: "Faith Baptist Church "
@@ -698,6 +742,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.842554
       LONG_: -84.980137
@@ -712,12 +758,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.98014161596404
           - 33.842560430592506
-    - 
+    -
       type: "Feature"
       OBJECTID: 24
       NAME: "Snellville Baptist Church"
@@ -729,6 +775,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "418 - Snellville to Downtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.854016
       LONG_: -84.015241
@@ -743,12 +791,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.01524525422629
           - 33.854022754369154
-    - 
+    -
       type: "Feature"
       OBJECTID: 25
       NAME: "Powder Springs"
@@ -760,6 +808,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "470/477 - to Downtown/Midtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.867312
       LONG_: -84.701122
@@ -774,12 +824,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.70112595820665
           - 33.86731855756862
-    - 
+    -
       type: "Feature"
       OBJECTID: 26
       NAME: "Hiram 278 Theater Park and Ride"
@@ -791,6 +841,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "470/477  - Hiram/Powder Springs to Downtown/Midtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.884237
       LONG_: -84.738541
@@ -805,12 +857,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.73854491106965
           - 33.88424349244446
-    - 
+    -
       type: "Feature"
       OBJECTID: 27
       NAME: "Dallas"
@@ -822,6 +874,8 @@
       SURFACE: "Asphalt"
       SHELTER: "no shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Georgia Rideshare"
       LAT: 33.911126
       LONG_: -84.825121
@@ -836,12 +890,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.82512559265342
           - 33.91113214731083
-    - 
+    -
       type: "Feature"
       OBJECTID: 28
       NAME: "Indian Trail"
@@ -853,6 +907,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: "102 - Indian Tr to Downtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "GCT"
       LAT: 33.930064
       LONG_: -84.175471
@@ -867,12 +923,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.17547543006106
           - 33.93007052198965
-    - 
+    -
       type: "Feature"
       OBJECTID: 29
       NAME: "Marietta Transfer Center"
@@ -884,6 +940,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "101 - Marietta to Downtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "CCT"
       LAT: 33.942154
       LONG_: -84.53004
@@ -898,12 +956,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.53004425396902
           - 33.94216047059613
-    - 
+    -
       type: "Feature"
       OBJECTID: 30
       NAME: "Sugarloaf Mills"
@@ -915,6 +973,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: "410/412 - Discover Mills to Lindbergh/Midtown/Downtown, 103 Discover Mills to Downtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress, GCT, Georgia Rideshare"
       LAT: 33.984921
       LONG_: -84.078482
@@ -929,12 +989,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.07848595340879
           - 33.984927112511166
-    - 
+    -
       type: "Feature"
       OBJECTID: 31
       NAME: "Towns Center - Big Shanty"
@@ -946,6 +1006,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "100 - Town Center to Downtown                   481 - Town Center to Midtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "CCT, Xpress"
       LAT: 34.026305
       LONG_: -84.570609
@@ -960,12 +1022,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.5706132584154
           - 34.026311442303495
-    - 
+    -
       type: "Feature"
       OBJECTID: 32
       NAME: "Busbee Park and Ride - Brandsmart"
@@ -977,6 +1039,8 @@
       SURFACE: "Asphalt"
       SHELTER: "Unknown"
       Route: "100 - Town Center to Downtown                  480/481 - Town Center to Downtown/Midtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "CCT, Xpress"
       LAT: 34.028929
       LONG_: -84.571032
@@ -991,12 +1055,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.57103632843274
           - 34.02893567734606
-    - 
+    -
       type: "Feature"
       OBJECTID: 33
       NAME: "Mansell Rd"
@@ -1008,6 +1072,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA, Georgia Rideshare"
       LAT: 34.038747
       LONG_: -84.31308
@@ -1022,12 +1088,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.31308411058427
           - 34.03875346001948
-    - 
+    -
       type: "Feature"
       OBJECTID: 34
       NAME: "Acworth"
@@ -1039,6 +1105,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: "102 - Acworth to Midtown Atlanta            480 - Acworth to Downtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "CCT, Xpress"
       LAT: 34.077023
       LONG_: -84.656205
@@ -1053,12 +1121,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.65620914555157
           - 34.077029900039435
-    - 
+    -
       type: "Feature"
       OBJECTID: 35
       NAME: "Buford"
@@ -1070,6 +1138,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: "101 - Buford to Downtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "GCT"
       LAT: 34.085269
       LONG_: -83.995534
@@ -1084,12 +1154,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -83.9954558711999
           - 34.08608313401208
-    - 
+    -
       type: "Feature"
       OBJECTID: 36
       NAME: "Windward Pkwy"
@@ -1101,6 +1171,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA, Georgia Rideshare"
       LAT: 34.08636
       LONG_: -84.260879
@@ -1115,12 +1187,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.26088309804365
           - 34.08636687967885
-    - 
+    -
       type: "Feature"
       OBJECTID: 37
       NAME: "Cumming"
@@ -1132,6 +1204,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "400 - Cumming to North Springs and Downtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 34.182273
       LONG_: -84.143535
@@ -1146,12 +1220,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.14353962643386
           - 34.182279364990144
-    - 
+    -
       type: "Feature"
       OBJECTID: 38
       NAME: "Canton - Boling Park "
@@ -1163,6 +1237,8 @@
       SURFACE: "Asphalt"
       SHELTER: "no shelter"
       Route: "490 - Canton/Woodstock to Downtwown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress (CATS), Georgia Rideshare"
       LAT: 34.230384
       LONG_: -84.500759
@@ -1177,12 +1253,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.50076335687565
           - 34.230390578626086
-    - 
+    -
       type: "Feature"
       OBJECTID: 39
       NAME: "Avondale"
@@ -1194,6 +1270,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.775024
       LONG_: -84.282333
@@ -1208,12 +1286,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.28233754763869
           - 33.77503085777671
-    - 
+    -
       type: "Feature"
       OBJECTID: 40
       NAME: "Chamblee"
@@ -1225,6 +1303,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.887424
       LONG_: -84.30632
@@ -1239,12 +1319,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.3063243767644
           - 33.88743093604384
-    - 
+    -
       type: "Feature"
       OBJECTID: 41
       NAME: "Lakewood-Ft. McPherson"
@@ -1256,6 +1336,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.700325
       LONG_: -84.42894
@@ -1270,12 +1352,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.4289440309677
           - 33.700331434235736
-    - 
+    -
       type: "Feature"
       OBJECTID: 42
       NAME: "Oakland City"
@@ -1287,6 +1369,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.717026
       LONG_: -84.425156
@@ -1301,12 +1385,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.42515985144823
           - 33.717032182767
-    - 
+    -
       type: "Feature"
       OBJECTID: 43
       NAME: "West End"
@@ -1318,6 +1402,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.735817
       LONG_: -84.413666
@@ -1332,12 +1418,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.41366998137127
           - 33.735823386471694
-    - 
+    -
       type: "Feature"
       OBJECTID: 44
       NAME: "Arts Center"
@@ -1349,6 +1435,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.789078
       LONG_: -84.386803
@@ -1363,12 +1451,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.3868068781822
           - 33.78908420196111
-    - 
+    -
       type: "Feature"
       OBJECTID: 45
       NAME: "Lindbergh Center"
@@ -1380,6 +1468,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.822479
       LONG_: -84.36953
@@ -1394,12 +1484,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.36953392502532
           - 33.822485699019616
-    - 
+    -
       type: "Feature"
       OBJECTID: 46
       NAME: "Kensington"
@@ -1411,6 +1501,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.772591
       LONG_: -84.251915
@@ -1425,12 +1517,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.25191914320045
           - 33.77259708180039
-    - 
+    -
       type: "Feature"
       OBJECTID: 47
       NAME: "King Memorial"
@@ -1442,6 +1534,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.749802
       LONG_: -84.375542
@@ -1456,12 +1550,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.37554588614684
           - 33.7498080710845
-    - 
+    -
       type: "Feature"
       OBJECTID: 48
       NAME: "Inman Park-Reynoldstown"
@@ -1473,6 +1567,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.757404
       LONG_: -84.352753
@@ -1487,12 +1583,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.35275687836776
           - 33.757410764920266
-    - 
+    -
       type: "Feature"
       OBJECTID: 49
       NAME: "Edgewood-Candler Park"
@@ -1504,6 +1600,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.761799
       LONG_: -84.339882
@@ -1518,12 +1616,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.33988608658737
           - 33.76180529716046
-    - 
+    -
       type: "Feature"
       OBJECTID: 50
       NAME: "East Lake"
@@ -1535,6 +1633,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.765106
       LONG_: -84.313049
@@ -1549,12 +1649,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.3130534980389
           - 33.76511264129406
-    - 
+    -
       type: "Feature"
       OBJECTID: 51
       NAME: "Indian Creek"
@@ -1566,6 +1666,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.769733
       LONG_: -84.22966
@@ -1580,12 +1682,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.2296641921564
           - 33.7697398736949
-    - 
+    -
       type: "Feature"
       OBJECTID: 52
       NAME: "Vine City"
@@ -1597,6 +1699,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.756458
       LONG_: -84.404732
@@ -1611,12 +1715,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.4047359585507
           - 33.75646471801999
-    - 
+    -
       type: "Feature"
       OBJECTID: 53
       NAME: "Ashby"
@@ -1628,6 +1732,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.756275
       LONG_: -84.416786
@@ -1642,12 +1748,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.41679040586273
           - 33.75628161202332
-    - 
+    -
       type: "Feature"
       OBJECTID: 54
       NAME: "Bankhead"
@@ -1659,6 +1765,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.77214
       LONG_: -84.428932
@@ -1673,12 +1781,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.42893640542505
           - 33.77214694057539
-    - 
+    -
       type: "Feature"
       OBJECTID: 55
       NAME: "West Lake"
@@ -1690,6 +1798,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.753242
       LONG_: -84.445381
@@ -1704,12 +1814,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.44538538387829
           - 33.753248925490155
-    - 
+    -
       type: "Feature"
       OBJECTID: 56
       NAME: "Hamilton E. Holmes"
@@ -1721,6 +1831,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.754406
       LONG_: -84.470436
@@ -1735,12 +1847,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.47044032274184
           - 33.75441240733814
-    - 
+    -
       type: "Feature"
       OBJECTID: 57
       NAME: "Midtown"
@@ -1752,6 +1864,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.780758
       LONG_: -84.386452
@@ -1766,12 +1880,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.3864559255166
           - 33.780764345314715
-    - 
+    -
       type: "Feature"
       OBJECTID: 58
       NAME: "Dunwoody"
@@ -1783,6 +1897,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.921066
       LONG_: -84.344414
@@ -1797,12 +1913,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.34441795668336
           - 33.92107275696099
-    - 
+    -
       type: "Feature"
       OBJECTID: 59
       NAME: "Medical Center"
@@ -1814,6 +1930,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.910553
       LONG_: -84.351456
@@ -1828,12 +1946,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.35145988922012
           - 33.91055944900886
-    - 
+    -
       type: "Feature"
       OBJECTID: 60
       NAME: "Sandy Springs"
@@ -1845,6 +1963,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.932606
       LONG_: -84.353149
@@ -1859,12 +1979,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.3531536163913
           - 33.9326122185127
-    - 
+    -
       type: "Feature"
       OBJECTID: 61
       NAME: "North Springs"
@@ -1876,6 +1996,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.943817
       LONG_: -84.357315
@@ -1890,12 +2012,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.35731926791782
           - 33.94382361542961
-    - 
+    -
       type: "Feature"
       OBJECTID: 62
       NAME: "Lenox"
@@ -1907,6 +2029,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.845955
       LONG_: -84.356911
@@ -1921,12 +2045,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.35691490411479
           - 33.84596135091343
-    - 
+    -
       type: "Feature"
       OBJECTID: 63
       NAME: "Brookhaven"
@@ -1938,6 +2062,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.85997
       LONG_: -84.339264
@@ -1952,12 +2078,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.33926811033817
           - 33.85997655223855
-    - 
+    -
       type: "Feature"
       OBJECTID: 64
       NAME: "Doraville"
@@ -1969,6 +2095,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.902386
       LONG_: -84.281006
@@ -1983,12 +2111,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.28101003943794
           - 33.90239218259417
-    - 
+    -
       type: "Feature"
       OBJECTID: 65
       NAME: "College Park"
@@ -2000,6 +2128,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.651527
       LONG_: -84.448799
@@ -2014,12 +2144,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.44880334830002
           - 33.65153381617883
-    - 
+    -
       type: "Feature"
       OBJECTID: 66
       NAME: "East Point"
@@ -2031,6 +2161,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "MARTA "
       LAT: 33.676868
       LONG_: -84.440796
@@ -2045,12 +2177,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.44080011253337
           - 33.6768748554687
-    - 
+    -
       type: "Feature"
       OBJECTID: 67
       NAME: "Floyd Road Park and Ride"
@@ -2062,6 +2194,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "30 - to MARTA H.E. Holmes and Marietta Transfer Center"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "CCT"
       LAT: 33.8471
       LONG_: -84.585768
@@ -2076,12 +2210,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.58571969647006
           - 33.84740663212906
-    - 
+    -
       type: "Feature"
       OBJECTID: 68
       NAME: "Turner Field"
@@ -2093,6 +2227,8 @@
       SURFACE: "Asphalt"
       SHELTER: "no shelter"
       Route: null
+      has_transit: false
+      has_vanpool: false
       SERVICE_PROVIDER: "Georgia State"
       LAT: 33.735639
       LONG_: -84.388034
@@ -2107,12 +2243,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.38803836923321
           - 33.7356451432448
-    - 
+    -
       type: "Feature"
       OBJECTID: 69
       NAME: "Douglas Blvd Park and Ride"
@@ -2124,6 +2260,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: "461/462 to Downtown & Midtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.723007
       LONG_: -84.771262
@@ -2138,12 +2276,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.77126675716252
           - 33.72301306262469
-    - 
+    -
       type: "Feature"
       OBJECTID: 70
       NAME: "Hamilton Mill Station"
@@ -2155,6 +2293,8 @@
       SURFACE: "Asphalt"
       SHELTER: "shelter"
       Route: "413 - Hamilton Mill to Downtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 34.075196
       LONG_: -83.921598
@@ -2169,12 +2309,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -83.92057966409536
           - 34.07637923856854
-    - 
+    -
       type: "Feature"
       OBJECTID: 71
       NAME: "Hebron Baptist Church - Dacula"
@@ -2186,6 +2326,8 @@
       SURFACE: "Asphalt"
       SHELTER: "Unknown"
       Route: "416 - Dacula to Downtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.997155
       LONG_: -83.908723
@@ -2200,12 +2342,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -83.90872671404567
           - 33.99716186569528
-    - 
+    -
       type: "Feature"
       OBJECTID: 72
       NAME: "Mableton Park and Ride"
@@ -2217,6 +2359,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "475 - Mableton to Downtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.827253
       LONG_: -84.575485
@@ -2231,12 +2375,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.57548884711335
           - 33.82725990071423
-    - 
+    -
       type: "Feature"
       OBJECTID: 73
       NAME: "Mall of Georgia "
@@ -2248,6 +2392,8 @@
       SURFACE: "Asphalt"
       SHELTER: "Unknown"
       Route: "411 - Mall of GA to Midtown"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 34.067807
       LONG_: -83.982641
@@ -2262,12 +2408,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -83.9851793341422
           - 34.06890544224473
-    - 
+    -
       type: "Feature"
       OBJECTID: 74
       NAME: "His Hands Church"
@@ -2279,6 +2425,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "491 - Woodstock to Downtwown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress (CATS)"
       LAT: 34.081549
       LONG_: -84.541236
@@ -2293,12 +2441,12 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.54124039337746
           - 34.08155528188407
-    - 
+    -
       type: "Feature"
       OBJECTID: 75
       NAME: "Jonesboro Park and Ride"
@@ -2310,6 +2458,8 @@
       SURFACE: "Unknown"
       SHELTER: "Unknown"
       Route: "440- Tara Blvd to Atlanta, 441 - Jonesboro to Midtown Atlanta"
+      has_transit: true
+      has_vanpool: false
       SERVICE_PROVIDER: "Xpress"
       LAT: 33.504496
       LONG_: -84.355958
@@ -2324,8 +2474,8 @@
       created_date: null
       last_edited_user: null
       last_edited_date: null
-      geometry: 
+      geometry:
         type: "Point"
-        coordinates: 
+        coordinates:
           - -84.36236520413145
           - 33.523798369749564
