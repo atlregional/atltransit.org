@@ -109,11 +109,20 @@ tagline: Plan a trip using the atltransit trip planner.
 				<div class="col-md-12 form-group">
 				<p class="main-message"></p>
 				<span id="bike-triangle-container" style="display: none">
-					<span>Personalize your bike trip</span>
+					<span>Personalize your bike trip: </span>
 					<div class="btn-group" role="group" aria-label="Refine your bike trip">
-						<button id="quick" class="planner-control btn btn-default bike-triangle active">Quick</button>
+						<label class="checkbox-inline">
+						  <input type="checkbox" class="planner-control btn btn-default bike-triangle" id="quick" value="option1"> Quick
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" class="planner-control btn btn-default bike-triangle" id="flat" value="option2"> Flat
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" class="planner-control btn btn-default bike-triangle" id="bike-friendly" value="option3"> Bike friendly
+						</label>
+						<!-- <button id="quick" class="planner-control btn btn-default bike-triangle active">Quick</button>
 						<button id="flat" class="planner-control btn btn-default bike-triangle active">Flat</button>
-						<button id="bike-friendly" class="planner-control btn btn-default bike-triangle active">Bike friendly</button>
+						<button id="bike-friendly" class="planner-control btn btn-default bike-triangle active">Bike friendly</button> -->
 					</div>
 				</span>
 				</div>

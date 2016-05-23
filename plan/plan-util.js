@@ -1172,7 +1172,7 @@ function makePlanRequest () {
   plannerreq.time = $('.planner-time-btn:first-child').val() === 'Leave now' ? moment().valueOf() : getTime()
   plannerreq.date = getDate()
   console.log()
-  var bikeTriangle = $('.bike-triangle.active')
+  var bikeTriangle = $('.bike-triangle:checked')
   if (bikeTriangle.length && plannerreq.mode.split(',')[0] === 'BICYCLE') {
     plannerreq.triangleSafetyFactor = 0
     plannerreq.triangleSlopeFactor = 0
@@ -1284,14 +1284,14 @@ function restoreFromHash () {
     $('input[type=radio][value="' + plannerreq.mode + '"]').prop('checked', true).parent().addClass('active')
     if (plannerreq.mode.split(',')[0] === 'BICYCLE') {
       $('#bike-triangle-container').show()
-      if (!+plannerreq.triangleTimeFactor) {
-        $('#quick').removeClass('active')
+      if (+plannerreq.triangleTimeFactor) {
+        $('#quick').addClass('active')
       }
-      if (!+plannerreq.triangleSlopeFactor) {
-        $('#flat').removeClass('active')
+      if (+plannerreq.triangleSlopeFactor) {
+        $('#flat').addClass('active')
       }
-      if (!+plannerreq.triangleSafetyFactor) {
-        $('#bike-friendly').removeClass('active')
+      if (+plannerreq.triangleSafetyFactor) {
+        $('#bike-friendly').addClass('active')
       }
     }
     $('.mode-option').val(plannerreq.mode)
@@ -1335,9 +1335,9 @@ function setupSubmit () {
         $('.main-message').html(mainMessage)
       }
     })
-  $('.bike-triangle').click(function(){
-    $(this).toggleClass('active')
-  })
+  // $('.bike-triangle').click(function(){
+  //   $(this).toggleClass('active')
+  // })
   $('.main-message').html(mainMessage)
   $('#planner-options-submit').click(function (e) {
     var $theForm = $(this).closest('form')
@@ -1368,7 +1368,7 @@ function setupSubmit () {
   })
   // Setup auto resubmittal of trip plan
   $('.planner-control').change(resubmit)
-  $('.planner-control.bike-triangle').click(resubmit)
+  $('.planner-control.bike-triangle').change(resubmit)
   $('.reverse-locations').click(resubmit)
 }
 
