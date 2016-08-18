@@ -6,7 +6,8 @@ order: 2
 category: 'maps'
 permalink: '/maps/systems/'
 related: ["agencies"]
-tagline: 
+tagline: Get a detailed look at the entire transit system, from Avondale to Acworth.
+Or, drill down to a single agency’s service coverage to find out where transit is in your neighborhood.
 image: "/assets/images/guide/group_using_map.jpg"
 ---
 
