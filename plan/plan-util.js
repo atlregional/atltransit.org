@@ -259,7 +259,7 @@ var nominatim_geocoder = function (request, response) {
 }
 
 var planningserver = whitelabel_prefix // + 'otp/routers/default/plan?'
-  + 'ws/plan?'
+  + 'default/plan?'
 
 String.prototype.lpad = function (padString, length) {
   var str = this

@@ -15,10 +15,10 @@ function mapClick(e){
   console.log(point);
   if ($( "#planner-options-from-latlng" ).val() === '' || locationType === 'originMarker'){
     console.log("origin");
-    
+
     $( "#planner-options-from-latlng" ).val(point.lat + ',' + point.lng);
     reverseGeocode(point, "#planner-options-from");
-    
+
 
 
   }
@@ -27,7 +27,7 @@ function mapClick(e){
     dest = point;
     $( "#planner-options-dest-latlng" ).val(point.lat + ',' + point.lng);
     reverseGeocode(point, "#planner-options-dest");
-    
+
   }
 
 }
@@ -76,9 +76,9 @@ function reverseGeocode(point, id){
     	var json = JSON.parse(data)
       console.log(json);
       var display = getDisplay(json);
-      
+
       $(id).val(display);
-      
+
       var locationType = "originMarker";
       if (id == "#planner-options-dest"){
         locationType = "destinationMarker";
@@ -109,7 +109,7 @@ function getBoundingBox (data) {
 	            latitude = coords[j][1];
 
 	            // Update the bounds recursively by comparing the current
-	            // xMin/xMax and yMin/yMax with the coordinate 
+	            // xMin/xMax and yMin/yMax with the coordinate
 	            // we're currently checking
 	            bounds.xMin = bounds.xMin < longitude ? bounds.xMin : longitude;
 	            // console.log(bounds.xMin);
@@ -167,8 +167,8 @@ function addMarker(point, title, locationType, source){
 			"type": locationType
 		}
 	});
-	markers[locationType] = new L.geoJson(geoJSON, { 
-		// style: L.mapbox.simplestyle.style 
+	markers[locationType] = new L.geoJson(geoJSON, {
+		// style: L.mapbox.simplestyle.style
 		pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 				draggable: true,
@@ -187,7 +187,7 @@ function addMarker(point, title, locationType, source){
 		onEachFeature: function (feature, layer) {
 			// ADD A POPUP
 			layer.bindPopup(
-				// "<h1>" + 
+				// "<h1>" +
 				feature.properties.title + ''
 				// "</h1>"
 			);
@@ -259,7 +259,7 @@ itinOpt = {
     buttons: [
       {
         text: "Close",
-        click: function() { 
+        click: function() {
            $(this).dialog("close");
         }
       }
@@ -268,7 +268,7 @@ itinOpt = {
     title: "Trip Itinerary"
 };
 //////////////////////////////////////////
-var whitelabel_prefix = 'http://opentrip.atlantaregion.com/otp-rest-servlet/';
+var whitelabel_prefix = 'http://opentrip.atlantaregion.com/otp/routers/';
 
 var whitelabel_minDate = new Date(2014, 02, 08);
 var whitelabel_maxDate = new Date(2020, 03, 30);
@@ -421,13 +421,13 @@ var photon_geocoder = function(request, response) {
           }
           if (props.osm_value && props.osm_key != 'building'){
             if (props.osm_key == 'highway'){
-              desc.push('(road)');  
+              desc.push('(road)');
             }
             else{
               desc.push('('+props.osm_value+')');
             }
           }
-        
+
           return {
             label: props.name, //item.display_name.split(', Georgia, United States of America')[0],
             value: props.name, //item.display_name.split(', Georgia, United States of America')[0],
@@ -564,7 +564,7 @@ var nominatim_geocoder = function(request, response) {
   })
 }
 
-var planningserver = whitelabel_prefix+'ws/plan?';
+var planningserver = whitelabel_prefix+'default/plan?';
 
 String.prototype.lpad = function(padString, length) {
     var str = this;
@@ -786,7 +786,7 @@ function earlierAdvice(){
   $.ajax({
       url: url,
       type: "GET",
-      dataType: "jsonp", 
+      dataType: "jsonp",
       success: function( data ) {
         if (!('itineraries' in data.plan) || data.plan.itineraries.length == 0){
           return;
@@ -826,7 +826,7 @@ function laterAdvice(){
   $.ajax({
       url: url,
       type: "GET",
-      dataType: "jsonp", 
+      dataType: "jsonp",
       success: function( data ) {
         if (!('itineraries' in data.plan) || data.plan.itineraries.length == 0){
             return;
@@ -869,7 +869,7 @@ function resetLeg(el){
 }
 function legItem(leg, legName){
     var legItem = $('<li class="list-group-item advice-leg" id="'+legName+'" onmouseover="highlightLeg(this)" onmouseout="resetLeg(this)"><div></div></li>');
-    
+
     var icon = getIcon(leg)
     // console.log(leg)
     if (leg.mode == 'WALK' || leg.mode == 'CAR' || leg.mode == 'BICYCLE'){
@@ -988,10 +988,10 @@ function renderItinerary(index, focus, el, click){
 		prevItin.index = index;
 		prevItin.el = el;
 		// console.log(el);
-		
+
 	}
 	lines = {};
-	
+
 	var generic = {
 		"type": "Feature",
 		"properties": {},
@@ -1039,7 +1039,7 @@ function renderItinerary(index, focus, el, click){
 				// console.log(leg)
 				// TODO: change route to normal mapbox
 				var dash = /WALK/.test(i) ? "3,10" : null;
-				line.layer = L.geoJson(line.data, { 
+				line.layer = L.geoJson(line.data, {
 					style: {
 						color: getColor(line.leg),
 						opacity: 0.8,
@@ -1051,7 +1051,7 @@ function renderItinerary(index, focus, el, click){
 					onEachFeature: function(feature, layer){
 						// // ADD A POPUP
 						layer.bindPopup(
-							// "<h1>" + 
+							// "<h1>" +
 							getIcon(line.leg) + ''
 							// "</h1>"
 						);
@@ -1073,7 +1073,7 @@ function renderItinerary(index, focus, el, click){
 
 	// $('#planner-advice-list').find('.btn').removeClass('active');
 	// $(this).addClass('active');
-	
+
 	if ($el.hasClass('active')){
 		if (click){
 			// console.log('click!')
@@ -1102,7 +1102,7 @@ function itinButton(index, itin){
 	);
     itineraries.push(itin);
     var diffDisplay = getDiff(itin.startTime, itin.endTime);
-    
+
     var itinSummary = '';
     $.each(itin.legs, function(i, leg){
       var text = getIcon(leg);
@@ -1147,7 +1147,7 @@ function planItinerary(plannerreq){
   $.ajax({
       url: url,
       type: "GET",
-      dataType: "jsonp", 
+      dataType: "jsonp",
       success: function( data ) {
         console.log(data)
         $('#planner-leg-list').html('');
@@ -1217,7 +1217,7 @@ function truncate(word, num){
   }
 }
 function submit(){
-	// Remove lines when redrawing 
+	// Remove lines when redrawing
 	// console.log('submitting')
 	if ($("input[type='radio'][name='mode-select']:checked").val() === 'specialized'){
 		// alert('Please use the One-Click!')
@@ -1431,7 +1431,7 @@ function setupAutoComplete(){
                   return false;
                 }
               });
-            } 
+            }
         }
 
     })
@@ -1463,7 +1463,7 @@ function setupAutoComplete(){
         },
         select: function( event, ui ) {
             $( "#planner-options-dest" ).val( ui.item.label );
-            
+
             $( "#project-description" ).html( ui.item.desc );
             console.log(ui.item)
             var point;
@@ -1491,7 +1491,7 @@ function setupAutoComplete(){
                   return false;
                 }
               });
-            } 
+            }
         }
     })
     .data("ui-autocomplete")._renderItem = function (ul, item) {
@@ -1513,7 +1513,7 @@ function switchLocale() {
   $(".planner-options-timeformat").text(Locale.timeFormat);
 
   // $("#planner-options-date").datepicker('option', {
-  //     dateFormat: Locale.dateFormat, 
+  //     dateFormat: Locale.dateFormat,
   //     dayNames: Locale.days,
   //     dayNamesMin : Locale.daysMin,
   //     monthNames: Locale.months
