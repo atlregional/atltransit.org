@@ -273,7 +273,7 @@ itinOpt = {
     title: "Trip Itinerary"
 };
 //////////////////////////////////////////
-var whitelabel_prefix = 'http://ec2-54-162-172-243.compute-1.amazonaws.com/otp/routers/default/plan?';
+var whitelabel_prefix = 'http://s3.amazonaws.com/arc-otp/index.html#plan?';
 
 var whitelabel_minDate = new Date(2014, 02, 08);
 var whitelabel_maxDate = new Date(2020, 03, 30);
