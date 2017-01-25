@@ -1,4 +1,4 @@
-var whitelabel_prefix = 'http://opentrip.atlantaregion.com/otp/routers';
+var whitelabel_prefix = 'http://opentrip.atlantaregion.com/otp/routers/';
 
 var whitelabel_minDate = new Date(2014, 02, 08);
 var whitelabel_maxDate = new Date(2020, 03, 30);
