@@ -1102,7 +1102,7 @@ function planItinerary (plannerreq) {
   $.ajax({
     url: url + "&src=atltransit.org",
     type: 'GET',
-    dataType: 'jsonp',
+    dataType: 'json',
     success: function (data) {
       console.log(data)
       $('#planner-leg-list').html('')
