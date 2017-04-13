@@ -22,16 +22,16 @@ services:
   - express_bus
   - paratransit
 schedules:
-  - url: http://cobbcounty.org/index.php?option=com_content&view=article&id=462&Itemid=431
+  - url: https://cobbcounty.org/index.php?option=com_content&view=category&id=427&Itemid=2073
     name: CobbLinc Local and Express Route Schedules
 maps:
-  - url: "http://cobbcounty.org/images/documents/dot/cct/CCT_RouteMapMay5_2015.pdf"
+  - url: "https://cobbcounty.org/images/documents/dot/cct/CobbLinc_SystemMap_12-2016.pdf"
     type: pdf
     name: System Map
   - url: "http://cobbcounty.org/images/documents/dot/cct/aug2011_cctinset_update.pdf"
     type: pdf
     name: System Inset Map
-  - url: "http://cobbcounty.org/images/documents/dot/cct/aug2011_cctparatransit.pdf"
+  - url: "https://cobbcounty.org/images/documents/dot/cct/Paratransit-System-Map-12-16.pdf"
     type: pdf
     name: Paratransit Map
   - url: "http://cobbcounty.org/images/documents/dot/cct/aug2011_cctparkandride.pdf"
@@ -45,7 +45,7 @@ paratransit:
   url: http://www.cobbcounty.org/index.php?option=com_content&view=article&id=469&Itemid=427
   description: Complementary curb to curb paratransit service is provided to individuals who cannot use the regular CobbLinc bus. Passengers must be certified to use paratransit service.
 fares:
-  info_url: "http://www.cobbcounty.org/index.php?option=com_content&view=article&id=471&Itemid=422"
+  info_url: "https://cobbcounty.org/index.php?option=com_content&view=article&id=4478:cobblinc-paratransit-service&catid=428&Itemid=2074"
   purchase_url: "http://egov.cobbcountyga.gov/index.php/estore-categories/2/168/cct-bus-passes"
   base: 
     - name: Local
