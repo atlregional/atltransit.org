@@ -3,10 +3,13 @@ layout: page
 title: Biking & Transit
 id: biking
 order: 3
-category: 'guide'
-permalink: '/guide/biking/'
-image: "/build/images/marta_bike.jpg"
-tagline: Taking your bike on transit can get you to your destination without breaking a sweat.
+category: guide
+permalink: /guide/biking/
+image: /build/images/marta_bike.jpg
+tagline: >-
+  Taking your bike on transit can get you to your destination without breaking a
+  sweat.
+published: true
 ---
 
 ## Biking/transit connections
@@ -42,6 +45,3 @@ Never tried to bring your bike to the bus?  Don't worry: it's so easy, even a zo
 		</div>
 	</div>
 </div>
-
-
-
