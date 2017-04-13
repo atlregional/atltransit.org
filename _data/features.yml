@@ -7,6 +7,6 @@
 - tagline: "Find real-time arrivals for trains and buses."
   url: "/tools/realtime"
   image: "/build/images/train_realtime.jpeg"
-- tagline: "Not sure how to transfer?"
+- tagline: "Learn how to transfer."
   url: "/fares/transfers"
   image: "/build/images/bus_transfer.png"
