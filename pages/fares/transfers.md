@@ -3,12 +3,20 @@ layout: page
 title: How to transfer
 id: transfers
 order: 3
-category: 'fares'
-permalink: '/fares/transfers/'
-related: ["schedules", "realtime"]
-tagline: Wondering what makes a successful transfer? Here, you can learn when, where, and how.
-sections: ["Transfer basics", "Transfer information", "Major transfer stations"]
-image: "/build/images/bus_transfer.png"
+category: fares
+permalink: /fares/transfers/
+related:
+  - schedules
+  - realtime
+tagline: >-
+  Wondering what makes a successful transfer? Here, you can learn when, where,
+  and how.
+sections:
+  - Transfer basics
+  - Transfer information
+  - Major transfer stations
+image: /build/images/bus_transfer.png
+published: true
 ---
 
 * toc goes here
@@ -18,7 +26,7 @@ image: "/build/images/bus_transfer.png"
 
 ### Local trips involving **a single** transit agency (e.g. MARTA)
 
-* Transfers between local buses of the same operator are **free** (except for GRTA Xpress).
+* Transfers between local buses of the same operator are **free** (except for Xpress).
 * Bus to rail (and vice versa) transfers are always free (according to transfer rules).
 * Tranfers from a local bus to an express bus may require an upcharge (e.g. CobbLinc Local to CobbLinc Express).
 
@@ -73,10 +81,10 @@ It's a little confusing, but there are some restrictions about when you can coll
 
 ### <i class="fa fa-check"></i> Does your journey involve MARTA?
 * If so, you may transfer for free to (or from) any regional transit operator (except Streetcar).
-* Regional transit operators include CobbLinc, Gwinnett County Transit and GRTA Xpress.
+* Regional transit operators include CobbLinc, Gwinnett County Transit and Xpress.
 
 ### <i class="fa fa-times"></i> Does your journey involve two different regional/express bus transit operators?
-* Sorry, free transfers directly between CobbLinc, GCT and GRTA is **not allowed**. 
+* Sorry, free transfers directly between CobbLinc, GCT and XPress is **not allowed**. 
 * You must start or end your transit trip on MARTA to qualify for a free transfer.
 
 {% comment %}
@@ -90,7 +98,7 @@ The table below gives a quick glance at the free regional transfers offered to r
 
 ## Major transfer stations
 
-GRTA Xpress, CobbLinc, and GCT all have connection points at major MARTA stations for convenient access to MARTA's extensive rail and bus network.
+Xpress, CobbLinc, and GCT all have connection points at major MARTA stations for convenient access to MARTA's extensive rail and bus network.
 
 [View our interactive map for more details »](/maps/interactive)
 
