@@ -4,10 +4,10 @@
   platforms:
     android: https://play.google.com/store/apps/details?id=com.joulespersecond.seattlebusbot&hl=en
     apple: https://itunes.apple.com/us/app/onebusaway/id329380089?mt=8
-    windows: http://onebusaway.org/wp-content/uploads/windows_40.png
+    windows: https://www.microsoft.com/en-us/store/p/onebusaway/9nblggh0cbd9
   description: OneBusAway provides real-time info for the entire Atlanta region.
   category: realtime
-  agencies: ["MARTA", "GRTA Xpress", "CobbLinc", "GCT"]
+  agencies: ["MARTA", "Xpress", "CobbLinc", "GCT"]
 - name: MARTA On the Go 
   url: http://www.itsmarta.com/developers/app-station.aspx
   image: "/assets/images/guide/MARTA_App_Logo.png"
@@ -26,15 +26,6 @@
   description: myStop® Mobile provides real-time traveler information in the palm of your hand!. 
   category: realtime
   agencies: ["GCT"]
-- name: GoCCT Locator
-  url: http://gocct.cobbcounty.org/
-  image: 
-  platforms:
-    internet-explorer: http://gocct.cobbcounty.org/
-  description:
-  category: realtime
-  agencies: ["CobbLinc"]
-
 - name: ATLtransit.org
   url: /plan/
   platforms: 
@@ -43,19 +34,24 @@
     firefox: http://www.atltransit.org
   description: "While we absolutely love Google Transit, the ATLtransit trip planner offers some great additional features.  It currently supports biking + transit option and offers more accurate fare information about the trip."
   category: planning
-  agencies: ["MARTA", "CobbLinc", "GCT", "GRTA Xpress", ]
-
-- name: Google Transit
-  url: https://maps.google.com/
+  agencies: ["MARTA", "CobbLinc", "GCT", "Xpress"]
+- name: MARTA On the Go 
+  url: http://www.itsmarta.com/developers/app-station.aspx
+  image: "/assets/images/guide/MARTA_App_Logo.png"
   platforms:
-    android: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en
-    apple: https://itunes.apple.com/us/app/google-maps/id585027354?mt=8
-    internet-explorer: https://maps.google.com/landing/transit/index.html
-    chrome: https://maps.google.com/landing/transit/index.html
-    firefox: https://maps.google.com/landing/transit/index.html
-  description: "Google Transit (Google Maps) is a great trip planner for all modes of travel, including transit."
-  category: planning
-  agencies: ["MARTA", "CobbLinc", "GRTA Xpress", "Hartsfield-Jackson Airport"]
+    android: https://play.google.com/store/apps/details?id=com.itsmarta.martaapp
+    apple: https://itunes.apple.com/us/app/marta/id386648039?mt=8
+  description: MARTA On the Go provides scheduling information for bus and rail services. The app will also provide real-time bus and rail information, service alerts, and connecting bus route(s) information. 
+  category: realtime
+  agencies: ["MARTA"]
+- name: myXpress 
+  url: http://www.xpressga.com/myxpressapp/
+  platforms:
+    android: https://play.google.com/store/apps/details?id=com.routematch.routeshout.grta&hl=en
+    apple: https://itunes.apple.com/us/app/myxpress/id1097103593?mt=8
+  description: "MyXpress allows you to find your nearest bus stop, view you route's schedule, and track your Xpress bus in real time."
+  category: realtime
+  agencies: ["Xpress"]
   
 - name: Simply Get There
   url: http://www.simplygetthere.org/en/users/230708/trips/new
