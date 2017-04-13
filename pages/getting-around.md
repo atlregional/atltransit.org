@@ -1,16 +1,17 @@
 ---
 layout: page
 title: Getting Around
-id: "getting-around"
+id: getting-around
 order: 2
-category: ""
-permalink: "/getting-around/"
-related: 
+permalink: /getting-around/
+related:
   - maps
   - schedules
   - agencies
   - fares
-tagline: "Looking for the cliffsnotes version of how transit in Atlanta works?  You've come to the right place."
+tagline: >-
+  Looking for the cliffsnotes version of how transit in Atlanta works?  You've
+  come to the right place.
 image: /build/images/train_schedule.jpeg
 published: true
 ---
@@ -45,7 +46,7 @@ Regularly scheduled buses and trains serve the five core counties of the Atlanta
 
 ### Commuter Bus & Express Services
 
-GRTA Xpress, GCT and CobbLinc bring commuters to and from central business districts during peak commute times, and offer services with limited stops.
+Xpress, GCT and CobbLinc bring commuters to and from central business districts during peak commute times, and offer services with limited stops.
 
 Express Park & Ride lots are located in the following counties:
 
@@ -70,7 +71,7 @@ Each transit agency has different hours of operation.
 
 Boarding a bus or train in Atlanta is as simple as tapping your Breeze Card.
 
-The Breeze Card is the *only way* to access a free transfer between MARTA and a Breeze partner transit agency (CobbLinc, Gwinnett County Transit and GRTA).  Free transfers are not available between any of the following transit agencies: CobbLinc, GCT or GRTA.
+The Breeze Card is the *only way* to access a free transfer between MARTA and a Breeze partner transit agency (CobbLinc, Gwinnett County Transit and XPress).  Free transfers are not available between any of the following transit agencies: CobbLinc, GCT or XPress.
 
 ![Breeze.png](/assets/images/Breeze.png) 
 
