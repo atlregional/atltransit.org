@@ -4,7 +4,7 @@ id: asc
 title: Atlanta Streetcar
 category: about
 name: Atlanta Streetcar
-acronym: Streetcar
+acronym: Atlanta Streetcar
 address: 55 Trinity Avenue
 city: Atlanta
 state: GA
