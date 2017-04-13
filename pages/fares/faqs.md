@@ -3,11 +3,12 @@ layout: page
 title: FAQs
 id: faqs
 order: 5
-category: 'fares'
-permalink: '/fares/faqs/'
-related:
+category: fares
+permalink: /fares/faqs/
+related: null
 tagline: Get that nagging question about transit in Atlanta answered here.
-image: "/build/images/confused_customers.jpg"
+image: /build/images/confused_customers.jpg
+published: true
 ---
 
 * toc goes here
@@ -16,7 +17,7 @@ image: "/build/images/confused_customers.jpg"
 ## Inter-agency transfers
 **Question:**{: .lead} Can I get a free transfer between CobbLinc and GCT buses?
 
-**Answer:**{: .lead} Unfortunately not.  Free transfers are only given when transfering from MARTA or to MARTA from one of the regional transit operators (CobbLinc, Gwinnett County TRansit or GRTA Xpress). [More info »](/fares/transfers)
+**Answer:**{: .lead} Unfortunately not.  Free transfers are only given when transfering from MARTA or to MARTA from one of the regional transit operators (CobbLinc, Gwinnett County TRansit or Xpress). [More info »](/fares/transfers)
 
 **Question:**{: .lead} How long is my free transfer valid?
 
@@ -25,7 +26,7 @@ image: "/build/images/confused_customers.jpg"
 * Transfer from MARTA: 3 hours
 * Transfer from GCT: 1.5 hours
 * Transfer from CobbLinc: 3 hours
-* Transfer from GRTA: 3 hours
+* Transfer from XPress: 3 hours
 
 [More info...](/fares/passes)
 
