@@ -26,20 +26,10 @@ schedules:
   - url: "http://www.itsmarta.com/rail-schedules-or-route.aspx"
     name: MARTA Rail Schedules
 maps: 
-  - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/System_Map/System-Map-outside2-3-16.pdf"
+  - url: "http://www.itsmarta.com/uploadedFiles/system-map-outer-inner-2017.pdf"
     type: pdf
     name: System Map
-  - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/Regional_Map/Regional%20Transit%20System%20Map_2012_Web_Exterior.pdf"
-    type: pdf
-    name: Central Atlanta/Midtown Map
-  - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/Regional_Map/Regional%20Transit%20System%20Map_2012_Web_Exterior.pdf"
-    type: pdf
-    name: Downtown Atlanta Map
-  - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/System_Map/Five-Points-Station-Bus-Connections-December-14-2013.pdf"
-    type: pdf
-    name: Five Points Connections Map
-  - url: "http://www.itsmarta.com/uploadedFiles/Schedules_And_Maps/Rail_Schedules_or_Routes/Rail-Map33x33-2014.pdf"
-    type: pdf
+  - url: "http://www.itsmarta.com/train-stations-and-schedules.aspx"
     name: Rail Lines Map
 services:
   - heavy_rail
@@ -47,10 +37,10 @@ services:
   - paratransit
 paratransit:
   name: MARTA Mobility
-  url: http://www.itsmarta.com/accessibility-Mobility.aspx
+  url: http://www.itsmarta.com/marta-mobility.aspx
   description: Provides paratransit to Fulton and DeKalb.
 fares:
-  info_url: "http://www.itsmarta.com/fares-passes.aspx"
+  info_url: "http://www.itsmarta.com/fare-programs.aspx"
   purchase_url: "http://breezecard.com/"
   base: 
     - name: Local
