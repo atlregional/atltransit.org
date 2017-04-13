@@ -1,10 +1,10 @@
 ---
 layout: agency
-id: grta
-title: GRTA Xpress
+id: Xpress
+title: Xpress
 category: about
-name: GRTA Xpress
-acronym: GRTA Xpress
+name: Xpress
+acronym: Xpress
 address: 245 Peachtree Center Ave, NE
 address2: Suite 400
 city: Atlanta
@@ -20,15 +20,15 @@ tagline: GRTA Xpress serves 12 counties in the metro Atlanta region.
 services:
   - express_bus
 schedules:
-  - url: http://xpressga.com/index.php?option=com_content&task=view&id=38&Itemid=75
+  - url: http://www.xpressga.com/commutertools/#schedule
     name: Xpress Route Schedules
 maps:
-- url: "http://xpressga.com/images/images/documents/xpress_system_pnr_map_6-13.pdf"
+- url: "http://www.xpressga.com/commutertools/#maps"
   type: pdf
   name: System Map
 fares:
-  info_url: "http://www.xpressga.com/index.php?option=com_content&task=view&id=87&Itemid=75"
-  purchase_url: "http://onlinesales.xpressga.com/"
+  info_url: "http://www.xpressga.com/commutertools/#buypass"
+  purchase_url: "https://onlinesales.xpressga.com/Merchant2/merchant.mvc?Screen=CTGY&Store_Code=XS&Category_Code=FAREMEDIA"
   base:
     - name: Green Zone
       cost: "$3.00"
@@ -66,7 +66,7 @@ fares:
     details: see Xpress website
 ---
 
-GRTA Xpress service is a commuter bus service that provides trips to and from 12 counties in the Atlanta region into Downtown and Midtown Atlanta and other regional employment centers.  
+Xpress service is a commuter bus service that provides trips to and from 12 counties in the Atlanta region into Downtown and Midtown Atlanta and other regional employment centers.  
 
 It operates Monday through Friday, primarily during the morning and afternoon/evening commute times.  All of the routes connect to MARTA rail stations. 
 
