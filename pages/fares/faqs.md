@@ -17,7 +17,7 @@ published: true
 ## Inter-agency transfers
 **Question:**{: .lead} Can I get a free transfer between CobbLinc and GCT buses?
 
-**Answer:**{: .lead} Unfortunately not.  Free transfers are only given when transfering from MARTA or to MARTA from one of the regional transit operators (CobbLinc, Gwinnett County TRansit or Xpress). [More info »](/fares/transfers)
+**Answer:**{: .lead} Unfortunately not.  Free transfers are only given when transfering from MARTA or to MARTA from one of the regional transit operators (CobbLinc, Gwinnett County Transit or Xpress). [More info »](/fares/transfers)
 
 **Question:**{: .lead} How long is my free transfer valid?
 
