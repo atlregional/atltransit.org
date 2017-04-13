@@ -33,7 +33,7 @@ Whether you're looking for [real-time data](/tools/realtime/), [trip planning](/
 
 ## Multiple agencies working in partnership
 
-MARTA, CobbLinc, Gwinnett County Transit, and Xpress provide the Atlanta region a coordinated network of transit options.
+MARTA, CobbLinc, Gwinnett County Transit, and Xpress provide the Atlanta region with a coordinated network of transit options.
 
 [Learn more about efforts to build better regional transit »](/about/regional-transit)
 
