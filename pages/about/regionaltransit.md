@@ -3,11 +3,13 @@ layout: page
 title: Regional Transit
 id: regional-transit
 order: 3
-category: 'about'
-permalink: '/about/regional-transit/'
-related: ["interactive-map"]
-image: "/build/images/concept_3.png"
+category: about
+permalink: /about/regional-transit/
+related:
+  - interactive-map
+image: /build/images/concept_3.png
 tagline: Working to create a seamless regional transit system.
+published: true
 ---
 
 * toc goes here
@@ -47,7 +49,7 @@ The vision was officially adopted in 2008 and now serves as the transit element 
 	<img class="img-responsive center-block" style="max-height: 285px" src="/build/images/fares/breeze_farebox.png" alt="Breeze Farebox">
 </div>
 
-Currently travelling among multiple transit providers is simplified by having the Breeze regional fare card.  Riders can load passes and cash value onto their Breeze Card without having to carry around multiple agency transit passes.
+Travelling among multiple transit providers is simplified by the Breeze regional fare card.  Riders can load passes and cash value onto their Breeze Card without having to carry around multiple agency transit passes.
 
 
 
