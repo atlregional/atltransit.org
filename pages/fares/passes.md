@@ -81,4 +81,4 @@ Seniors, youth, and students may qualify for special discounted fares.  Check th
 
 ## Regional Fare Card
 
-Breeze Card is the regional transit fare card for Atlanta.  To pay for your trip, you can either pre-load cash value onto your Breeze Card, or you can pre-load a multi-trip pass product for a specific transit agency (MARTA, Cobb, Gwinnett or XPress).  Frequent riders should consider purchasing a multi-trip or monthly pass, as it provides added discounts by purchasing in bulk.  To receive a free transfer between MARTA and any Breeze partner agency, you must use a Breeze Card.
+Breeze Card is the regional transit fare card for Atlanta.  To pay for your trip, you can either pre-load cash value onto your Breeze Card, or you can pre-load a multi-trip pass product for a specific transit agency (MARTA, Cobb, Gwinnett or XPress).  Frequent riders should consider purchasing a multi-trip or monthly pass, as it provides added discounts for purchasing in bulk.  To receive a free transfer between MARTA and any Breeze partner agency, you must use a Breeze Card.
