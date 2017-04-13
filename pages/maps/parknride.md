@@ -3,14 +3,20 @@ layout: page
 title: Park 'n' Ride
 id: parknride
 order: 3
-category: 'maps'
-permalink: '/maps/parknride/'
-related: ["parking", "agencies"]
-tagline: Driving to transit is a great way to avoid unnecessary traffic and save your sanity.  Find your closest Park 'n' Ride location here.
-image: "http://www.clker.com/cliparts/2/4/8/f/131672402079289369Park%20and%20Ride.svg.hi.png"
+category: maps
+permalink: /maps/parknride/
+related:
+  - parking
+  - agencies
+tagline: >-
+  Driving to transit is a great way to avoid unnecessary traffic and save your
+  sanity.  Find your closest Park 'n' Ride location here.
+image: >-
+  http://www.clker.com/cliparts/2/4/8/f/131672402079289369Park%20and%20Ride.svg.hi.png
+published: true
 ---
 
-<h2 class="row-heading">Choose a city to find a nearby Park 'n' Ride</h2>
+<h2 class="row-heading">Choose a city to find a nearby Park and Ride</h2>
 
 * toc goes here
 {:toc class="list-inline anchor toc text-center col-sm-12"}
@@ -20,7 +26,7 @@ image: "http://www.clker.com/cliparts/2/4/8/f/131672402079289369Park%20and%20Rid
 {% include forms/parknride-select.html scroll=true label=true %}
 </div> -->
 <div class="text-center">
-  <h3>Filter Park 'n' Rides by available service</h3>
+  <h3>Filter Park and Rides by available service</h3>
   <div class="btn-group" role="group" aria-label="Filter park and ride lots">
     <button id="all" class="btn btn-default filter active">All</button>
     <button id="has-transit" class="btn btn-default filter">Transit</button>
