@@ -27,12 +27,12 @@ maps:
 services:
   - streetcar
 schedules:
-  - url: http://streetcar.atlantaga.gov/schedule-fares/
+  - url: "http://streetcar.atlantaga.gov/?page_id=1111"
     name: Streetcar Schedules
 fares:
-  info_url: "http://streetcar.atlantaga.gov/schedule-fares/"
-  purchase_url: "http://streetcar.atlantaga.gov/schedule-fares/"
-  description: Passengers must have a Streetcar ticket to ride the Streetcar, and may be requested to verify purchase while riding.  Tickets can be purchased at each Streetcar stop with credit/debit cards, Breeze Card (stored cash value), as well as with cash at select stops (King Historic District, Centennial Olympic Park, Woodruff Park, Park Place).  Upon purchase a Streetcar ticket is valid for 2 hours.  The Atlanta Streetcar does not currently provide a free transfer to other transit agencies.<br/><br/>A mobile fare payment app will launch for the Atlanta Streetcar later in 2016.<br/><br/>Visit <a href="http://streetcar.atlantaga.gov/">streetcar.atlantaga.gov</a> for more information.
+  info_url: "http://streetcar.atlantaga.gov/?page_id=1111"
+  purchase_url: "http://streetcar.atlantaga.gov/?page_id=1111"
+  description: Tickets can be purchased at each Atlanta Streetcar stop using a debit/credit card or Breeze Card (stored value). Cash can also be used to purchase the tickets at the King Historic District, Centennial Olympic Park, Woodruff Park, and Park Place stops. Additionally, Atlanta Streetcar tickets are available through the system's mobile app. Passengers must have a ticket to ride the Atlanta Streetcar. Passengers may be asked to verify their purchase with the paper ticket or to display their app purchase while riding. Upon purchase a Streetcar ticket is valid for 2 hours.  The Atlanta Streetcar does not currently provide a free transfer to other transit agencies.<br/><br/>Visit <a href="http://streetcar.atlantaga.gov/">streetcar.atlantaga.gov</a> for more information.
   base: 
     - name: Local
       cost: "$1.00"
@@ -61,4 +61,4 @@ fares:
 
 The Atlanta Streetcar consists of a 2.7 mile East-West route that connects the Centennial Olympic Park area to the Martin Luther King, Jr. National Historic Site, with 12 stops along the route. 
  
-The Atlanta Streetcar expansion will connect to the Atlanta Beltline, and include additional neighborhoods and other popular destinations around the city.
+The Atlanta Streetcar expansion will connect to the Atlanta Beltline and include additional neighborhoods and other popular destinations around the city.
