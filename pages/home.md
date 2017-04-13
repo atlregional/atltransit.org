@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Home
-category: ""
-permalink: '/'
+permalink: /
+published: true
 ---
 <div class="home-container">
 <!-- <div class="bg" style="background-image: url('/assets/source_images/marta_train_blur_2.jpg'); width:100%;background-repeat:no-repeat; background-size:contain;"> -->
@@ -96,8 +96,8 @@ permalink: '/'
 	<div class="col-xs-12 col-sm-12 col-md-6">
 		<a href="/about/regional-transit" class="thumbnail thumbnail-link main-item">
 			<div class="caption">
-				<h3>Is transit in Atlanta regional?</h3>
-				<p class="">How can a transit system with more than 4 agencies work in harmony? Find out how these agencies are stitching transit together.</p>
+				<h3>Creating a regional transit system</h3>
+				<p class="">Find out how the region's largest transit agencies are stitching transit together.</p>
 			</div>
 		</a>
 	</div>
@@ -105,7 +105,7 @@ permalink: '/'
 		<a href="/about/history" class="thumbnail thumbnail-link main-item">
 			<div class="caption">
 				<h3>What is ATLtransit?</h3>
-				<p class="">ATLtransit is <em>the</em> regional transit information hub. Whether you're looking for tools or tips, you've come to the right place.</p>
+				<p class="">ATLtransit is <em>the</em> regional transit information hub. Whether you're looking for tools, tips or trip planning, you've come to the right place.</p>
 			</div>
 		</a>
 	</div>
