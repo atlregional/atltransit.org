@@ -6,7 +6,7 @@ order: 1
 category: about
 permalink: /about/history/
 related: null
-tagline: ATLtransit was initially launched as a pilot program in 2014.
+tagline: ATLtransit was launched to help commuters plan their transit trips throughout the region. 
 image: /assets/images/logos/logo.png
 published: true
 ---
@@ -40,7 +40,7 @@ MARTA, CobbLinc, Gwinnett County Transit, and Xpress provide the Atlanta region 
 
 ## History of ATLtransit
 
-State Senator Brandon Beach originally devised a regional transit information portal after encountering difficulties when travelling between transit agencies.
+GA State Senator Brandon Beach originally pioneered a regional transit information portal after encountering difficulties when travelling between transit agencies.
 
 He documented his journey from <a href="/plan/#fromPlace=34.03469763500044%2C-84.58262787899969&fromName=Kennesaw+State+University%2C+1000+Chastain+Rd+NW+Kennesaw%2C+GA+30144&toPlace=33.99136160395591%2C-84.0904314499507&toName=6400+Sugarloaf+Pkwy%2C+Duluth%2C+Georgia%2C+30097%2C+USA&mode=TRANSIT%2CWALK&time=04%3A30+pm&date=2015-10-15&arriveBy=false">Kennesaw State University to the Infinite Energy Center (Gwinnett Arena)</a> in the YouTube video below:
 
