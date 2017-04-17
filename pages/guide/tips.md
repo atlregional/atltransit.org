@@ -16,7 +16,7 @@ published: true
 
 2.  **Arrive a few minutes early** to your stop or station.
 
-3.  If you're waiting for a bus, **stand near the stop's signage and signal to the driver** as it approaches.
+3.  When waiting for the bus, **stand near the bus stop signage and signal** as the vehicle approaches.
 
 4.  Paying in cash or coins can delay the bus.  Help make the trip faster for everyone and <a href="http://www.breezecard.com/"> **pre-load cash fare onto a Breeze Card.** </a>
 
