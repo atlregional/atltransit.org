@@ -6,7 +6,7 @@ order: 4
 category: guide
 permalink: /guide/parking/
 related:
-  - parknride
+  - park and ride
   - plan
   - interactive
 image: /assets/images/guide/carpool.jpg
