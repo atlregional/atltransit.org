@@ -2,10 +2,10 @@
   id: marta
   info_url: "http://www.itsmarta.com/fares-passes.aspx"
   purchase_url: "http://breezecard.com/"
-  base: 
+  base:
     - name: Local
       cost: "$2.50"
-  passes: 
+  passes:
   - name: 1 Trip
     cost: "$2.50"
   - name: 2 Trip
@@ -26,7 +26,7 @@
     cost: "$23.75"
   - name: 30 Day Pass
     cost: "$95.00"
-  discounts: 
+  discounts:
   - name: Children
     cost: "Free"
   - name: University student
@@ -35,7 +35,7 @@
     cost: "$83.80"
   - name: Elderly/disabled
     cost: "$1.00"
-  paratransit: 
+  paratransit:
   - name: 1 trip
     cost: "$4.00"
   - name: 20 trip
@@ -47,7 +47,7 @@
   id: cobblinc
   info_url: "http://www.cobbcounty.org/index.php?option=com_content&view=article&id=471&Itemid=422"
   purchase_url: "http://egov.cobbcountyga.gov/index.php/estore-categories/2/168/cct-bus-passes"
-  base: 
+  base:
     - name: Local
       cost: "$2.50"
       description: Local bus fare
@@ -63,12 +63,12 @@
     cost: "$65.00"
   - name: Express 31 Day Pass
     cost: "$125.00"
-  discounts: 
+  discounts:
   - name: Youth
     cost: "$1.50"
   - name: Elderly/disabled
     cost: "$1.00"
-  paratransit: 
+  paratransit:
   - name: 1 trip
     cost: "$4.00"
   - name: 10 trip
@@ -82,7 +82,7 @@
   id: gct
   info_url: "https://www.gwinnettcounty.com/portal/gwinnett/Departments/Transportation/GwinnettCountyTransit/PassesandTickets"
   purchase_url: "http://www.gwinnettcounty.com/portal/gwinnett/Departments/Transportation/GwinnettCountyTransit/PassesandTickets"
-  base: 
+  base:
     - name: Local
       cost: "$2.50"
       description: Local bus fare
@@ -105,12 +105,12 @@
     cost: "$80"
   - name: Local 10 Ride
     cost: "$22.50"
-  discounts: 
+  discounts:
   - name: Youth
     cost: "$1.50"
   - name: Elderly/disabled
     cost: "$1.25"
-  paratransit: 
+  paratransit:
   - name: 1 trip
     cost: "$4.00"
 
@@ -138,19 +138,19 @@
     cost: "$35.00"
   - name: Blue Zone 31-Day
     cost: "$125.00"
-  discounts: 
+  discounts:
   - name: Children
     cost: "Free"
 
 - name: Streetcar
   id: asc
   purchase_url: "http://streetcar.atlantaga.gov/schedule-fares/"
-  base: 
+  base:
     - name: Local
       cost: "$1.00"
 
 - name: CATS
   id: cats
-  base: 
+  base:
     - name: Local
       cost: "$1.25"

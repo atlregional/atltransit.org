@@ -10,7 +10,7 @@
     url: "/maps/systems"
     image: "/assets/images/guide/group_using_map.jpg"
   - title: "Park and Ride"
-    url: "/maps/parknride"
+    url: "/maps/parkandride"
     image: "/build/images/atl-placeholder.png"
 
 
@@ -94,7 +94,7 @@
   main: false
   dropdown: true
   url: "/tools"
-  subitems: 
+  subitems:
   - title: Plan a Trip
     url: "/plan"
     image: "/build/images/tools/trip-planner.png"
