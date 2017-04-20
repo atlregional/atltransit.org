@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Park 'n' Ride
+title: Park and Ride
 id: parking
 order: 4
 category: guide
