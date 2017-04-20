@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Park 'n' Ride
+title: Park and Ride
 id: parknride
 order: 3
 category: maps
@@ -10,7 +10,7 @@ related:
   - agencies
 tagline: >-
   Driving to transit is a great way to avoid unnecessary traffic and save your
-  sanity.  Find your closest Park 'n' Ride location here.
+  sanity.  Find your closest Park and Ride location here.
 image: >-
   http://www.clker.com/cliparts/2/4/8/f/131672402079289369Park%20and%20Ride.svg.hi.png
 published: true
@@ -47,10 +47,10 @@ published: true
 {: .parknride-header}
 
 {{ parknride.LOCATION }},
-{{ parknride.CITY }}, GA  
+{{ parknride.CITY }}, GA
 
-Routes: {{ parknride.Route }}  
-Description: {{ parknride.SPACES }} parking spaces, {{ parknride.LIGHTING }}, with {{ parknride.SHELTER }}.  
+Routes: {{ parknride.Route }}
+Description: {{ parknride.SPACES }} parking spaces, {{ parknride.LIGHTING }}, with {{ parknride.SHELTER }}.
 
 
 {% capture latlng %}{{ parknride.geometry.coordinates[1] }},{{ parknride.geometry.coordinates[0] }}{% endcapture %}
